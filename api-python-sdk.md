@@ -2,7 +2,7 @@
 
 O **Chloros Python SDK** fornece acesso programático ao motor de processamento de imagens Chloros, permitindo automação, fluxos de trabalho personalizados e integração perfeita com as suas aplicações Python e pipelines de pesquisa.
 
-### Principais características
+### Principais funcionalidades
 
 * 🐍 **Python nativo** - API limpo e Pythonic para processamento de imagens
 * 🔧 **Acesso total ao API** - Controlo total sobre o processamento do Chloros
@@ -23,7 +23,7 @@ O **Chloros Python SDK** fornece acesso programático ao motor de processamento 
 | **Internet**         | Necessária para ativação da licença                                     |
 
 {% hint style=&quot;warning&quot; %}
-**Requisitos de licença**: O Python SDK requer uma subscrição paga do Chloros+ para acesso ao API. Os planos padrão (gratuitos) não têm acesso ao API/SDK. Visite [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) para atualizar.
+**Requisito de licença**: O Python SDK requer uma subscrição paga do Chloros+ para acesso ao API. Os planos padrão (gratuitos) não têm acesso ao API/SDK. Visite [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) para atualizar.
 {% endhint %}
 
 ## Início rápido
@@ -227,7 +227,7 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 
 #### `import_images(folder_path, recursive=False)`
 
-Importa imagens de uma pasta.
+Importar imagens de uma pasta.
 
 **Parâmetros:**
 
@@ -302,13 +302,13 @@ chloros.configure(
 
 #### `process(mode="parallel", wait=True, progress_callback=None)`
 
-Processar as imagens do projeto.
+Processe as imagens do projeto.
 
 **Parâmetros:**
 
 | Parâmetro           | Tipo     | Padrão      | Descrição                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Modo de processamento: «parallel» ou «serial»   |
+| `mode`              | str      | `"parallel"` | Modo de processamento: «paralelo» ou «serial»   |
 | `wait`              | bool     | `True`       | Aguardar conclusão                       |
 | `progress_callback` | callable | `None`       | Função de retorno de chamada de progresso (progress, msg) |
 | `poll_interval`     | float    | `2.0`        | Intervalo de sondagem para progresso (segundos)   |
@@ -437,7 +437,7 @@ results = process_folder(
 
 ## Suporte ao gerenciador de contexto
 
-O SDK oferece suporte a gerenciadores de contexto para limpeza automática:
+O SDK suporta gerenciadores de contexto para limpeza automática:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -455,7 +455,7 @@ with ChlorosLocal() as chloros:
 
 ## Exemplos completos
 
-### Exemplo 1: processamento básico
+### Exemplo 1: Processamento básico
 
 Processe uma pasta com as configurações padrão:
 
@@ -472,7 +472,7 @@ print(f"Processing complete: {results}")
 
 ### Exemplo 2: Fluxo de trabalho personalizado
 
-Controlo total sobre o pipeline de processamento:
+Controle total sobre o pipeline de processamento:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -566,7 +566,7 @@ print("All flights processed!")
 
 ### Exemplo 4: Integração do pipeline de pesquisa
 
-Integrar o Chloros com a análise de dados:
+Integre o Chloros com a análise de dados:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -785,7 +785,7 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ## Tratamento de exceções
 
-O SDK fornece classes de exceção específicas para diferentes tipos de erros:
+O SDK fornece classes de exceção específicas para diferentes tipos de erro:
 
 ### Hierarquia de exceções
 
@@ -919,7 +919,7 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 **Soluções:**
 
-1. Abra Chloros, Chloros (navegador) ou Chloros CLI e inicie sessão.
+1. Abra o Chloros, Chloros (navegador) ou Chloros CLI e inicie sessão.
 2. Verifique se a licença está armazenada em cache:
 
 ```python
@@ -1151,10 +1151,10 @@ chloros.process(progress_callback=notebook_progress)
 
 ### P: Posso distribuir aplicações criadas com o SDK?
 
-**R:** O código SDK pode ser integrado nas suas aplicações, mas:
+**R:** O código SDK pode ser integrado às suas aplicações, mas:
 
-* Os utilizadores finais precisam de ter o Chloros instalado
-* Os utilizadores finais precisam de licenças Chloros+ ativas
+* Os utilizadores finais precisam ter o Chloros instalado
+* Os utilizadores finais precisam ter licenças ativas do Chloros+
 * A distribuição comercial requer licenciamento OEM
 
 Contacte o info@mapir.camera para consultas sobre OEM.
@@ -1171,7 +1171,7 @@ pip install --upgrade chloros-sdk
 
 ### P: Onde as imagens processadas são guardadas?
 
-Por predefinição, no Caminho do projeto:
+Por predefinição, no Caminho do Projeto:
 
 ```
 Project_Path/
@@ -1193,7 +1193,7 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Programe através do Agendador de Tarefas para executar diariamente.
+Agende através do Agendador de Tarefas para ser executado diariamente.
 
 ***
 

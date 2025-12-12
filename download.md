@@ -6,7 +6,7 @@ metaLinks:
 
 # Download
 
-Faça o download da versão mais recente do Chloros para Windows para começar a trabalhar com o processamento de imagens multiespectrais.
+Faça o download da versão mais recente do Chloros para o Windows para começar a trabalhar com o processamento de imagens multiespectrais.
 
 ### Requisitos do sistema
 
@@ -21,7 +21,7 @@ Faça o download da versão mais recente do Chloros para Windows para começar a
 | **Internet**         | Necessária para ativação da licença | Necessária para ativação da licença |
 
 {% hint style=&quot;info&quot; %}
-**Aceleração GPU**: Os utilizadores do Chloros+ com GPUs NVIDIA (4 GB+ VRAM) podem utilizar a aceleração CUDA para um processamento significativamente mais rápido.
+**Aceleração GPU**: Os utilizadores do Chloros+ com GPUs NVIDIA (4 GB+ VRAM) podem usar a aceleração CUDA para um processamento significativamente mais rápido.
 {% endhint %}
 
 ***
@@ -90,12 +90,12 @@ Desbloqueie funcionalidades avançadas com uma subscrição Chloros+:
 * ⚡ **Aceleração GPU (CUDA)** - Aproveite o poder da GPU NVIDIA
 * 💻 **Acesso CLI** - Automatize com ferramentas de linha de comando
 * 🐍 **Python SDK** - Acesso programático ao API
-* 📱 **Vários dispositivos** - Use em 2 a 10+ dispositivos (dependendo do plano)
+* 📱 **Vários dispositivos** - Utilize em 2 a 10 ou mais dispositivos (dependendo do plano)
 * 🧮 **Fórmulas personalizadas** - Crie índices multiespectrais personalizados
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planos e preços do Chloros+</a></p>***
 
-## Ajuda com a instalação
+## Ajuda para instalação
 
 ### Resolução de problemas
 
@@ -110,7 +110,7 @@ Desbloqueie funcionalidades avançadas com uma subscrição Chloros+:
 * Experimente a versão Chloros (navegador)
 * Verifique se o Windows 10/11 (64 bits) está instalado
 * Atualize os controladores gráficos
-* Verifique o Windows Event Viewer para obter detalhes sobre o erro
+* Verifique o Windows Visualizador de Eventos para obter detalhes sobre o erro
 * Contacte o suporte com os registos de erros
 
 **Problemas de ativação da licença:**

@@ -1,8 +1,6 @@
 # CLI: Linha de comando
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
-
-O **Chloros CLI** fornece acesso poderoso por linha de comando ao motor de processamento de imagens Chloros, permitindo automação, criação de scripts e operação sem monitor para os seus fluxos de trabalho de imagem.
+<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>O **Chloros CLI** fornece acesso poderoso por linha de comando ao mecanismo de processamento de imagens Chloros, permitindo automação, criação de scripts e operação sem monitor para os seus fluxos de trabalho de imagem.
 
 ### Principais funcionalidades
 
@@ -166,7 +164,7 @@ chloros-cli logout
 
 ### `status` - Verificar o estado da licença
 
-Exibir a licença atual e o estado da autenticação.
+Exibe a licença atual e o estado da autenticação.
 
 **Sintaxe:**
 
@@ -339,9 +337,9 @@ chloros-cli get-project-folder
 
 ***
 
-### `reset-project-folder` - Repor para o padrão
+### `reset-project-folder` - Redefinir para o padrão
 
-Repor a pasta do projeto para a localização padrão.
+Redefinir a pasta do projeto para a localização padrão.
 
 **Sintaxe:**
 
@@ -579,11 +577,11 @@ if __name__ == '__main__':
 ### Fluxo de trabalho padrão
 
 1. **Entrada**: Pasta contendo pares de imagens RAW/JPG
-2. **Descoberta**: CLI faz a verificação automática de ficheiros de imagem suportados
-3. **Processamento**: O modo paralelo adapta-se aos núcleos da sua CPU (Chloros+)
+2. **Descoberta**: CLI faz a varredura automática de ficheiros de imagem compatíveis
+3. **Processamento**: O modo paralelo se adapta aos núcleos da sua CPU (Chloros+)
 4. **Saída**: Cria subpastas do modelo da câmara com imagens processadas
 
-### Exemplo de estrutura de saída
+### Estrutura de saída de exemplo
 
 ```
 MyProject/
@@ -745,7 +743,7 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ### P: Preciso de uma licença para o CLI?
 
-**R:** Sim! O CLI requer uma licença paga **Chloros+.**
+**R:** Sim! O CLI requer uma licença paga **Chloros+**.
 
 * ❌ Plano padrão (gratuito): CLI desativado
 * ✅ Planos Chloros+ (pagos): CLI totalmente ativado
@@ -783,7 +781,7 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### P: Como posso guardar a saída do CLI num ficheiro de registo?
+### P: Como posso guardar a saída CLI num ficheiro de registo?
 
 **PowerShell:**
 
@@ -803,7 +801,7 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 **R:** O CLI irá:
 
-1. Parar o processamento normalmente
+1. Parar o processamento de forma adequada
 2. Desligar o backend
 3. Sair com o código 130
 
@@ -813,7 +811,7 @@ Imagens parcialmente processadas podem permanecer na pasta de saída.
 
 ### P: Posso automatizar o processamento do CLI?
 
-**R:** Com certeza! O CLI foi projetado para automação. Consulte [Automação e scripts](CLI.md#automation--scripting) para obter exemplos do PowerShell, Batch e Python.
+**R:** Com certeza! O CLI foi projetado para automação. Consulte [Automação e scripts](CLI.md#automation--scripting) para exemplos do PowerShell, Batch e Python.
 
 ***
 
@@ -852,7 +850,7 @@ chloros-cli language --help
 ### Canais de suporte
 
 * **E-mail**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Site**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * **Preços**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
@@ -861,7 +859,7 @@ chloros-cli language --help
 
 ### Exemplo 1: Processamento básico
 
-Processamento com configurações padrão (vinheta, refletância):
+Processe com as configurações padrão (vinheta, refletância):
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
