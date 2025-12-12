@@ -1,13 +1,13 @@
 ---
-description: Lab-measured panels used to calibrate captured data in post processing
+description: Painéis medidos em laboratório usados ​​para calibrar dados capturados no pós-processamento
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
 ---
 
-# Calibration Targets
+# Alvos de calibração
 
-MAPIR offers various calibration targets to cover a range of applications. The compact T4-R50 seen below contains 4 panels that have been measured for light reflectance from 250 - 2,500 nm.
+O MAPIR oferece vários alvos de calibração para cobrir uma variedade de aplicações. O compacto T4-R50 visto abaixo contém 4 painéis que foram medidos quanto à refletância de luz de 250 a 2.500 nm.
 
 <figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>
 
@@ -17,10 +17,10 @@ The T4 diffuse reference targets have the following reflectance curves, [data do
 
 <figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (400-1000nm).png" alt=""><figcaption><p>MAPIR T4 Reflectance :: 400-1000nm</p></figcaption></figure>
 
-Looking at the reflectance graph you can see that the values are wavelength (x-axis) versus reflectance percent (y-axis). When we capture an image of the calibration target we then create a relationship between pixel value and reflectance percent, within the spectrum that each of the camera's sensor bands are sensitive to.
+Olhando para o gráfico de refletância, você pode ver que os valores são comprimento de onda (eixo x) versus porcentagem de refletância (eixo y). Quando capturamos uma imagem do alvo de calibração, criamos uma relação entre o valor do pixel e a porcentagem de refletância, dentro do espectro ao qual cada uma das bandas do sensor da câmera é sensível.
 
 This means that with every image you capture with our cameras, you can use a photo of our reflectance targets, such as the [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) or [T4-R125](https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t4-r125) to calibrate the images for reflectance. Once calibrated each pixel in the image is equal to percent reflectance.
 
-If you output the calibrated images in Chloros as the typical JPG or TIFF then the reflectance percent is calculated by dividing the pixel value by the bit depth of the image format. So for JPG divide by 255, and for TIFF divide by 65,535. You can also choose the PERCENT format output in Chloros, and then each pixel will range from a percent value of 0.0 to 1.0 (0% to 100% reflectance). Just keep in mind that some image applications cannot accept the percent (floating point) images, and they are large in size storage wise.
+Se você produzir as imagens calibradas em Chloros como JPG ou TIFF típico, a porcentagem de refletância será calculada dividindo o valor do pixel pela profundidade de bits do formato da imagem. Portanto, para JPG divida por 255 e para TIFF divida por 65.535. Você também pode escolher o formato PERCENT de saída em Cloros e cada pixel variará de um valor percentual de 0,0 a 1,0 (0% a 100% de refletância). Apenas tenha em mente que alguns aplicativos de imagem não podem aceitar imagens de porcentagem (ponto flutuante) e são grandes em termos de armazenamento.
 
 <div><figure><img src=".gitbook/assets/t3-125.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_closed.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure></div>

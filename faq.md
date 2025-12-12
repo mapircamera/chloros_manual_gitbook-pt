@@ -1,11 +1,11 @@
 ---
-description: Frequently Asked Questions
+description: Perguntas frequentes
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
 
-# FAQ
+# Perguntas frequentes
 
 <details>
 
@@ -19,7 +19,7 @@ No, Chloros only supports processing MAPIR camera images. Please see the list of
 
 <summary>Can I calibrate my images for reflectance without a calibration target?</summary>
 
-No. Without an image of the calibration target captured around when the non target images are captured you will not be able to relate the image's pixel values to a known reflectance percent. If you also do not include the log from a MAPIR light sensor then the ambient light spectrum will not be measured, and the reflectance results will not be accurate.
+Não. Sem uma imagem do alvo de calibração capturada próximo ao momento em que as imagens não alvo são capturadas, você não será capaz de relacionar os valores de pixel da imagem a uma porcentagem de refletância conhecida. Se você também não incluir o registro de um sensor de luz MAPIR, o espectro de luz ambiente não será medido e os resultados de refletância não serão precisos.
 
 </details>
 
@@ -27,7 +27,7 @@ No. Without an image of the calibration target captured around when the non targ
 
 <summary>Can I edit my images prior to processing in Chloros?</summary>
 
-No. Chloros assumes the input data has not been modified. Do not change the file names.
+Não. A Chloros assume que os dados de entrada não foram modificados. Não altere os nomes dos arquivos.
 
 </details>
 
@@ -35,7 +35,7 @@ No. Chloros assumes the input data has not been modified. Do not change the file
 
 <summary>Can I set my MAPIR Survey3 cameras to auto exposure and process the images in Chloros?</summary>
 
-No. Survey3 image datasets must have a fixed/locked exposure, so no auto shutter speed or auto ISO. All images of the same camera model must have identical shutter speed and ISO (exposure).
+Os conjuntos de dados de imagens Survey3 devem ter uma exposição fixa/bloqueada, portanto, não há velocidade do obturador automático ou ISO automático. Todas as imagens do mesmo modelo de câmera devem ter velocidade de obturador e ISO (exposição) idênticos.
 
 </details>
 
@@ -43,7 +43,7 @@ No. Survey3 image datasets must have a fixed/locked exposure, so no auto shutter
 
 <summary>Can Chloros process or analyze orthomosaic images?</summary>
 
-No. Only individual MAPIR camera images are supported, not stitched images like an orthomosaic map.
+Não. Somente imagens individuais de câmeras MAPIR são suportadas, e não imagens unidas como um mapa ortomosaico.
 
 </details>
 
@@ -51,7 +51,7 @@ No. Only individual MAPIR camera images are supported, not stitched images like 
 
 <summary>How can I speed up the target detection step of Chloros?</summary>
 
-In the file browser table pre-selecting the target images in the right column will tell Chloros to only look in those images for calibration targets, greatly speeding up the processing.
+Na tabela do navegador de arquivos, a pré-seleção das imagens alvo na coluna da direita dirá ao Chloros para procurar apenas alvos de calibração nessas imagens, acelerando bastante o processamento.
 
 </details>
 
