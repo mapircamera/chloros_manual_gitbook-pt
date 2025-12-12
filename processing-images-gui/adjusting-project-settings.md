@@ -1,6 +1,6 @@
 # Ajustar as definições do projeto
 
-Antes de processar as suas imagens, é importante configurar as definições do projeto para corresponder aos requisitos do seu fluxo de trabalho. O painel Definições do projeto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> oferece controlo abrangente sobre calibração, opções de processamento, índices multiespectrais e formatos de exportação.
+Antes de processar as suas imagens, é importante configurar as definições do projeto para corresponder aos requisitos do seu fluxo de trabalho. O painel Definições do projeto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> oferece controle abrangente sobre calibração, opções de processamento, índices multiespectrais e formatos de exportação.
 
 ## Acessando as configurações do projeto
 
@@ -54,7 +54,7 @@ Principais opções de processamento e calibração de imagens.
 
 **Configurações principais:**
 
-* **Correção de vinheta**: Compensa o escurecimento da lente nas bordas ✅ Recomendado
+* **Correção de vinheta**: Compensa o escurecimento das lentes nas bordas ✅ Recomendado
 * **Calibração de refletância**: Normaliza os valores usando alvos de calibração ✅ Recomendado
 * **Método Debayer**: Algoritmo para converter RAW em multiespectral de 3 canais
 * **Intervalo mínimo de recalibração**: Tempo entre o uso de alvos de calibração (0 = usar todos)
@@ -146,11 +146,11 @@ A configuração **&quot;Guardar pasta do projeto&quot;** especifica onde os nov
 
 ## Configuração PPK (cinemática pós-processada)
 
-Se estiver a utilizar gravadores MAPIR DAQ com GPS para geolocalização precisa:
+Se estiver a utilizar gravadores DAQ MAPIR com GPS para geolocalização precisa:
 
 ### Pré-requisitos
 
-* MAPIR DAQ com módulo GPS (GNSS)
+* DAQ MAPIR com módulo GPS (GNSS)
 * Ficheiro de registo .daq com entradas de pinos de exposição
 * Câmara conectada aos pinos de exposição DAQ durante a sessão de captura
 
@@ -161,9 +161,9 @@ Se estiver a utilizar gravadores MAPIR DAQ com GPS para geolocalização precisa
 3. Defina **&quot;Desvio de fuso horário do sensor de luz&quot;**, se necessário (padrão: 0 para UTC)
 4. Atribua câmaras aos pinos de exposição:
    * **Câmara única**: Atribuída automaticamente ao pino 1
-   * **Câmaras duplas**: atribua manualmente cada câmara ao pino correto
+   * **Duas câmaras**: atribua manualmente cada câmara ao pino correto
 
-**Atribuição do pino de exposição:**
+**Atribuição de pinos de exposição:**
 
 * **Pino de exposição 1**: selecione o modelo da câmara no menu suspenso
 * **Pino de exposição 2**: selecione a segunda câmara ou &quot;Não usar&quot;
@@ -186,7 +186,7 @@ Ao processar imagens de várias câmaras MAPIR num único projeto:
 3. PPK: atribua manualmente cada câmara ao pino de exposição correto
 4. Todas as câmaras utilizam o mesmo formato de exportação e índices
 
-**Exemplo**: Survey3W RGN + Survey3N OCN equipamento de câmara dupla
+**Exemplo**: Survey3W RGN + Survey3N OCN equipamento com duas câmaras
 
 ### Levantamentos com intervalos de tempo ou em várias datas
 

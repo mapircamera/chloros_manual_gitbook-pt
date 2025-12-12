@@ -18,7 +18,7 @@ Quando o processamento for concluído com sucesso, você verá vários indicador
 ### Abrir a pasta de saída
 
 1. Clique no ícone **Menu principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
-2. Selecione **«Abrir pasta do projeto»**
+2. Selecione **&quot;Abrir pasta do projeto&quot;**
 3. O seu explorador de ficheiros abre no diretório do projeto
 4. Localize o seu projeto pelo nome
 
@@ -33,7 +33,7 @@ Quando o processamento for concluído com sucesso, você verá vários indicador
 1. Navegue até à subpasta do modelo da câmara
 2. Selecione um ficheiro de imagem
 3. A pré-visualização aparece no painel de pré-visualização do Windows Explorer
-4. Use as setas do teclado para navegar pelas imagens
+4. Use as teclas de seta para navegar pelas imagens
 
 ### Pré-visualização em visualizadores de imagens externos
 
@@ -94,7 +94,7 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 1. Verifique o registo de depuração para mensagens de omissão/erro
 2. Verifique se o espaço em disco era suficiente
-3. Conte os ficheiros: deve corresponder (contagem original - contagem de destino) × (índices + 1)
+3. Conte os ficheiros: Deve corresponder (contagem original - contagem de destino) × (índices + 1)
 4. Reimporte e reprocesse quaisquer ficheiros em falta
 
 ### Problema: Bordas escuras ou brilhantes (vinheta ainda visível)
@@ -205,12 +205,12 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 ## Próximas execuções de processamento
 
-### Reutilização das definições do projeto
+### Reutilização das configurações do projeto
 
 Se processar conjuntos de dados semelhantes no futuro:
 
-1. **Salve o modelo do projeto** (se ainda não tiver feito isso)
-2. **Crie um novo projeto** usando o modelo salvo
+1. **Salvar modelo do projeto** (se ainda não tiver feito isso)
+2. **Crie um novo projeto** usando o modelo guardado
 3. **Importe novas imagens**
 4. **Processe** com configurações idênticas para manter a consistência
 
@@ -224,10 +224,10 @@ Para várias sessões/conjuntos de dados:
 * Use configurações de modelo consistentes
 * Processe um de cada vez
 
-**Opção 2: Chloros CLI (somente Chloros+)**
+**Opção 2: Chloros CLI (apenas Chloros+)**
 
-* Automatize o processamento em lote
-* Processe várias pastas com scripts
+* Automatizar o processamento em lote
+* Processar várias pastas com scripts
 * Consulte [Documentação do CLI](../CLI.md)
 
 **Opção 3: Python SDK (apenas Chloros+)**
@@ -278,10 +278,10 @@ Agora concluiu todo o fluxo de trabalho de processamento do Chloros:
 3. ✅ **Configurações ajustadas** - Consulte [Ajustar configurações do projeto](adjusting-project-settings.md)
 4. ✅ **Alvos marcados** - Consulte [Escolher imagens alvo](choosing-target-images.md)
 5. ✅ **Processamento iniciado** - Consulte [Iniciar o processamento](starting-the-processing.md)
-6. ✅ **Progresso monitorado** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
-7. ✅ **Resultados revisados** - Esta página
+6. ✅ **Progresso monitorizado** - Consulte [Monitorizar o processamento](monitoring-the-processing.md)
+7. ✅ **Resultados revistos** - Esta página
 
-**Suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
+**As suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
 
 ***
 

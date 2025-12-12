@@ -55,7 +55,7 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 * Data e hora em que a imagem foi capturada
 * Extraído dos metadados EXIF da imagem
-* Usado para sincronização PPK e deteção de alvo de calibração
+* Usado para sincronização PPK e deteção de alvos de calibração
 
 ### Modelo da câmara
 
@@ -73,17 +73,17 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 ## Gerenciando ficheiros no seu projeto
 
-### Remoção de ficheiros
+### Removendo ficheiros
 
 Para remover imagens indesejadas do seu projeto:
 
 1. Selecione uma ou mais imagens na tabela do Navegador de ficheiros
 2. Clique no botão **&quot;Remover selecionados&quot;**
-3. Confirme a remoção (os ficheiros não são eliminados do disco, apenas removidos do projeto)
+3. Confirme a remoção (os ficheiros não são excluídos do disco, apenas removidos do projeto)
 
-### Ordenação e filtragem
+### Classificar e filtrar
 
-* **Ordenar por coluna**: Clique em qualquer cabeçalho de coluna para ordenar as imagens
+* **Classificar por coluna**: Clique em qualquer cabeçalho de coluna para classificar as imagens
 * **Classificação por data e hora**: útil para organizar sequências de captura cronológicas
 * **Filtro de modelo de câmara**: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras
 
@@ -122,7 +122,7 @@ O Chloros deteta e ignora automaticamente ficheiros duplicados:
 
 ***
 
-## Conjuntos de dados de câmaras mistos
+## Conjuntos de dados de câmaras mistas
 
 Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
@@ -176,7 +176,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 * Metadados EXIF modificados
 * Imagens editadas em software externo
-* Transferência de ficheiros incompleta
+* Transferência incompleta do ficheiro
 
 **Solução**: Reimporte os ficheiros originais, não modificados, da câmara/cartão SD
 
@@ -184,7 +184,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 **Possíveis causas:**
 
-* Relógio da câmara não ajustado corretamente
+* Relógio da câmara não definido corretamente
 * Dados EXIF removidos por software externo
 
 **Solução**: Verifique se as configurações de hora da câmara estavam corretas durante a captura

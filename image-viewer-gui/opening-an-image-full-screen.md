@@ -18,12 +18,12 @@ A forma mais comum de abrir uma imagem no Visualizador de Imagens:
 Depois de uma imagem ser carregada na área de pré-visualização:
 
 1. Clique no ícone **Visualizador de Imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
-2. O separador Visualizador de imagens abre, exibindo a imagem selecionada em ecrã inteiro
+2. O separador Visualizador de Imagens abre, exibindo a imagem selecionada em ecrã inteiro
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
 ***
 
-## Visão geral da interface do Visualizador de imagens
+## Visão geral da interface do Visualizador de Imagens
 
 ### Área de exibição principal
 
@@ -44,7 +44,7 @@ A maior parte do ecrã mostra a sua imagem:
 
 Navegue pelo seu conjunto de imagens usando atalhos do teclado ou botões:
 
-* **Próxima imagem**: Clique no botão → ou pressione a tecla **→** (seta para a direita)
+* **Imagem seguinte**: Clique no botão → ou pressione a tecla **→** (seta para a direita)
 * **Imagem anterior**: Clique no botão ← ou pressione a tecla **←** (seta para a esquerda)
 * **Ir para uma imagem específica**: Volte ao Navegador de Ficheiros e clique na miniatura desejada
 
@@ -52,13 +52,13 @@ Navegue pelo seu conjunto de imagens usando atalhos do teclado ou botões:
 
 Ajuste a ampliação para inspecionar os detalhes da imagem:
 
-**Ampliar:**
+**Aumentar:**
 
 * Clique no botão **+** (Mais)
 * Pressione a tecla **+** ou **=**
 * Role a roda do rato **para cima**
 
-**Reduzir:**
+**Diminuir:**
 
 * Clique no botão **−** (Menos)
 * Pressione a tecla **−** (Menos)
@@ -92,8 +92,8 @@ Ao ampliar além do tamanho da tela:
 **Localização da exibição do valor:**
 
 * **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito**
-* **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado**
-* Mostra os valores do pixel **sob o cursor ou destacado**
+* **Ao ampliar ainda mais, valor flutuante próximo ao cursor e pixel destacado**
+* Mostra os valores dos pixels **sob o cursor ou destacados**
 * Atualiza conforme move o rato
 
 ***
@@ -136,7 +136,7 @@ Aplique índices multiespectrais e tabelas de consulta de cores:
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
 3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (apenas Chloros+)
 4. Aplique o gradiente LUT de cor para visualização
-5. Ajuste os intervalos de valores e os limites
+5. Ajuste os intervalos de valores e os limiares
 
 Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detalhadas.
 
@@ -198,9 +198,9 @@ Verifique se os índices foram calculados corretamente:
 
 **Soluções:**
 
-1. Tente abrir num visualizador externo para verificar a integridade do ficheiro
+1. Tente abrir em um visualizador externo para verificar a integridade do ficheiro
 2. Verifique se o formato do ficheiro corresponde ao tipo esperado
-3. Feche outras aplicações para liberar memória
+3. Feche outros aplicativos para liberar memória
 4. Tente uma imagem menor/diferente
 
 ### Exibição de imagem em preto ou branco

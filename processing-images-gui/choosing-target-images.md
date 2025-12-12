@@ -23,7 +23,7 @@ Quando verifica a coluna Alvo para imagens específicas:
 * O tempo total de processamento é bastante reduzido
 
 {% hint style=&quot;success&quot; %}
-**Melhoria na velocidade**: marcar 2-3 imagens-alvo num conjunto de dados de 500 imagens pode reduzir o tempo de detecção de alvos de mais de 30 minutos para menos de 1 minuto.
+**Melhoria na velocidade**: marcar 2-3 imagens-alvo num conjunto de dados de 500 imagens pode reduzir o tempo de deteção de alvos de mais de 30 minutos para menos de 1 minuto.
 {% endhint %}
 
 ***
@@ -32,7 +32,7 @@ Quando verifica a coluna Alvo para imagens específicas:
 
 ### Passo 1: Identifique as suas imagens-alvo
 
-Examine as imagens importadas no Navegador de Ficheiros e identifique quais contêm alvos de calibração.
+Examine as imagens importadas no Navegador de ficheiros e identifique quais contêm alvos de calibração.
 
 **Cenários comuns:**
 
@@ -85,7 +85,7 @@ Antes do processamento, verifique novamente:
 **Condição do alvo:**
 
 * Mantenha os painéis do alvo limpos e secos
-* Todos os 4 painéis devem estar claramente visíveis e sem obstruções
+* Todos os 4 painéis devem estar claramente visíveis e desobstruídos
 * Alvos perpendiculares/nadir à fonte de luz, se possível
 
 ### Quantas imagens do alvo?
@@ -120,15 +120,15 @@ A coluna **Modelo da Câmara** ajuda a identificar quais imagens vieram de qual 
 * Survey3W\_RGB
 * etc.
 
-Use esta coluna para verificar se marcou alvos para cada tipo de câmara no seu projeto.
+Use esta coluna para verificar se você marcou alvos para cada tipo de câmara no seu projeto.
 
 ***
 
-## Definições de deteção de alvos
+## Configurações de detecção de alvos
 
-### Ajustar a sensibilidade de deteção
+### Ajustando a sensibilidade de detecção
 
-Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas definições em [Definições do projeto](adjusting-project-settings.md):
+Se o Chloros não estiver a detectar os seus alvos corretamente, ajuste estas configurações em [Configurações do projeto](adjusting-project-settings.md):
 
 **Área mínima da amostra de calibração:**
 
@@ -151,9 +151,9 @@ Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas def
 **Possíveis causas:**
 
 * Imagens de alvos não marcadas no Navegador de ficheiros
-* Alvo muito pequeno no quadro (&lt; 30% da imagem)
+* Alvo muito pequeno no enquadramento (&lt; 30% da imagem)
 * Iluminação inadequada (sombras, reflexos)
-* Definições de deteção de alvos demasiado restritas
+* Definições de deteção de alvos demasiado rigorosas
 
 **Soluções:**
 
@@ -168,11 +168,11 @@ Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas def
 
 * Edifícios brancos, veículos ou cobertura do solo confundidos com alvos
 * Manchas brilhantes na vegetação
-* Sensibilidade de detecção muito baixa
+* Sensibilidade de deteção muito baixa
 
 **Soluções:**
 
-1. Marque apenas imagens de alvos reais para limitar o âmbito da detecção
+1. Marque apenas imagens de alvos reais para limitar o âmbito da deteção
 2. Aumente a área mínima da amostra de calibração
 3. Aumente o valor mínimo de agrupamento de alvos
 4. Certifique-se de que as imagens de alvos mostram apenas o alvo (mínimo de interferências no fundo)
@@ -184,7 +184,7 @@ Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas def
 Antes de iniciar o processamento, verifique a seleção da imagem do alvo:
 
 * [ ] Pelo menos 1 imagem do alvo marcada por sessão
-* [ ] As caixas de seleção da coluna do alvo estão marcadas para todas as imagens do alvo
+* [ ] As caixas de seleção da coluna Alvo estão marcadas para todas as imagens do alvo
 * [ ] Imagens do alvo capturadas no mesmo período da pesquisa
 * [ ] Alvos claramente visíveis na pré-visualização quando clicados
 * [ ] Todos os 4 painéis de calibração visíveis em cada imagem do alvo
@@ -205,7 +205,7 @@ Embora não seja recomendado para trabalhos científicos, pode processar sem alv
 4. A saída não será calibrada para refletância absoluta
 
 {% hint style=&quot;warning&quot; %}
-**Não recomendado**: sem calibração de refletância, os valores de pixel representam apenas brilho relativo, não medições científicas de refletância. Use alvos de calibração para obter resultados precisos e repetíveis.
+**Não recomendado**: sem calibração de refletância, os valores de pixel representam apenas o brilho relativo, não medições científicas de refletância. Use alvos de calibração para obter resultados precisos e repetíveis.
 {% endhint %}
 
 ***
