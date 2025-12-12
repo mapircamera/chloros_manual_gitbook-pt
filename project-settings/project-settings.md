@@ -31,10 +31,10 @@ Estas definições controlam como o Chloros deteta e processa alvos de calibraç
 * **Tipo**: Número
 * **Intervalo**: 0 a 100
 * **Padrão**: 60
-* **Descrição**: Controla o limite de agrupamento para agrupar regiões de cores semelhantes ao detetar alvos de calibração. Valores mais altos exigem que cores mais semelhantes sejam agrupadas, resultando em uma deteção de alvos mais conservadora. Valores mais baixos permitem mais variação de cores dentro de um grupo de alvos.
+* **Descrição**: Controla o limite de agrupamento para agrupar regiões de cores semelhantes ao detetar alvos de calibração. Valores mais altos exigem que cores mais semelhantes sejam agrupadas, resultando em uma detecção de alvos mais conservadora. Valores mais baixos permitem mais variação de cores dentro de um grupo de alvos.
 * **Quando ajustar**:
-  * Aumente se os alvos de calibração estiverem a ser divididos em várias detecções.
-  * Diminua se os alvos de calibração com variação de cor não estiverem a ser totalmente detetados.
+  * Aumente se os alvos de calibração estiverem a ser divididos em várias detecções
+  * Diminua se os alvos de calibração com variação de cor não estiverem a ser totalmente detetados
 
 ***
 
@@ -47,14 +47,14 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Tipo**: Caixa de seleção
 * **Padrão**: Ativado (marcado)
 * **Descrição**: Aplica correção de vinheta para compensar o escurecimento da lente nas bordas das imagens. A vinheta é um fenómeno óptico comum em que os cantos e bordas de uma imagem parecem mais escuros do que o centro devido às características da lente.
-* **Quando desativar**: Desative apenas se a combinação da sua câmara/lente já tiver aplicado a correção de vinheta ou se pretender corrigir manualmente a vinheta no pós-processamento.
+* **Quando desativar**: Desative apenas se a sua combinação de câmara/lente já tiver aplicado a correção de vinheta ou se pretender corrigir manualmente a vinheta no pós-processamento.
 
 ### Calibração de refletância/equilíbrio de brancos
 
 * **Tipo**: Caixa de seleção
 * **Padrão**: Ativado (marcado)
-* **Descrição**: Ativa a calibração automática da refletância usando alvos de calibração detetados nas suas imagens. Isto normaliza os valores de refletância em todo o seu conjunto de dados e garante medições consistentes, independentemente das condições de iluminação.
-* **Quando desativar**: Desative apenas se desejar processar imagens brutas e não calibradas ou se estiver a usar um fluxo de trabalho de calibração diferente.
+* **Descrição**: Ativa a calibração automática de refletância usando alvos de calibração detetados nas suas imagens. Isso normaliza os valores de refletância em todo o seu conjunto de dados e garante medições consistentes, independentemente das condições de iluminação.
+* **Quando desativar**: Desative apenas se pretender processar imagens brutas e não calibradas ou se estiver a utilizar um fluxo de trabalho de calibração diferente.
 
 ### Método Debayer
 
@@ -62,7 +62,7 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Opções**:
   * Alta qualidade (mais rápido) - Atualmente a única opção disponível
 * **Padrão**: Alta qualidade (mais rápido)
-* **Descrição**: Seleciona o algoritmo de demosaicing usado para converter dados brutos do sensor do padrão Bayer em imagens coloridas. O método &quot;Alta qualidade (mais rápido)&quot; oferece um equilíbrio ideal entre velocidade de processamento e qualidade da imagem.
+* **Descrição**: Seleciona o algoritmo de demosaicing usado para converter dados brutos do sensor de padrão Bayer em imagens coloridas. O método &quot;Alta qualidade (mais rápido)&quot; oferece um equilíbrio ideal entre velocidade de processamento e qualidade de imagem.
 * **Observação**: Métodos adicionais de debayer podem ser adicionados em versões futuras do Chloros.
 
 ### Intervalo mínimo de recalibração
@@ -81,7 +81,7 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Intervalo**: -12 a +12 horas
 * **Padrão**: 0 horas
 * **Descrição**: Especifica o desvio do fuso horário (em horas a partir do UTC) para os carimbos de data/hora dos dados do sensor de luz. Isso é usado ao processar ficheiros de dados PPK (cinemática pós-processada) para garantir a sincronização correta do tempo entre as capturas de imagem e os dados GPS.
-* **Quando ajustar**: Defina isto para o desvio do fuso horário local se os seus dados PPK utilizarem a hora local em vez de UTC. Por exemplo:
+* **Quando ajustar**: Defina isso para o desvio do fuso horário local se os seus dados PPK usarem a hora local em vez de UTC. Por exemplo:
   * Hora do Pacífico: -8 ou -7 (dependendo do horário de verão)
   * Hora do Leste: -5 ou -4 (dependendo do horário de verão)
   * Hora da Europa Central: +1 ou +2 (dependendo do horário de verão)
@@ -114,12 +114,12 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Visibilidade**: visível apenas quando «Aplicar correções PPK» está ativado E os dados de exposição estão disponíveis para o pino 2
 * **Opções**:
   * Nomes de modelos de câmaras detetados no projeto
-  * «Não usar» - Ignorar este pino de exposição
+  * «Não usar» - Ignora este pino de exposição
 * **Padrão**: Selecionado automaticamente com base na configuração do projeto
-* **Descrição**: Atribui uma câmara específica ao Pino de exposição 2 para sincronização de tempo PPK ao usar uma configuração de duas câmaras.
+* **Descrição**: Atribui uma câmara específica ao Pino de exposição 2 para sincronização de tempo PPK ao usar uma configuração de câmara dupla.
 * **Comportamento de seleção automática**:
   * Câmara única + pino único: Pino 2 definido automaticamente como &quot;Não usar&quot;
-  * Câmara única + dois pinos: O pino 2 é automaticamente definido como «Não utilizar»
+  * Câmara única + dois pinos: O pino 2 é automaticamente definido como &quot;Não utilizar&quot;
   * Várias câmaras: É necessária a seleção manual
 * **Nota**: A mesma câmara não pode ser atribuída simultaneamente ao pino 1 e ao pino 2.
 
@@ -176,18 +176,18 @@ Estas definições controlam o formato e a qualidade das imagens processadas exp
 * **Descrição**: Seleciona o formato de ficheiro para guardar imagens processadas e calibradas.
 * **Recomendações de formato**:
   * **TIFF (16 bits)**: Recomendado para análises científicas e fluxos de trabalho profissionais. Preserva a máxima qualidade dos dados sem artefactos de compressão. Ideal para análises multiespectrais e processamento adicional em software GIS.
-  * **TIFF (32 bits, percentagem)**: Ideal para fluxos de trabalho que exigem valores de refletância em percentagem (0-100%). Oferece precisão máxima para medições radiométricas.
-  * **PNG (8 bits)**: Ideal para visualização na web e visualização geral. Tamanhos de ficheiro menores com compressão sem perdas, mas com gama dinâmica reduzida.
+  * **TIFF (32 bits, percentagem)**: Ideal para fluxos de trabalho que requerem valores de refletância em percentagem (0-100%). Oferece a máxima precisão para medições radiométricas.
+  * **PNG (8 bits)**: Bom para visualização na web e visualização geral. Tamanhos de ficheiro menores com compressão sem perdas, mas com gama dinâmica reduzida.
   * **JPG (8 bits)**: Tamanhos de ficheiro menores, ideal apenas para pré-visualizações e exibição na web. Utiliza compressão com perdas, o que não é adequado para análises científicas.
 
 ***
 
 ## Guardar modelo de projeto
 
-Esta funcionalidade permite-lhe guardar as configurações atuais do seu projeto como um modelo reutilizável.
+Esta funcionalidade permite-lhe guardar as definições atuais do seu projeto como um modelo reutilizável.
 
 * **Tipo**: Entrada de texto + botão Guardar
-* **Descrição**: Introduza um nome descritivo para o seu modelo de definições e clique no ícone Guardar. O modelo armazenará todas as definições atuais do seu projeto (detecção de alvos, opções de processamento, índices e formato de exportação) para fácil reutilização em projetos futuros.
+* **Descrição**: Introduza um nome descritivo para o seu modelo de definições e clique no ícone Guardar. O modelo irá armazenar todas as definições atuais do seu projeto (detecção de alvos, opções de processamento, índices e formato de exportação) para fácil reutilização em projetos futuros.
 * **Casos de uso**:
   * Crie modelos para diferentes sistemas de câmaras (RGB, multiespectral, NIR)
   * Guarde configurações padrão para tipos específicos de culturas ou fluxos de trabalho de análise
@@ -208,10 +208,10 @@ Esta configuração especifica onde os novos projetos são guardados por predefi
 * **Predefinição**: `C:\Users\[Username]\Chloros Projects`
 * **Descrição**: Mostra o diretório predefinido atual onde os novos projetos Chloros são criados. Clique no ícone Editar para selecionar um diretório diferente.
 * **Quando alterar**:
-  * Defina para uma unidade de rede para colaboração em equipa
+  * Defina como uma unidade de rede para colaboração em equipa
   * Altere para uma unidade com mais espaço de armazenamento para grandes conjuntos de dados
   * Organize projetos por ano, cliente ou tipo de projeto em pastas diferentes
-* **Observação**: alterar esta configuração afeta apenas projetos NOVOS. Os projetos existentes permanecem nos seus locais originais.
+* **Observação**: alterar esta configuração afeta apenas NOVOS projetos. Os projetos existentes permanecem em seus locais originais.
 
 ***
 
@@ -230,7 +230,7 @@ As configurações são aplicadas na seguinte ordem:
 
 ### Definições e processamento de imagens
 
-A maioria das alterações nas definições (especialmente nas categorias Processamento e Exportação) irá desencadear o reprocessamento das imagens para refletir as novas definições. No entanto, algumas definições são «apenas para exportação» e não requerem reprocessamento imediato:
+A maioria das alterações nas definições (especialmente nas categorias Processamento e Exportação) irá desencadear o reprocessamento das imagens para refletir as novas definições. No entanto, algumas configurações são &quot;somente para exportação&quot; e não requerem reprocessamento imediato:
 
 * Guardar modelo do projeto
 * Diretório de trabalho
@@ -240,11 +240,11 @@ A maioria das alterações nas definições (especialmente nas categorias Proces
 
 ## Melhores práticas
 
-1. **Comece com as predefinições**: as definições predefinidas funcionam bem para a maioria dos sistemas de câmaras MAPIR e fluxos de trabalho típicos.
-2. **Crie modelos**: depois de otimizar as definições para um fluxo de trabalho ou câmara específicos, guarde-as como um modelo para garantir a consistência entre projetos.
-3. **Teste antes do processamento completo**: ao experimentar novas configurações, teste em um pequeno subconjunto de imagens antes de processar todo o conjunto de dados.
-4. **Documente as suas configurações**: use nomes de modelos descritivos que indiquem o sistema de câmera, o tipo de processamento e o uso pretendido (por exemplo, &quot;Survey3\_RGB\_NDVI\_Agriculture&quot;).
-5. **Seleção do formato de exportação**: escolha o formato de exportação com base na sua utilização final:
+1. **Comece com as predefinições**: as configurações padrão funcionam bem para a maioria dos sistemas de câmaras MAPIR e fluxos de trabalho típicos.
+2. **Crie modelos**: Depois de otimizar as configurações para um fluxo de trabalho ou câmara específica, guarde-as como um modelo para garantir a consistência entre os projetos.
+3. **Teste antes do processamento completo**: Ao experimentar novas configurações, teste num pequeno subconjunto de imagens antes de processar todo o conjunto de dados.
+4. **Documente as suas configurações**: use nomes de modelos descritivos que indiquem o sistema de câmaras, o tipo de processamento e o uso pretendido (por exemplo, &quot;Survey3\_RGB\_NDVI\_Agricultura&quot;).
+5. **Seleção do formato de exportação**: Escolha o formato de exportação com base na sua utilização final:
    * Análise científica → TIFF (16 bits ou 32 bits)
    * Processamento GIS → TIFF (16 bits)
    * Visualização rápida → PNG (8 bits)
@@ -252,4 +252,4 @@ A maioria das alterações nas definições (especialmente nas categorias Proces
 
 ***
 
-Para obter mais informações sobre índices multiespectrais no Chloros, consulte a página [Fórmulas de índices multiespectrais](multispectral-index-formulas.md).
+Para obter mais informações sobre índices multiespectrais em Chloros, consulte a página [Fórmulas de índices multiespectrais](multispectral-index-formulas.md).

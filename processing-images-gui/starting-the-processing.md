@@ -58,8 +58,8 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **A barra de progresso mostra 2 etapas:**
 
-1. **Detecção de alvo** - Verificação de alvos de calibração
-2. **Processamento** - Aplicação de calibração e exportação de imagens
+1. **Detecção do alvo** - Verificação de alvos de calibração
+2. **Processamento** - Aplicação da calibração e exportação de imagens
 
 **Tempo de processamento:**
 
@@ -134,7 +134,7 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 * Aplica correções em todas as bandas/canais
 * Usa alvo de calibração apropriado para cada imagem com base no carimbo de data/hora
 
-**Duração:** a maior parte do tempo de processamento
+**Duração:** Maioria do tempo de processamento
 
 ### Fase 4: Cálculo do índice
 
@@ -146,14 +146,14 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **Duração:** Alguns segundos por imagem
 
-### Fase 5: Exportação
+### Etapa 5: Exportação
 
 **O que o Chloros faz:**
 
 * Guarda imagens calibradas no formato selecionado
 * Exporta imagens de índice com cores LUT configuradas
-* Grava ficheiros em subpastas do modelo da câmara
-* Preserva nomes de ficheiros originais com sufixos
+* Grava ficheiros nas subpastas do modelo da câmara
+* Preserva os nomes de ficheiros originais com sufixos
 
 **Duração:** Varia de acordo com o formato de exportação e o tamanho do ficheiro
 
@@ -193,9 +193,9 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 **Limitações importantes:**
 
 * Uma vez iniciado, o processamento não pode ser pausado
-* É possível cancelar o processamento, mas o progresso será perdido
+* Pode cancelar o processamento, mas o progresso será perdido
 * Resultados parciais não são guardados
-* É necessário reiniciar do início se for cancelado
+* Deve reiniciar do início se cancelado
 
 **Dica de planeamento:** Para projetos muito grandes, considere processar em lotes ou usar o CLI para um melhor controlo.
 
@@ -206,9 +206,9 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 Enquanto o processamento estiver em execução, pode:
 
 * **Observar a barra de progresso** - Veja a percentagem geral de conclusão
-* **Ver o estágio atual** - Detetar, Analisar, Calibrar ou Exportar
-* **Verificar a guia de registo** - Veja mensagens e avisos detalhados do processamento
-* **Visualizar imagens concluídas** - Alguns ficheiros de exportação podem aparecer durante o processamento
+* **Ver a fase atual** - Detetar, Analisar, Calibrar ou Exportar
+* **Verificar o separador de registo** - Veja mensagens e avisos detalhados do processamento
+* **Pré-visualizar imagens concluídas** - Alguns ficheiros de exportação podem aparecer durante o processamento
 
 Para obter informações detalhadas sobre o monitoramento, consulte [Monitorando o processamento](monitoring-the-processing.md).
 
@@ -254,7 +254,7 @@ O tempo de processamento real varia muito com base em:
 * Número de imagens
 * Resolução da imagem
 * Formato de entrada RAW vs JPG
-* Modo de processamento (Free vs Chloros+)
+* Modo de processamento (Gratuito vs Chloros+)
 * Velocidade da CPU e número de núcleos
 * Disponibilidade da GPU (apenas Chloros+)
 * Número de índices a calcular
@@ -262,7 +262,7 @@ O tempo de processamento real varia muito com base em:
 
 ### Estimativas aproximadas (Chloros+, imagens de 12 MP, CPU moderna)
 
-| Número de imagens | Modo gratuito | Chloros+ (CPU) | Chloros+ (GPU) |
+| Contagem de imagens | Modo gratuito | Chloros+ (CPU) | Chloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
 | 50 imagens   | 15-20 min | 5-8 min        | 3-5 min        |
 | 100 imagens  | 30-40 min | 10-15 min      | 5-8 min        |
@@ -310,12 +310,12 @@ O tempo de processamento real varia muito com base em:
 3. Tente processar um subconjunto menor de imagens
 4. Verifique se as imagens não estão corrompidas
 
-### Aviso «Nenhum alvo detetado»
+### Aviso &quot;Nenhum alvo detetado&quot;
 
 **Possíveis causas:**
 
-* Esqueceu-se de marcar as imagens de destino
-* As imagens de destino não contêm alvos visíveis
+* Esqueceu-se de marcar as imagens alvo
+* As imagens alvo não contêm alvos visíveis
 * As configurações de deteção de alvos são muito rígidas
 
 **Soluções:**
@@ -335,13 +335,13 @@ O tempo de processamento real varia muito com base em:
 2. **Verifique o espaço disponível em disco** - Certifique-se de que há 2 a 3 vezes o tamanho do conjunto de dados livre
 3. **Feche aplicações desnecessárias** - Libere recursos do sistema
 4. **Verifique as imagens-alvo** - Visualize os alvos marcados para garantir a qualidade
-5. **Guarde o projeto** - O projeto é guardado automaticamente, mas é boa prática guardá-lo manualmente
+5. **Salve o projeto** - O projeto é salvo automaticamente, mas é uma boa prática salvá-lo manualmente
 
 ### Durante o processamento
 
-1. **Evite o modo de suspensão do sistema** - Desative os modos de poupança de energia
+1. **Evite o modo de suspensão do sistema** - Desative os modos de economia de energia
 2. **Mantenha o Chloros em primeiro plano** - Ou, pelo menos, visível na barra de tarefas
-3. **Monitorize o progresso ocasionalmente** - Verifique se há avisos ou erros
+3. **Monitore o progresso ocasionalmente** - Verifique se há avisos ou erros
 4. **Não carregue outras aplicações pesadas** - Especialmente com o modo paralelo Chloros+
 
 ### Chloros+ Aceleração da GPU
