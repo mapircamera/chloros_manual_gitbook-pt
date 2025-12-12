@@ -1,6 +1,6 @@
 # Idiomas suportados
 
-O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a utilizadores em todo o mundo. Pode alternar instantaneamente entre idiomas em todas as interfaces: Desktop, Navegador, CLI e Python SDK.
+O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a utilizadores em todo o mundo. Pode alternar entre idiomas instantaneamente em todas as interfaces: Desktop, Navegador, CLI e Python SDK.
 
 O Chloros suporta os seguintes idiomas:
 
@@ -49,10 +49,10 @@ O Chloros suporta os seguintes idiomas:
 
 ### No Chloros Desktop/Navegador
 
-1. Abra as definições da aplicação
-2. Navegue até ao menu de seleção de idioma
-3. Escolha o seu idioma preferido na lista
-4. A interface será atualizada instantaneamente
+1. Abra as configurações do aplicativo.
+2. Navegue até o menu de seleção de idioma.
+3. Escolha o idioma de sua preferência na lista.
+4. A interface será atualizada instantaneamente.
 
 ### No Chloros CLI
 
@@ -88,6 +88,6 @@ Todos os 38 idiomas são totalmente suportados em:
 * **Chloros Desktop** - Tradução completa da GUI
 * **Chloros Browser** - Interface web em todos os idiomas
 * **Chloros CLI** - Interface de linha de comando e mensagens de saída
-* **Chloros Python SDK** - Mensagens e documentação API
+* **Chloros Python SDK** - Mensagens e documentação do API
 
 O suporte a idiomas garante que os utilizadores em todo o mundo possam trabalhar de forma eficiente em seu idioma nativo, sem barreiras.

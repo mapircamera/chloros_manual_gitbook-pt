@@ -14,11 +14,9 @@ No menu principal, pode iniciar um novo projeto, abrir um projeto existente ou a
 
 Quando ativado, o botão Iniciar processamento inicia o pipeline de processamento de imagens.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="line">No modo gratuito Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostrará 2 etapas: Detecção do alvo e Processamento.
 
-No modo gratuito Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostrará duas etapas: Detecção do alvo e Processamento.
-
-No modo licenciado pago Chloros+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra quatro etapas: Detecção, Análise, Calibração e Exportação. Se passar o cursor do rato sobre a barra de progresso Chloros+, será exibido um painel suspenso com a barra de progresso alargada para que possa acompanhar o processo. Clicar na barra de progresso superior irá congelar o painel suspenso; clicar novamente irá descongelá-lo.
+No modo licenciado pago Chloros+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra 4 etapas: Detecção, Análise, Calibração, Exportação. Se passar o cursor do rato sobre a barra de progresso Chloros+, será exibido um painel suspenso com a barra de progresso alargada para que possa acompanhar o processo. Clicar na barra de progresso superior irá congelar o painel suspenso; clicar novamente irá descongelá-lo.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -26,13 +24,13 @@ No modo licenciado pago Chloros+, que processa todos os ficheiros simultaneament
 
 O menu da barra lateral esquerda contém vários ícones para interagir:
 
-#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Definições do projeto](project-settings/project-settings.md)
+#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Configurações do projeto](project-settings/project-settings.md)
 
-O separador Definições do projeto permite ajustar as definições globais e de processamento do projeto. Ajuste-as antes de começar a processar os seus ficheiros.
+A guia Configurações do projeto permite ajustar as configurações globais e de processamento do projeto. Ajuste-as antes de começar a processar os seus ficheiros.
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Navegador de ficheiros
 
-Adicione ficheiros/pastas e remova ficheiros do projeto. Ficheiros duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino, e o processamento irá considerar apenas as imagens marcadas como destinos, acelerando significativamente o tempo de processamento.
+Adicione ficheiros/pastas e remova ficheiros do projeto. Ficheiros duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino, e o processamento irá considerar apenas as imagens marcadas como destinos, acelerando significativamente o seu tempo de processamento.
 
 #### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Visualizador de imagens](image-viewer-gui/opening-an-image-full-screen.md)
 
