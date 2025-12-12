@@ -10,7 +10,7 @@ metaLinks:
 
 As fórmulas de índice abaixo usam uma combinação de faixas médias de transmissão do filtro Survey3:
 
-<table><thead><tr><th align="center">Survey3 Filter Color</th><th width="196.199951171875" align="center">Survey3 Filter Name</th><th width="159.800048828125" align="center">Transmission Range (FWHM)</th><th align="center">Average Transmission</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848nm</td><td align="center">823nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table>
+ <table><thead><tr><th align="center">Cor do filtro Survey3</th><th width="196.199951171875" align="center">Nome do filtro Survey3</th><th width="159.800048828125" align="center">Faixa de transmissão (FWHM)</th><th align="center">Média Transmissão</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848nm</td><td alinhar="center">823nm</td></tr><tr><td alinhar="center">NIR2</td><td alinhar="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table> 
 
 Quando estas fórmulas são utilizadas o nome pode terminar em "\_1" ou "\_2", que corresponde a qual filtro NIR, NIR1 ou NIR2 foi utilizado.
 
@@ -24,7 +24,7 @@ $$
 EVI = 2,5 * {(NIR - Vermelho) \over (NIR + 6 * Vermelho - 7,5 * Azul + 1)}
 $$
 
-Os valores de EVI devem variar de 0 a 1 para pixels de vegetação. Características características, como nuvens e edifícios brancos, juntamente com características escuras, como água, podem resultar em valores de pixel anômalos em uma imagem EVI. Antes de criar uma imagem EVI, você deve mascarar nuvens e recursos estendidos da imagem de refletância e, opcionalmente, limitar os valores de pixel de 0 a 1.
+Os valores de EVI devem variar de 0 a 1 para pixels de vegetação. Características características, como nuvens e edifícios brancos, juntamente com características escuras, como água, podem resultar em valores de pixel anômalos em uma imagem EVI. Antes de criar uma imagem EVI, você deve mascarar nuvens e recursos estendidos de imagem de refletância e, opcionalmente, limitar os valores de pixel de 0 a 1.
 
 _Referência: Huete, A., et al. "Visão geral do desempenho radiométrico e biofísico dos índices de urbanização MODIS." Sensoriamento Remoto do Meio Ambiente 83 (2002):195–213._
 
@@ -212,7 +212,7 @@ _Referência: Yang, Z., P. Willis e R. Mueller. "Impacto da imagem AWIFS aprimor
 
 ## MSAVI2 - Índice de Vegetação 2 Ajustado ao Solo Modificado
 
-Este índice é uma versão mais simples do índice MSAVI proposto por Qi, et al (1994), que melhora o Índice de Vegetação Ajustado ao Solo (SAVI). Reduz o ruído do solo e aumenta a faixa dinâmica do sinal da vegetação. O MSAVI2 é baseado em um método indutivo que não utiliza um valor _L_ constante (como no SAVI) para destacar os florestas saudáveis.
+Este índice é uma versão mais simples do índice MSAVI proposto por Qi, et al (1994), que melhora o Índice de Vegetação Ajustado ao Solo (SAVI). Reduz o ruído do solo e aumenta a faixa dinâmica do sinal da vegetação. O MSAVI2 é baseado em um método indutivo que não utiliza um valor _L_ constante (como no SAVI) para destacar as florestas densas.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Vermelho)} \mais de 2}
@@ -320,7 +320,7 @@ _Referência: Gitelson, A., et al. "Linhas de vegetação e solo no espaço espe
 
 ## WDRVI - Índice de Vegetação da Ampla Faixa Dinâmica
 
-Este índice é semelhante ao NDVI, mas utiliza um coeficiente de ponderação (_a_) para reduzir a disparidade entre as contribuições dos sinais infravermelhos próximo e vermelho para o NDVI. O WDRVI é particularmente eficaz em cenas com densidade de vegetação moderada a alta quando o NDVI excede 0,6. O NDVI tende a se estabilizar quando a fração de vegetação e o índice de área foliar (IAF) aumentam, enquanto o WDRVI é mais sensível a uma gama mais ampla de frações de vegetação e as alterações no IAF.
+Este índice é semelhante ao NDVI, mas utiliza um coeficiente de ponderação (_a_) para reduzir a disparidade entre as contribuições dos sinais infravermelhos próximos e vermelhos para o NDVI. O WDRVI é particularmente eficaz em cenas com densidade de vegetação moderada a alta quando o NDVI excede 0,6. O NDVI tende a se estabilizar quando a fração de vegetação e o índice de área foliar (IAF) aumentam, enquanto o WDRVI é mais sensível a uma gama mais ampla de frações de vegetação e as alterações no IAF.
 
 $$
 WDRVI = {(\alpha * NIR- Vermelho) \over (\alpha * NIR + Vermelho)}

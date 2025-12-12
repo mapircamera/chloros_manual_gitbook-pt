@@ -7,7 +7,7 @@
 * [API: Python SDK](api-python-sdk.md)
 * [Câmeras suportadas](supported-cameras.md)
 * [Formatos de imagem de saída](output-image-formats.md)
-* [Chloros+ Login](cloros+-login.md)
+* [Login do Cloros+](cloros+-login.md)
 * [Alvos de detecção](calibration-targets.md)
 * [Idiomas suportados](idiomas suportados.md)
 * [Baixar](download.md)
@@ -31,4 +31,4 @@
 
 * [Abrindo uma imagem em tela cheia](image-viewer-gui/page-3.md)
 * [Camadas de imagem](image-viewer-gui/image-layers.md)
-* [Index/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Sandbox de índice/LUT](image-viewer-gui/index-lut-sandbox.md)

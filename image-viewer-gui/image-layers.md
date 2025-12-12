@@ -4,11 +4,11 @@ O menu suspenso Camadas de imagem no Visualizador de imagens do Chloros permite 
 
 ## O que são camadas de imagem?
 
-No Chloros, **camadas** consulte-se às diferentes saídas de imagem disponíveis para uma única imagem de origem. Ao processar imagens, o Chloros cria múltiplas versões:
+No Chloros, **camadas** consulte as diferentes saídas de imagem disponíveis para uma única imagem de origem. Ao processar imagens, o Chloros cria múltiplas versões:
 
 * **Imagens originais** (arquivos JPG e RAW da sua câmera)
 * **Refletância calibrada** saídas (se a concentração de refletância estiver habilitada)
-* **Imagens alvo** (se a imagem contém alvos específicos)
+* **Imagens alvo** (veja a imagem contém alvos específicos)
 * **Imagens de índice** (NDVI, NDRE, GNDVI, etc. se os índices foram configurados)
 
 O **menu suspenso Seletor de camada** no canto superior direito do Visualizador de imagens permite alternar instantes entre essas versões sem sair do visualizador.
@@ -52,7 +52,7 @@ O **menu suspenso Seletor de camada** no canto superior direito do Visualizador 
 
 * Confirmando que os alvos encontrados foram detectados corretamente
 * Verificando a qualidade da imagem alvo
-* Solução de problemas de deficiência
+* Solução para problemas de deficiência
 
 {% dica estilo = "info" %}
 **Camada de destino**: esta camada só aparece no menu suspenso para imagens que contêm alvos de ocorrência. Imagens de captura regulares não terão essa opção.
@@ -62,10 +62,10 @@ O **menu suspenso Seletor de camada** no canto superior direito do Visualizador 
 
 * A imagem de saída de refletância calibrada
 * Vinheta corrigida (se habilitada no processamento)
-* Refletância calibrada usando dados do alvo (se habilitada)
+* Refletância calibrada usando dados do alvo (habilitada)
 * TIFF multibanda com todos os canais de câmera
 * Os valores de pixel representam a refletância percentual (ao usar o modo percentual)
-* Pronto para manipular com o [Index/LUT Sandbox](index-lut-sandbox.md)
+* Pronto para manipular com o [Sandbox de índice/LUT](index-lut-sandbox.md)
 
 **Quando visualizar:**
 
@@ -75,7 +75,7 @@ O **menu suspenso Seletor de camada** no canto superior direito do Visualizador 
 * Comparando com o original para ver os efeitos de encontrar
 
 {% dica estilo = "sucesso" %}
-**Recomendado**: Utilize a camada RAW (Refletância) para verificar valores de pixels para análise científica e análise científica.
+**Recomendado**: Utilize uma camada RAW (Refletância) para verificar valores de pixels para análise científica e análise científica.
 {% endhint %}
 
 ### RAW (Índice NDVI)... e similares
@@ -119,7 +119,7 @@ O **menu suspenso Seletor de camada** no canto superior direito do Visualizador 
 1. Clique no menu suspenso da camada para abrir a lista
 2. Todas as camadas disponíveis para a imagem atual são mostradas
 3. Clique em qualquer nome de camada para mudar para essa versão
-4. A imagem é atualizada imediatamente para exibir a camada selecionada
+4. A imagem é atualizada imediatamente para exibir a camada removida
 
 **Troca rápida:**
 
@@ -137,8 +137,8 @@ Nem todas as camadas estão disponíveis para todas as imagens:
 
 **Disponível condicionalmente:**
 
-* ⚠️ RAW (Original) - Somente a imagem foi capturada no modo RAW ou RAW+JPG
-* ⚠️ RAW (Alvo) - Somente a imagem contém alvos de descobertas detectadas
+* ⚠️ RAW (Original) - Apenas a imagem foi capturada no modo RAW ou RAW+JPG
+* ⚠️ RAW (Alvo) - Apenas a imagem contém alvos de descobertas descobertas
 * ⚠️ RAW (Refletância) - Somente após processamento com ocorrência de refletância habilitada
 * ⚠️ RAW (\[Índice] Índice) - Somente após processamento com índices configurados
 
@@ -195,7 +195,7 @@ Ao navegar para uma imagem diferente (usando as teclas de seta ou clicando nas m
 
 1. Navegue até uma imagem de destino
 2. Selecione **RAW (destino)** no menu suspenso
-3. Verifique se os alvos de suspeita estão claramente visíveis e detectados
+3. Verifique se os alvos de suspeitas estão claramente visíveis e detectados
 4. Navegue para a próxima imagem de destino
 5. Repita a verificação para todos os alvos
 
@@ -338,7 +338,7 @@ Para testar e visualizar o índice interativo:
 * **Mapeamento de cores LUT**: aplique gradientes de cores a índices de escala de cinza
 * **Exportar visualizações**: salve imagens de índice colorido
 
-Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter detalhes.
+Consulte [Sandbox de índice/LUT](index-lut-sandbox.md) para obter detalhes.
 
 ***
 
@@ -347,6 +347,6 @@ Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter detalhes.
 Agora que você entende as camadas da imagem:
 
 * [**Abrindo uma imagem em tela inteira**](page-3.md) - Guia completo do visualizador de imagens
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Visualização interativa do índice
+* [**Sandbox de índice/LUT**](index-lut-sandbox.md) - Visualização interativa do índice
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência de índices disponíveis
 * [**Finalizando o processamento**](../processing-images-gui/finishing-the-processing.md) - Compreendendo as saídas processadas

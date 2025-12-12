@@ -1,6 +1,6 @@
 # Sandbox de índice/LUT
 
-O Index/LUT Sandbox é um espaço de trabalho interativo dentro do Chloros Image Viewer que permite experimentar cálculos de índice multiespectral e visualizações de núcleos em tempo real. Essa ferramenta poderosa ajuda você a testar diferentes índices, refinar interrupções de valores e criar visualizações prontas para publicação sem reprocessar todo o conjunto de dados.
+O Index/LUT Sandbox é um espaço de trabalho interativo dentro do Chloros Image Viewer que permite experimentar cálculos de índice multiespectral e visualizações de núcleos em tempo real. Essa ferramenta poderosa ajuda você a testar diferentes índices, refinar valores intermitentes e criar visualizações prontas para publicação sem reprocessar todo o conjunto de dados.
 
 ## O que é o índice/LUT Sandbox?
 
@@ -51,24 +51,24 @@ A caixa de areia permite que você:
 
 ### Abrindo a caixa de areia
 
-The Index/LUT Sandbox is accessed in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar tab:
+O Index/LUT Sandbox é acessado no **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar tab:
 
-1. Clique em uma imagem na categoria de imagens do navegador de arquivos. Ela será aberta na guia **Visualizador de imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
-2. Clique na guia **Visualizador de imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para abrir a barra lateral pop-out esquerda, caso ainda não esteja aberto
+1. Clique em uma imagem na categoria de imagens do navegador de arquivos. Ela será aberta na guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
+2. Clique na guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para abrir a barra lateral pop-out esquerda, caso ainda não esteja aberto
 
 ### Selecionando uma imagem para aplicar um índice/LUT
 
-To work with an index in the Image Viewer <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sandbox:
+Para trabalhar com um índice no Image Viewer<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sandbox:
 
 1. **Abra uma imagem** na nota de imagens principal clicando nela
-2. O guia **Visualizador de imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> será aberto
+2. O guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> será aberto
 3. Clique no **menu suspenso Camada** (canto superior direito do visualizador)
 4. Selecione a camada no menu suspenso:
    * RAW (Refletância)
 
 ### Aplicando um índice a uma imagem
 
-Once the image is fullscreen and the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar is open:
+Assim que a imagem estiver em tela cheia e o **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar is open:
 
 1. Marque a caixa Índice na parte superior da barra lateral
 2. Escolha o filtro da sua câmera no menu suspenso à esquerda
@@ -123,11 +123,11 @@ Uma **Tabela de consulta (LUT)** mapa de valores de índice numérico em núcleo
 
 Depois de ter uma imagem de índice
 
-1. Clique no botão <img src="../.gitbook/assets/image.png" alt="" data-size="line"> "+Adicionar LUT"
+1. Clique no botão<img src="../.gitbook/assets/image.png" alt="" data-size="line"> "+Adicionar LUT"
 2. Selecione o gradiente de cor
 3. Ajuste dos pontos finais mínimo/máximo de recorte
 4. Ajuste o modo de recorte
-5. Marque a caixa Índice na barra lateral da guia **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para aplicar uma LUT
+5. Marque a caixa Índice na barra lateral da guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para aplicar uma LUT
 
 ### Escolhendo um gradiente de cor
 
@@ -179,7 +179,7 @@ Os **controles de intervalo de valores** determinam quais valores de índice sã
 **Controles de alcance no painel LUT:**
 
 * **Valor mínimo**: Limite inferior da escala de núcleos
-* **Valor máximo**: Limite superior da escala de núcleos
+* **Valor* máximo*: Limite superior da escala de núcleos
 * **Valores intermediários**: distribuídos automaticamente entre mínimo e máximo (com base na contagem de turmas)
 
 #### Ajustando Valores Mín/Máx.
@@ -188,9 +188,9 @@ Os **controles de intervalo de valores** determinam quais valores de índice sã
 
 1. No painel LUT, localize os campos de entrada **Min Value** e **Max Value**
 2. Clique no campo **Valor mínimo**
-3. Type the desired minimum value (e.g., `0.2`)
+3. Digite o valor mínimo desejado (por exemplo,`0.2`)
 4. Pressione **Enter** ou clique fora do campo
-5. Repeat for **Max Value** field (e.g., `0.9`)
+5. Repita para o campo **Valor máximo** (por exemplo,`0.9`)
 6. A visualização **atualiza imediatamente**
 
 {% dica estilo = "info" %}
@@ -199,10 +199,10 @@ Os **controles de intervalo de valores** determinam quais valores de índice sã
 
 **Exemplos de ajustes de faixa de NDVI:**
 
-* **Full range**: `-1.0` to `1.0` (show all possible values)
-* **Vegetation-focused**: `0.2` to `0.9` (exclude bare soil and water)
-* **Healthy vegetation only**: `0.5` to `0.9` (highlight only vigorous plants)
-* **Stress detection**: `0.2` to `0.5` (emphasize problem areas)
+* **Gama completa**:`-1.0` to `1.0`(mostrar todos os valores possíveis)
+* **Foco na vegetação**:`0.2` to `0.9`(excluir solo descoberto e água)
+* **Apenas vegetação saudável**:`0.5` to `0.9`(destaque apenas plantas vigorosas)
+* **Detecção de estresse**:`0.2` to `0.5`(enfatize as áreas problemáticas)
 * **Intervalo personalizado**: ajuste com base nos valores de pixels coletados
 
 **Por que ajustar os intervalos?**
@@ -238,7 +238,7 @@ Quando os valores de pixel estão fora do intervalo mínimo/máximo definido, vo
 
 #### 3. Histórico do índice
 
-* Pixels **fora do intervalo** são dispostos em **tons de cinza** (mostrando valores de índice bruto)
+* Pixels **fora do intervalo** são baratos em **tons de cinza** (mostrando valores de índice bruto)
 * Pixels **dentro do intervalo** mostram **gradiente de cor**
 * **Caso de uso**: Destaque sutil, mantenha o contexto enquanto enfatiza áreas de interesse
 * **Exemplo**: Vegetação estressada com destaque colorido (NDVI 0,3-0,5) enquanto mostra áreas altas em cinza
@@ -272,7 +272,7 @@ Para ter controle total sobre sua visualização, você pode criar **gradientes 
 5. Escolha uma nova cor usando:
    * **Roda de núcleos**: seleção visual de núcleos
    * **Controles deslizantes RGB/HSV**: controle preciso de núcleos
-   * **Hex code entry**: Exact color specification (e.g., `#FF0000` for red)
+   * **Entrada de código hexadecimal**: Especificação exata da cor (por exemplo,`#FF0000`para vermelho)
 6. Clique fora do seletor de cores **para aplicar a nova cor**
 7. O **atualiza imediatamente** na imagem
 
@@ -299,12 +299,12 @@ Para ter controle total sobre sua visualização, você pode criar **gradientes 
 
 ### Atualizações em tempo real
 
-Todas as configurações de LUT no sandbox atualizam a imagem ** instantânea e interativamente**:
+Todas as configurações de LUT no sandbox atualizam a imagem **intencionalmente e interativamente**:
 
 * **Alterar camada** → A imagem muda imediatamente
 * **Seleção gradiente** → As cores são atualizadas instantaneamente
 * **Ajuste a faixa de valores** → Mudanças de contraste em tempo real
-* **Alterar classes** → A especialização do gradiente é atualizada imediatamente
+* **Alterar aulas** → A especialização do gradiente é atualizada imediatamente
 * **Modificar recorte** → A exibição do plano de fundo muda instantaneamente
 * **Editar núcleos** → O gradiente personalizado é aplicado imediatamente
 
@@ -351,7 +351,7 @@ Depois de executar os valores de pixel, ajuste seu LUT mínimo/máximo de acordo
 
 * **Observação**: Valores do solo = 0,05-0,25, Estressado = 0,25-0,50, Saudável = 0,50-0,85
 * **Objetivo**: visualizar apenas a saúde das plantas (excluindo apenas)
-* **LUT settings**: Min = `0.25`, Max = `0.85`
+* **Configurações LUT**: Mín =`0.25`, Máx =`0.85`
 * **Recorte**: "Fundo original" para ver o solo na cor natural
 * **Resultado**: O gradiente de cor se aplica apenas à vegetação, o solo é exibido como imagem original
 
@@ -375,10 +375,10 @@ Depois de executar os valores de pixel, ajuste seu LUT mínimo/máximo de acordo
 2. Navegue até a lista suspensa **Fórmula do índice**
 3. Adquira a opção **"Custom"** (deve estar logado com licença Chloros+)
 4. **Definir sua fórmula** usando variáveis ​​de banda:
-   * Band names: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
-   * Operators: `+`, `-`, `*`, `/`, `^` (exponent)
-   * Functions: `sqrt()`, `abs()`, etc. (if supported)
-   * Parentheses: `()` for order of operations
+   * Nomes de bandas:`NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
+   * Operadores:`+`, `-`, `*`, `/`, `^`(expoente)
+   * Funções:`sqrt()`, `abs()`, etc. (se compatível)
+   *Parênteses:`()`para ordem de operações
 5. **Nomeie seu índice** (por exemplo, "MyIndex" ou "CustomNDVI")
 6. **Salve uma configuração**
 
@@ -399,7 +399,7 @@ Exponential index:
 ```
 
 {% dica estilo = "aviso" %}
-**Validação de fórmula**: comprova-se que sua fórmula usa faixas disponíveis em sua câmera. Por exemplo, RedEdge está disponível apenas em câmeras com filtro RedEdge.
+**Validação de fórmula**: comprove-se que sua fórmula usa faixas disponíveis em sua câmera. Por exemplo, RedEdge está disponível apenas em câmeras com filtro RedEdge.
 {% endhint %}
 
 ***
@@ -414,6 +414,6 @@ Agora que você entende o Sandbox Index/LUT:
 
 Documentação relacionada:
 
-* [**Image Layers**](image-layers.md) - Gerenciamento e visualização de camadas
+* [**Camadas de imagem**](image-layers.md) - Gerenciamento e visualização de camadas
 * [**Abrindo uma imagem em tela cheia**](page-3.md) - Noções básicas do visualizador de imagens
 * [**Processamento de imagens (GUI)**](../processing-images-gui/page-1.md) - Fluxo de trabalho de processamento completo

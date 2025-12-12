@@ -2,7 +2,7 @@
 
 ## Login de Cloros e Cloros (navegador)
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+O usuário<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
 
 Quando logado, os detalhes da sua conta serão mostrados:
 
@@ -25,7 +25,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
 {% dica estilo = "aviso" %}
-**Caracteres especiais**: use aspas simples em senhas que contenham caracteres como `$`, `!` ou espaços.
+**Caracteres especiais**: use aspas simples em senhas que contenham caracteres como`$`, `!`ou espaços.
 {% endhint %}
 
 **Saída:**

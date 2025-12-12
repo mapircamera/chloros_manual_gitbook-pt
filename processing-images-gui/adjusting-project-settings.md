@@ -1,11 +1,11 @@
 # Ajustando as configurações do projeto
 
-Before processing your images, it's important to configure your project settings to match your workflow requirements. The Project Settings <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> panel provides comprehensive control over calibration, processing options, multispectral indices, and export formats.
+Antes de processar suas imagens, é importante definir as configurações do projeto para atender aos requisitos do seu fluxo de trabalho. As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> panel provides comprehensive control over calibration, processing options, multispectral indices, and export formats.
 
 ## Acessando as configurações do projeto
 
 1. Abra seu projeto no Chloros
-2. Clique no ícone **Configurações do projeto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique no ícone **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
 3. O painel Configurações do projeto exibe todas as opções de configuração
 
 {% dica estilo = "info" %}
@@ -135,12 +135,12 @@ Ao criar um novo projeto:
 
 A configuração **"Salvar pasta do projeto"** especifica onde novos projetos são criados por padrão:
 
-* **Default location**: `C:\Users\[Username]\Chloros Projects`
+* **Local padrão**:`C:\Users\[Username]\Chloros Projects`
 * **Alterar local**: Clique no ícone de edição e selecione uma nova pasta
 * **Quando mudar**:
   * Unidade de rede para colaboração em equipe
   * Unidade diferente com mais espaço de armazenamento
-  * Estrutura de massas organizada por ano/cliente
+  * Estrutura de massa organizada por ano/cliente
 
 ***
 
@@ -188,7 +188,7 @@ Ao processar imagens de diversas câmeras MAPIR em um projeto:
 
 **Exemplo**: equipamento de câmera dupla Survey3W RGN + Survey3N OCN
 
-### Pesquisas de lapso de tempo ou de múltiplos dados
+### Pesquisas de lapso de tempo ou de dados múltiplos
 
 Para levantamentos repetidos da mesma área ao longo do tempo:
 
@@ -219,7 +219,7 @@ Antes de iniciar o processamento, revise estas configurações principais:
 * [] Pelo menos uma imagem de alvo de encontro importada
 * [] Índices multiespectrais desejados ampliados
 * [] Formato de exportação protegido para seu fluxo de trabalho
-* [] Configurações de PPK ajustados (se estiver usando .daq com eventos de exposição)
+* [] Configurações de PPK ajustadas (se estiver usando .daq com eventos de exposição)
 
 ***
 

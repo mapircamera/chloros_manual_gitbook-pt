@@ -17,7 +17,7 @@ Quando o processamento para terminar com êxito, você verá vários indicadores
 
 ### Abrindo a pasta de saída
 
-1. Clique no ícone **Menu Principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
+1. Clique no ícone **Menu Principal**<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
 2. Selecione **"Abrir pasta do projeto"**
 3. Seu explorador de arquivos abre no diretório do projeto
 4. Localize seu projeto pelo nome
@@ -51,8 +51,8 @@ Use o Visualizador de imagens integrado do Chloros para visualização avançada
 
 1. Clique em uma miniatura de imagem no navegador de arquivos
 2. A imagem é aberta na área de visualização principal
-3. Clique no **Visualizador de imagens** guia <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
+3. Clique no guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+4. Use [Sandbox de índice/LUT](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
 
 Consulte [Visualizador de imagens](../image-viewer-gui/page-3.md) para obter instruções detalhadas.
 
@@ -62,7 +62,7 @@ Consulte [Visualizador de imagens](../image-viewer-gui/page-3.md) para obter ins
 
 ### Verifique se há avisos ou erros
 
-1. Abra **Log de depuração** guia <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
+1. Abra **Log de depuração** guia<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
 2. Percorrer as mensagens
 3. Adquira avisos amarelos ou erros vermelhos
 4. Revise quaisquer problemas observados
@@ -108,7 +108,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 **Soluções:**
 
 1. Verifique se a correção da vinheta foi habilitada nas configurações do projeto
-2. Verifique o modelo da câmera detectada corretamente
+2. Verifique o modelo da câmera com defeito
 3. Entre em contato com o suporte do MAPIR se a vinheta persistir
 
 ### Problema: núcleos ou valores incorretos
@@ -116,7 +116,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 **Causas possíveis:**
 
 * Nenhum alvo de detecção detectado
-* Modelo de destino de escolha escolhido
+* Modelo de destino de escolha escolhida
 * Calibração de refletância desativada
 * Imagens alvo de baixa qualidade
 
@@ -136,7 +136,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 * **Vegetação moderada**: 0,4 a 0,6
 * **Vegetação densa e saudável**: 0,6 a 0,9
 
-**Se os valores estiverem fora desses momentos:**
+**Se os valores estiverem nesses momentos:**
 
 1. Verifique se a concentração de refletância foi aplicada
 2. Verifique se o registro do sensor de luz foi incluído
@@ -177,7 +177,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 **Fluxo de trabalho recomendado:**
 
 1. **Usar imagens de índice com núcleos LUT** para relatórios visuais
-2. **Estatísticas de degradação**: NDVI médio por talhão/parcela
+2. **Estatísticas de manipulação**: NDVI médio por talhão/parcela
 3. **Série temporal**: compare índices em várias sessões
 4. **Gere relatórios**: incluindo mapas, estatísticas e visualizações
 
@@ -189,7 +189,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 
 **O que salvar:**
 
-* ✅ **Imagens RAW/JPG originais** - Arquivar em unidade/nuvem separadas
+* ✅ **Imagens RAW/JPG exclusivas** - Arquivar em unidade/nuvem separada
 * ✅ **Saídas processadas** - Mantenha imagens e índices calibrados
 * ✅ **Arquivo de projeto** - Contém todas as configurações para reprocessamento, se necessário
 * ✅ **Log de depuração** - Detalhes de processamento de documentos
@@ -234,7 +234,7 @@ Para várias sessões/conjuntos de dados:
 
 * Controle programático
 * Integração com pipelines de análise
-* Consulte [documentação da API](../api-python-sdk.md)
+* Consulte [documentos da API](../api-python-sdk.md)
 
 ***
 
@@ -244,7 +244,7 @@ Para várias sessões/conjuntos de dados:
 
 Se os resultados não forem esmagadores:
 
-1. Manter as imagens originais (nunca excluída)
+1. Manter as imagens originais (nunca restauração)
 2. Abra o mesmo projeto no Chloros
 3. Ajustar as configurações no painel Configurações do projeto
 4. Processo novamente - as saídas substituirão os resultados anteriores
@@ -265,7 +265,7 @@ Se você encontrar problemas:
 * 📧 **E-mail**: info@mapir.camera (inclui registro de depuração)
 * 🌐 **Suporte**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **FAQ**: [Perguntas frequentes](../faq.md)
-* 📖 **Documentação**: [Manual Cloros](../)
+* 📖 **Documentação**: [Cloros manuais](../)
 
 ***
 
@@ -289,18 +289,18 @@ Agora você concluiu todo o fluxo de trabalho de processamento do Cloros:
 
 ### Recursos avançados
 
-* [**Image Viewer**](../image-viewer-gui/page-3.md) - Visualização e análise interativa
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Teste de índice personalizado
+* [**Visualizador de imagens**](../image-viewer-gui/page-3.md) - Visualização e análise interativa
+* [**Sandbox de índice/LUT**](../image-viewer-gui/index-lut-sandbox.md) - Teste de índice personalizado
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência completa do índice
 
 ### Automação e Integração
 
 * [**Documentação CLI**](../CLI.md) - Processamento em lote de linha de comando
-* [**Python SDK**](../api-python-sdk.md) - Automação programática
+* [**SDK para Python**](../api-python-sdk.md) - Automação programática
 * [**Recursos do Cloros+**](../#cloros) - Recursos avançados de processamento
 
 ### Suporte e Aprendizagem
 
-* [**FAQ**](../faq.md) - Perguntas comuns respondidas
+* [**PERGUNTAS FREQUENTES**](../faq.md) - Perguntas comuns respondidas
 * [**Alvos de experiência**](../calibration-targets.md) - Noções básicas sobre rotina de refletância
 * [**Câmeras suportadas**](../supported-cameras.md) - Hardware compatível

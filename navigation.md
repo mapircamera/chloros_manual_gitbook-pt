@@ -1,6 +1,6 @@
 # GUI: Navegação
 
-When you first launch Chloros and Chloros (Browser) it will start up its backend. Once it is ready the top left main menu icon will be revealed <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Quando você inicia o Chloros e o Chloros (navegador), ele inicia seu backend. Quando estiver pronto, o ícone do menu principal no canto superior esquerdo será revelado<img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
 
 <figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 

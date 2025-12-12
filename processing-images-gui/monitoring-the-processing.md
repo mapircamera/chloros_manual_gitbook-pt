@@ -112,7 +112,7 @@ Para usuários com licença Cloros+:
 
 * **Modo livre**: processa uma imagem por vez sequencialmente
 * **Modo Cloros+**: Processo até 16 imagens simultaneamente
-* **Aceleração de GPU**: aceleração significativamente esse estágio
+* **Aceleração de GPU**: Aceleração significativamente esse estágio
 
 **O que observar:**
 
@@ -151,7 +151,7 @@ O log de detalhamento fornece informações planejadas sobre o andamento do proc
 
 ### Acessando o log de depuração
 
-1. Clique no ícone **Log de depuração** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> na barra lateral esquerda
+1. Clique no ícone **Log de depuração**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> na barra lateral esquerda
 2. O painel de registro é aberto mostrando mensagens de processamento em tempo real
 3. Rola automaticamente para mostrar as mensagens mais recentes
 
@@ -197,7 +197,7 @@ Problemas críticos que podem causar falha no processamento:
 
 | Mensagem | Significado | Ação necessária |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Alvo detectado em \[nome do arquivo]" | Alvo de calibração encontrado com sucesso | Nenhum - normal |
+| "Alvo detectado em \[nome do arquivo]" | Alvo de encontrado com sucesso | Nenhum - normal |
 | "Processando imagem X de Y" | Atualização do progresso atual | Nenhum - normal |
 | "Nenhum alvo encontrado" | Não foram detectados alvos de descoberta | Marcar imagens alvo ou desativar a refletância |
 | “Espaço em disco insuficiente” | Armazenamento insuficiente para saída | Espaço livre em discoteca |
@@ -250,7 +250,7 @@ Para copiar o log para solução de problemas ou suporte:
 
 * Processar lotes menores
 * Buscar outros aplicativos
-* Atualizar a RAM para processar regularmente grandes conjuntos de dados
+* Atualizar a RAM para registrar regularmente grandes conjuntos de dados
 
 ### Uso de GPU (Chloros+ com CUDA)
 
@@ -278,7 +278,7 @@ Quando a aceleração da GPU está habilitada:
 
 * Use SSD para pasta do projeto quando possível
 * Evite unidades de rede para grandes conjuntos de dados
-* -se de que o disco não esteja próximo da capacidade máxima (afeta a velocidade de gravação)
+* -se de que o disco não está próximo da capacidade máxima (afeta a velocidade de gravação)
 
 ***
 
@@ -346,7 +346,7 @@ Pare o processamento se você vir:
 
 1. Espaço livre na discoteca imediatamente
 2. Mova o projeto para dirigir com mais espaço
-3. Reduzir o número de índices para exportar
+3. Redusar o número de índices para exportar
 4. Use o formato JPG em vez de TIFF (arquivos menores)
 
 ### Mensagens de “arquivo danificado”
@@ -389,4 +389,4 @@ Assim que o processamento para conclusão:
 3. **Revisar o registro de depuração** - Verifique se há avisos ou erros
 4. **Visualizar imagens processadas** - Utilize o Image Viewer ou software externo
 
-Para obter informações sobre como revisar e usar os resultados processados, consulte [Finishing the Processing](finishing-the-processing.md).
+Para obter informações sobre como revisar e usar os resultados processados, consulte [Finalizando o Processamento](finishing-the-processing.md).

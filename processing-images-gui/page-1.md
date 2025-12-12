@@ -1,11 +1,11 @@
 # Adicionando arquivos a um projeto
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Depois de criar ou abrir um projeto no Chloros, o próximo passo é adicionar suas imagens multiespectrais para iniciar o processamento. O navegador de arquivos<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
 
 ## Acessando o navegador de arquivos
 
 1. Abra ou chore um projeto no Chloros
-2. Clique no ícone **Navegador de arquivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique no ícone **Navegador de arquivos**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> na barra lateral esquerda
 3. O painel Navegador de Arquivos exibirá uma lista de arquivos do seu projeto
 
 {% dica estilo = "info" %}
@@ -54,7 +54,7 @@ Depois que as imagens são importadas, elas aparecem em uma tabela com as seguin
 ### Carimbo de dados e hora
 
 * Data e hora em que a imagem foi capturada
-* Extraído dos metadados EXIF ​​​​da imagem
+* Extraído dos metadados EXIF​​da imagem
 * Usado para sincronização PPK e detecção de alvo de falha
 
 ### Modelo de câmera
@@ -114,7 +114,7 @@ O Chloros detecta e ignora automaticamente arquivos duplicados:
 
 * Arquivos com nomes idênticos são ignorados
 * Evita o processamento duplo acidental
-* Mensagem de aviso exibida quando duplicatas são bloqueadas
+* Mensagem de aviso exibida quando duplicatas estão bloqueadas
 
 {% dica estilo = "aviso" %}
 **Importante**: Não renomeie ou modifique seus arquivos de imagem originais antes de importar. O Chloros depende de nomes de arquivos e metadados originais para o processamento adequado.
@@ -139,7 +139,7 @@ Se o seu projeto contém imagens de múltiplas câmeras MAPIR:
 
 ### Organize antes de importar
 
-* Mantenha as imagens do alvo de encontro na mesma pasta das imagens do levantamento
+* Manter as imagens do alvo de encontro na mesma pasta das imagens do levantamento
 * Mantenha a estrutura de pastas original da sua câmera/cartão SD
 * Não misture conjuntos de dados de sessões diferentes em um projeto
 
@@ -174,7 +174,7 @@ Se o seu projeto contém imagens de múltiplas câmeras MAPIR:
 
 **Causas possíveis:**
 
-* Metadados EXIF ​​​​modificados
+* Metadados EXIF​​modificados
 * Imagens editadas em software externo
 * Transferência de arquivo incompleta
 

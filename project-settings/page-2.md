@@ -1,13 +1,13 @@
 # Configurações do projeto
 
-The Project Settings <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> sidebar in Chloros allows you to configure all aspects of image processing, calibration target detection, multispectral index calculations, and export options for your project. These settings are saved with your project and can be saved as templates for reuse across multiple projects.
+As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> sidebar in Chloros allows you to configure all aspects of image processing, calibration target detection, multispectral index calculations, and export options for your project. These settings are saved with your project and can be saved as templates for reuse across multiple projects.
 
 ## Acessando as configurações do projeto
 
 Para acessar as configurações do projeto:
 
 1. Abra um projeto no Chloros
-2. Clique na guia **Configurações do projeto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique na guia **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
 3. O painel de configurações exibirá todas as opções de configuração disponíveis organizadas por categoria
 
 ***
@@ -21,9 +21,9 @@ Essas configurações são controladas como o Cloros detecta e processa alvos de
 * **Tipo**: Número
 * **Intervalo**: 0 a 10.000 pixels
 * **Padrão**: 25 pixels
-* **Descrição**: Defina a área mínima (em pixels) necessária para que uma região bloqueada seja considerada uma amostra de alvo de deficiência válida. Valores menores detectarão alvos menores, mas poderão aumentar os falsos positivos. Valores maiores exigem regiões alvo maiores e mais claras para detecção.
+* **Descrição**: Defina a área mínima (em pixels) necessária para que uma região bloqueada seja considerada uma amostra de alvo de deficiência válida. Valores menores detectarão alvos menores, mas poderão aumentar os falsos positivos. Valores maiores regiões excluídas alvo maiores e mais claros para detecção.
 * **Quando ajustar**:
-  * Aumente se você estiver obtendo detecções falsas em pequenos artistas de imagem
+  * Aumente se você estiver encontrando detecções falsas em pequenos artistas de imagem
   * Diminua se seus alvos sofisticados parecem pequenos em suas imagens e não estão sendo detectados
 
 ### Clustering de destino mínimo (0-100)
@@ -31,9 +31,9 @@ Essas configurações são controladas como o Cloros detecta e processa alvos de
 * **Tipo**: Número
 * **Intervalo**: 0 a 100
 * **Padrão**: 60
-* **Descrição**: Controle o limite de agrupamento para grupos de regiões específicas semelhantes para detectar alvos específicos. Valores mais altos excluem que núcleos mais semelhantes sejam agrupados, resultando em uma detecção de alvo mais conservadora. Valores mais baixos permitem mais variação de núcleos dentro de um grupo-alvo.
+* **Descrição**: Controle o limite de agrupamento para grupos de regiões específicas para detecção de alvos específicos. Valores mais altos excluem que núcleos mais semelhantes sejam agrupados, resultando em uma detecção de alvo mais conservadora. Valores mais baixos permitem mais variação de núcleos dentro de um grupo-alvo.
 * **Quando ajustar**:
-  * Aumente se os alvos de ocorrência estiverem sendo divididos em múltiplas detecções
+  * Aumente se os alvos de ocorrência forem divididos em múltiplas detecções
   * Diminua se os alvos de atração com variação de cor não estão sendo totalmente detectados
 
 ***
@@ -46,8 +46,8 @@ Essas configurações são controladas como o Cloros processa e calibra suas ima
 
 * **Tipo**: Caixa de seleção
 * **Padrão**: Habilitado (marcado)
-* **Descrição**: Aplicação correção de vinheta para compensar o escurecimento da lente nas bordas das imagens. A vinheta é uma aparência óptica comum em que os cantos e bordas de uma imagem parecem mais escuros que o centro devido às características da lente.
-* **Quando desativar**: desative apenas se a combinação câmera/lente já tiver aplicada a correção de vinheta ou se você quiser ajustar manualmente a vinheta no pós-processamento.
+* **Descrição**: Aplicação de vinheta para compensar o escurecimento da lente nas bordas das imagens. A vinheta é uma aparência óptica comum em que os cantos e bordas de uma imagem parecem mais escuros que o centro devido às características da lente.
+* **Quando desativar**: Desative apenas se a combinação câmera/lente já tiver aplicado a correção de vinheta ou se você quiser ajustar manualmente a vinheta no pós-processamento.
 
 ### Calibração de refletância/balanço de branco
 
@@ -70,10 +70,10 @@ Essas configurações são controladas como o Cloros processa e calibra suas ima
 * **Tipo**: Número
 * **Intervalo**: 0 a 3.600 segundos
 * **Padrão**: 0 segundos
-* **Descrição**: Defina o intervalo de tempo mínimo (em segundos) entre o uso dos alvos específicos. Quando definido como 0, o Chloros usará todos os alvos descobertos. Quando definido para um valor mais alto, o Chloros usará apenas alvos de coexistência separados, pelo menos esse número de segundos, diminuindo o tempo de processamento para conjuntos de dados com capturas frequentes de alvos de encontros.
+* **Descrição**: Defina o intervalo de tempo mínimo (em segundos) entre o uso dos alvos específicos. Quando definido como 0, o Cloros usará todos os alvos descobertos. Quando definido para um valor mais alto, o Cloros usará apenas alvos de coexistência separados, pelo menos esse número de segundos, aumentando o tempo de processamento para conjuntos de dados com capturas frequentes de alvos de encontros.
 * **Quando ajustar**:
   * Defina como 0 para máxima proteção de escuridão quando as condições de iluminação variam
-  * Aumente (por exemplo, para 60-300 segundos) para um processamento mais rápido quando a iluminação for consistente e você tiver imagens alvo de ocasiões especiais
+  * Aumente (por exemplo, para 60-300 segundos) para um processamento mais rápido quando a iluminação for consistente e você tiver imagens alvo de benefícios especiais
 
 ### Deslocamento do fuso horário do sensor de luz
 
@@ -81,7 +81,7 @@ Essas configurações são controladas como o Cloros processa e calibra suas ima
 * **Intervalo**: -12 a +12 horas
 * **Padrão**: 0 horas
 * **Descrição**: especifica a posição do fuso horário (em horas a partir do UTC) para carimbos de dados/hora dos dados do sensor de luz. Isso é usado ao processar arquivos de dados PPK (Post-Processed Kinematic) para garantir a sincronização de tempo correta entre as capturas de imagem e os dados de GPS.
-* **Quando ajustar**: defina para a posição do fuso localização local se seus dados PPK usarem a hora local em vez de UTC. Por exemplo:
+* **Quando ajustar**: defina para a posição do fuso localização local se seus dados PPK usam a hora local em vez de UTC. Por exemplo:
   * Horário do Pacífico: -8 ou -7 (dependendo do horário de verão)
   * Horário do Leste: -5 ou -4 (dependendo do horário de verão)
   * Horário da Europa Central: +1 ou +2 (dependendo do horário de verão)
@@ -154,7 +154,7 @@ Essas configurações permitem configurar índices multiespectrais para análise
   2. Defina sua fórmula usando identificadores de banda (por exemplo, NIR, Vermelho, Verde, Azul)
   3. Salve a fórmula com um nome descritivo
 * **Sintaxe da fórmula**: operações matemáticas padrão são suportadas, incluindo:
-  * Arithmetic: `+`, `-`, `*`, `/`
+  * Aritmética:`+`, `-`, `*`, `/`
   * Parênteses para ordem de operações
   * Referências de banda: NIR, Vermelho, Verde, Azul, RedEdge, Ciano, Laranja, NIR1, NIR2
 
@@ -176,7 +176,7 @@ Essas configurações controlam o formato e a qualidade das imagens processadas 
 * **Descrição**: Selecionado o formato de arquivo para salvar imagens processadas e calibradas.
 * **Recomendações de formato**:
   * **TIFF (16 bits)**: Recomendado para análises científicas e fluxos de trabalho profissionais. Preservar a qualidade máxima dos dados sem artefatos de compactação. Melhor para análise multiespectral e processamento adicional em software GIS.
-  * **TIFF (32 bits, porcentagem)**: melhor para fluxos de trabalho que desative valores de refletância como porcentagens (0-100%). Oferece precisão máxima para precisão radiométrica.
+  * **TIFF (32 bits, porcentagem)**: melhor para fluxos de trabalho que desativa valores de refletância como porcentagens (0-100%). Oferece soluções máximas para precisão radiométrica.
   * **PNG (8 bits)**: Bom para visualização na Web e visualização geral. Tamanhos de arquivo menores com compactação sem perdas, mas faixa dinâmica diminuta.
   * **JPG (8 bits)**: tamanhos de arquivo menores, ideais apenas para visualizações e exibição na Web. Usa compactação com perdas que não é adequada para análise científica.
 
@@ -205,7 +205,7 @@ Este recurso permite que você salve as configurações atuais do projeto como u
 Esta configuração especifica onde os novos projetos são salvos por padrão.
 
 * **Tipo**: exibição do caminho do diretório + botão Editar
-* **Default**: `C:\Users\[Username]\Chloros Projects`
+* **Padrão**:`C:\Users\[Username]\Chloros Projects`
 * **Descrição**: Mostra o diretório padrão atual onde novos projetos do Chloros são criados. Clique no ícone de edição para selecionar um diretório diferente.
 * **Quando mudar**:
   * Defina como uma unidade de rede para colaboração em equipe
@@ -217,7 +217,7 @@ Esta configuração especifica onde os novos projetos são salvos por padrão.
 
 ## Persistência de configurações
 
-Todas as configurações do projeto são salvas automaticamente com o arquivo do projeto (formato de projeto `.mapir`). Ao reabrir um projeto, todas as configurações serão restauradas exatamente como você as deixou.
+Todas as configurações do projeto são salvas automaticamente com o arquivo do projeto (formato de projeto`.mapir`). Ao reabrir um projeto, todas as configurações serão restauradas exatamente como você deixou.
 
 ### Hierarquia de configurações
 

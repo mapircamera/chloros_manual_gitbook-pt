@@ -45,7 +45,7 @@ O Chloros suporta os seguintes idiomas:
 
 ## Como mudar o idioma
 
-### Sem desktop/navegador Chloros
+### Sem desktop/navegador Cloros
 
 1. Abra as configurações do aplicativo
 2. Navegue até o menu de seleção de idioma

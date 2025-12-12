@@ -127,7 +127,7 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 O SDK usa a mesma licença que o Cloros, o Cloros (navegador) e o Cloros CLI. Ativo uma vez por meio da GUI ou CLI:
 
-1. Abra **Cloros ou Cloros (navegador)** e faça login na guia Usuário <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">. Ou abra um **CLI**.
+1. Abra **Cloros ou Cloros (navegador)** e faça login no guia Usuário<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">. Ou abra um **CLI**.
 2. Insira suas credenciais do Chloros+ e faça login
 3. A licença é armazenada em cache localmente (persiste durante as reinicializações)
 
@@ -172,13 +172,13 @@ ChlorosLocal(
 
 **Parâmetros:**
 
-| Parâmetro | Tipo | Padrão | Descrição |
+| Parâmetro | Tipo | padrão | Descrição |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| `api_url` | | `"http://localhost:5000"` | URL do back-end local do Chloros |
-| `auto_start_backend` | bool | `Verdade` | Iniciar back-end automaticamente, se necessário |
-| `backend_exe` | | `Nenhum` (detecção automática) | Caminho para o executável de back-end |
-| `tempo limite` | interno | `30` | Tempo limite da solicitação em segundos |
-| `backend_startup_timeout` | interno | `60` | Tempo limite para inicialização do back-end (segundos) |
+| `api_url` | | `"http://localhost:5000"`| URL do back-end local do Cloros |
+| `auto_start_backend`| bool |`Verdade`| Iniciar back-end automaticamente, se necessário |
+| `backend_exe` | | `Nenhum`(detecção automática) | Caminho para o seguinte nível de back-end |
+| `tempo limite`| interno |`30`| Tempo limite da solicitação em segundos |
+| `backend_startup_timeout`| interno |`60`| Tempo limite para inicialização do back-end (segundos) |
 
 **Exemplos:**
 
@@ -208,10 +208,10 @@ Crie um novo projeto Cloros.
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | -------------- | ---- | -------- | ----------------------------------------------------------------------- |
-| `nome_do_projeto` | | Sim | Nome do projeto |
-| `câmera` | | Não | Modelo de câmera (por exemplo, "Survey3N\_RGN", "Survey3W\_OCN") |
+| `nome_do_projeto`| | Sim | Nome do projeto |
+| `câmera`| | Não | Modelo de câmera (por exemplo, "Survey3N\_RGN", "Survey3W\_OCN") |
 
-**Retorna:** `dict` - Resposta de criação do projeto
+**Retorna:**`dict`- Resposta de criação do projeto
 
 **Exemplo:**
 
@@ -233,10 +233,10 @@ Importe imagens de uma pasta.
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | ------------- | -------- | -------- | ---------------------------------- |
-| `caminho_pasta` | str/Caminho | Sim | Caminho para pasta com imagens |
-| `recursivo` | bool | Não | Pesquisar subpastas (padrão: Falso) |
+| `caminho_pasta`| str/Caminho | Sim | Caminho para pasta com imagens |
+| `recursivo`| bool | Não | Pesquisar subpastas (padrão: Falso) |
 
-**Retorna:** `dict` - Importa resultados com contagem de arquivos
+**Retorna:**`dict`- Importar resultados com contagem de arquivos
 
 **Exemplo:**
 
@@ -256,22 +256,22 @@ Defina as configurações de processamento.
 
 **Parâmetros:**
 
-| Parâmetro | Tipo | Padrão | Descrição |
+| Parâmetro | Tipo | padrão | Descrição |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer` | | "Alta qualidade (mais rápido)" | Método Debayer |
-| `vinheta_correção` | bool | `Verdade` | Ativar correção de vinheta |
-| `reflectância_calibração` | bool | `Verdade` | Ativar calibração de refletância |
-| `índices` | lista | `Nenhum` | Índices de vegetação a calcular |
-| `formato_exportação` | | "TIFF (16 bits)" | Formato de saída |
-| `ppk` | bool | `Falso` | Habilitar correções PPK |
-| `configurações_personalizadas` | ditado | `Nenhum` | Configurações personalizadas avançadas |
+| `debayer`| | "Alta qualidade (mais rápido)" | Método Debayer |
+| `vinheta_correção`| bool |`Verdade`| Ativar correção de vinheta |
+| `reflectância_calibração`| bool |`Verdade`| Ativar retenção de refletância |
+| `índices`| lista |`Nenhum`| Índices de urbanização a calcular |
+| `formato_exportação`| | "TIFF (16 bits)" | Formato de saída |
+| `ppk`| bool |`Falso`| Habilitar correções PPK |
+| `configurações_personalizadas`| ditado |`Nenhum`| Configurações personalizadas avançadas |
 
 **Formatos de exportação:**
 
-* `"TIFF (16-bit)"` - Recommended for GIS/photogrammetry
-* `"TIFF (32-bit, Percent)"` - Scientific analysis
-* `"PNG (8-bit)"` - Visual inspection
-* `"JPG (8-bit)"` - Compressed output
+* `"TIFF (16-bit)"`- Recomendado para GIS/fotogrametria
+* `"TIFF (32-bit, Percent)"`- Análise científica
+* `"PNG (8-bit)"`- Inspeção visual
+* `"JPG (8-bit)"`- Saída compactada
 
 **Índices disponíveis:**
 
@@ -306,17 +306,17 @@ Processe como imagens do projeto.
 
 **Parâmetros:**
 
-| Parâmetro | Tipo | Padrão | Descrição |
+| Parâmetro | Tipo | padrão | Descrição |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `modo` | | `"paralelo"` | Modo de processamento: “paralelo” ou “serial” |
-| `espera` | bool | `Verdade` | Aguarde a conclusão |
-| `progress_callback` | exigível | `Nenhum` | Função de retorno de chamada de progresso (progresso, mensagem) |
-| `poll_interval` | flutuar | `2.0` | Intervalo de pesquisa para progresso (segundos) |
+| `modo` | | `"paralelo"`| Modo de processamento: “paralelo” ou “serial” |
+| `espera`| bool |`Verdade`| Aguarde a conclusão |
+| `progress_callback`| exigível |`Nenhum`| Função de retorno de chamada de progresso (progresso, mensagem) |
+| `poll_interval`| flutuar |`2.0`| Intervalo de pesquisa para progresso (segundos) |
 
-**Retorna:** `dict` - Processando resultados
+**Retorna:**`dict`- Processando resultados
 
 {% dica estilo = "aviso" %}
-**Modo Paralelo**: Solicite licença Cloros+. Escala automaticamente para os núcleos da sua CPU (até 16 trabalhadores).
+**Modo Paralelo**: Solicitar licença Cloros+. Escala automaticamente para os núcleos da sua CPU (até 16 trabalhadores).
 {% endhint %}
 
 **Exemplo:**
@@ -345,7 +345,7 @@ chloros.process(wait=False)
 
 Obtenha a configuração atual do projeto.
 
-**Retorna:** `dict` - Configuração atual do projeto
+**Retorna:**`dict`- Configuração atual do projeto
 
 **Exemplo:**
 
@@ -360,7 +360,7 @@ print(config['Project Settings'])
 
 Obtenha informações de status de back-end.
 
-**Retorna:** `dict` - Status do back-end
+**Retorna:**`dict`- Status do back-end
 
 **Exemplo:**
 
@@ -392,19 +392,19 @@ Função de conveniência de uma linha para processar uma pasta.
 
 **Parâmetros:**
 
-| Parâmetro | Tipo | Padrão | Descrição |
+| Parâmetro | Tipo | padrão | Descrição |
 | ------------------------- | -------- | --------------- | ------------------------------ |
-| `caminho_pasta` | str/Caminho | Obrigatório | Caminho para pasta com imagens |
-| `nome_do_projeto` | | Gerado automaticamente | Nome do projeto |
-| `câmera` | | `Nenhum` | Modelo de câmera |
-| `índices` | lista | `["NDVI"]` | Índices a calcular |
-| `vinheta_correção` | bool | `Verdade` | Ativar correção de vinheta |
-| `reflectância_calibração` | bool | `Verdade` | Ativar calibração de refletância |
-| `formato_exportação` | | "TIFF (16 bits)" | Formato de saída |
-| `modo` | | `"paralelo"` | Modo de processamento |
-| `progress_callback` | exigível | `Nenhum` | Retorno de chamada de progresso |
+| `caminho_pasta`| str/Caminho | Obrigatório | Caminho para pasta com imagens |
+| `nome_do_projeto`| | Gerado automaticamente | Nome do projeto |
+| `câmera` | | `Nenhum`| Modelo de câmera |
+| `índices`| lista |`["NDVI"]`| Índices a calcular |
+| `vinheta_correção`| bool |`Verdade`| Ativar correção de vinheta |
+| `reflectância_calibração`| bool |`Verdade`| Ativar retenção de refletância |
+| `formato_exportação`| | "TIFF (16 bits)" | Formato de saída |
+| `modo` | | `"paralelo"`| Modo de processamento |
+| `progress_callback`| exigível |`Nenhum`| Retorno de chamada de progresso |
 
-**Retorna:** `dict` - Processando resultados
+**Retorna:**`dict`- Processando resultados
 
 **Exemplo:**
 
@@ -828,7 +828,7 @@ except ChlorosError as e:
 
 ### Configuração de back-end personalizada
 
-Use um local ou configuração de back-end personalizada:
+Utilize um local ou configuração de back-end personalizada:
 
 ```python
 chloros = ChlorosLocal(
@@ -937,7 +937,7 @@ print(f"Cache exists: {cache_path.exists()}")
 
 ### Erros de importação
 
-**Problema:** `ModuleNotFoundError: Nenhum módulo chamado 'cloros_sdk'`
+**Problema:**`ModuleNotFoundError: Nenhum módulo chamado 'cloros_sdk'`
 
 **Soluções:**
 
@@ -1139,12 +1139,12 @@ chloros.process(progress_callback=notebook_progress)
 
 ### P: Qual é a diferença entre Desktop, CLI e SDK?
 
-| Recurso | GUI de área de trabalho | Linha de comando CLI | SDK Python |
+| Recurso | GUI da área de trabalho | Linha de comando CLI | SDK Python |
 | --------------- | ----------- | ---------------- | ----------- |
 | **Interface** | Clique com o botão direito | Comando | API Python |
 | **Melhor para** | Trabalho visual | Roteiros | Integração |
-| **Automação** | Limitado | Bom | Excelente |
-| **Flexibilidade** | Básico | Bom | Máximo |
+| **Automação** | Limitado | bom | Excelente |
+| **Flexibilidade** | Básico | bom | Máximo |
 | **Licença** | Cloros+ | Cloros+ | Cloros+ |
 
 ***
@@ -1153,7 +1153,7 @@ chloros.process(progress_callback=notebook_progress)
 
 **R:** O código SDK pode ser integrado aos seus aplicativos, mas:
 
-* Os usuários finais precisam do Cloros instalado
+* Os usuários finais precisam dos Cloros instalados
 * Os usuários finais precisam de licenças ativas do Chloros+
 * A distribuição comercial requer licenciamento OEM
 
@@ -1161,7 +1161,7 @@ Entre em contato com info@mapir.camera para consultas de OEM.
 
 ***
 
-### P: Como o SDK é atualizado?
+### P: Como o SDK está atualizado?
 
 ```bash
 pip install --upgrade chloros-sdk
@@ -1199,7 +1199,7 @@ Agende via Agendador de Tarefas para execução diária.
 
 ### P: O SDK oferece suporte assíncrono/espera?
 
-**R:** A versão atual é síncrona. Para comportamento assíncrono, use `wait=False` ou execute em thread separado:
+**R:** A versão atual é sincronizada. Para comportamento assíncrono, use`wait=False`ou execute em thread separado:
 
 ```python
 import threading

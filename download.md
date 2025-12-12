@@ -14,7 +14,7 @@ Baixe a versão mais recente do Chloros para Windows para começar a processar i
 | -------------------- | ------------------------------- | ------------------------------- |
 | **Sistema operacional** | Windows 10 (64 bits) | Windows 11 (64 bits) |
 | **Processador** | Intel Core i5 ou equivalente | Intel Core i7 ou superior |
-| **Memória (RAM)** | 8 GB | 16 GB ou mais |
+| **Memória (RAM)** | 8GB | 16 GB ou mais |
 | **Placa Gráfica** | Compatível com DirectX 11 | GPU NVIDIA com 4 GB + VRAM |
 | **Armazenamento** | 2 GB de espaço livre | SSD com mais de 10 GB de espaço livre |
 | **Exibição** | 1920x1080 | 2560x1440 ou superior |
@@ -32,7 +32,7 @@ Baixe a versão mais recente do Chloros para Windows para começar a processar i
 
 ### Versão mais recente estável
 
-**Instalador do Cloros para Windows**
+**Instalador de Cloros para Windows**
 
 * **Versão**: 1.0.3
 * **Dados de lançamento**: dezembro? de 2025
@@ -41,15 +41,15 @@ Baixe a versão mais recente do Chloros para Windows para começar a processar i
 
 #### **Etapas de instalação:**
 
-1. Download the `CHLOROS INSTALLER - CURRENT VERSION.exe` file
+1. Baixe o`CHLOROS INSTALLER - CURRENT VERSION.exe`arquivo
 2. Clique duas vezes no instalador para iniciar a instalação
 3. Siga as instruções do assistente de instalação
-4. Choose installation directory (default: `C:\Program Files\Chloros\`)
+4. Escolha o diretório de instalação (padrão:`C:\Program Files\Chloros\`)
 5. Conclua a instalação e inicie o Chloros
 6. Faça login com sua conta MAPIR Cloud Chloros+ (ou continue com a versão gratuita)
 
 {% dica estilo = "sucesso" %}
-O instalador adiciona automaticamente `chloros-cli` ao PATH do seu sistema para acesso à linha de comando.
+O instalador adiciona automaticamente`chloros-cli`ao PATH do seu sistema para acesso à linha de comando.
 {% endhint %}
 
 ***
@@ -103,7 +103,7 @@ Desbloqueie recursos avançados com uma assinatura do Chloros+:
 
 **Uma falha de instalação com mensagem de erro:**
 
-* certifique-se de ter direitos de administrador
+* comprove-se de ter direitos de administrador
 * Desative temporariamente o software antivírus
 * Verifique se você atende aos requisitos mínimos do sistema
 
@@ -117,10 +117,10 @@ Desbloqueie recursos avançados com uma assinatura do Chloros+:
 
 **Problemas de ativação da licença:**
 
-* -se de que a conexão certifique-se com a Internet esteja ativa
+* -se de que a conexão segura-se com a Internet está ativa
 * Verifique as credenciais em [https://cloud.mapir.camera](https://cloud.mapir.camera)
 * Verifique se o firewall não está bloqueando o Chloros
-* Consulte [Chloros+ Login](cloros+-login.md) para obter instruções planejadas
+* Consulte [Login do Cloros+](cloros+-login.md) para obter instruções planejadas
 
 ### Obtendo suporte
 
@@ -137,7 +137,7 @@ Precisa de ajuda para instalação ou configuração?
 
 <details>
 
-<summary>Version 1.0.3</summary>
+<summary>Versão 1.0.3</summary>
 
 ### **Dados de lançamento**: dezembro? de 2025
 

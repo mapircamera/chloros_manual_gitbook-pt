@@ -14,7 +14,7 @@ Sem marcar as imagens alvo, o Cloros deve:
 
 **Resultado**: o processamento pode demorar significativamente mais, especialmente para grandes conjuntos de dados.
 
-### Com imagens alvo marcado
+### Com imagens alvo marcadas
 
 Ao verificar a coluna Destino para imagens específicas:
 
@@ -109,7 +109,7 @@ Se você estiver usando duas câmeras MAPIR simultaneamente (por exemplo, Survey
 1. Capture imagens alvo com **ambas as câmeras** ao mesmo tempo
 2. Use o **mesmo alvo físico** para ambas as câmeras
 3. Marque imagens de destino para **ambos os tipos de câmera** no Navegador de arquivos
-4. O cloro usará alvos protetores para a segurança de cada câmera
+4. O cloro usará protetores para a segurança de cada câmera
 
 ### Coluna Modelo de Câmera
 
@@ -139,7 +139,7 @@ Se o Chloros não estiver detectando seus alvos corretamente, ajuste essas confi
 **Clustering de destino mínimo:**
 
 * **Padrão**: 60
-* **Aumente** se os alvos estivessem sendo divididos em múltiplas detecções
+* **Aumente** se os alvos estão sendo divididos em múltiplas detecções
 * **Diminua** se os alvos com variação de cor não foram totalmente detectados
 
 ***
@@ -173,7 +173,7 @@ Se o Chloros não estiver detectando seus alvos corretamente, ajuste essas confi
 **Soluções:**
 
 1. Marque apenas imagens de destino reais para limitar o escopo da detecção
-2. Aumentar a área mínima de amostra encontrada
+2. Aumentar a área mínima da amostra encontrada
 3. Aumentar o valor mínimo de clustering de destino
 4. -se de que as imagens de destino mostram apenas o alvo (mínima confusão de fundo)
 
@@ -218,4 +218,4 @@ Depois de marcar suas imagens de destino:
 2. **Iniciar processamento** - Consulte [Iniciando o processamento](starting-the-processing.md)
 3. **Monitore o progresso** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
 
-Para obter mais informações sobre os próprios alvos de calibração, consulte [Alvos de calibração](../calibration-targets.md).
+Para obter mais informações sobre os próprios alvos de calibração, consulte [Alvos de confiança](../calibration-targets.md).

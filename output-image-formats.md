@@ -21,4 +21,3 @@ Saída em formato JPG (.jpg) de 8 bits (número digital de pixel 0 -255).
 ### **PNG (8 bits)**
 
 Saída em formato PNG (.png) de 8 bits (número digital de pixel 0 - 255). Compressão sem perdas adequada para visualização e visualização na web.
-

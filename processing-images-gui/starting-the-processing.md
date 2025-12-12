@@ -1,6 +1,6 @@
 # Iniciando o processamento
 
-Depois de importar suas imagens, marcar seus alvos de dificuldades e definir as configurações do projeto, você estará pronto para iniciar o processamento. Esta página orienta você no início do pipeline de processamento do Cloros.
+Depois de importar suas imagens, marcar seus alvos de dificuldades e definir as configurações do projeto, você estará pronto para iniciar o processamento. Esta página orienta você no início do pipeline de processamento da Cloros.
 
 ## Lista de verificação de pré-processamento
 
@@ -11,7 +11,7 @@ Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 * [ ] **Modelos de câmera detectados** - A coluna Modelo de câmera mostra as câmeras corretas
 * [ ] **Configurações ajustadas** - Configurações do projeto revisadas e ajustadas
 * [ ] **Índices selecionados** - Índices multiespectrais desejados (se necessário)
-* [ ] **Formato de exportação escolhido** - Formato de saída adequada para seu fluxo de trabalho
+* [ ] **Formato de exportação escolhido** - Formato de saída adequado para seu fluxo de trabalho
 
 {% dica estilo = "info" %}
 **Dica**: clique em algumas imagens no Navegador de arquivos para verificar se foram incluídas corretamente antes do processamento.
@@ -26,7 +26,7 @@ Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 O botão/Reproduzir está localizado na barra de cabeçalho superior do Chloros:
 
 * Posição: Centro superior da janela
-* Ícone: **Botão Reproduzir/Iniciar** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Ícone: **Botão Reproduzir/Iniciar**<img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
 * Status: O botão está ativado (brilhante) quando pronto para processar
 
 ### Clique para começar
@@ -108,7 +108,7 @@ A Chloros opera em dois modos de processamento diferentes dependendo de sua lice
 
 **O que o Cloros faz:**
 
-* Verifique as imagens alvo marcadas (ou todas as imagens, se não estiverem marcadas)
+* Verifique as imagens marcadas (ou todas as imagens, se não estiverem marcadas)
 * Identifique os 4 painéis defeituosos em cada alvo
 * Extrai valores de refletância de painéis de destino
 * Registrar carimbos de dados e hora alvo para agendamento de reserva
@@ -129,10 +129,10 @@ A Chloros opera em dois modos de processamento diferentes dependendo de sua lice
 
 **O que o Cloros faz:**
 
-* **Correção de vinheta**: remova o escurecimento da lente nas bordas
+* **Correção de vinheta**: remoção do escurecimento da lente nas bordas
 * **Calibração de refletância**: normaliza usando valores de refletância alvo
 * Aplicar correções em todas as bandas/canais
-* Usa alvo de proteção protetora para cada imagem com base no carimbo de data/hora
+* Use alvo de proteção protetor para cada imagem com base no carimbo de dados/hora
 
 **Duração:** Maioria do tempo de processamento
 
@@ -210,7 +210,7 @@ Durante a execução do processamento, você pode:
 * **Verificar guia de log** - Veja mensagens e avisos detalhados de processamento
 * **Visualizar imagens concluídas** - Alguns arquivos de exportação podem aparecer durante o processamento
 
-Para obter informações detalhadas sobre monitoramento, consulte [Monitoring the Processing](monitoring-the-processing.md).
+Para obter informações detalhadas sobre monitoramento, consulte [Monitorando o Processamento](monitoring-the-processing.md).
 
 ***
 
@@ -262,7 +262,7 @@ O tempo real de processamento varia muito com base em:
 
 ### Estimativas aproximadas (Chloros +, imagens de 12 MP, CPU moderna)
 
-| Contagem de imagens | Modo Livre | Cloros+ (CPU) | Cloro+ (GPU) |
+| Contagem de imagens | Modo Livre | Cloro+ (CPU) | Cloro + (GPU) |
 | ----------- | --------- | -------------- | -------------- |
 | 50 imagens | 15-20 minutos | 5-8 minutos | 3-5 minutos |
 | 100 imagens | 30-40 minutos | 10-15 minutos | 5-8 minutos |
@@ -305,7 +305,7 @@ O tempo real de processamento varia muito com base em:
 
 **Soluções:**
 
-1. Verifique o log de depuração <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> para mensagens de erro
+1. Verifique o registro de depuração<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> para mensagens de erro
 2. Confira o espaço em disco disponível
 3. Tente processar um subconjunto menor de imagens
 4. Verifique se as imagens não estão corrompidas
@@ -341,7 +341,7 @@ O tempo real de processamento varia muito com base em:
 
 1. **Evite suspensão do sistema** - Desative os modos de economia de energia
 2. **Mantenha o Cloros no primeiro plano** - Ou pelo menos visível na barra de tarefas
-3. **Monitore o progresso ocasional** - Verifique se há avisos ou erros
+3. **Monitore o progresso ocasionalmente** - Verifique se há avisos ou erros
 4. **Não carregue outras aplicações pesadas** - Especialmente com o modo paralelo Chloros+
 
 ### Aceleração GPU Cloros+

@@ -8,16 +8,16 @@ O Chloros Image Viewer fornece uma interface dedicada em tela cheia para visuali
 
 A maneira mais comum de abrir uma imagem no Image Viewer:
 
-1. Verifique se você está no guia **Navegador de arquivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+1. Verifique se você está no guia **Navegador de arquivos**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
 2. Clique em qualquer **miniatura de imagem** na categoria de imagens
 3. A imagem abre na **área principal de visualização** (centro da tela)
 4. A imagem agora está anunciada e pronta para visualização em tela cheia
 
 ### Abrindo o guia Visualizador de imagens
 
-Depois que uma imagem for compartilhada na área de visualização:
+Depois que uma imagem foi compartilhada na área de visualização:
 
-1. Clique no ícone **Visualizador de imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+1. Clique no ícone **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
 2. O guia Visualizador de imagens é aberto, exibindo a imagem selecionada em tela inteira
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
@@ -132,13 +132,13 @@ Quando ampliado além do tamanho da tela:
 
 Aplique índices multiespectrais e tabelas de consulta de núcleos:
 
-1. Localizar **Index/LUT Sandbox** não **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
+1. Localizar **Index/LUT Sandbox** não **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
 3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (somente Cloros+)
 4. Aplicar gradiente de cor LUT para visualização
 5. Ajustar intervalos de valores e limites
 
-Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detalhadas.
+Consulte [Sandbox de índice/LUT](index-lut-sandbox.md) para obter instruções detalhadas.
 
 ***
 
@@ -238,8 +238,8 @@ Verifique se os índices foram calculados corretamente:
 
 Agora você pode visualizar as imagens em tela cheia:
 
-* [**Image Layers**](image-layers.md) - Aprenda sobre visualização multibanda
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplicar índices personalizados e mapeamento de núcleos
+* [**Camadas de imagem**](image-layers.md) - Aprenda sobre visualização multibanda
+* [**Sandbox de índice/LUT**](index-lut-sandbox.md) - Aplicar índices personalizados e mapeamento de núcleos
 * [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Descubra os índices disponíveis
 
 Para fluxo de trabalho de processamento, consulte:

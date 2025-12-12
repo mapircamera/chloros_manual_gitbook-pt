@@ -34,10 +34,10 @@ A CLI é automaticamente incluída no instalador do Chloros:
 
 1. Baixe e execute **Chloros Installer.exe**
 2. Conclua o assistente de instalação
-3. CLI installed to: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+3. CLI instalada para:`C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% dica estilo = "sucesso" %}
-O instalador adiciona automaticamente `chloros-cli` ao PATH do seu sistema. Reinicie seu terminal após a instalação.
+O instalador adiciona automaticamente`chloros-cli`ao PATH do seu sistema. Reinicie seu terminal após a instalação.
 {% endhint %}
 
 ### Configuração inicial
@@ -77,9 +77,9 @@ chloros-cli [global-options] <command> [command-options]
 
 ## Comandos
 
-### `process` - Processar imagens
+### `process`- Processar imagens
 
-Processe imagens em uma pasta com experiência.
+Processe imagens em uma massa com experiência.
 
 **Sintaxe:**
 
@@ -95,27 +95,27 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 
 #### Opções de comando de processo
 
-| Opção | Tipo | Padrão | Descrição |
+| Opção | Tipo | padrão | Descrição |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<pasta de entrada>` | Caminho | _Obrigatório_ | Pasta contendo imagens multiespectrais RAW/JPG |
-| `-o, --saída` | Caminho | O mesmo que entrada | Pasta de saída para imagens processadas |
-| `-n, --nome do projeto` | Corda | Gerado automaticamente | Nome do projeto personalizado |
-| `--vinheta` | Bandeira | Habilitado | Ativar correção de vinheta |
-| `--sem-vinheta` | Bandeira | - | Desativar correção de vinheta |
-| `--refletância` | Bandeira | Habilitado | Ativar calibração de refletância |
-| `--no-reflectance` | Bandeira | - | Desativar calibração de refletância |
-| `--ppk` | Bandeira | Desativado | Aplicar correções PPK a partir de dados do sensor de luz .daq |
-| `--formato` | Escolha | TIFF (16 bits) | Formato de saída: `TIFF (16 bits)`, `TIFF (32 bits, porcentagem)`, `PNG (8 bits)`, `JPG (8 bits)` |
-| `--min-tamanho-alvo` | Inteiro | Automóvel | Tamanho mínimo do alvo em pixels para detecção do painel de calibração |
-| `--target-clustering` | Inteiro | Automóvel | Limite de agrupamento alvo (0-100) |
-| `--exposição-pin-1` | Corda | Nenhum | Bloquear exposição para modelo de câmera (Pino 1) |
-| `--exposição-pin-2` | Corda | Nenhum | Bloquear exposição para modelo de câmera (Pino 2) |
-| `--recal-intervalo` | Inteiro | Automóvel | Intervalo de recalibração em segundos |
-| `--timezone-offset` | Inteiro | 0 | Deslocamento de fuso horário em horas |
+| `<pasta de entrada>`| Caminho | _Obrigatório_ | Pasta contendo imagens multiespectrais RAW/JPG |
+| `-o, --saída`| Caminho | O mesmo que entrada | Pasta de saída para imagens processadas |
+| `-n, --nome do projeto`| Corda | Gerado automaticamente | Nome do projeto personalizado |
+| `--vinheta`| Bandeira | Habilitado | Ativar correção de vinheta |
+| `--sem-vinheta`| Bandeira | - | Desativar correção de vinheta |
+| `--refletância`| Bandeira | Habilitado | Ativar retenção de refletância |
+| `--no-reflectance`| Bandeira | - | Desativar concentração de refletância |
+| `--ppk`| Bandeira | Desativado | Aplicar correções PPK a partir de dados do sensor de luz .daq |
+| `--formato`| Escolha | TIFF (16 bits) | Formato de saída:`TIFF (16 bits)`, `TIFF (32 bits, porcentagem)`, `PNG (8 bits)`, `JPG (8 bits)` |
+| `--min-tamanho-alvo`| Inteiro | Automóvel | Tamanho mínimo do alvo em pixels para detecção do painel de detecção |
+| `--target-clustering`| Inteiro | Automóvel | Limite de agrupamento alvo (0-100) |
+| `--exposição-pin-1`| Corda | Nenhum | Bloquear exposição para modelo de câmera (Pino 1) |
+| `--exposição-pin-2`| Corda | Nenhum | Bloquear exposição para modelo de câmera (Pino 2) |
+| `--recal-intervalo`| Inteiro | Automóvel | Intervalo de recalibração em segundos |
+| `--timezone-offset`| Inteiro | 0 | Deslocamento de fuso horário em horas |
 
 ***
 
-### `login` - Autenticar conta
+### `login`- Autenticar conta
 
 Faça login com suas credenciais da Chloros+ para ativar o processamento CLI.
 
@@ -132,7 +132,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
 {% dica estilo = "aviso" %}
-**Caracteres especiais**: use aspas simples em senhas que contenham caracteres como `$`, `!` ou espaços.
+**Caracteres especiais**: use aspas simples em senhas que contenham caracteres como`$`, `!`ou espaços.
 {% endhint %}
 
 **Saída:**
@@ -141,7 +141,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 ***
 
-### `logout` - Limpar credenciais
+### `logout`- Limpar credenciais
 
 Limpe as credenciais armazenadas e saia da sua conta.
 
@@ -166,7 +166,7 @@ chloros-cli logout
 
 ***
 
-### `status` - Verifique o status da licença
+### `status`- Verifique o status da licença
 
 Exibir licença atual e status de autenticação.
 
@@ -197,9 +197,9 @@ chloros-cli status
 
 ***
 
-### `export-status` - Verifica o progresso da exportação
+### `export-status`- Verificar o progresso da exportação
 
-Monitore o progresso da exportação da Linha 4 durante ou após o processamento.
+Monitorar o progresso da exportação da Linha 4 durante ou após o processamento.
 
 **Sintaxe:**
 
@@ -217,7 +217,7 @@ chloros-cli export-status
 
 ***
 
-### `linguagem` - Gerenciar idioma da interface
+### `linguagem`- Gerenciar idioma da interface
 
 Visualize ou altere o idioma da interface CLI.
 
@@ -254,52 +254,52 @@ chloros-cli language ja
 
 | Código | Idioma | Nome nativo |
 | ------- | --------------------- | ---------------- |
-| `pt` | Inglês | Inglês |
-| `é` | Espanhol | Espanhol |
-| `pt` | Português | Português |
-| `fr` | Francês | Français |
-| `de` | Alemão | Alemão |
-| `isso` | Italiano | Italiano |
-| `já` | Japonês | 日本語 |
-| `ko` | Coreano | 한국어 |
-| `zh` | Chinês (simplificado) | 简体中文 |
-| `zh-TW` | Chinês (tradicional) | 繁體中文 |
-| `ru` | Russo | Russo |
-| `nl` | Holandês | Holanda |
-| `ar` | Árabe | العربية |
-| `pl` | Polonês | Polaco |
-| `tr` | Turco | Turquia |
-| `oi` | Hindi | हिंदी |
-| `id` | Indonésio | Bahasa Indonésia |
-| `vi` | Vietnamita | Tiếng Việt |
-| `th` | Tailandês | ไทย |
-| `sv` | Sueco | Sueca |
-| `da` | Dinamarquês | Dinamarquês |
-| `não` | Norueguês | Norueguês |
-| `fi` | Finlandês | Suomi |
-| `el` | Grego | Eλληνικά |
-| `cs` | Tcheco | Čeština |
-| `hu` | Húngaro | Magiar |
-| `ro` | Romeno | Română |
-| `Reino Unido` | Ucraniano | Українська |
-| `pt-BR` | Português Brasileiro | Português Brasileiro |
-| `zh-HK` | Cantonês | 粵語 |
-| `ms` | Malaio | Bahasa Melayu |
-| `sk` | Eslovaco | Eslovena |
-| `bg` | Búlgaro | Búlgaro |
-| `hr` | Croata | Hrvatsky |
-| `lt` | Lituano | Lietuvių |
-| `lv` | Letão | Letão |
-| `et` | Estoniano | Este |
-| `sl` | Esloveno | Eslovênia |
+| `pt`| Inglês | Inglês |
+| `é`| Espanhol | Espanhol |
+| `pt`| Português | Português |
+| `fr`| Francês | Français |
+| `de`| Alemão | Alemão |
+| `isso`| Italiano | Italiano |
+| `já`| Japonês | 日本語 |
+| `ko`| Coreano | 한국어 |
+| `zh`| Chinês (simplificado) | 简体中文 |
+| `zh-TW`| Chinês (tradicional) | 繁體中文 |
+| `ru`| Russo | Russo |
+| `nl`| Holandês | Holanda |
+| `ar`| Árabe | العربية |
+| `pl`| Polonês | Polaco |
+| `tr`| Turco | Turquia |
+| `oi`| Hindi | हिंदी |
+| `id`| Indonésia | Indonésia |
+| `vi`| Vietnamita | Tiếng Việt |
+| `th`| Tailandês | ไทย |
+| `sv`| Sueco | Sueca |
+| `da`| Dinamarquês | Dinamarquês |
+| `não`| Norueguês | Norueguês |
+| `fi`| Finlandês | Suomi |
+| `el`| Grego | Eλληνικά |
+| `cs`| Tcheco | Čeština |
+| `hu`| Húngaro | Magiar |
+| `ro`| Romeno | Română |
+| `Reino Unido`| Ucraniano | Українська |
+| `pt-BR`| Português Brasileiro | Português Brasileiro |
+| `zh-HK`| cantonês | 粵語 |
+| `ms`| Malaio | Bahasa Melayu |
+| `sk`| Eslovaco | Eslovênia |
+| `bg`| Búlgaro | Búlgaro |
+| `hr`| Croácia | Hrvatsky |
+| `lt`| Lituano | Lietuvių |
+| `lv`| Letão | Letão |
+| `et`| Estónio | Este |
+| `sl`| Esloveno | Eslovênia |
 
 {% dica estilo = "sucesso" %}
-**Persistência automática**: sua preferência de idioma é salva em `~/.chloros/cli_language.json` e persiste em todas as sessões.
+**Persistência automática**: sua preferência de idioma é salva em`~/.chloros/cli_language.json`e persiste em todas as sessões.
 {% endhint %}
 
 ***
 
-### `set-project-folder` - Definir pasta de projeto padrão
+### `set-project-folder`- Definir pasta de projeto padrão
 
 Altere o padrão local da pasta do projeto (compartilhada com uma GUI).
 
@@ -317,7 +317,7 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Mostrar pasta do projeto
+### `get-project-folder`- Mostrar pasta do projeto
 
 Exibe o padrão local atual da pasta do projeto.
 
@@ -341,7 +341,7 @@ chloros-cli get-project-folder
 
 ***
 
-### `reset-project-folder` - Redefinir para o padrão
+### `reset-project-folder`- Redefinir para o padrão
 
 Redefinir a pasta do projeto para o padrão local.
 
@@ -357,13 +357,13 @@ chloros-cli reset-project-folder
 
 Estas opções se aplicam a todos os comandos:
 
-| Opção | Tipo | Padrão | Descrição |
+| Opção | Tipo | padrão | Descrição |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Caminho | Detectado automaticamente | Caminho para o executável de back-end |
-| `--porta` | Inteiro | 5000 | Número da porta da API de back-end |
-| `--reiniciar` | Bandeira | - | Forçar reinicialização de back-end (elimina processos existentes) |
-| `--versão` | Bandeira | - | Mostrar informações da versão e sair |
-| `--ajuda` | Bandeira | - | Mostrar informações de ajuda e sair |
+| `--backend-exe`| Caminho | Detectado automaticamente | Caminho para o seguinte nível de back-end |
+| `--porta`| Inteiro | 5000 | Número da porta da API de back-end |
+| `--reiniciar`| Bandeira | - | Forçar renovação de back-end (eliminar processos existentes) |
+| `--versão`| Bandeira | - | Mostrar informações da versão e sair |
+| `--ajuda`| Bandeira | - | Mostrar informações de ajuda e sair |
 
 **Exemplo com opções globais:**
 
@@ -391,7 +391,7 @@ Cloros+ CLI **escalona automaticamente** o processamento paralelo para especific
 | ------------- | ---------- | -------- | -------- | --------------- |
 | **Alta qualidade** | Mais de 16 núcleos | Mais de 32 GB | Até 16 | Velocidade máxima |
 | **Intermediário** | 8-15 núcleos | 16-31 GB | 8-16 | Excelente velocidade |
-| **Básico** | 4-7 núcleos | 8-15 GB | 4-8 | Boa velocidade |
+| **Básico** | 4-7 núcleos | 8-15GB | 4-8 | Boa velocidade |
 
 {% dica estilo = "sucesso" %}
 **Otimização automática**: a CLI detecta automaticamente as especificações do sistema e configura o processamento paralelo ideal. Nenhuma configuração manual necessária!
@@ -410,7 +410,7 @@ A CLI usa **Alta qualidade (mais rápida)** como algoritmo debayer padrão e rec
 **O que faz:** corrige a queda de luz nas bordas da imagem (cantos mais escuros, comuns em imagens de câmeras).
 
 * **Ativado por padrão** - A maioria dos usuários deve manter esta opção ativada
-* Use `--no-vignette` to disable
+* Usar`--no-vignette`desabilitar
 
 {% dica estilo = "sucesso" %}
 **Recomendação**: Sempre ativa a correção de vinheta para garantir brilho uniforme em todo o quadro.
@@ -421,8 +421,8 @@ A CLI usa **Alta qualidade (mais rápida)** como algoritmo debayer padrão e rec
 Converta valores brutos do sensor em porcentagens de refletância padronizadas usando painéis de deficiência.
 
 * **Ativado por padrão** - Essencial para análise de vegetação
-* Solicitar painéis de destino de desaparecidos em imagens
-* Use `--no-reflectance` to disable
+* Solicitar painéis de destinos de desaparecidos em imagens
+* Usar`--no-reflectance`desabilitar
 
 {% dica estilo = "info" %}
 **Requisitos**: Certifique-se de que os painéis de fiação estejam devidamente expostos e visíveis em suas imagens para uma conversão de refletância precisa.
@@ -430,10 +430,10 @@ Converta valores brutos do sensor em porcentagens de refletância padronizadas u
 
 ### Correções PPK
 
-**O que faz:** Aplique correções cinemáticas pós-processadas usando dados de registro DAQ-A-SD para melhorar as resultados do GPS.
+**O que faz:** Aplique correções cinemáticas pós-processadas usando dados de registro DAQ-A-SD para melhorar os resultados do GPS.
 
 * **Desativado por padrão**
-* Use `--ppk` to enable
+* Usar`--ppk`para habilitar
 * Solicite arquivos .daq na pasta do projeto do sensor de luz MAPIR DAQ-A-SD.
 
 ### Formatos de saída
@@ -604,7 +604,7 @@ MyProject/
 
 Tempos típicos de processamento para 100 imagens (12 MP cada):
 
-| Modo | Tempo | Ferragens |
+| modo | Tempo | Ferragens |
 | ----------------- | --------- | -------------------------------------------- |
 | **Modo Paralelo** | 5-10 minutos | i7/Ryzen 7, 16 GB de RAM, SSD (até 16 trabalhadores) |
 | **Modo Paralelo** | 10-15 minutos | i5/Ryzen 5, 8 GB de RAM, HDD (até 8 trabalhadores) |
@@ -642,7 +642,7 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 3. Adicione o PATH manualmente:
    * Abra Propriedades do Sistema → Variáveis ​​de Ambiente
    * Editar variável PATH
-   * Add: `C:\Program Files\Chloros\resources\cli`
+   * Adicionar:`C:\Program Files\Chloros\resources\cli`
    * Reinicie o terminal
 
 ***
@@ -712,7 +712,7 @@ No images found in the specified folder
 
 1. Verifique se a pasta contém formatos suportados (.RAW, .TIF, .JPG)
 2. Verifique se o caminho da pasta está correto (use aspas para caminhos com espaços)
-3. -se de ter permissões de leitura certifique-se para a pasta
+3. -se de ter permissões de leitura comprovada-se para a pasta
 4. Verifique se as extensões dos arquivos estão corretas
 
 ***
@@ -771,9 +771,9 @@ Inscreva-se em: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/
 
 ### P: Onde as imagens processadas são salvas?
 
-**R:** Por padrão, as imagens processadas são salvas na **mesma pasta da entrada** nas subpastas do modelo da câmera (por exemplo, `Survey3N_RGN/`).
+**R:** Por padrão, as imagens processadas são salvas na **mesma pasta da entrada** nas subpastas do modelo da câmera (por exemplo,`Survey3N_RGN/`).
 
-Use a opção `-o` para especificar uma pasta de saída diferente:
+Use uma opção`-o`para especificar uma pasta de saída diferente:
 
 ```powershell
 chloros-cli process "C:\Input" -o "D:\Output"
@@ -823,7 +823,7 @@ Imagens parcialmente processadas podem permanecer na massa de saída.
 
 ### P: Como verificar a versão CLI?
 
-**HUM:**
+**ZUMBIR:**
 
 ```powershell
 chloros-cli --version

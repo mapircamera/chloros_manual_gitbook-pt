@@ -6,7 +6,7 @@ metaLinks: {}
 
 <div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
 
-Chloros é um aplicativo de software da [MAPIR](https://www.mapir.camera) para processar imagens e outros dados de sensores.
+Chloros é um aplicativo de software da [MAPAIR](https://www.mapir.camera) para processar imagens e outros dados de sensores.
 
 ***
 
@@ -20,7 +20,7 @@ Chloros está disponível em 4 modos de aplicação:
 
 É executado no seu navegador (Chrome/Edge). Melhor para computadores mais lentos com VRAM <4 GB.
 
-## [Chloros CLI: interface de linha de comando](CLI.md)
+## [Cloros CLI: interface de linha de comando](CLI.md)
 
 Processamento em lote de linha de comando. Perfeito para automação, scripts e fluxos de trabalho avançados. _CLI requer uma licença Chloros+ para acessar._
 
