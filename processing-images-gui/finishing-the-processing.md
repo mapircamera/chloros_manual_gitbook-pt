@@ -17,7 +17,7 @@ Quando o processamento para terminar com êxito, você verá vários indicadores
 
 ### Abrindo a pasta de saída
 
-1. Clique no ícone **Menu Principal**<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
+1. Clique no ícone **Menu Principal**<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line">(canto superior esquerdo)
 2. Selecione **"Abrir pasta do projeto"**
 3. Seu explorador de arquivos abre no diretório do projeto
 4. Localize seu projeto pelo nome
@@ -51,7 +51,7 @@ Use o Visualizador de imagens integrado do Chloros para visualização avançada
 
 1. Clique em uma miniatura de imagem no navegador de arquivos
 2. A imagem é aberta na área de visualização principal
-3. Clique no guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+3. Clique no guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">na barra lateral esquerda
 4. Use [Sandbox de índice/LUT](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
 
 Consulte [Visualizador de imagens](../image-viewer-gui/page-3.md) para obter instruções detalhadas.
@@ -75,7 +75,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 1. Clique no botão **"Copiar"** ou **"Baixar"**
 2. Salvar como arquivo de texto na pasta do projeto
 3. Incluir com a documentação do projeto
-4. Envie para o suporte do MAPIR se encontrar problemas
+4. Envie para o suporte do MAPIR para encontrar problemas
 
 ***
 
@@ -189,7 +189,7 @@ Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 
 **O que salvar:**
 
-* ✅ **Imagens RAW/JPG exclusivas** - Arquivar em unidade/nuvem separada
+* ✅ **Imagens RAW/JPG exclusivas** - Arquivar em unidade/nuvem separadas
 * ✅ **Saídas processadas** - Mantenha imagens e índices calibrados
 * ✅ **Arquivo de projeto** - Contém todas as configurações para reprocessamento, se necessário
 * ✅ **Log de depuração** - Detalhes de processamento de documentos

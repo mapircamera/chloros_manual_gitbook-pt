@@ -1,13 +1,13 @@
 # Configurações do projeto
 
-As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> sidebar in Chloros allows you to configure all aspects of image processing, calibration target detection, multispectral index calculations, and export options for your project. These settings are saved with your project and can be saved as templates for reuse across multiple projects.
+As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">a barra lateral em Chloros permite configurar todos os aspectos de processamento de imagem, detecção de alvo de calibração, cálculos de índice multiespectral e opções de exportação para seu projeto. Essas configurações são salvas com o seu projeto e podem ser salvas como modelos para reutilização em vários projetos.
 
 ## Acessando as configurações do projeto
 
 Para acessar as configurações do projeto:
 
 1. Abra um projeto no Chloros
-2. Clique na guia **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique na guia **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">na barra lateral esquerda
 3. O painel de configurações exibirá todas as opções de configuração disponíveis organizadas por categoria
 
 ***
@@ -21,7 +21,7 @@ Essas configurações são controladas como o Cloros detecta e processa alvos de
 * **Tipo**: Número
 * **Intervalo**: 0 a 10.000 pixels
 * **Padrão**: 25 pixels
-* **Descrição**: Defina a área mínima (em pixels) necessária para que uma região bloqueada seja considerada uma amostra de alvo de deficiência válida. Valores menores detectarão alvos menores, mas poderão aumentar os falsos positivos. Valores maiores regiões excluídas alvo maiores e mais claros para detecção.
+* **Descrição**: Defina a área mínima (em pixels) necessária para que uma região bloqueada seja considerada uma amostra de alvo de deficiência válida. Valores menores detectarão alvos menores, mas poderão aumentar os falsos positivos. Valores maiores regiões arquivos alvo maiores e mais claros para detecção.
 * **Quando ajustar**:
   * Aumente se você estiver encontrando detecções falsas em pequenos artistas de imagem
   * Diminua se seus alvos sofisticados parecem pequenos em suas imagens e não estão sendo detectados
@@ -33,7 +33,7 @@ Essas configurações são controladas como o Cloros detecta e processa alvos de
 * **Padrão**: 60
 * **Descrição**: Controle o limite de agrupamento para grupos de regiões específicas para detecção de alvos específicos. Valores mais altos excluem que núcleos mais semelhantes sejam agrupados, resultando em uma detecção de alvo mais conservadora. Valores mais baixos permitem mais variação de núcleos dentro de um grupo-alvo.
 * **Quando ajustar**:
-  * Aumente se os alvos de ocorrência forem divididos em múltiplas detecções
+  * Aumente se os alvos de ocorrência foram divididos em múltiplas detecções
   * Diminua se os alvos de atração com variação de cor não estão sendo totalmente detectados
 
 ***
@@ -47,7 +47,7 @@ Essas configurações são controladas como o Cloros processa e calibra suas ima
 * **Tipo**: Caixa de seleção
 * **Padrão**: Habilitado (marcado)
 * **Descrição**: Aplicação de vinheta para compensar o escurecimento da lente nas bordas das imagens. A vinheta é uma aparência óptica comum em que os cantos e bordas de uma imagem parecem mais escuros que o centro devido às características da lente.
-* **Quando desativar**: Desative apenas se a combinação câmera/lente já tiver aplicado a correção de vinheta ou se você quiser ajustar manualmente a vinheta no pós-processamento.
+* **Quando desativar**: Desative apenas se a combinação câmera/lente já tiver aplicada a correção da vinheta ou se você quiser ajustar manualmente a vinheta no pós-processamento.
 
 ### Calibração de refletância/balanço de branco
 
@@ -176,7 +176,7 @@ Essas configurações controlam o formato e a qualidade das imagens processadas 
 * **Descrição**: Selecionado o formato de arquivo para salvar imagens processadas e calibradas.
 * **Recomendações de formato**:
   * **TIFF (16 bits)**: Recomendado para análises científicas e fluxos de trabalho profissionais. Preservar a qualidade máxima dos dados sem artefatos de compactação. Melhor para análise multiespectral e processamento adicional em software GIS.
-  * **TIFF (32 bits, porcentagem)**: melhor para fluxos de trabalho que desativa valores de refletância como porcentagens (0-100%). Oferece soluções máximas para precisão radiométrica.
+  * **TIFF (32 bits, porcentagem)**: melhor para fluxos de trabalho que desativa valores de refletância como porcentagens (0-100%). Oferece soluções máximas para soluções radiométricas.
   * **PNG (8 bits)**: Bom para visualização na Web e visualização geral. Tamanhos de arquivo menores com compactação sem perdas, mas faixa dinâmica diminuta.
   * **JPG (8 bits)**: tamanhos de arquivo menores, ideais apenas para visualizações e exibição na Web. Usa compactação com perdas que não é adequada para análise científica.
 

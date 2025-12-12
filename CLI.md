@@ -1,6 +1,6 @@
 # CLI: Linha de Comando
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figura>
 
 O **Chloros CLI** fornece acesso poderoso de linha de comando ao mecanismo de processamento de imagens do Chloros, permitindo automação, scripts e operação sem comando para seus fluxos de trabalho de imagens.
 
@@ -137,7 +137,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Saída:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figura>
 
 ***
 
@@ -359,7 +359,7 @@ Estas opções se aplicam a todos os comandos:
 
 | Opção | Tipo | padrão | Descrição |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe`| Caminho | Detectado automaticamente | Caminho para o seguinte nível de back-end |
+| `--backend-exe`| Caminho | Detectado automaticamente | Caminho para o próximo nível de back-end |
 | `--porta`| Inteiro | 5000 | Número da porta da API de back-end |
 | `--reiniciar`| Bandeira | - | Forçar renovação de back-end (eliminar processos existentes) |
 | `--versão`| Bandeira | - | Mostrar informações da versão e sair |
@@ -391,7 +391,7 @@ Cloros+ CLI **escalona automaticamente** o processamento paralelo para especific
 | ------------- | ---------- | -------- | -------- | --------------- |
 | **Alta qualidade** | Mais de 16 núcleos | Mais de 32 GB | Até 16 | Velocidade máxima |
 | **Intermediário** | 8-15 núcleos | 16-31 GB | 8-16 | Excelente velocidade |
-| **Básico** | 4-7 núcleos | 8-15GB | 4-8 | Boa velocidade |
+| **Básico** | 4-7 núcleos | 8-15 GB | 4-8 | Boa velocidade |
 
 {% dica estilo = "sucesso" %}
 **Otimização automática**: a CLI detecta automaticamente as especificações do sistema e configura o processamento paralelo ideal. Nenhuma configuração manual necessária!
@@ -642,7 +642,7 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 3. Adicione o PATH manualmente:
    * Abra Propriedades do Sistema → Variáveis ​​de Ambiente
    * Editar variável PATH
-   * Adicionar:`C:\Program Files\Chloros\resources\cli`
+   *Adicionar:`C:\Program Files\Chloros\resources\cli`
    * Reinicie o terminal
 
 ***

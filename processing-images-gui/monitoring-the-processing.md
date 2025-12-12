@@ -151,7 +151,7 @@ O log de detalhamento fornece informações planejadas sobre o andamento do proc
 
 ### Acessando o log de depuração
 
-1. Clique no ícone **Log de depuração**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> na barra lateral esquerda
+1. Clique no ícone **Log de depuração**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">na barra lateral esquerda
 2. O painel de registro é aberto mostrando mensagens de processamento em tempo real
 3. Rola automaticamente para mostrar as mensagens mais recentes
 
@@ -250,7 +250,7 @@ Para copiar o log para solução de problemas ou suporte:
 
 * Processar lotes menores
 * Buscar outros aplicativos
-* Atualizar a RAM para registrar regularmente grandes conjuntos de dados
+* Atualizar RAM para registrar regularmente grandes conjuntos de dados
 
 ### Uso de GPU (Chloros+ com CUDA)
 

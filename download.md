@@ -56,7 +56,7 @@ O instalador adiciona automaticamente`chloros-cli`ao PATH do seu sistema para ac
 
 ## Recursos Adicionais
 
-### SDK Python
+### SDKPython
 
 Para desenvolvedores e fluxos de trabalho de automação, instale o SDK do Chloros Python:
 

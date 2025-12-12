@@ -1,11 +1,11 @@
 # Adicionando arquivos a um projeto
 
-Depois de criar ou abrir um projeto no Chloros, o próximo passo é adicionar suas imagens multiespectrais para iniciar o processamento. O navegador de arquivos<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Depois de criar ou abrir um projeto no Chloros, o próximo passo é adicionar suas imagens multiespectrais para iniciar o processamento. O navegador de arquivos<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">facilita a importação de imagens e o gerenciamento de seu conjunto de dados.
 
 ## Acessando o navegador de arquivos
 
 1. Abra ou chore um projeto no Chloros
-2. Clique no ícone **Navegador de arquivos**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique no ícone **Navegador de arquivos**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">na barra lateral esquerda
 3. O painel Navegador de Arquivos exibirá uma lista de arquivos do seu projeto
 
 {% dica estilo = "info" %}
@@ -114,7 +114,7 @@ O Chloros detecta e ignora automaticamente arquivos duplicados:
 
 * Arquivos com nomes idênticos são ignorados
 * Evita o processamento duplo acidental
-* Mensagem de aviso exibida quando duplicatas estão bloqueadas
+* Mensagem de aviso exibida quando duplicatas estiverem bloqueadas
 
 {% dica estilo = "aviso" %}
 **Importante**: Não renomeie ou modifique seus arquivos de imagem originais antes de importar. O Chloros depende de nomes de arquivos e metadados originais para o processamento adequado.

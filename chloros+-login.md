@@ -2,11 +2,11 @@
 
 ## Login de Cloros e Cloros (navegador)
 
-O usuário<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+O usuário<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">O menu da barra lateral permite que você faça login em sua conta Chloros+ e desbloqueie recursos adicionais.
 
 Quando logado, os detalhes da sua conta serão mostrados:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figura>
 
 ## CLI de login
 
@@ -30,7 +30,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Saída:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figura>
 
 ### Expiração do plano
 

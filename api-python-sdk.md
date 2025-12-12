@@ -176,7 +176,7 @@ ChlorosLocal(
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
 | `api_url` | | `"http://localhost:5000"`| URL do back-end local do Cloros |
 | `auto_start_backend`| bool |`Verdade`| Iniciar back-end automaticamente, se necessário |
-| `backend_exe` | | `Nenhum`(detecção automática) | Caminho para o seguinte nível de back-end |
+| `backend_exe` | | `Nenhum`(detecção automática) | Caminho para o próximo nível de back-end |
 | `tempo limite`| interno |`30`| Tempo limite da solicitação em segundos |
 | `backend_startup_timeout`| interno |`60`| Tempo limite para inicialização do back-end (segundos) |
 
@@ -1139,9 +1139,9 @@ chloros.process(progress_callback=notebook_progress)
 
 ### P: Qual é a diferença entre Desktop, CLI e SDK?
 
-| Recurso | GUI da área de trabalho | Linha de comando CLI | SDK Python |
+| Recurso | GUI da área de trabalho | Linha de comando CLI | SDKPython |
 | --------------- | ----------- | ---------------- | ----------- |
-| **Interface** | Clique com o botão direito | Comando | API Python |
+| **Interface** | Clique com o botão direito | Comando | APIPython |
 | **Melhor para** | Trabalho visual | Roteiros | Integração |
 | **Automação** | Limitado | bom | Excelente |
 | **Flexibilidade** | Básico | bom | Máximo |

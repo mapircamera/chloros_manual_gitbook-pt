@@ -11,7 +11,7 @@ Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 * [ ] **Modelos de câmera detectados** - A coluna Modelo de câmera mostra as câmeras corretas
 * [ ] **Configurações ajustadas** - Configurações do projeto revisadas e ajustadas
 * [ ] **Índices selecionados** - Índices multiespectrais desejados (se necessário)
-* [ ] **Formato de exportação escolhido** - Formato de saída adequado para seu fluxo de trabalho
+* [ ] **Formato de exportação escolhido** - Formato de saída adequado ao seu fluxo de trabalho
 
 {% dica estilo = "info" %}
 **Dica**: clique em algumas imagens no Navegador de arquivos para verificar se foram incluídas corretamente antes do processamento.
@@ -132,7 +132,7 @@ A Chloros opera em dois modos de processamento diferentes dependendo de sua lice
 * **Correção de vinheta**: remoção do escurecimento da lente nas bordas
 * **Calibração de refletância**: normaliza usando valores de refletância alvo
 * Aplicar correções em todas as bandas/canais
-* Use alvo de proteção protetor para cada imagem com base no carimbo de dados/hora
+* Use alvo de proteção para cada imagem com base no carimbo de dados/hora
 
 **Duração:** Maioria do tempo de processamento
 
@@ -305,7 +305,7 @@ O tempo real de processamento varia muito com base em:
 
 **Soluções:**
 
-1. Verifique o registro de depuração<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> para mensagens de erro
+1. Verifique o registro de depuração<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">para mensagens de erro
 2. Confira o espaço em disco disponível
 3. Tente processar um subconjunto menor de imagens
 4. Verifique se as imagens não estão corrompidas
@@ -341,7 +341,7 @@ O tempo real de processamento varia muito com base em:
 
 1. **Evite suspensão do sistema** - Desative os modos de economia de energia
 2. **Mantenha o Cloros no primeiro plano** - Ou pelo menos visível na barra de tarefas
-3. **Monitore o progresso ocasionalmente** - Verifique se há avisos ou erros
+3. **Monitore o progresso ocasional** - Verifique se há avisos ou erros
 4. **Não carregue outras aplicações pesadas** - Especialmente com o modo paralelo Chloros+
 
 ### Aceleração GPU Cloros+

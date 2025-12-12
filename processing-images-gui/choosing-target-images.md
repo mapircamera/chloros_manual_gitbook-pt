@@ -1,6 +1,6 @@
 # Escolhendo imagens alvo
 
-Marcar quais imagens contêm alvos de atenção é uma etapa crucial que acelera significativamente o pipeline de processamento do Cloros. Ao pré-selecionar as imagens alvo, você elimina a necessidade do Chloros digitalizar todas as imagens do seu conjunto de dados em busca de alvos específicos.
+Marcar quais imagens contêm alvos de atenção é uma etapa crucial que acelera significativamente o pipeline de processamento do Cloros. Ao pré-selecionar as imagens alvo, você elimina a necessidade de Chloros digitalizar todas as imagens do seu conjunto de dados em busca de alvos específicos.
 
 ## Por que marcar imagens alvo?
 
@@ -14,7 +14,7 @@ Sem marcar as imagens alvo, o Cloros deve:
 
 **Resultado**: o processamento pode demorar significativamente mais, especialmente para grandes conjuntos de dados.
 
-### Com imagens alvo marcadas
+### Com imagens alvo marcado
 
 Ao verificar a coluna Destino para imagens específicas:
 

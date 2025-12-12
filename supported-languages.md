@@ -65,7 +65,7 @@ Defina o parâmetro de idioma ao inicializar o SDK para obter mensagens e result
 Todos os 38 idiomas são totalmente suportados em:
 
 * **Chloros Desktop** – Tradução completa da GUI
-* **Chloros Browser** - Interface Web em todos os idiomas
+* **Chloros Navegador** - Interface Web em todos os idiomas
 * **Chloros CLI** – Interface de linha de comando e mensagens de saída
 * **Chloros Python SDK** – Mensagens e documentação da API
 

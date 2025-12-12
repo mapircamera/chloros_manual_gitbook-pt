@@ -51,24 +51,24 @@ A caixa de areia permite que você:
 
 ### Abrindo a caixa de areia
 
-O Index/LUT Sandbox é acessado no **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar tab:
+O Index/LUT Sandbox foi acessado no **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">guia da barra lateral:
 
 1. Clique em uma imagem na categoria de imagens do navegador de arquivos. Ela será aberta na guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
-2. Clique na guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para abrir a barra lateral pop-out esquerda, caso ainda não esteja aberto
+2. Clique na guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">para abrir a barra lateral pop-out esquerda, caso ainda não esteja aberto
 
 ### Selecionando uma imagem para aplicar um índice/LUT
 
-Para trabalhar com um índice no Image Viewer<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sandbox:
+Para trabalhar com um índice no Image Viewer<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">caixa de areia:
 
 1. **Abra uma imagem** na nota de imagens principal clicando nela
-2. O guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> será aberto
+2. O guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">será aberto
 3. Clique no **menu suspenso Camada** (canto superior direito do visualizador)
 4. Selecione a camada no menu suspenso:
    * RAW (Refletância)
 
 ### Aplicando um índice a uma imagem
 
-Assim que a imagem estiver em tela cheia e o **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar is open:
+Assim que a imagem estiver em tela cheia e o **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">a barra lateral da guia está aberta:
 
 1. Marque a caixa Índice na parte superior da barra lateral
 2. Escolha o filtro da sua câmera no menu suspenso à esquerda
@@ -123,11 +123,11 @@ Uma **Tabela de consulta (LUT)** mapa de valores de índice numérico em núcleo
 
 Depois de ter uma imagem de índice
 
-1. Clique no botão<img src="../.gitbook/assets/image.png" alt="" data-size="line"> "+Adicionar LUT"
+1. Clique no botão<img src="../.gitbook/assets/image.png" alt="" data-size="line">"+Adicionar LUT"
 2. Selecione o gradiente de cor
 3. Ajuste dos pontos finais mínimo/máximo de recorte
 4. Ajuste o modo de recorte
-5. Marque a caixa Índice na barra lateral da guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> para aplicar uma LUT
+5. Marque a caixa Índice na barra lateral da guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">para aplicar uma LUT
 
 ### Escolhendo um gradiente de cor
 
@@ -200,9 +200,9 @@ Os **controles de intervalo de valores** determinam quais valores de índice sã
 **Exemplos de ajustes de faixa de NDVI:**
 
 * **Gama completa**:`-1.0` to `1.0`(mostrar todos os valores possíveis)
-* **Foco na vegetação**:`0.2` to `0.9`(excluir solo descoberto e água)
-* **Apenas vegetação saudável**:`0.5` to `0.9`(destaque apenas plantas vigorosas)
-* **Detecção de estresse**:`0.2` to `0.5`(enfatize as áreas problemáticas)
+* **Foco na área urbana**:`0.2` to `0.9`(excluindo solo descoberto e água)
+* **Apenas florestas saudáveis**:`0.5` to `0.9`(destaque apenas plantas vigorosas)
+* **Detecção de estresse**:`0.2` to `0.5`(enfatizar as áreas problemáticas)
 * **Intervalo personalizado**: ajuste com base nos valores de pixels coletados
 
 **Por que ajustar os intervalos?**
@@ -375,7 +375,7 @@ Depois de executar os valores de pixel, ajuste seu LUT mínimo/máximo de acordo
 2. Navegue até a lista suspensa **Fórmula do índice**
 3. Adquira a opção **"Custom"** (deve estar logado com licença Chloros+)
 4. **Definir sua fórmula** usando variáveis ​​de banda:
-   * Nomes de bandas:`NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
+   *Nomes de bandas:`NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
    * Operadores:`+`, `-`, `*`, `/`, `^`(expoente)
    * Funções:`sqrt()`, `abs()`, etc. (se compatível)
    *Parênteses:`()`para ordem de operações

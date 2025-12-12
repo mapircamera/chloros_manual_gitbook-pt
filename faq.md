@@ -17,7 +17,7 @@ Não, o Chloros suporta apenas o processamento de imagens de câmeras MAPIR. Con
 
 <details>
 
-<summary>Posso calibrar minhas imagens para refletância sem um alvo de calibração?</summary>
+<summary>Posso calibrar minhas imagens para reflexão sem um alvo específico?</summary>
 
 Não. Sem uma imagem do alvo de precisão capturada próximo ao momento em que as imagens não são alvo de capturadas, você não será capaz de relacionar os valores de pixel da imagem a uma porcentagem de refletância conhecida. Se você também não incluir o registro de um sensor de luz MAPIR, o espectro de luz ambiente não será medido e os resultados de refletância não serão precisos.
 
@@ -33,7 +33,7 @@ Não. A Chloros assume que os dados de entrada não foram modificados. Não alte
 
 <details>
 
-<summary>Posso configurar minhas câmeras MAPIR Survey3 para exposição automática e processar as imagens em Chloros?</summary>
+<summary>Posso configurar minhas câmeras MAPIR Survey3 para exibição automática e processamento como imagens em Chloros?</summary>
 
 Os conjuntos de dados de imagens Survey3 devem ter uma exposição fixa/bloqueada, portanto, não há velocidade do obturador automático ou ISO automático. Todas as imagens do mesmo modelo de câmera devem ter velocidade de obturador e ISO (exposição) idênticas.
 
@@ -41,7 +41,7 @@ Os conjuntos de dados de imagens Survey3 devem ter uma exposição fixa/bloquead
 
 <details>
 
-<summary>O Chloros pode processar ou analisar imagens ortomosaicas?</summary>
+<summary>O Chloros pode analisar ou analisar imagens ortomosaicas?</summary>
 
 Não. Somente imagens individuais de câmeras MAPIR são suportadas, e não imagens unidas como um mapa ortomosaico.
 

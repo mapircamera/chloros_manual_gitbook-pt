@@ -1,11 +1,11 @@
 # Ajustando as configurações do projeto
 
-Antes de processar suas imagens, é importante definir as configurações do projeto para atender aos requisitos do seu fluxo de trabalho. As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> panel provides comprehensive control over calibration, processing options, multispectral indices, and export formats.
+Antes de processar suas imagens, é importante definir as configurações do projeto para atender aos requisitos do seu fluxo de trabalho. As configurações do projeto<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">fornece controle abrangente sobre calibração, opções de processamento, índices multiespectrais e formatos de exportação.
 
 ## Acessando as configurações do projeto
 
 1. Abra seu projeto no Chloros
-2. Clique no ícone **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. Clique no ícone **Configurações do projeto**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">na barra lateral esquerda
 3. O painel Configurações do projeto exibe todas as opções de configuração
 
 {% dica estilo = "info" %}
@@ -135,7 +135,7 @@ Ao criar um novo projeto:
 
 A configuração **"Salvar pasta do projeto"** especifica onde novos projetos são criados por padrão:
 
-* **Local padrão**:`C:\Users\[Username]\Chloros Projects`
+* **Padrão local**:`C:\Users\[Username]\Chloros Projects`
 * **Alterar local**: Clique no ícone de edição e selecione uma nova pasta
 * **Quando mudar**:
   * Unidade de rede para colaboração em equipe

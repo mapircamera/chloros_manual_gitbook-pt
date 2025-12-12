@@ -137,7 +137,7 @@ Nem todas as camadas estão disponíveis para todas as imagens:
 
 **Disponível condicionalmente:**
 
-* ⚠️ RAW (Original) - Apenas a imagem foi capturada no modo RAW ou RAW+JPG
+* ⚠️ RAW (Original) - Apenas uma imagem foi capturada no modo RAW ou RAW+JPG
 * ⚠️ RAW (Alvo) - Apenas a imagem contém alvos de descobertas descobertas
 * ⚠️ RAW (Refletância) - Somente após processamento com ocorrência de refletância habilitada
 * ⚠️ RAW (\[Índice] Índice) - Somente após processamento com índices configurados

@@ -17,7 +17,7 @@ A maneira mais comum de abrir uma imagem no Image Viewer:
 
 Depois que uma imagem foi compartilhada na área de visualização:
 
-1. Clique no ícone **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+1. Clique no ícone **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">na barra lateral esquerda
 2. O guia Visualizador de imagens é aberto, exibindo a imagem selecionada em tela inteira
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
@@ -132,7 +132,7 @@ Quando ampliado além do tamanho da tela:
 
 Aplique índices multiespectrais e tabelas de consulta de núcleos:
 
-1. Localizar **Index/LUT Sandbox** não **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
+1. Localizar **Index/LUT Sandbox** não **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">barra lateral
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
 3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (somente Cloros+)
 4. Aplicar gradiente de cor LUT para visualização

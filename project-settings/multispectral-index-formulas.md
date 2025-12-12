@@ -10,7 +10,7 @@ metaLinks:
 
 As fórmulas de índice abaixo usam uma combinação de faixas médias de transmissão do filtro Survey3:
 
- <table><thead><tr><th align="center">Cor do filtro Survey3</th><th width="196.199951171875" align="center">Nome do filtro Survey3</th><th width="159.800048828125" align="center">Faixa de transmissão (FWHM)</th><th align="center">Média Transmissão</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848nm</td><td alinhar="center">823nm</td></tr><tr><td alinhar="center">NIR2</td><td alinhar="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table> 
+  <table><thead><tr><th align="center">Cor do filtro Survey3</th><th width="196.199951171875" align="center">Nome do filtro Survey3</th><th width="159.800048828125" align="center">Faixa de transmissão (FWHM)</th><th align="center">Mídia Transmissão</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848nm</td><td alinhar="center">823nm</td></tr><tr><td alinhar="center">NIR2</td><td alinhar="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table>  
 
 Quando estas fórmulas são utilizadas o nome pode terminar em "\_1" ou "\_2", que corresponde a qual filtro NIR, NIR1 ou NIR2 foi utilizado.
 
@@ -72,7 +72,7 @@ $$
 eta = {2(NIR^{2}-Vermelho^{2}) + 1,5 * NIR + 0,5 * Vermelho \over NIR + Vermelho + 0,5}
 $$
 
-_Referência: Pinty, B. e M. Verstraete. GEMI: um índice não linear para monitorar a vegetação global a partir de satélites. Vegetação 101 (1992): 15-20._
+_Referência: Pinty, B. e M. Verstraete. GEMI: um índice não linear para monitorar o vegetação global a partir de satélites. Vegetação 101 (1992): 15-20._
 
 ***
 
@@ -320,7 +320,7 @@ _Referência: Gitelson, A., et al. "Linhas de vegetação e solo no espaço espe
 
 ## WDRVI - Índice de Vegetação da Ampla Faixa Dinâmica
 
-Este índice é semelhante ao NDVI, mas utiliza um coeficiente de ponderação (_a_) para reduzir a disparidade entre as contribuições dos sinais infravermelhos próximos e vermelhos para o NDVI. O WDRVI é particularmente eficaz em cenas com densidade de vegetação moderada a alta quando o NDVI excede 0,6. O NDVI tende a se estabilizar quando a fração de vegetação e o índice de área foliar (IAF) aumentam, enquanto o WDRVI é mais sensível a uma gama mais ampla de frações de vegetação e as alterações no IAF.
+Este índice é semelhante ao NDVI, mas utiliza um coeficiente de ponderação (_a_) para reduzir a disparidade entre as contribuições dos sinais infravermelhos enviados e vermelhos para o NDVI. O WDRVI é particularmente eficaz em cenas com densidade de vegetação moderada a alta quando o NDVI excede 0,6. O NDVI tende a se estabilizar quando a fração de vegetação e o índice de área foliar (IAF) aumentam, enquanto o WDRVI é mais sensível a uma gama mais ampla de frações de vegetação e as alterações no IAF.
 
 $$
 WDRVI = {(\alpha * NIR- Vermelho) \over (\alpha * NIR + Vermelho)}

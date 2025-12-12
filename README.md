@@ -4,7 +4,7 @@ metaLinks: {}
 
 # Começando
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figura><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
 
 Chloros é um aplicativo de software da [MAPAIR](https://www.mapir.camera) para processar imagens e outros dados de sensores.
 
@@ -24,7 +24,7 @@ Chloros está disponível em 4 modos de aplicação:
 
 Processamento em lote de linha de comando. Perfeito para automação, scripts e fluxos de trabalho avançados. _CLI requer uma licença Chloros+ para acessar._
 
-## [API Cloros: SDK Python](api-python-sdk.md)
+## [API Cloro: SDK Python](api-python-sdk.md)
 
 Interface programática Python para automação e fluxos de trabalho personalizados. Perfeito para pipelines de pesquisa, integração com aplicativos Python existentes e construção de ferramentas personalizadas. _API requer uma licença Chloros+ para acessar._
 
@@ -43,6 +43,6 @@ Embora o uso do Chloros seja gratuito para a maioria das tarefas, você pode que
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Chloros+ Pricing &#x26; Signup</a></p>
 
-<figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figura>
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
+<figura><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figura>
