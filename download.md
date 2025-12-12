@@ -6,59 +6,59 @@ metaLinks:
 
 # Download
 
-Baixe a versão mais recente do Chloros para Windows para começar a processar imagens multiespectrais.
+Faça o download da versão mais recente do Chloros para Windows para começar a trabalhar com o processamento de imagens multiespectrais.
 
 ### Requisitos do sistema
 
-| Requisito | Mínimo | Recomendado |
+| Requisito          | Mínimo                         | Recomendado                     |
 | -------------------- | ------------------------------- | ------------------------------- |
-| **Sistema operacional** | Windows 10 (64 bits) | Windows 11 (64 bits) |
-| **Processador** | Intel Core i5 ou equivalente | Intel Core i7 ou superior |
-| **Memória (RAM)** | 8GB | 16 GB ou mais |
-| **Placa Gráfica** | Compatível com DirectX 11 | GPU NVIDIA com 4 GB + VRAM |
-| **Armazenamento** | 2 GB de espaço livre | SSD com mais de 10 GB de espaço livre |
-| **Exibição** | 1920x1080 | 2560x1440 ou superior |
-| **Internet** | Necessário para ativação da licença | Necessário para ativação da licença |
+| **Sistema operativo** | Windows 10 (64 bits)             | Windows 11 (64 bits)             |
+| **Processador**        | Intel Core i5 ou equivalente     | Intel Core i7 ou superior         |
+| **Memória (RAM)**     | 8 GB                             | 16 GB ou mais                    |
+| **Placa gráfica**    | Compatível com DirectX 11           | GPU NVIDIA com 4 GB+ de VRAM       |
+| **Armazenamento**          | 2 GB de espaço livre                  | SSD com 10 GB+ de espaço livre       |
+| **Ecrã**          | 1920x1080                       | 2560x1440 ou superior             |
+| **Internet**         | Necessária para ativação da licença | Necessária para ativação da licença |
 
-{% dica estilo = "info" %}
-**Aceleração de GPU**: Os usuários do Chloros+ com GPUs NVIDIA (4GB+ VRAM) podem usar a aceleração CUDA para um processamento significativamente mais rápido.
+{% hint style=&quot;info&quot; %}
+**Aceleração GPU**: Os utilizadores do Chloros+ com GPUs NVIDIA (4 GB+ VRAM) podem utilizar a aceleração CUDA para um processamento significativamente mais rápido.
 {% endhint %}
 
 ***
 
-## Baixar Cloros
+## Descarregar Chloros
 
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primário">Baixe o Cloros aqui</a>
+### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Descarregar Chloros aqui</a>
 
-### Versão mais recente estável
+### Última versão estável
 
-**Instalador de Cloros para Windows**
+**Chloros Instalador para Windows**
 
 * **Versão**: 1.0.3
-* **Dados de lançamento**: dezembro? de 2025
-* **Tamanho do arquivo**: 1,6 GB
-* **Tipo de arquivo**: .exe (Windows Installer)
+* **Data de lançamento**: Dezembro ?, 2025
+* **Tamanho do ficheiro**: 1,6 GB
+* **Tipo de ficheiro**: .exe (Instalador Windows)
 
 #### **Etapas de instalação:**
 
-1. Baixe o`CHLOROS INSTALLER - CURRENT VERSION.exe`arquivo
+1. Descarregue o ficheiro `CHLOROS INSTALLER - CURRENT VERSION.exe`
 2. Clique duas vezes no instalador para iniciar a instalação
 3. Siga as instruções do assistente de instalação
-4. Escolha o diretório de instalação (padrão:`C:\Program Files\Chloros\`)
+4. Escolha o diretório de instalação (padrão: `C:\Program Files\Chloros\`)
 5. Conclua a instalação e inicie o Chloros
-6. Faça login com sua conta MAPIR Cloud Chloros+ (ou continue com a versão gratuita)
+6. Inicie sessão com a sua conta MAPIR Cloud Chloros+ (ou continue com a versão gratuita)
 
-{% dica estilo = "sucesso" %}
-O instalador adiciona automaticamente`chloros-cli`ao PATH do seu sistema para acesso à linha de comando.
+{% hint style=&quot;success&quot; %}
+O instalador adiciona automaticamente o `chloros-cli` ao PATH do seu sistema para acesso à linha de comando.
 {% endhint %}
 
 ***
 
-## Recursos Adicionais
+## Recursos adicionais
 
-### SDKPython
+### Python SDK
 
-Para desenvolvedores e fluxos de trabalho de automação, instale o SDK do Chloros Python:
+Para programadores e fluxos de trabalho de automação, instale o Chloros Python SDK:
 
 ```bash
 pip install chloros-sdk
@@ -66,7 +66,7 @@ pip install chloros-sdk
 
 **Documentação**: [API: Python SDK](api-python-sdk.md)
 
-**Requisitos**: O Chloros Desktop deve estar instalado, é necessária a licença do Chloros+
+**Requisitos**: Chloros Desktop deve estar instalado, Chloros+ licença necessária
 
 ***
 
@@ -75,98 +75,94 @@ pip install chloros-sdk
 A instalação do Chloros inclui:
 
 * ✅ **Chloros Desktop GUI** - Interface gráfica completa
-* ✅ **Cloros (navegador)** - Interface baseada na Web para sistemas de especificações mais baixas
-* ✅ **Chloros CLI** - Interface de linha de comando (solicitar licença Chloros+)
-* ✅ **Backend Engine** - Pipeline de processamento de imagem
-* ✅ **Perfis de câmera** - Modelos de câmera MAPIR pré-configurados
+* ✅ **Chloros (Navegador)** - Interface baseada na Web para sistemas com especificações mais baixas
+* ✅ **Chloros CLI** - Interface de linha de comando (requer licença Chloros+)
+* ✅ **Motor backend** - Pipeline de processamento de imagens
+* ✅ **Perfis de câmara** - Modelos de câmara pré-configurados MAPIR
 
 ***
 
-## Atualizar para Cloros+
+## Atualize para Chloros+
 
-Desbloqueie recursos avançados com uma assinatura do Chloros+:
+Desbloqueie funcionalidades avançadas com uma subscrição Chloros+:
 
-* 🚀 **Processamento multithread** - Processar imagens em paralelo
-* ⚡ **Aceleração de GPU (CUDA)** – Aproveite o poder da GPU NVIDIA
-* 💻 **Acesso CLI** – Automatize com ferramentas de linha de comando
-* 🐍 **Python SDK** – Acesso programático à API
-* 📱 **Vários dispositivos** - Use em 2 a 10+ dispositivos (depende do plano)
-* 🧮 **Fórmulas Personalizadas** - Crie índices multiespectrais personalizados
+* 🚀 **Processamento multithread** - Processe imagens em paralelo
+* ⚡ **Aceleração GPU (CUDA)** - Aproveite o poder da GPU NVIDIA
+* 💻 **Acesso CLI** - Automatize com ferramentas de linha de comando
+* 🐍 **Python SDK** - Acesso programático ao API
+* 📱 **Vários dispositivos** - Use em 2 a 10+ dispositivos (dependendo do plano)
+* 🧮 **Fórmulas personalizadas** - Crie índices multiespectrais personalizados
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">View Chloros+ Plans &#x26; Pricing</a></p>
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planos e preços do Chloros+</a></p>***
 
-***
+## Ajuda com a instalação
 
-## Ajuda de instalação
+### Resolução de problemas
 
-### Solução de problemas
+**A instalação falha com a mensagem de erro:**
 
-**Uma falha de instalação com mensagem de erro:**
-
-* comprove-se de ter direitos de administrador
+* Certifique-se de que tem direitos de administrador
 * Desative temporariamente o software antivírus
-* Verifique se você atende aos requisitos mínimos do sistema
+* Verifique se cumpre os requisitos mínimos do sistema
 
-**O aplicativo não inicia:**
+**A aplicação não inicia:**
 
 * Experimente a versão Chloros (navegador)
 * Verifique se o Windows 10/11 (64 bits) está instalado
-* Atualizar drivers gráficos
-* Verifique o Visualizador de Eventos do Windows para obter detalhes do erro
-* Entre em contato com o suporte com logs de erros
+* Atualize os controladores gráficos
+* Verifique o Windows Event Viewer para obter detalhes sobre o erro
+* Contacte o suporte com os registos de erros
 
 **Problemas de ativação da licença:**
 
-* -se de que a conexão segura-se com a Internet está ativa
+* Certifique-se de que a ligação à Internet está ativa
 * Verifique as credenciais em [https://cloud.mapir.camera](https://cloud.mapir.camera)
-* Verifique se o firewall não está bloqueando o Chloros
-* Consulte [Login do Cloros+](cloros+-login.md) para obter instruções planejadas
+* Verifique se a firewall não está a bloquear o Chloros
+* Consulte [Chloros+ Login](chloros+-login.md) para obter instruções detalhadas
 
-### Obtendo suporte
+### Obter suporte
 
-Precisa de ajuda para instalação ou configuração?
+Precisa de ajuda com a instalação ou configuração?
 
 * 📧 **E-mail**: info@mapir.camera
-* 🌐 **Site**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **Documentação**: [Primeiros passos](./)
-* ❓ **FAQ**: [Perguntas frequentes](faq.md)
+* 🌐 **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **Documentação**: [Introdução](./)
+* ❓ **Perguntas frequentes**: [Perguntas frequentes](faq.md)
 
 ***
 
-## Registro de alterações
+## Registo de alterações
 
 <details>
 
 <summary>Versão 1.0.3</summary>
 
-### **Dados de lançamento**: dezembro? de 2025
+### **Data de lançamento**: Dezembro ?, 2025
 
-#### Novos recursos
+#### Novas funcionalidades
 
-* Lançamento Inicial
+* Lançamento inicial
 
 #### Melhorias
 
-* Lançamento Inicial
+* Lançamento inicial
 
-#### Correções de bugs
+#### Correções de erros
 
-* Lançamento Inicial
+* Lançamento inicial
 
 #### Problemas conhecidos
 
-* Lançamento Inicial
+* Lançamento inicial
 
-</details>
-
-***
+</details>***
 
 ## Contrato de licença
 
-**Proprietário do software** - Copyright (c) 2025 MAPIR Inc.
+**Software proprietário** - Copyright (c) 2025 MAPIR Inc.
 
-O uso, distribuição ou modificação não autorizado é proibido.
+É proibido o uso, distribuição ou modificação não autorizados.
 
-**Versão Gratuita**: Disponível para uso pessoal e comercial com limitações de recursos
+**Versão gratuita**: disponível para uso pessoal e comercial com limitações de funcionalidades
 
-**Chloros+**: licença baseada em assinatura para recursos avançados e implantações comerciais
+**Chloros+**: licença baseada em assinatura para funcionalidades avançadas e implementações comerciais

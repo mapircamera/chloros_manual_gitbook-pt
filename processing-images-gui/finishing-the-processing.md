@@ -1,306 +1,306 @@
-# Finalizando o Processamento
+# Concluindo o processamento
 
-Assim que o Chloros conclui o processamento, é hora de revisar seus resultados, verificar a qualidade da saída e preparar as imagens processadas para uso em seu fluxo de trabalho. Esta página orienta você nas etapas finais e nas próximas ações.
+Assim que o Chloros concluir o processamento, é hora de rever os resultados, verificar a qualidade da saída e preparar as imagens processadas para uso no seu fluxo de trabalho. Esta página orienta-o nas etapas finais e nas próximas ações.
 
-## Processando Indicação Completa
+## Indicação de processamento concluído
 
-Quando o processamento para terminar com êxito, você verá vários indicadores:
+Quando o processamento for concluído com sucesso, você verá vários indicadores:
 
-* ✅ **Barra de progresso**: alcance 100% de conclusão
-* ✅ **Log de depuração**: mostra a mensagem "Processamento concluído"
-* ✅ **Botão Iniciar**: Torna-se ativado novamente (pronto para a próxima execução de processamento)
-* ✅ **Arquivos de saída**: todas as imagens processadas salvas na subpasta do modelo da câmera
-
-***
-
-## Localizando suas imagens processadas
-
-### Abrindo a pasta de saída
-
-1. Clique no ícone **Menu Principal**<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line">(canto superior esquerdo)
-2. Selecione **"Abrir pasta do projeto"**
-3. Seu explorador de arquivos abre no diretório do projeto
-4. Localize seu projeto pelo nome
+* ✅ **Barra de progresso**: atinge 100% de conclusão
+* ✅ **Registo de depuração**: mostra a mensagem &quot;Processamento concluído&quot;
+* ✅ **Botão Iniciar**: fica ativado novamente (pronto para a próxima execução do processamento)
+* ✅ **Ficheiros de saída**: Todas as imagens processadas são guardadas na subpasta do modelo da câmara
 
 ***
 
-## Revisão de imagens processadas
+## Localizar as suas imagens processadas
 
-### Visualização rápida no File Explorer
+### Abrir a pasta de saída
 
-**Visualização integrada do Windows:**
+1. Clique no ícone **Menu principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
+2. Selecione **«Abrir pasta do projeto»**
+3. O seu explorador de ficheiros abre no diretório do projeto
+4. Localize o seu projeto pelo nome
 
-1. Navegue até a subpasta do modelo da câmera
-2. Selecione um arquivo de imagem
-3. A visualização aparece no painel de visualização do Windows Explorer
-4. Use as teclas de seta para navegar pelas imagens
+***
 
-### Visualização em visualizadores de imagens externas
+## Revendo imagens processadas
+
+### Pré-visualização rápida no explorador de ficheiros
+
+**Pré-visualização integrada no Windows:**
+
+1. Navegue até à subpasta do modelo da câmara
+2. Selecione um ficheiro de imagem
+3. A pré-visualização aparece no painel de pré-visualização do Windows Explorer
+4. Use as setas do teclado para navegar pelas imagens
+
+### Pré-visualização em visualizadores de imagens externos
 
 **Visualizadores recomendados:**
 
-* **QGIS** - Software GIS gratuito (melhor para análise georreferenciada multiespectral)
-* **IrfanView** - Visualizador de imagens rápido e leve (suporta TIFF)
-* **Adobe Photoshop** – Edição profissional (suporte TIFF)
-* **GIMP** – Alternativa gratuita ao Photoshop
-* **Fotos do Windows** – Visualização básica (pode não suportar TIFF de 16 bits)
+* **QGIS** - Software GIS gratuito (ideal para análise multiespectral georreferenciada)
+* **IrfanView** - Visualizador de imagens rápido e leve (compatível com TIFF)
+* **Adobe Photoshop** - Edição profissional (suporte a TIFF)
+* **GIMP** - Alternativa gratuita ao Photoshop
+* **Windows Photos** - Visualização básica (pode não suportar TIFF de 16 bits)
 
-### Pré-visualização no visualizador de imagens Cloros
+### Pré-visualização no Visualizador de Imagens Chloros
 
-Use o Visualizador de imagens integrado do Chloros para visualização avançada:
+Use o Visualizador de Imagens integrado do Chloros para visualização avançada:
 
-1. Clique em uma miniatura de imagem no navegador de arquivos
-2. A imagem é aberta na área de visualização principal
-3. Clique no guia **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">na barra lateral esquerda
-4. Use [Sandbox de índice/LUT](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
+1. Clique numa miniatura de imagem no Navegador de Ficheiros
+2. A imagem abre na área de pré-visualização principal
+3. Clique no separador **Visualizador de Imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
 
-Consulte [Visualizador de imagens](../image-viewer-gui/page-3.md) para obter instruções detalhadas.
+Consulte [Visualizador de Imagens](../image-viewer-gui/opening-an-image-full-screen.md) para obter instruções detalhadas.
 
 ***
 
-## Revendo o log de depuração
+## Revendo o Log de Depuração
 
 ### Verifique se há avisos ou erros
 
-1. Abra **Log de depuração** guia<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
-2. Percorrer as mensagens
-3. Adquira avisos amarelos ou erros vermelhos
-4. Revise quaisquer problemas observados
-5. Entre em contato com o suporte do MAPIR para obter assistência
+1. Abra a guia **Registo de depuração** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> .
+2. Percorra as mensagens.
+3. Procure avisos amarelos ou erros vermelhos.
+4. Revise quaisquer problemas observados.
+5. Entre em contacto com o suporte MAPIR para obter assistência.
 
-### Salvando o registro
+### Guardar o registo
 
-Para manter um registro de processamento ou enviar ao Suporte MAPIR:
+Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
-1. Clique no botão **"Copiar"** ou **"Baixar"**
-2. Salvar como arquivo de texto na pasta do projeto
-3. Incluir com a documentação do projeto
-4. Envie para o suporte do MAPIR para encontrar problemas
+1. Clique no botão **&quot;Copiar&quot;** ou **&quot;Transferir&quot;**
+2. Guarde como ficheiro de texto na pasta do projeto
+3. Inclua na documentação do projeto
+4. Envie para o suporte MAPIR se encontrar problemas
 
 ***
 
-## Problemas e soluções comuns de saída
+## Problemas comuns de saída e soluções
 
-### Problema: arquivos de saída ausentes
+### Problema: Ficheiros de saída em falta
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Os arquivos não atenderam aos critérios de processamento
-* Imagens somente de destino (excluídas de exportação)
-* O espaço em disco acabou durante a exportação
-* Corrupção de arquivo durante o processamento
-
-**Soluções:**
-
-1. Verifique o log de depuração para mensagens de erro/ignorar
-2. Verifique se o espaço no disco era suficiente
-3. Contar arquivos: deve ser responsável (contagem original - contagem alvo) × (índices + 1)
-4. Reimporte e reprocesse quaisquer arquivos ausentes
-
-### Problema: bordas escuras ou escondidas (vinhetas ainda visíveis)
-
-**Causas possíveis:**
-
-* Correção de vinha desativada
-* Câmera/lente que não está no banco de dados de perfis do Chloros
-* Vinhetas extremas além da capacidade de correção
+* Os ficheiros não cumpriram os critérios de processamento
+* Imagens apenas de destino (excluídas da exportação)
+* O espaço em disco esgotou-se durante a exportação
+* Corrupção de ficheiros durante o processamento
 
 **Soluções:**
 
-1. Verifique se a correção da vinheta foi habilitada nas configurações do projeto
-2. Verifique o modelo da câmera com defeito
-3. Entre em contato com o suporte do MAPIR se a vinheta persistir
+1. Verifique o registo de depuração para mensagens de omissão/erro
+2. Verifique se o espaço em disco era suficiente
+3. Conte os ficheiros: deve corresponder (contagem original - contagem de destino) × (índices + 1)
+4. Reimporte e reprocesse quaisquer ficheiros em falta
 
-### Problema: núcleos ou valores incorretos
+### Problema: Bordas escuras ou brilhantes (vinheta ainda visível)
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Nenhum alvo de detecção detectado
-* Modelo de destino de escolha escolhida
+* Correção de vinheta desativada
+* Câmara/lente não presente na base de dados de perfis Chloros
+* Vinheta extrema além da capacidade de correção
+
+**Soluções:**
+
+1. Verifique se a correção de vinheta foi ativada nas configurações do projeto
+2. Verifique se o modelo da câmara foi detetado corretamente
+3. Entre em contacto com o suporte MAPIR se a vinheta persistir
+
+### Problema: Cores ou valores incorretos
+
+**Possíveis causas:**
+
+* Nenhuma meta de calibração detetada
+* Modelo de meta de calibração incorreto selecionado
 * Calibração de refletância desativada
-* Imagens alvo de baixa qualidade
+* Imagens de meta de baixa qualidade
 
 **Soluções:**
 
-1. Verifique se a retenção de refletância foi habilitada
-2. Verifique as mensagens "Destino encontrado" no log de depuração
-3. Revise a qualidade da imagem alvo
-4. Reprocesse com alvos adequados marcados
+1. Verifique se a calibração da refletância foi ativada
+2. Verifique as mensagens «Alvo encontrado» no registo de depuração
+3. Reveja a qualidade da imagem do alvo
+4. Reprocesse com os alvos corretos marcados
 
-### Problema: os valores do NDVI parecem errados
+### Problema: Os valores NDVI parecem incorretos
 
-**Intervalos esperados de NDVI:**
+**Intervalos NDVI esperados:**
 
-* **Água, pedras, solo**: -0,1 a 0,2
-* **Vegetação esparsa/não saudável**: 0,2 a 0,4
+* **Água, rochas, solo**: -0,1 a 0,2
+* **Vegetação escassa/doente**: 0,2 a 0,4
 * **Vegetação moderada**: 0,4 a 0,6
-* **Vegetação densa e saudável**: 0,6 a 0,9
+* **Vegetação saudável e densa**: 0,6 a 0,9
 
-**Se os valores estiverem nesses momentos:**
+**Se os valores estiverem fora destes intervalos:**
 
-1. Verifique se a concentração de refletância foi aplicada
-2. Verifique se o registro do sensor de luz foi incluído
-3. Verifique se os alvos de descoberta foram detectados
-4. -se de que o modelo correto da câmera foi detectado
-5. Revise o tempo e as condições de captura da imagem alvo
+1. Verifique se a calibração da refletância foi aplicada
+2. Verifique se o registo do sensor de luz foi incluído
+3. Verifique se os alvos de calibração foram detetados
+4. Certifique-se de que o modelo correto da câmara foi detetado
+5. Reveja o tempo e as condições de captura da imagem do alvo
 
 ***
 
-## Usando suas imagens processadas
+## Usando as suas imagens processadas
 
-### Para Fotogrametria/Criação Ortomosaica
+### Para fotogrametria/criação de ortomosaico
 
 **Fluxo de trabalho recomendado:**
 
-1. **Importar imagens de refletância calibradas** para software de fotografia:
+1. **Importe imagens de refletância calibradas** para o software de fotogrametria:
    * Pix4Dmapper
-   * Metaforma Agisoft
+   * Agisoft Metashape
    * DroneDeploy
    * WebODM
-2. **Mantenha os metadados EXIF**: garanta que os dados do GPS sejam preservados para marcação geográfica
-3. **Fluxos de trabalho calibrados**: use imagens de refletância para precisão científica
-4. **Processar mosaicos de índice**: geração de NDVI ortomosaico a partir de imagens de índice individuais
-5. **Exportar GeoTIFF georreferenciado**: Para uso em aplicativos GIS
+2. **Mantenha os metadados EXIF**: Certifique-se de que os dados GPS sejam preservados para geotagging
+3. **Fluxos de trabalho calibrados**: Use imagens de refletância para precisão científica
+4. **Processe mosaicos de índice**: Crie ortomosaicos NDVI a partir de imagens de índice individuais
+5. **Exporte GeoTIFF georreferenciado**: para uso em aplicações GIS
 
 ### Para análise GIS
 
 **Fluxo de trabalho recomendado:**
 
 1. **Carregue no QGIS, ArcGIS ou similar**
-2. **Usar imagens de refletância TIFF de 16 bits** para análise multibanda
+2. **Use imagens de refletância TIFF de 16 bits** para análise multibanda
 3. **Use imagens de índice** (NDVI, NDRE) como camadas de vegetação prontas para uso
-4. **Calculadora raster**: Combine bandas para análise personalizada
-5. **Exportar**: Crie mapas de classificação, detecção de alterações e mapas de saúde do vegetação
+4. **Calculadora raster**: combine bandas para análise personalizada
+5. **Exportar**: crie mapas de classificação, deteção de alterações, mapas de saúde da vegetação
 
-### Para análise/relatórios diretos
+### Para análise direta/relatórios
 
 **Fluxo de trabalho recomendado:**
 
-1. **Usar imagens de índice com núcleos LUT** para relatórios visuais
-2. **Estatísticas de manipulação**: NDVI médio por talhão/parcela
+1. **Use imagens de índice com cores LUT** para relatórios visuais
+2. **Extraia estatísticas**: média NDVI por campo/parcela
 3. **Série temporal**: compare índices em várias sessões
-4. **Gere relatórios**: incluindo mapas, estatísticas e visualizações
+4. **Gere relatórios**: inclua mapas, estatísticas e visualizações
 
 ***
 
-## Arquivamento e Backup
+## Arquivamento e backup
 
 ### Estratégia de backup recomendada
 
 **O que salvar:**
 
-* ✅ **Imagens RAW/JPG exclusivas** - Arquivar em unidade/nuvem separadas
-* ✅ **Saídas processadas** - Mantenha imagens e índices calibrados
-* ✅ **Arquivo de projeto** - Contém todas as configurações para reprocessamento, se necessário
-* ✅ **Log de depuração** - Detalhes de processamento de documentos
-* ✅ **Imagens alvo de descoberta** - Para verificação e reprocessamento
+* ✅ **Imagens RAW/JPG originais** - arquive em unidade/nuvem separada
+* ✅ **Resultados processados** - Mantenha imagens e índices calibrados
+* ✅ **Ficheiro do projeto** - Contém todas as configurações para reprocessamento, se necessário
+* ✅ **Registo de depuração** - Documenta detalhes do processamento
+* ✅ **Imagens de alvo de calibração** - Para verificação e reprocessamento
 
 **Recomendações de armazenamento:**
 
-* **Backup imediato**: disco rígido externo
-* **Arquivo de longo prazo**: armazenamento em nuvem (Google Drive, Dropbox, etc.)
-* **Dados críticos**: mantenha 2 a 3 cópias em locais diferentes
+* **Cópia de segurança imediata**: Disco rígido externo
+* **Arquivo de longo prazo**: Armazenamento na nuvem (Google Drive, Dropbox, etc.)
+* **Dados críticos**: Mantenha 2-3 cópias em locais diferentes
 
 ***
 
 ## Próximas execuções de processamento
 
-### Reutilizando configurações do projeto
+### Reutilização das definições do projeto
 
 Se processar conjuntos de dados semelhantes no futuro:
 
-1. **Salvar modelo de projeto** (se ainda não tiver feito)
+1. **Salve o modelo do projeto** (se ainda não tiver feito isso)
 2. **Crie um novo projeto** usando o modelo salvo
-3. **Importar novas imagens**
-4. **Processo** com configurações idênticas para consistência
+3. **Importe novas imagens**
+4. **Processe** com configurações idênticas para manter a consistência
 
-### Processamento em lote de múltiplas sessões
+### Processamento em lote de várias sessões
 
 Para várias sessões/conjuntos de dados:
 
-**Opção 1: GUI – Vários projetos**
+**Opção 1: GUI - Vários projetos**
 
 * Crie um projeto separado para cada sessão
 * Use configurações de modelo consistentes
 * Processe um de cada vez
 
-**Opção 2: Cloros CLI (somente Cloros+)**
+**Opção 2: Chloros CLI (somente Chloros+)**
 
 * Automatize o processamento em lote
 * Processe várias pastas com scripts
-* Consulte [Documentação CLI](../CLI.md)
+* Consulte [Documentação do CLI](../CLI.md)
 
-**Opção 3: Python SDK (somente Chloros+)**
+**Opção 3: Python SDK (apenas Chloros+)**
 
-* Controle programático
+* Controlo programático
 * Integração com pipelines de análise
-* Consulte [documentos da API](../api-python-sdk.md)
+* Consulte a [Documentação API](../api-python-sdk.md)
 
 ***
 
-## Solução de problemas de pós-processamento
+## Resolução de problemas pós-processamento
 
 ### Reprocessamento com configurações diferentes
 
-Se os resultados não forem esmagadores:
+Se os resultados não forem satisfatórios:
 
-1. Manter as imagens originais (nunca restauração)
+1. Mantenha as imagens originais (nunca as elimine)
 2. Abra o mesmo projeto no Chloros
-3. Ajustar as configurações no painel Configurações do projeto
-4. Processo novamente - as saídas substituirão os resultados anteriores
+3. Ajuste as configurações no painel Configurações do projeto
+4. Processe novamente - os resultados substituirão os resultados anteriores
 
-### Processando Subconjunto de Imagens
+### Processamento de subconjunto de imagens
 
 Para reprocessar apenas imagens específicas:
 
-1. Criar novo projeto
-2. Importe apenas as imagens que serão reveladas de reprocessamento
+1. Crie um novo projeto
+2. Importe apenas as imagens que precisam ser reprocessadas
 3. Use o mesmo modelo de configurações
-4. Processador conjunto de dados menor
+4. Processe um conjunto de dados menor
 
-### Obtendo ajuda
+### Obtenha ajuda
 
-Se você encontrar problemas:
+Se tiver problemas:
 
-* 📧 **E-mail**: info@mapir.camera (inclui registro de depuração)
+* 📧 **E-mail**: info@mapir.camera (inclua o registo de depuração)
 * 🌐 **Suporte**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Perguntas frequentes](../faq.md)
-* 📖 **Documentação**: [Cloros manuais](../)
+* 📚 **Perguntas frequentes**: [Perguntas frequentes](../faq.md)
+* 📖 **Documentação**: [Manual do Chloros](../)
 
 ***
 
-## Resumo: Fluxo de trabalho completo
+## Resumo: fluxo de trabalho completo
 
-Agora você concluiu todo o fluxo de trabalho de processamento do Cloros:
+Agora concluiu todo o fluxo de trabalho de processamento do Chloros:
 
-1. ✅ **Projeto criado** - Veja [Projetos](../projects.md)
-2. ✅ **Arquivos adicionados** - Consulte [Adicionando arquivos](page-1.md)
-3. ✅ **Configurações ajustadas** - Consulte [Ajustando as configurações do projeto](adjusting-project-settings.md)
-4. ✅ **Alvos marcados** - Consulte [Escolher imagens de destino](choosing-target-images.md)
-5. ✅ **Processamento iniciado** - Consulte [Iniciando o processamento](starting-the-processing.md)
+1. ✅ **Projeto criado** - Consulte [Projetos](../projects.md)
+2. ✅ **Arquivos adicionados** - Consulte [Adicionar arquivos](adding-files-to-a-project.md)
+3. ✅ **Configurações ajustadas** - Consulte [Ajustar configurações do projeto](adjusting-project-settings.md)
+4. ✅ **Alvos marcados** - Consulte [Escolher imagens alvo](choosing-target-images.md)
+5. ✅ **Processamento iniciado** - Consulte [Iniciar o processamento](starting-the-processing.md)
 6. ✅ **Progresso monitorado** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
 7. ✅ **Resultados revisados** - Esta página
 
-**Suas imagens multiespectrais calibradas e corrigidas por refletância estão prontas para análise!**
+**Suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
 
 ***
 
-## Recursos Adicionais
+## Recursos adicionais
 
 ### Recursos avançados
 
-* [**Visualizador de imagens**](../image-viewer-gui/page-3.md) - Visualização e análise interativa
+* [**Visualizador de imagens**](../image-viewer-gui/opening-an-image-full-screen.md) - Visualização e análise interativas
 * [**Sandbox de índice/LUT**](../image-viewer-gui/index-lut-sandbox.md) - Teste de índice personalizado
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência completa do índice
+* [**Fórmulas de Índice Multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência completa do índice
 
-### Automação e Integração
+### Automação e integração
 
-* [**Documentação CLI**](../CLI.md) - Processamento em lote de linha de comando
-* [**SDK para Python**](../api-python-sdk.md) - Automação programática
-* [**Recursos do Cloros+**](../#cloros) - Recursos avançados de processamento
+* [**Documentação CLI**](../CLI.md) - Processamento em lote por linha de comando
+* [**Python SDK**](../api-python-sdk.md) - Automatização programática
+* [**Recursos do Chloros+**](../#chloros) - Recursos avançados de processamento
 
-### Suporte e Aprendizagem
+### Suporte e aprendizagem
 
-* [**PERGUNTAS FREQUENTES**](../faq.md) - Perguntas comuns respondidas
-* [**Alvos de experiência**](../calibration-targets.md) - Noções básicas sobre rotina de refletância
-* [**Câmeras suportadas**](../supported-cameras.md) - Hardware compatível
+* [**Perguntas frequentes**](../faq.md) - Respostas a perguntas comuns
+* [**Alvos de calibração**](../calibration-targets.md) - Compreender a calibração da refletância
+* [**Câmaras compatíveis**](../supported-cameras.md) - Hardware compatível

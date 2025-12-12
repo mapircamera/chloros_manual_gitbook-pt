@@ -1,221 +1,221 @@
-# Escolhendo imagens alvo
+# Escolhendo imagens-alvo
 
-Marcar quais imagens contêm alvos de atenção é uma etapa crucial que acelera significativamente o pipeline de processamento do Cloros. Ao pré-selecionar as imagens alvo, você elimina a necessidade de Chloros digitalizar todas as imagens do seu conjunto de dados em busca de alvos específicos.
+Marcar quais imagens contêm alvos de calibração é uma etapa crucial que acelera significativamente o pipeline de processamento do Chloros. Ao pré-selecionar imagens-alvo, elimina-se a necessidade do Chloros verificar todas as imagens do seu conjunto de dados em busca de alvos de calibração.
 
-## Por que marcar imagens alvo?
+## Por que marcar imagens-alvo?
 
 ### Velocidade de processamento
 
-Sem marcar as imagens alvo, o Cloros deve:
+Sem marcar as imagens-alvo, o Chloros deve:
 
-* Digitalize cada imagem do seu projeto
-* Execute algoritmos de detecção de alvo em cada imagem
-* Verifique centenas ou milhares de imagens desnecessariamente
+* Digitalizar todas as imagens do seu projeto
+* Executar algoritmos de deteção de alvos em cada imagem
+* Verificar centenas ou milhares de imagens desnecessariamente
 
-**Resultado**: o processamento pode demorar significativamente mais, especialmente para grandes conjuntos de dados.
+**Resultado**: o processamento pode demorar significativamente mais tempo, especialmente para conjuntos de dados grandes.
 
-### Com imagens alvo marcado
+### Com imagens-alvo marcadas
 
-Ao verificar a coluna Destino para imagens específicas:
+Quando verifica a coluna Alvo para imagens específicas:
 
-* O Cloros apenas verifica as imagens verificadas em busca de alvos
-* A detecção do alvo é concluída muito mais rapidamente
-* O tempo geral de processamento é bastante limitado
+* O Chloros verifica apenas as imagens marcadas em busca de alvos
+* A deteção de alvos é concluída muito mais rapidamente
+* O tempo total de processamento é bastante reduzido
 
-{% dica estilo = "sucesso" %}
-**Melhoria de velocidade**: marcar de 2 a 3 imagens alvo em um conjunto de dados de 500 imagens pode reduzir o tempo de detecção do alvo de mais de 30 minutos para menos de 1 minuto.
+{% hint style=&quot;success&quot; %}
+**Melhoria na velocidade**: marcar 2-3 imagens-alvo num conjunto de dados de 500 imagens pode reduzir o tempo de detecção de alvos de mais de 30 minutos para menos de 1 minuto.
 {% endhint %}
 
 ***
 
-## Como marcar imagens alvo
+## Como marcar imagens-alvo
 
-### Etapa 1: Identifique suas imagens alvo
+### Passo 1: Identifique as suas imagens-alvo
 
-Examine as imagens importadas no Navegador de arquivos e identifique quais imagens contêm alvos específicos.
+Examine as imagens importadas no Navegador de Ficheiros e identifique quais contêm alvos de calibração.
 
 **Cenários comuns:**
 
-* **Alvo pré-captura**: Capturado antes de iniciar a sessão
-* **Alvo pós-captura**: Capturado após a conclusão da sessão
-* **Alvos em campo**: Alvos colocados dentro da área de captura
-* **Múltiplos alvos**: 2 a 3 imagens alvo por sessão (recomendado)
+* **Alvo pré-captura**: capturado antes de iniciar a sessão
+* **Alvo pós-captura**: capturado após concluir a sessão
+* **Alvos no campo**: alvos colocados dentro da área de captura
+* **Vários alvos**: 2-3 imagens-alvo por sessão (recomendado)
 
-### Etapa 2: verifique a coluna de destino
+### Passo 2: Verifique a coluna Alvo
 
-Para cada imagem contendo um alvo específico:
+Para cada imagem que contenha um alvo de calibração:
 
-1. Localize uma imagem na tabela do navegador de arquivos
-2. Encontre a coluna **Destino** (coluna mais à direita)
-3. Clique na caixa de seleção na coluna Destino dessa imagem
-4. Repita para todas as imagens contendo alvos
+1. Localize a imagem na tabela do Navegador de ficheiros
+2. Encontre a coluna **Alvo** (coluna mais à direita)
+3. Clique na caixa de seleção na coluna Alvo para essa imagem
+4. Repita para todas as imagens que contenham alvos
 
-### Etapa 3: verifique sua seleção
+### Passo 3: Verifique a sua seleção
 
-Antes de processar, verifique novamente:
+Antes do processamento, verifique novamente:
 
-* [] Todas as imagens com alvos de descoberta são verificadas
-* [] Nenhuma imagem não alvo é verificada acidentalmente
-* [] Os alvos são claramente visíveis nas imagens verificadas
+* [ ] Todas as imagens com alvos de calibração estão marcadas
+* [ ] Nenhuma imagem que não seja alvo foi marcada acidentalmente
+* [ ] Os alvos estão claramente visíveis nas imagens marcadas
 
 ***
 
-## Melhores práticas para imagens alvo
+## Melhores práticas para imagens-alvo
 
-### Diretrizes de captura de alvo
+### Diretrizes para captura de alvos
 
 **Tempo:**
 
-* Capturar imagens alvo imediatamente antes e durante a sessão de captura
-* Nas mesmas condições de iluminação do seu sensor de luz DAQ
-* O ideal é capturar imagens alvo com a maior frequência possível para obter os melhores resultados. Caso contrário, os dados do sensor de luz serão usados ​​para ajustar a privacidade ao longo do tempo.
+* Capture imagens-alvo imediatamente antes e durante a sessão de captura
+* Nas mesmas condições de iluminação do sensor de luz DAQ
+* O ideal é capturar imagens de alvo com a maior frequência possível para obter os melhores resultados. Caso contrário, os dados do sensor de luz serão usados para ajustar a calibração ao longo do tempo.
 
-**Posição da câmera:**
+**Posição da câmara:**
 
-* Segure a câmera acima do alvo de forma que fique centralizada e preencha cerca de 40-60% do centro da imagem.
-* Mantenha a câmera paralela/nadir à superfície alvo
+* Segure a câmara acima do alvo de forma que ele fique centralizado e ocupe cerca de 40-60% do centro da imagem.
+* Mantenha a câmara paralela/nadir à superfície do alvo
 
 **Iluminação:**
 
-* Mesma iluminação ambiente do seu sensor de luz DAQ
-* Evite sombras nas superfícies alvo
-* Não bloqueie sua fonte de luz com seu corpo, veículo ou vegetação
-* Condições nubladas fornecem resultados mais consistentes
+* A mesma iluminação ambiente do seu sensor de luz DAQ
+* Evite sombras nas superfícies do alvo
+* Não bloqueie a sua fonte de luz com o seu corpo, veículo ou vegetação
+* Condições nubladas proporcionam resultados mais consistentes
 
-**Condição alvo:**
+**Condição do alvo:**
 
-* Mantenha os painéis alvo limpos e secos
-* Todos os 4 painéis devem estar claramente visíveis e desobstruídos
+* Mantenha os painéis do alvo limpos e secos
+* Todos os 4 painéis devem estar claramente visíveis e sem obstruções
 * Alvos perpendiculares/nadir à fonte de luz, se possível
 
-### Quantas imagens são alvo?
+### Quantas imagens do alvo?
 
-**Mínimo:** 1 imagem alvo por sessão. **Recomendado:** 3 a 5 imagens alvo por sessão.
+**Mínimo:** 1 imagem alvo por sessão. **Recomendado:** 3-5 imagens alvo por sessão.
 
-**Cronograma de práticas recomendadas:**
+**Cronograma de melhores práticas:**
 
-* 3-5 imagens capturadas logo após a gravação do sensor de luz
-* Gire uma câmera entre as capturas para obter os melhores resultados
-* Opcional: periodicamente no meio da sessão se as condições de iluminação mudarem constantemente
+* 3-5 imagens capturadas logo após o sensor de luz começar a gravar
+* Gire a câmara entre as capturas para obter os melhores resultados
+* Opcional: periodicamente no meio da sessão, se as condições de iluminação mudarem constantemente
 
 ***
 
-## Trabalhando com múltiplas câmeras
+## Trabalhando com várias câmaras
 
-### Configurações da câmera dupla
+### Configurações de duas câmaras
 
-Se você estiver usando duas câmeras MAPIR simultaneamente (por exemplo, Survey3W RGN + Survey3N OCN):
+Se estiver a utilizar duas câmaras MAPIR simultaneamente (por exemplo, Survey3W RGN + Survey3N OCN):
 
-1. Capture imagens alvo com **ambas as câmeras** ao mesmo tempo
-2. Use o **mesmo alvo físico** para ambas as câmeras
-3. Marque imagens de destino para **ambos os tipos de câmera** no Navegador de arquivos
-4. O cloro usará protetores para a segurança de cada câmera
+1. Capture imagens-alvo com **ambas as câmaras** ao mesmo tempo
+2. Use o **mesmo alvo físico** para ambas as câmaras
+3. Marque imagens-alvo para **ambos os tipos de câmara** no Navegador de Ficheiros
+4. O Chloros usará alvos apropriados para a calibração de cada câmara
 
-### Coluna Modelo de Câmera
+### Coluna Modelo da Câmara
 
-A coluna **Modelo da câmera** ajuda a identificar quais imagens vieram de qual câmera:
+A coluna **Modelo da Câmara** ajuda a identificar quais imagens vieram de qual câmara:
 
-* Pesquisa3W\_RGN
-* Pesquisa3N\_OCN
-* Pesquisa3W\_RGB
+* Survey3W\_RGN
+* Survey3N\_OCN
+* Survey3W\_RGB
 * etc.
 
-Use esta coluna para verificar se você marcou alvos para cada tipo de câmera em seu projeto.
+Use esta coluna para verificar se marcou alvos para cada tipo de câmara no seu projeto.
 
 ***
 
-## Configurações de detecção de alvo
+## Definições de deteção de alvos
 
-### Ajustando a sensibilidade de detecção
+### Ajustar a sensibilidade de deteção
 
-Se o Chloros não estiver detectando seus alvos corretamente, ajuste essas configurações em [Configurações do projeto](adjusting-project-settings.md):
+Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas definições em [Definições do projeto](adjusting-project-settings.md):
 
-**Área mínima de amostra de ocorrência:**
+**Área mínima da amostra de calibração:**
 
 * **Padrão**: 25 pixels
-* **Aumente** se obteve detecções falsas em pequenos artistas
-* **Diminua** se os alvos não estiverem sendo detectados
+* **Aumente** se estiver a obter detecções falsas em pequenos artefactos
+* **Diminua** se os alvos não estiverem a ser detetados
 
-**Clustering de destino mínimo:**
+**Agrupamento mínimo de alvos:**
 
 * **Padrão**: 60
-* **Aumente** se os alvos estão sendo divididos em múltiplas detecções
-* **Diminua** se os alvos com variação de cor não foram totalmente detectados
+* **Aumente** se os alvos estiverem a ser divididos em várias detecções
+* **Diminua** se os alvos com variação de cor não estiverem a ser totalmente detetados
 
 ***
 
-## Problemas comuns de imagem alvo
+## Problemas comuns com imagens de alvos
 
-### Problema: Nenhum alvo detectado
+### Problema: Nenhum alvo detetado
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Imagens de destino não marcadas no navegador de arquivos
-* Alvo muito pequeno no quadro (<30% da imagem)
-* Má iluminação (sombras, brilho)
-* Configurações de detecção de alvo muito rigorosas
+* Imagens de alvos não marcadas no Navegador de ficheiros
+* Alvo muito pequeno no quadro (&lt; 30% da imagem)
+* Iluminação inadequada (sombras, reflexos)
+* Definições de deteção de alvos demasiado restritas
 
 **Soluções:**
 
-1. Verifique se a coluna Target está marcada para imagens corretas
-2. Revisar a qualidade da imagem desejada na visualização
-3. Recapturar alvos se a qualidade for ruim
-4. Ajuste as configurações de detecção de alvo, se necessário
+1. Verifique se a coluna Alvo está marcada para as imagens corretas
+2. Reveja a qualidade da imagem do alvo na pré-visualização
+3. Recapture os alvos se a qualidade for inadequada
+4. Ajuste as definições de deteção de alvos, se necessário
 
-### Problema: Detecções de alvos falsos
+### Problema: deteções falsas de alvos
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Prédios, veículos ou cobertura do solo branco confundidos com alvos
-* Manchas manchadas na vegetação
+* Edifícios brancos, veículos ou cobertura do solo confundidos com alvos
+* Manchas brilhantes na vegetação
 * Sensibilidade de detecção muito baixa
 
 **Soluções:**
 
-1. Marque apenas imagens de destino reais para limitar o escopo da detecção
-2. Aumentar a área mínima da amostra encontrada
-3. Aumentar o valor mínimo de clustering de destino
-4. -se de que as imagens de destino mostram apenas o alvo (mínima confusão de fundo)
+1. Marque apenas imagens de alvos reais para limitar o âmbito da detecção
+2. Aumente a área mínima da amostra de calibração
+3. Aumente o valor mínimo de agrupamento de alvos
+4. Certifique-se de que as imagens de alvos mostram apenas o alvo (mínimo de interferências no fundo)
 
 ***
 
-## Lista de verificação de verificação
+## Lista de verificação
 
-Antes de iniciar o processamento, verifique a seleção da imagem alvo:
+Antes de iniciar o processamento, verifique a seleção da imagem do alvo:
 
-* [] Pelo menos 1 imagem alvo marcada por sessão
-* [] As caixas de seleção da coluna de destino são marcadas para todas as imagens de destino
-* [] Imagens alvo capturadas no mesmo período da pesquisa
-* [] Todos claramente visíveis na visualização quando clicados
-* [] Todos os 4 painéis de blindagem ocultos em cada imagem alvo
-* [] Sem sombras ou obstruções nos alvos
-* [] Para câmera dupla: alvos marcados para ambos os tipos de câmera
+* [ ] Pelo menos 1 imagem do alvo marcada por sessão
+* [ ] As caixas de seleção da coluna do alvo estão marcadas para todas as imagens do alvo
+* [ ] Imagens do alvo capturadas no mesmo período da pesquisa
+* [ ] Alvos claramente visíveis na pré-visualização quando clicados
+* [ ] Todos os 4 painéis de calibração visíveis em cada imagem do alvo
+* [ ] Sem sombras ou obstruções nos alvos
+* [ ] Para câmaras duplas: alvos marcados para ambos os tipos de câmara
 
 ***
 
-## Processamento sem alvo
+## Processamento sem alvos
 
-### Processamento sem alvos específicos
+### Processamento sem alvos de calibração
 
-Embora não seja recomendado para trabalhos científicos, você pode analisar sem metas:
+Embora não seja recomendado para trabalhos científicos, pode processar sem alvos:
 
-1. Deixe todas as caixas de seleção da coluna de destino demarcadas
-2. **Desativar** "Calibração de refletância" nas configurações do projeto
-3. A correção da vinha ainda será aplicada
+1. Deixe todas as caixas de seleção da coluna Alvo desmarcadas
+2. **Desative** a «Calibração de refletância» nas Definições do projeto
+3. A correção de vinheta ainda será aplicada
 4. A saída não será calibrada para refletância absoluta
 
-{% dica estilo = "aviso" %}
-**Não recomendado**: sem isolamento de refletância, os valores de pixel representam apenas o brilho relativo, e não específicos científicos de refletância. Use alvos específicos para obter resultados precisos e repetíveis.
+{% hint style=&quot;warning&quot; %}
+**Não recomendado**: sem calibração de refletância, os valores de pixel representam apenas brilho relativo, não medições científicas de refletância. Use alvos de calibração para obter resultados precisos e repetíveis.
 {% endhint %}
 
 ***
 
-## Próximas etapas
+## Próximos passos
 
-Depois de marcar suas imagens de destino:
+Depois de marcar as imagens-alvo:
 
-1. **Revisar suas configurações** - Consulte [Ajustando as configurações do projeto](adjusting-project-settings.md)
-2. **Iniciar processamento** - Consulte [Iniciando o processamento](starting-the-processing.md)
-3. **Monitore o progresso** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
+1. **Revise as suas configurações** - Consulte [Ajustar as configurações do projeto](adjusting-project-settings.md)
+2. **Inicie o processamento** - Consulte [Iniciar o processamento](starting-the-processing.md)
+3. **Monitorize o progresso** - Consulte [Monitorizar o processamento](monitoring-the-processing.md)
 
-Para obter mais informações sobre os próprios alvos de calibração, consulte [Alvos de confiança](../calibration-targets.md).
+Para obter mais informações sobre os alvos de calibração, consulte [Alvos de calibração](../calibration-targets.md).

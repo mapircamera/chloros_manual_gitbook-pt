@@ -1,72 +1,72 @@
-# Idiomas Suportados
+# Idiomas suportados
 
-O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a usuários em todo o mundo. Você pode alternar idiomas instantaneamente em todas as interfaces: Desktop, navegador, CLI e Python SDK.
+O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a utilizadores em todo o mundo. Pode alternar instantaneamente entre idiomas em todas as interfaces: Desktop, Navegador, CLI e Python SDK.
 
 O Chloros suporta os seguintes idiomas:
 
 1. 🇺🇸 **Inglês**
 2. 🇪🇸 **Español** (espanhol)
-3. 🇵🇹 **Português** (Português)
-4. 🇫🇷 **Français** (Francês)
-5. 🇩🇪 **Deutsch** (Alemão)
-6. 🇮🇹 **Italiano** (Italiano)
+3. 🇵🇹 **Português** (português)
+4. 🇫🇷 **Français** (francês)
+5. 🇩🇪 **Deutsch** (alemão)
+6. 🇮🇹 **Italiano** (italiano)
 7. 🇯🇵 **日本語** (japonês)
-8. 🇰🇷 **한국어** (Coreano)
+8. 🇰🇷 **한국어** (coreano)
 9. 🇨🇳 **简体中文** (chinês simplificado)
-10. 🇹🇼 **繁體中文** (chinês tradicional)
+10. 🇹🇼 **繁體中文** (Chinês Tradicional)
 11. 🇷🇺 **Русский** (Russo)
-12. 🇳🇱 **Holanda** (holandês)
-13. 🇸🇦 **العربية** (árabe)
-14. 🇵🇱 **Polski** (polonês)
-15. 🇹🇷 **Türkçe** (turco)
-16. 🇮🇳 **हिंदी** (hindi)
-17. 🇮🇩 **Bahasa Indonésia** (indonésio)
-18. 🇻🇳 **Tiếng Việt** (vietnamita)
-19. 🇹🇭 **ไทย** (tailandês)
-20. 🇸🇪 **Svenska** (sueco)
+12. 🇳🇱 **Nederlands** (Holandês)
+13. 🇸🇦 **العربية** (Árabe)
+14. 🇵🇱 **Polski** (Polaco)
+15. 🇹🇷 **Türkçe** (Turco)
+16. 🇮🇳 **हिंदी** (Hindi)
+17. 🇮🇩 **Bahasa Indonesia** (Indonésio)
+18. 🇻🇳 **Tiếng Việt** (Vietnamita)
+19. 🇹🇭 **ไทย** (Tailandês)
+20. 🇸🇪 **Svenska** (Sueco)
 21. 🇩🇰 **Dansk** (dinamarquês)
 22. 🇳🇴 **Norsk** (norueguês)
-23. 🇫🇮 **Suomi** (Finlandês)
+23. 🇫🇮 **Suomi** (finlandês)
 24. 🇬🇷 **Ελληνικά** (grego)
-25. 🇨🇿 **Čeština** (tcheco)
-26. 🇭🇺 **Magiar** (húngaro)
-27. 🇷🇴 **Romană** (Romeno)
+25. 🇨🇿 **Čeština** (checo)
+26. 🇭🇺 **Magyar** (húngaro)
+27. 🇷🇴 **Română** (romeno)
 28. 🇺🇦 **Українська** (ucraniano)
-29. 🇧🇷 **Português Brasileiro** (Português do Brasil)
+29. 🇧🇷 **Português Brasileiro** (Português Brasileiro)
 30. 🇭🇰 **粵語** (Cantonês)
-31. 🇲🇾 **Bahasa Melayu** (malaio)
+31. 🇲🇾 **Bahasa Melayu** (Malaio)
 32. 🇸🇰 **Slovenčina** (Eslovaco)
-33. 🇧🇬 **Български** (búlgaro)
-34. 🇭🇷 **Hrvatski** (croata)
+33. 🇧🇬 **Български** (Búlgaro)
+34. 🇭🇷 **Hrvatski** (Croata)
 35. 🇱🇹 **Lietuvių** (Lituano)
-36. 🇱🇻 **Latviešu** (letão)
-37. 🇪🇪 **Eesti** (estoniano)
-38. 🇸🇮 **Slovenščina** (esloveno)
+36. 🇱🇻 **Latviešu** (Letão)
+37. 🇪🇪 **Eesti** (Estónio)
+38. 🇸🇮 **Slovenščina** (Esloveno)
 
-## Como mudar o idioma
+## Como alterar o idioma
 
-### Sem desktop/navegador Cloros
+### No Chloros Desktop/Navegador
 
-1. Abra as configurações do aplicativo
-2. Navegue até o menu de seleção de idioma
-3. Escolha seu idioma preferido na lista
+1. Abra as definições da aplicação
+2. Navegue até ao menu de seleção de idioma
+3. Escolha o seu idioma preferido na lista
 4. A interface será atualizada instantaneamente
 
-### Em Cloros CLI
+### No Chloros CLI
 
-Use o parâmetro idioma com seus comandos para definir o idioma da interface.
+Use o parâmetro de idioma com os seus comandos para definir o idioma da interface.
 
-### Sem SDK do Cloros Python
+### No Chloros Python SDK
 
-Defina o parâmetro de idioma ao inicializar o SDK para obter mensagens e resultados no idioma de sua preferência.
+Defina o parâmetro de idioma ao inicializar o SDK para receber mensagens e resultados no seu idioma preferido.
 
 ## Cobertura
 
 Todos os 38 idiomas são totalmente suportados em:
 
-* **Chloros Desktop** – Tradução completa da GUI
-* **Chloros Navegador** - Interface Web em todos os idiomas
-* **Chloros CLI** – Interface de linha de comando e mensagens de saída
-* **Chloros Python SDK** – Mensagens e documentação da API
+* **Chloros Desktop** - Tradução completa da GUI
+* **Chloros Browser** - Interface web em todos os idiomas
+* **Chloros CLI** - Interface de linha de comando e mensagens de saída
+* **Chloros Python SDK** - Mensagens e documentação API
 
-O suporte a idiomas garante que usuários em todo o mundo possam trabalhar de forma eficiente em seu idioma nativo, sem barreiras.
+O suporte a idiomas garante que os utilizadores em todo o mundo possam trabalhar com eficiência em seu idioma nativo, sem barreiras.

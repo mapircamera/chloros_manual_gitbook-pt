@@ -1,177 +1,177 @@
-# Abrindo uma imagem em tela cheia
+# Abrir uma imagem em ecrã inteiro
 
-O Chloros Image Viewer fornece uma interface dedicada em tela cheia para visualizar, analisar e manipular suas imagens multiespectrais. Seja visualizando imagens originais ou saídas processadas, o Image Viewer oferece ferramentas poderosas para inspeção e análise.
+O Visualizador de Imagens Chloros fornece uma interface dedicada em ecrã inteiro para visualizar, analisar e manipular as suas imagens multiespectrais. Seja para visualizar imagens originais ou resultados processados, o Visualizador de Imagens oferece ferramentas poderosas para inspeção e análise.
 
-## Acessando o Visualizador de Imagens
+## Aceder ao Visualizador de Imagens
 
-### Do navegador de arquivos
+### A partir do Navegador de Ficheiros
 
-A maneira mais comum de abrir uma imagem no Image Viewer:
+A forma mais comum de abrir uma imagem no Visualizador de Imagens:
 
-1. Verifique se você está no guia **Navegador de arquivos**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Clique em qualquer **miniatura de imagem** na categoria de imagens
-3. A imagem abre na **área principal de visualização** (centro da tela)
-4. A imagem agora está anunciada e pronta para visualização em tela cheia
+1. Certifique-se de que está no separador **Navegador de Ficheiros** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Clique em qualquer **miniatura de imagem** na grelha de imagens
+3. A imagem abre na **área de pré-visualização principal** (centro do ecrã)
+4. A imagem está agora carregada e pronta para visualização em ecrã inteiro
 
-### Abrindo o guia Visualizador de imagens
+### Abrir o separador do Visualizador de Imagens
 
-Depois que uma imagem foi compartilhada na área de visualização:
+Depois de uma imagem ser carregada na área de pré-visualização:
 
-1. Clique no ícone **Visualizador de imagens**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">na barra lateral esquerda
-2. O guia Visualizador de imagens é aberto, exibindo a imagem selecionada em tela inteira
+1. Clique no ícone **Visualizador de Imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+2. O separador Visualizador de imagens abre, exibindo a imagem selecionada em ecrã inteiro
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
 ***
 
-## Visão geral da interface do visualizador de imagens
+## Visão geral da interface do Visualizador de imagens
 
 ### Área de exibição principal
 
-A maior parte da tela mostra sua imagem:
+A maior parte do ecrã mostra a sua imagem:
 
-* **Resolução total**: imagens exibidas em resolução nativa
-* **Zoomável**: use os controles ou a roda do mouse para ampliar
-* **Movimentável**: clique e atrai para mover quando ampliado
+* **Resolução total**: imagens exibidas na resolução nativa
+* **Zoom**: use os controlos ou a roda do rato para ampliar
+* **Panorâmica**: clique e arraste para se mover quando ampliar
 * **Proporção mantida**: as imagens são dimensionadas proporcionalmente
 
 ***
 
 ## Opções de visualização
 
-### Navegação básica de imagens
+### Navegação básica pela imagem
 
-#### Navegue pelas imagens
+#### Navegar pelas imagens
 
-Navegue pelo seu conjunto de imagens usando atalhos de teclado ou botões:
+Navegue pelo seu conjunto de imagens usando atalhos do teclado ou botões:
 
-* **Próxima imagem**: Clique no botão → ou pressione a tecla **→** (Seta para a direita)
-* **Imagem anterior**: Clique no botão ← ou pressione a tecla **←** (Seta para a esquerda)
-* **Pular para a imagem específica**: Retorne ao Navegador de Arquivos e clique na miniatura desejada
+* **Próxima imagem**: Clique no botão → ou pressione a tecla **→** (seta para a direita)
+* **Imagem anterior**: Clique no botão ← ou pressione a tecla **←** (seta para a esquerda)
+* **Ir para uma imagem específica**: Volte ao Navegador de Ficheiros e clique na miniatura desejada
 
-#### Controles de zoom
+#### Controlos de zoom
 
-Ajuste a ampliação para executar os detalhes da imagem:
+Ajuste a ampliação para inspecionar os detalhes da imagem:
 
 **Ampliar:**
 
 * Clique no botão **+** (Mais)
 * Pressione a tecla **+** ou **=**
-* Role a roda do mouse **para cima**
+* Role a roda do rato **para cima**
 
-**Diminuir zoom:**
+**Reduzir:**
 
 * Clique no botão **−** (Menos)
-* Pressione a tecla **−** (menos)
-* Role a roda do mouse **para baixo**
+* Pressione a tecla **−** (Menos)
+* Role a roda do rato **para baixo**
 
-**Ajustar tela:**
+**Ajustar à tela:**
 
 * Clique no botão **↔** (Ajustar)
 * Pressione a tecla **0** (Zero)
 * Clique duas vezes na imagem
 
-#### Pan quando ampliado
+#### Panorâmica ao ampliar
 
-Quando ampliado além do tamanho da tela:
+Ao ampliar além do tamanho da tela:
 
 1. Mova o cursor do mouse sobre a imagem
 2. Clique e **mantenha pressionado o botão esquerdo do mouse**
 3. **Arraste** para mover a imagem
-4. Solte para parar de panoramizar
+4. Solte para parar a panorâmica
 
-**Alternativa**: use como teclas de seta para deslocar em pequenos incrementos
+**Alternativa**: Use as teclas de seta para fazer uma panorâmica em pequenos incrementos
 
 ***
 
-## Inspeção de valor de pixel
+## Inspeção do valor dos pixels
 
-### Visualizando Valores de Pixel no Cursor
+### Visualização dos valores dos pixels no cursor
 
-À medida que você move o cursor do mouse sobre a imagem, os valores dos pixels são exibidos em tempo real:
+À medida que move o cursor do rato sobre a imagem, os valores dos pixels são exibidos em tempo real:
 
-**Exibição local do valor:**
+**Localização da exibição do valor:**
 
 * **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito**
 * **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado**
-* Mostra valores para pixel **sob o cursor ou realçado**
-* Atualizações conforme você move o mouse
+* Mostra os valores do pixel **sob o cursor ou destacado**
+* Atualiza conforme move o rato
 
 ***
 
-## Tipos de imagens que você pode visualizar
+## Tipos de imagens que pode visualizar
 
 ### Imagens originais (pré-processamento)
 
-**Imagens RAW + JPG da câmera:**
+**Imagens RAW + JPG da câmara:**
 
-* Exibir dados RAW conforme visualizados
-* Mostrar valores originais e não corrigidos
+* Exibe os dados RAW conforme visualizados
+* Mostra os valores originais, sem correção
 * Útil para verificar a qualidade da imagem antes do processamento
 
-### Imagens de refletância calibrada
+### Imagens de refletância calibradas
 
-**Após processamento:**
+**Após o processamento:**
 
 * Vinheta corrigida
 * Refletância calibrada
-* Multibanda TIFF (vermelho, verde, NIR, etc.)
+* Multibanda TIFF (Red, Green, NIR, etc.)
 * Dados científicos prontos para análise
 
 ### Imagens de índice
 
-**NDVI, NDRE, GNDVI, etc.
+**NDVI, NDRE, GNDVI, etc. (ficheiros \_NDVI.tif):**
 
 * Imagens em escala de cinza de banda única
-* Os valores de pixel representam resultados de cálculo de índice
-* Faixa normalmente de -1 a +1 para índices normalizados
-* Pode aplicar LUTs coloridos para visualização
+* Os valores dos pixels representam os resultados do cálculo do índice
+* Intervalo normalmente de -1 a +1 para índices normalizados
+* É possível aplicar LUTs de cor para visualização
 
 ***
 
 ## Aplicação de índice e LUT
 
-Aplique índices multiespectrais e tabelas de consulta de núcleos:
+Aplique índices multiespectrais e tabelas de consulta de cores:
 
-1. Localizar **Index/LUT Sandbox** não **Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">barra lateral
+1. Localize **Index/LUT Sandbox** na <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
-3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (somente Cloros+)
-4. Aplicar gradiente de cor LUT para visualização
-5. Ajustar intervalos de valores e limites
+3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (apenas Chloros+)
+4. Aplique o gradiente LUT de cor para visualização
+5. Ajuste os intervalos de valores e os limites
 
-Consulte [Sandbox de índice/LUT](index-lut-sandbox.md) para obter instruções detalhadas.
+Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detalhadas.
 
 ***
 
-## Atalhos de teclado
+## Atalhos do teclado
 
 ### Navegação
 
-* **→** (Seta para a direita): Próxima imagem
-* **←** (Seta para a esquerda): imagem anterior
+* **→** (Seta para a direita): Imagem seguinte
+* **←** (Seta para a esquerda): Imagem anterior
 * **Home**: Primeira imagem da lista
-* **Fim**: Última imagem da lista
+* **End**: Última imagem da lista
 
 ### Zoom
 
 * **+** ou **=**: Ampliar
-* **−**: Diminuir zoom
-* **0** (Zero): Ajustar tela
-* **Roda do mouse**: Aumentar/diminuir zoom
+* **−**: Reduzir
+* **0** (Zero): Ajustar à tela
+* **Roda do mouse**: Ampliar/reduzir
 
-### Ver controles
+### Controlos de visualização
 
-* **P**: Modo alternativo de porcentagem de pixels
-* **L**: Painel alternativo de camadas
-* **Esc**: fecha a tela inteira ou retorna ao navegador de arquivos
+* **P**: Alternar modo de percentagem de pixels
+* **L**: Alternar painel de camadas
+* **Esc**: Fechar ecrã inteiro ou voltar ao Navegador de ficheiros
 
-### Outro
+### Outros
 
-* **Ctrl+S**: Salva a imagem atual
-* **F**: modo de tela inteira (disponível)
+* **Ctrl+S**: Guardar imagem atual
+* **F**: Modo de ecrã inteiro (se disponível)
 
 ***
 
-### Verificando cálculos de índice
+### Verificar cálculos de índice
 
 Verifique se os índices foram calculados corretamente:
 
@@ -179,69 +179,69 @@ Verifique se os índices foram calculados corretamente:
 2. Verifique as áreas de vegetação:
    * **NDVI**: Deve mostrar 0,4-0,9 para plantas saudáveis
    * **NDRE**: Valores mais altos para crescimento vigoroso
-   * **GNDVI**: semelhante ao NDVI, mas sensível à clorofila
-3. Verifique a não urbanização:
-   * **Solo**: Perto de 0 ou mínimo negativo
+   * **GNDVI**: Semelhante ao NDVI, mas sensível à clorofila
+3. Verifique a não vegetação:
+   * **Solo**: Perto de 0 ou ligeiramente negativo
    * **Água**: Valores negativos (-0,5 a 0)
 
 ***
 
-## Solução de problemas de visualização
+## Resolução de problemas de visualização
 
 ### A imagem não abre
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Arquivo transmitido durante o processamento
-* Formato de arquivo não suportado
+* Ficheiro corrompido durante o processamento
+* Formato de ficheiro não suportado
 * Memória insuficiente para imagens grandes
 
 **Soluções:**
 
-1. Tente abrir no visualizador externo para verificar a integridade do arquivo
-2. Verifique se o formato do arquivo corresponde ao tipo esperado
-3. Baixe outros aplicativos para liberar memória
-4. Experimente uma imagem menor/diferente
+1. Tente abrir num visualizador externo para verificar a integridade do ficheiro
+2. Verifique se o formato do ficheiro corresponde ao tipo esperado
+3. Feche outras aplicações para liberar memória
+4. Tente uma imagem menor/diferente
 
 ### Exibição de imagem em preto ou branco
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Faixa de valores fora da capacidade de exibição
-* Imagem flutuante de 32 bits com valores esperados
+* Intervalo de valores fora da capacidade de exibição
+* Imagem flutuante de 32 bits com valores incomuns
 * Erro de cálculo do índice
 
 **Soluções:**
 
-1. Verifique os valores dos pixels - se estiverem todos muito baixos ou muito altos, ajuste o intervalo de exibição
-2. Tente abrir no QGIS ou similar com ajuste de intervalo automático
-3. Verifique se há erros no log de depuração do processamento
+1. Verifique os valores dos pixels - se todos forem muito baixos ou muito altos, ajuste o intervalo de exibição
+2. Tente abrir no QGIS ou similar com ajuste automático do intervalo
+3. Verifique o registo de depuração do processamento para erros
 
-### Os valores de pixel parecem errados
+### Os valores dos pixels parecem errados
 
-**Causas possíveis:**
+**Possíveis causas:**
 
-* Visualizando imagem errada (original vs processada)
-* A instrução não foi aplicada corretamente
+* Visualização da imagem errada (original vs processada)
+* A calibração não foi aplicada corretamente
 * Os dados do sensor de luz não foram incluídos na entrada
-* Modo percentual alternado incorretamente
+* O modo percentual foi alternado incorretamente
 
 **Soluções:**
 
-1. Verifique se você está visualizando a saída processada (verifique o sufixo do nome do arquivo)
+1. Verifique se está a visualizar a saída processada (verifique o sufixo do nome do ficheiro)
 2. Verifique o estado do botão do modo percentual
-3. Compare com imagens em bom estado do mesmo conjunto de dados
+3. Compare com imagens conhecidas como boas do mesmo conjunto de dados
 
 ***
 
-## Próximas etapas
+## Próximos passos
 
-Agora você pode visualizar as imagens em tela cheia:
+Agora que pode visualizar imagens em ecrã inteiro:
 
-* [**Camadas de imagem**](image-layers.md) - Aprenda sobre visualização multibanda
-* [**Sandbox de índice/LUT**](index-lut-sandbox.md) - Aplicar índices personalizados e mapeamento de núcleos
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Descubra os índices disponíveis
+* [**Camadas de imagem**](image-layers.md) - Saiba mais sobre visualização multibanda
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplique índices personalizados e mapeamento de cores
+* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Entenda os índices disponíveis
 
-Para fluxo de trabalho de processamento, consulte:
+Para o fluxo de trabalho de processamento, consulte:
 
-* [**Processamento de imagens (GUI)**](../processing-images-gui/page-1.md) - Guia completo de processamento
+* [**Processamento de imagens (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guia completo de processamento

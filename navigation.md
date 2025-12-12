@@ -1,47 +1,45 @@
 # GUI: Navegação
 
-Quando você inicia o Chloros e o Chloros (navegador), ele inicia seu backend. Quando estiver pronto, o ícone do menu principal no canto superior esquerdo será revelado<img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Quando iniciar o Chloros e o Chloros (Navegador) pela primeira vez, o seu backend será iniciado. Quando estiver pronto, o ícone do menu principal no canto superior esquerdo será revelado <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
 
-<figura><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figura>
+<figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 
 Da esquerda para a direita, o cabeçalho superior contém:
 
-### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line">Diretor do cardápio
+### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Menu principal
 
-No menu principal você pode iniciar um novo projeto, abrir um projeto existente ou abrir uma pasta do projeto.
+No menu principal, pode iniciar um novo projeto, abrir um projeto existente ou abrir a pasta do projeto.
 
-### <img src=".gitbook/assets/image (2).png" alt="" data-size="line">Botão Reproduzir/Iniciar
+### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Botão Reproduzir/Iniciar
 
-Quando ativado, o botão iniciar processamento inicia o pipeline de processamento de imagem.
+Quando ativado, o botão Iniciar processamento inicia o pipeline de processamento de imagens.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line">Barra de progresso<img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="line">No modo gratuito Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostrará duas etapas: Detecção do alvo e Processamento.
 
-No modo Cloros gratuito, que processa todos os arquivos sequencialmente, a barra de progresso mostrará 2 etapas: Detecção e Processamento do Alvo.
+No modo licenciado pago Chloros+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra quatro etapas: Detecção, Análise, Calibração e Exportação. Se passar o cursor do rato sobre a barra de progresso Chloros+, será exibido um painel suspenso com a barra de progresso alargada para que possa acompanhar o processo. Clicar na barra de progresso superior irá congelar o painel suspenso; clicar novamente irá descongelá-lo.
 
-Na modalidade licenciada Cloros+ paga, que processa todos os arquivos simultaneamente, a barra de progresso mostra 4 etapas: Detecção, Análise, Calibração, Exportação. Se você passar o cursor do mouse sobre a barra de progresso do Chloros+, ele abrirá o painel estendido de 4 barras de progresso para que você possa acompanhar. Clique na barra de progresso superior congelará o painel suspenso; clique novamente o descongelará.
-
-<figura><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figura>
+<figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
 ## Menu lateral
 
 O menu da barra lateral esquerda contém vários ícones para interagir:
 
-#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">[Configurações do projeto](project-settings/page-2.md)
+#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Definições do projeto](project-settings/project-settings.md)
 
-Um guia de configuração do projeto permite ajustar as configurações globais e de processamento do projeto. Ajuste-os antes de começar a processar seus arquivos.
+O separador Definições do projeto permite ajustar as definições globais e de processamento do projeto. Ajuste-as antes de começar a processar os seus ficheiros.
 
-#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">Navegador de arquivos
+#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Navegador de ficheiros
 
-Adicione arquivos/pastas e remova arquivos do projeto. Arquivos duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino e o processamento analisará apenas as imagens marcadas em busca de alvos, acelerando bastante o tempo de processamento.
+Adicione ficheiros/pastas e remova ficheiros do projeto. Ficheiros duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino, e o processamento irá considerar apenas as imagens marcadas como destinos, acelerando significativamente o tempo de processamento.
 
-#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">[Visualizador de imagens](image-viewer-gui/page-3.md)
+#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Visualizador de imagens](image-viewer-gui/opening-an-image-full-screen.md)
 
-Quando uma imagem é clicada no visualizador de imagens principal, ela é aberta em tela inteira na guia Visualizador de imagens.
+Quando uma imagem é clicada no visualizador de imagens principal, ela é aberta em ecrã inteiro na guia Visualizador de imagens.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line">Registro de depuração
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Registo de depuração
 
-Revise o log para impressões de depuração quando ocorrerem problemas. Copie/baixe o log e envie para [Suporte MAPIR](https://www.mapir.camera/community/contact) para obter assistência.
+Revise o registo para impressões de depuração quando ocorrerem problemas. Copie/descarregue o registo e envie para o [Suporte MAPIR](https://www.mapir.camera/community/contact) para obter assistência.
 
-#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">[Login do usuário](cloros+-login.md)
+#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Login do utilizador](chloros+-login.md)
 
-A barra lateral de login do usuário permite que você faça login na sua conta Chloros+ para desbloquear recursos avançados. Você também pode visualizar a versão atual do aplicativo, bem como ajustar o idioma do texto exibido na GUI e CLI do Chloros.
+A barra lateral de login do utilizador permite que você faça login na sua conta Chloros+ para desbloquear recursos avançados. Você também pode visualizar a versão atual do aplicativo, bem como ajustar o idioma do texto exibido na GUI Chloros e CLI.
