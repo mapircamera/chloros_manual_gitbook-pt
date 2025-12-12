@@ -14,7 +14,9 @@ No menu principal, pode iniciar um novo projeto, abrir um projeto existente ou a
 
 Quando ativado, o botão Iniciar processamento inicia o pipeline de processamento de imagens.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="line">No modo gratuito Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostrará duas etapas: Detecção do alvo e Processamento.
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+
+No modo gratuito Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostrará duas etapas: Detecção do alvo e Processamento.
 
 No modo licenciado pago Chloros+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra quatro etapas: Detecção, Análise, Calibração e Exportação. Se passar o cursor do rato sobre a barra de progresso Chloros+, será exibido um painel suspenso com a barra de progresso alargada para que possa acompanhar o processo. Clicar na barra de progresso superior irá congelar o painel suspenso; clicar novamente irá descongelá-lo.
 
