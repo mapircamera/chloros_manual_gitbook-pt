@@ -21,7 +21,7 @@ Before processing your images, it's important to configure your project settings
 Para fluxos de trabalho típicos de câmeras MAPIR Survey3, as configurações padrão funcionam bem:
 
 * ✅ **Correção de vinheta**: Ativado
-* ✅ **Calibração de refletância**: Ativado (requer imagens de alvos MAPIR)
+* ✅ **Calibração de refletância**: Ativado (solicitar imagens de alvos MAPIR)
 * ✅ **Método Debayer**: Alta qualidade (mais rápido)
 * ✅ **Formato de exportação**: TIFF (16 bits)
 
@@ -31,39 +31,39 @@ Basta importar suas imagens e começar a processar com esses padrões.
 
 ## Visão geral das configurações do projeto
 
-The Project Settings panel is organized into several categories. Below is a summary of each section. For complete documentation, see [Project Settings](../project-settings/page-2.md).
+O painel Configurações do Projeto está organizado em diversas categorias. Abaixo está um resumo de cada seção. Para obter a documentação completa, consulte [Configurações do projeto](../project-settings/page-2.md).
 
 ### Detecção de alvo
 
-Controla como o Chloros identifica alvos de calibração em suas imagens.
+Controla como o Cloros identifica alvos de confusão em suas imagens.
 
 **Configurações principais:**
 
-* **Área mínima de amostra de calibração**: Limite de tamanho para detecção de alvo (padrão: 25 pixels)
+* **Área mínima de amostra de ocorrência**: Limite de tamanho para detecção de alvo (padrão: 25 pixels)
 * **Clustering de destino mínimo**: limite de similaridade para agrupar regiões de destino (padrão: 60)
 
 **Quando ajustar:**
 
-* Aumente a área de amostra se obtiver detecções falsas
+* Aumente a área de amostra para obter detecções falsas
 * Diminua se os alvos não estiverem sendo detectados
-* Ajuste o clustering se os alvos estiverem sendo divididos em várias detecções
+* Ajustar o clustering se os alvos estiverem sendo divididos em várias detecções
 
 ### Processamento
 
-Principais opções de processamento e calibração de imagens.
+Principais opções de processamento e concentração de imagens.
 
 **Configurações principais:**
 
 * **Correção de vinheta**: Compensa o escurecimento da lente nas bordas ✅ Recomendado
-* **Calibração de refletância**: normaliza valores usando alvos de calibração ✅ Recomendado
+* **Calibração de refletância**: normaliza valores usando alvos específicos ✅ Recomendado
 * **Método Debayer**: Algoritmo para converter RAW em multiespectral de 3 canais
-* **Intervalo mínimo de recalibração**: Tempo entre o uso dos alvos de calibração (0 = usar todos)
+* **Intervalo mínimo de recalibração**: Tempo entre o uso dos alvos específicos (0 = usar todos)
 
 **Configurações avançadas:**
 
 * **Deslocamento de fuso horário do sensor de luz**: Para sincronização de horário PPK (padrão: 0)
 * **Aplicar correções PPK**: usa dados de GPS/pin de exposição de arquivos .daq
-* **Pino de exposição 1/2**: atribui câmeras a pinos de exposição para configurações de câmera dupla
+* **Pino de exposição 1/2**: anexando fotos a pinos de exposição para configurações de câmera dupla
 
 ### Índice (índices multiespectrais)
 
@@ -73,7 +73,7 @@ Configure quais índices de vegetação serão calculados e exportados.
 
 1. Clique no botão **"Adicionar índice"**
 2. Selecione um índice no menu suspenso (NDVI, NDRE, GNDVI, etc.)
-3. Definir configurações de visualização (cores LUT, intervalos de valores)
+3. Definir configurações de visualização (núcleos LUT, intervalos de valores)
 4. Adicione vários índices conforme necessário
 
 **Índices populares:**
@@ -90,7 +90,7 @@ Configure quais índices de vegetação serão calculados e exportados.
 * Use matemática de banda com todos os canais de imagem
 * Salve fórmulas personalizadas para reutilização
 
-For all available indices and formulas, see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md).
+Para todos os índices e fórmulas disponíveis, consulte [Fórmulas de índice multiespectral](../project-settings/multispectral-index-formulas.md).
 
 ### Exportar
 
@@ -98,7 +98,7 @@ Controla o formato e a qualidade do arquivo de saída.
 
 **Formatos disponíveis:**
 
-* **TIFF (16 bits)**: recomendado para GIS e análises científicas (faixa de 0 a 65.535)
+* **TIFF (16 bits)**: Recomendado para GIS e análises científicas (faixa de 0 a 65.535)
 * **TIFF (32 bits, porcentagem)**: valores de refletância de ponto flutuante (intervalo de 0,0 a 1,0)
 * **PNG (8 bits)**: compactação sem perdas para visualização (faixa de 0 a 255)
 * **JPG (8 bits)**: arquivos menores, compactação com perdas (intervalo de 0 a 255)
@@ -140,26 +140,26 @@ A configuração **"Salvar pasta do projeto"** especifica onde novos projetos s�
 * **Quando mudar**:
   * Unidade de rede para colaboração em equipe
   * Unidade diferente com mais espaço de armazenamento
-  * Estrutura de pastas organizada por ano/cliente
+  * Estrutura de massas organizada por ano/cliente
 
 ***
 
 ## Configuração PPK (Cinemática Pós-Processada)
 
-Se estiver usando gravadores MAPIR DAQ com GPS para geolocalização precisa:
+Se você estiver usando gravadores MAPIR DAQ com GPS para geolocalização precisa:
 
 ### Pré-requisitos
 
 * MAPIR DAQ com módulo GPS (GNSS)
 * Arquivo de log .daq com entradas de pinos de exposição
-* Câmera conectada aos pinos de exposição DAQ durante a sessão de captura
+* Câmera conectada aos pinos de exposição DAQ durante sessão de captura
 
 ### Etapas de configuração
 
 1. Coloque o arquivo de log .daq na pasta do seu projeto
 2. Nas configurações do projeto, marque a caixa de seleção **"Aplicar correções PPK"**
 3. Defina **"Deslocamento de fuso horário do sensor de luz"** se necessário (padrão: 0 para UTC)
-4. Atribua câmeras aos pinos de exposição:
+4. Atribuir câmeras aos pinos de exposição:
    * **Câmera única**: atribuída automaticamente ao pino 1
    * **Câmeras duplas**: atribua manualmente cada câmera ao pino correto
 
@@ -170,7 +170,7 @@ Se estiver usando gravadores MAPIR DAQ com GPS para geolocalização precisa:
 * A mesma câmera não pode ser atribuída a ambos os pinos
 
 {% dica estilo = "aviso" %}
-**Importante**: Os pinos de exposição devem ser atribuídos corretamente às suas respectivas câmeras. A atribuição incorreta resultará em dados de geolocalização incorretos.
+**Importante**: Os pinos de exposição devem ser atribuídos corretamente às suas respectivas câmeras. Uma atribuição incorreta resultará em dados de geolocalização incorretos.
 {% endhint %}
 
 ***
@@ -179,33 +179,33 @@ Se estiver usando gravadores MAPIR DAQ com GPS para geolocalização precisa:
 
 ### Projetos multicâmera
 
-Ao processar imagens de múltiplas câmeras MAPIR em um projeto:
+Ao processar imagens de diversas câmeras MAPIR em um projeto:
 
 1. O Chloros detecta automaticamente cada modelo de câmera
-2. Cada câmera obtém perfil de processamento apropriado
-3. PPK: Atribua manualmente cada câmera ao pino de exposição correto
+2. Cada câmera obtém perfil de processamento reciclado
+3. PPK: Atribuir manualmente cada câmera ao pino de exposição correta
 4. Todas as câmeras usam o mesmo formato e índices de exportação
 
 **Exemplo**: equipamento de câmera dupla Survey3W RGN + Survey3N OCN
 
-### Pesquisas de lapso de tempo ou de múltiplas datas
+### Pesquisas de lapso de tempo ou de múltiplos dados
 
 Para levantamentos repetidos da mesma área ao longo do tempo:
 
 1. Crie um modelo com suas configurações padrão
-2. Use uma configuração de alvo de calibração consistente em cada sessão
-3. Processe cada data como um projeto separado
+2. Use uma configuração de alvo consistente em cada sessão
+3. Processar cada dado como um projeto separado
 4. Use configurações idênticas para resultados comparáveis
-5. Exporte no mesmo formato para análise temporal
+5. Exportar no mesmo formato para análise temporal
 
 ### Grandes conjuntos de dados
 
 Para projetos com muitas imagens (500+):
 
-* Considere dividir em projetos menores por data ou área
-* Use o processamento paralelo Chloros+ para resultados mais rápidos
+* Considere dividir em projetos menores por dados ou área
+* Use o processamento paralelo Cloros+ para resultados mais rápidos
 * Considere CLI ou API para automação em lote
-* Ajuste o intervalo mínimo de recalibração para reduzir o tempo de detecção do alvo
+* Ajustar o intervalo mínimo de recalibração para reduzir o tempo de detecção do alvo
 
 ***
 
@@ -214,21 +214,21 @@ Para projetos com muitas imagens (500+):
 Antes de iniciar o processamento, revise estas configurações principais:
 
 * [] Modelo de câmera detectado corretamente no navegador de arquivos
-* [] Correção de vinheta ativada
+* [] Correção de vinha ativada
 * [] Calibração de refletância habilitada
-* [] Pelo menos uma imagem de alvo de calibração importada
-* [] Índices multiespectrais desejados adicionados
-* [] Formato de exportação apropriado para o seu fluxo de trabalho
-* [] Configurações de PPK configuradas (se estiver usando .daq com eventos de exposição)
+* [] Pelo menos uma imagem de alvo de encontro importada
+* [] Índices multiespectrais desejados ampliados
+* [] Formato de exportação protegido para seu fluxo de trabalho
+* [] Configurações de PPK ajustados (se estiver usando .daq com eventos de exposição)
 
 ***
 
 ## Próximas etapas
 
-Depois que suas configurações estiverem definidas:
+Depois que suas configurações forem definidas:
 
-1. **Marcar imagens alvo de calibração** - Consulte [Escolher imagens alvo](choosing-target-images.md)
+1. **Marcar imagens alvo de ocorrência** - Consulte [Escolher imagens alvo](choosing-target-images.md)
 2. **Iniciar processamento** - Consulte [Iniciando o processamento](starting-the-processing.md)
 3. **Monitore o progresso** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
 
-For complete details on all available settings, see the [Project Settings](../project-settings/page-2.md) reference documentation.
+Para obter detalhes completos sobre todas as configurações disponíveis, consulte a documentação de referência [Configurações do projeto](../project-settings/page-2.md).

@@ -8,7 +8,7 @@
 * [Câmeras suportadas](supported-cameras.md)
 * [Formatos de imagem de saída](output-image-formats.md)
 * [Chloros+ Login](cloros+-login.md)
-* [Alvos de calibração](calibration-targets.md)
+* [Alvos de detecção](calibration-targets.md)
 * [Idiomas suportados](idiomas suportados.md)
 * [Baixar](download.md)
 * [Perguntas frequentes](faq.md)

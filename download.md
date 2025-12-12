@@ -30,12 +30,12 @@ Baixe a versão mais recente do Chloros para Windows para começar a processar i
 
 ### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primário">Baixe o Cloros aqui</a>
 
-### Última versão estável
+### Versão mais recente estável
 
-**Instalador do Chloros para Windows**
+**Instalador do Cloros para Windows**
 
 * **Versão**: 1.0.3
-* **Data de lançamento**: dezembro? de 2025
+* **Dados de lançamento**: dezembro? de 2025
 * **Tamanho do arquivo**: 1,6 GB
 * **Tipo de arquivo**: .exe (Windows Installer)
 
@@ -49,7 +49,7 @@ Baixe a versão mais recente do Chloros para Windows para começar a processar i
 6. Faça login com sua conta MAPIR Cloud Chloros+ (ou continue com a versão gratuita)
 
 {% dica estilo = "sucesso" %}
-The installer automatically adds `chloros-cli` to your system PATH for command-line access.
+O instalador adiciona automaticamente `chloros-cli` ao PATH do seu sistema para acesso à linha de comando.
 {% endhint %}
 
 ***
@@ -64,7 +64,7 @@ Para desenvolvedores e fluxos de trabalho de automação, instale o SDK do Chlor
 pip install chloros-sdk
 ```
 
-**Documentation**: [API: Python SDK](api-python-sdk.md)
+**Documentação**: [API: Python SDK](api-python-sdk.md)
 
 **Requisitos**: O Chloros Desktop deve estar instalado, é necessária a licença do Chloros+
 
@@ -75,18 +75,18 @@ pip install chloros-sdk
 A instalação do Chloros inclui:
 
 * ✅ **Chloros Desktop GUI** - Interface gráfica completa
-* ✅ **Chloros (navegador)** - Interface baseada na Web para sistemas de especificações mais baixas
-* ✅ **Chloros CLI** - Interface de linha de comando (requer licença Chloros+)
+* ✅ **Cloros (navegador)** - Interface baseada na Web para sistemas de especificações mais baixas
+* ✅ **Chloros CLI** - Interface de linha de comando (solicitar licença Chloros+)
 * ✅ **Backend Engine** - Pipeline de processamento de imagem
 * ✅ **Perfis de câmera** - Modelos de câmera MAPIR pré-configurados
 
 ***
 
-## Atualize para Cloros+
+## Atualizar para Cloros+
 
 Desbloqueie recursos avançados com uma assinatura do Chloros+:
 
-* 🚀 **Processamento multithread** - Processe imagens em paralelo
+* 🚀 **Processamento multithread** - Processar imagens em paralelo
 * ⚡ **Aceleração de GPU (CUDA)** – Aproveite o poder da GPU NVIDIA
 * 💻 **Acesso CLI** – Automatize com ferramentas de linha de comando
 * 🐍 **Python SDK** – Acesso programático à API
@@ -101,9 +101,9 @@ Desbloqueie recursos avançados com uma assinatura do Chloros+:
 
 ### Solução de problemas
 
-**A instalação falha com mensagem de erro:**
+**Uma falha de instalação com mensagem de erro:**
 
-* Certifique-se de ter direitos de administrador
+* certifique-se de ter direitos de administrador
 * Desative temporariamente o software antivírus
 * Verifique se você atende aos requisitos mínimos do sistema
 
@@ -115,16 +115,16 @@ Desbloqueie recursos avançados com uma assinatura do Chloros+:
 * Verifique o Visualizador de Eventos do Windows para obter detalhes do erro
 * Entre em contato com o suporte com logs de erros
 
-**Problemas de ativação de licença:**
+**Problemas de ativação da licença:**
 
-* Certifique-se de que a conexão com a Internet esteja ativa
+* -se de que a conexão certifique-se com a Internet esteja ativa
 * Verifique as credenciais em [https://cloud.mapir.camera](https://cloud.mapir.camera)
 * Verifique se o firewall não está bloqueando o Chloros
-* Consulte [Chloros+ Login](cloros+-login.md) para obter instruções detalhadas
+* Consulte [Chloros+ Login](cloros+-login.md) para obter instruções planejadas
 
 ### Obtendo suporte
 
-Precisa de ajuda com instalação ou configuração?
+Precisa de ajuda para instalação ou configuração?
 
 * 📧 **E-mail**: info@mapir.camera
 * 🌐 **Site**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
@@ -139,7 +139,7 @@ Precisa de ajuda com instalação ou configuração?
 
 <summary>Version 1.0.3</summary>
 
-### **Data de lançamento**: dezembro? de 2025
+### **Dados de lançamento**: dezembro? de 2025
 
 #### Novos recursos
 
@@ -163,9 +163,9 @@ Precisa de ajuda com instalação ou configuração?
 
 ## Contrato de licença
 
-**Software proprietário** - Copyright (c) 2025 MAPIR Inc.
+**Proprietário do software** - Copyright (c) 2025 MAPIR Inc.
 
-O uso, distribuição ou modificação não autorizada é proibido.
+O uso, distribuição ou modificação não autorizado é proibido.
 
 **Versão Gratuita**: Disponível para uso pessoal e comercial com limitações de recursos
 

@@ -6,9 +6,9 @@ When you first launch Chloros and Chloros (Browser) it will start up its backend
 
 Da esquerda para a direita, o cabeçalho superior contém:
 
-### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Menu Principal
+### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Principal do menu
 
-No menu principal você pode iniciar um novo projeto, abrir um projeto existente ou abrir a pasta do projeto.
+No menu principal você pode iniciar um novo projeto, abrir um projeto existente ou abrir uma pasta do projeto.
 
 ### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Botão Reproduzir/Iniciar
 
@@ -18,7 +18,7 @@ Quando ativado, o botão iniciar processamento inicia o pipeline de processament
 
 No modo Cloros gratuito, que processa todos os arquivos sequencialmente, a barra de progresso mostrará 2 etapas: Detecção e Processamento do Alvo.
 
-Na modalidade licenciada Cloros+ paga, que processa todos os arquivos simultaneamente, a barra de progresso mostra 4 etapas: Detecção, Análise, Calibração, Exportação. Se você passar o cursor do mouse sobre a barra de progresso do Chloros+, ele abrirá o painel estendido de 4 barras de progresso para que você possa acompanhar. Clicar na barra de progresso superior congelará o painel suspenso; clicar novamente o descongelará.
+Na modalidade licenciada Cloros+ paga, que processa todos os arquivos simultaneamente, a barra de progresso mostra 4 etapas: Detecção, Análise, Calibração, Exportação. Se você passar o cursor do mouse sobre a barra de progresso do Chloros+, ele abrirá o painel estendido de 4 barras de progresso para que você possa acompanhar. Clique na barra de progresso superior congelará o painel suspenso; clique novamente o descongelará.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,7 @@ O menu da barra lateral esquerda contém vários ícones para interagir:
 
 #### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Configurações do projeto](project-settings/page-2.md)
 
-A guia Configuração do projeto permite ajustar as configurações globais e de processamento do projeto. Ajuste-os antes de começar a processar seus arquivos.
+Um guia de configuração do projeto permite ajustar as configurações globais e de processamento do projeto. Ajuste-os antes de começar a processar seus arquivos.
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Navegador de arquivos
 
@@ -38,9 +38,9 @@ Adicione arquivos/pastas e remova arquivos do projeto. Arquivos duplicados são 
 
 Quando uma imagem é clicada no visualizador de imagens principal, ela é aberta em tela inteira na guia Visualizador de imagens.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Log de depuração
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Registro de depuração
 
-Review the log for debug prints when issues happen. Copy/download the log and send to [MAPIR Support](https://www.mapir.camera/community/contact) for assistance.
+Revise o log para impressões de depuração quando ocorrerem problemas. Copie/baixe o log e envie para [Suporte MAPIR](https://www.mapir.camera/community/contact) para obter assistência.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Login do usuário](cloros+-login.md)
 

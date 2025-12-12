@@ -1,12 +1,12 @@
 # Finalizando o Processamento
 
-Assim que o Chloros concluir o processamento, é hora de revisar seus resultados, verificar a qualidade da saída e preparar as imagens processadas para uso em seu fluxo de trabalho. Esta página orienta você nas etapas finais e nas próximas ações.
+Assim que o Chloros conclui o processamento, é hora de revisar seus resultados, verificar a qualidade da saída e preparar as imagens processadas para uso em seu fluxo de trabalho. Esta página orienta você nas etapas finais e nas próximas ações.
 
 ## Processando Indicação Completa
 
-Quando o processamento for concluído com êxito, você verá vários indicadores:
+Quando o processamento para terminar com êxito, você verá vários indicadores:
 
-* ✅ **Barra de progresso**: atinge 100% de conclusão
+* ✅ **Barra de progresso**: alcance 100% de conclusão
 * ✅ **Log de depuração**: mostra a mensagem "Processamento concluído"
 * ✅ **Botão Iniciar**: Torna-se ativado novamente (pronto para a próxima execução de processamento)
 * ✅ **Arquivos de saída**: todas as imagens processadas salvas na subpasta do modelo da câmera
@@ -35,26 +35,26 @@ Quando o processamento for concluído com êxito, você verá vários indicadore
 3. A visualização aparece no painel de visualização do Windows Explorer
 4. Use as teclas de seta para navegar pelas imagens
 
-### Visualização em visualizadores de imagens externos
+### Visualização em visualizadores de imagens externas
 
 **Visualizadores recomendados:**
 
-* **QGIS** - Software GIS gratuito (melhor para análise multiespectral georreferenciada)
+* **QGIS** - Software GIS gratuito (melhor para análise georreferenciada multiespectral)
 * **IrfanView** - Visualizador de imagens rápido e leve (suporta TIFF)
 * **Adobe Photoshop** – Edição profissional (suporte TIFF)
 * **GIMP** – Alternativa gratuita ao Photoshop
 * **Fotos do Windows** – Visualização básica (pode não suportar TIFF de 16 bits)
 
-### Pré-visualização no visualizador de imagens Chloros
+### Pré-visualização no visualizador de imagens Cloros
 
 Use o Visualizador de imagens integrado do Chloros para visualização avançada:
 
 1. Clique em uma miniatura de imagem no navegador de arquivos
 2. A imagem é aberta na área de visualização principal
-3. Clique em **Visualizador de imagens** guia <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
+3. Clique no **Visualizador de imagens** guia <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
 4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) para análise interativa
 
-See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
+Consulte [Visualizador de imagens](../image-viewer-gui/page-3.md) para obter instruções detalhadas.
 
 ***
 
@@ -64,13 +64,13 @@ See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
 
 1. Abra **Log de depuração** guia <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
 2. Percorrer as mensagens
-3. Procure avisos amarelos ou erros vermelhos
+3. Adquira avisos amarelos ou erros vermelhos
 4. Revise quaisquer problemas observados
 5. Entre em contato com o suporte do MAPIR para obter assistência
 
 ### Salvando o registro
 
-Para manter um registro do processamento ou enviar ao Suporte MAPIR:
+Para manter um registro de processamento ou enviar ao Suporte MAPIR:
 
 1. Clique no botão **"Copiar"** ou **"Baixar"**
 2. Salvar como arquivo de texto na pasta do projeto
@@ -83,46 +83,46 @@ Para manter um registro do processamento ou enviar ao Suporte MAPIR:
 
 ### Problema: arquivos de saída ausentes
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Os arquivos não atenderam aos critérios de processamento
-* Imagens somente de destino (excluídas da exportação)
+* Imagens somente de destino (excluídas de exportação)
 * O espaço em disco acabou durante a exportação
 * Corrupção de arquivo durante o processamento
 
 **Soluções:**
 
 1. Verifique o log de depuração para mensagens de erro/ignorar
-2. Verifique se o espaço em disco era suficiente
-3. Contar arquivos: deve corresponder (contagem original - contagem alvo) × (índices + 1)
+2. Verifique se o espaço no disco era suficiente
+3. Contar arquivos: deve ser responsável (contagem original - contagem alvo) × (índices + 1)
 4. Reimporte e reprocesse quaisquer arquivos ausentes
 
-### Problema: bordas escuras ou brilhantes (vinhetas ainda visíveis)
+### Problema: bordas escuras ou escondidas (vinhetas ainda visíveis)
 
-**Possíveis causas:**
+**Causas possíveis:**
 
-* Correção de vinheta desativada
+* Correção de vinha desativada
 * Câmera/lente que não está no banco de dados de perfis do Chloros
 * Vinhetas extremas além da capacidade de correção
 
 **Soluções:**
 
 1. Verifique se a correção da vinheta foi habilitada nas configurações do projeto
-2. Verifique o modelo da câmera detectado corretamente
+2. Verifique o modelo da câmera detectada corretamente
 3. Entre em contato com o suporte do MAPIR se a vinheta persistir
 
-### Problema: cores ou valores incorretos
+### Problema: núcleos ou valores incorretos
 
-**Possíveis causas:**
+**Causas possíveis:**
 
-* Nenhum alvo de calibração detectado
-* Modelo de destino de calibração incorreto selecionado
+* Nenhum alvo de detecção detectado
+* Modelo de destino de escolha escolhido
 * Calibração de refletância desativada
 * Imagens alvo de baixa qualidade
 
 **Soluções:**
 
-1. Verifique se a calibração de refletância foi habilitada
+1. Verifique se a retenção de refletância foi habilitada
 2. Verifique as mensagens "Destino encontrado" no log de depuração
 3. Revise a qualidade da imagem alvo
 4. Reprocesse com alvos adequados marcados
@@ -136,12 +136,12 @@ Para manter um registro do processamento ou enviar ao Suporte MAPIR:
 * **Vegetação moderada**: 0,4 a 0,6
 * **Vegetação densa e saudável**: 0,6 a 0,9
 
-**Se os valores estiverem fora desses intervalos:**
+**Se os valores estiverem fora desses momentos:**
 
-1. Verifique se a calibração de refletância foi aplicada
+1. Verifique se a concentração de refletância foi aplicada
 2. Verifique se o registro do sensor de luz foi incluído
-3. Verifique se os alvos de calibração foram detectados
-4. Certifique-se de que o modelo correto da câmera foi detectado
+3. Verifique se os alvos de descoberta foram detectados
+4. -se de que o modelo correto da câmera foi detectado
 5. Revise o tempo e as condições de captura da imagem alvo
 
 ***
@@ -152,14 +152,14 @@ Para manter um registro do processamento ou enviar ao Suporte MAPIR:
 
 **Fluxo de trabalho recomendado:**
 
-1. **Importar imagens de refletância calibradas** para software de fotogrametria:
+1. **Importar imagens de refletância calibradas** para software de fotografia:
    * Pix4Dmapper
-   * Metashape Agisoft
+   * Metaforma Agisoft
    * DroneDeploy
    * WebODM
 2. **Mantenha os metadados EXIF**: garanta que os dados do GPS sejam preservados para marcação geográfica
 3. **Fluxos de trabalho calibrados**: use imagens de refletância para precisão científica
-4. **Processar mosaicos de índice**: crie ortomosaicos NDVI a partir de imagens de índice individuais
+4. **Processar mosaicos de índice**: geração de NDVI ortomosaico a partir de imagens de índice individuais
 5. **Exportar GeoTIFF georreferenciado**: Para uso em aplicativos GIS
 
 ### Para análise GIS
@@ -167,19 +167,19 @@ Para manter um registro do processamento ou enviar ao Suporte MAPIR:
 **Fluxo de trabalho recomendado:**
 
 1. **Carregue no QGIS, ArcGIS ou similar**
-2. **Use imagens de refletância TIFF de 16 bits** para análise multibanda
+2. **Usar imagens de refletância TIFF de 16 bits** para análise multibanda
 3. **Use imagens de índice** (NDVI, NDRE) como camadas de vegetação prontas para uso
 4. **Calculadora raster**: Combine bandas para análise personalizada
-5. **Exportar**: Crie mapas de classificação, detecção de alterações e mapas de saúde da vegetação
+5. **Exportar**: Crie mapas de classificação, detecção de alterações e mapas de saúde do vegetação
 
 ### Para análise/relatórios diretos
 
 **Fluxo de trabalho recomendado:**
 
-1. **Use imagens de índice com cores LUT** para relatórios visuais
-2. **Estatísticas de extração**: NDVI médio por talhão/parcela
+1. **Usar imagens de índice com núcleos LUT** para relatórios visuais
+2. **Estatísticas de degradação**: NDVI médio por talhão/parcela
 3. **Série temporal**: compare índices em várias sessões
-4. **Gere relatórios**: inclua mapas, estatísticas e visualizações
+4. **Gere relatórios**: incluindo mapas, estatísticas e visualizações
 
 ***
 
@@ -189,11 +189,11 @@ Para manter um registro do processamento ou enviar ao Suporte MAPIR:
 
 **O que salvar:**
 
-* ✅ **Imagens RAW/JPG originais** - Arquivar em unidade/nuvem separada
+* ✅ **Imagens RAW/JPG originais** - Arquivar em unidade/nuvem separadas
 * ✅ **Saídas processadas** - Mantenha imagens e índices calibrados
 * ✅ **Arquivo de projeto** - Contém todas as configurações para reprocessamento, se necessário
 * ✅ **Log de depuração** - Detalhes de processamento de documentos
-* ✅ **Imagens alvo de calibração** - Para verificação e reprocessamento
+* ✅ **Imagens alvo de descoberta** - Para verificação e reprocessamento
 
 **Recomendações de armazenamento:**
 
@@ -216,7 +216,7 @@ Se processar conjuntos de dados semelhantes no futuro:
 
 ### Processamento em lote de múltiplas sessões
 
-Para múltiplas sessões/conjuntos de dados:
+Para várias sessões/conjuntos de dados:
 
 **Opção 1: GUI – Vários projetos**
 
@@ -242,21 +242,21 @@ Para múltiplas sessões/conjuntos de dados:
 
 ### Reprocessamento com configurações diferentes
 
-Se os resultados não forem satisfatórios:
+Se os resultados não forem esmagadores:
 
-1. Mantenha as imagens originais (nunca exclua)
+1. Manter as imagens originais (nunca excluída)
 2. Abra o mesmo projeto no Chloros
-3. Ajuste as configurações no painel Configurações do projeto
-4. Processe novamente - as saídas substituirão os resultados anteriores
+3. Ajustar as configurações no painel Configurações do projeto
+4. Processo novamente - as saídas substituirão os resultados anteriores
 
 ### Processando Subconjunto de Imagens
 
 Para reprocessar apenas imagens específicas:
 
 1. Criar novo projeto
-2. Importe apenas as imagens que necessitam de reprocessamento
+2. Importe apenas as imagens que serão reveladas de reprocessamento
 3. Use o mesmo modelo de configurações
-4. Processar conjunto de dados menor
+4. Processador conjunto de dados menor
 
 ### Obtendo ajuda
 
@@ -271,7 +271,7 @@ Se você encontrar problemas:
 
 ## Resumo: Fluxo de trabalho completo
 
-Agora você concluiu todo o fluxo de trabalho de processamento do Chloros:
+Agora você concluiu todo o fluxo de trabalho de processamento do Cloros:
 
 1. ✅ **Projeto criado** - Veja [Projetos](../projects.md)
 2. ✅ **Arquivos adicionados** - Consulte [Adicionando arquivos](page-1.md)
@@ -297,10 +297,10 @@ Agora você concluiu todo o fluxo de trabalho de processamento do Chloros:
 
 * [**Documentação CLI**](../CLI.md) - Processamento em lote de linha de comando
 * [**Python SDK**](../api-python-sdk.md) - Automação programática
-* [**Recursos do Chloros+**](../#chloros) - Recursos avançados de processamento
+* [**Recursos do Cloros+**](../#cloros) - Recursos avançados de processamento
 
 ### Suporte e Aprendizagem
 
 * [**FAQ**](../faq.md) - Perguntas comuns respondidas
-* [**Alvos de calibração**](../calibration-targets.md) - Noções básicas sobre calibração de refletância
+* [**Alvos de experiência**](../calibration-targets.md) - Noções básicas sobre rotina de refletância
 * [**Câmeras suportadas**](../supported-cameras.md) - Hardware compatível

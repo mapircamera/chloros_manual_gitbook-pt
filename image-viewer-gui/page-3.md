@@ -8,17 +8,17 @@ O Chloros Image Viewer fornece uma interface dedicada em tela cheia para visuali
 
 A maneira mais comum de abrir uma imagem no Image Viewer:
 
-1. Verifique se você está na guia **Navegador de arquivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Clique em qualquer **miniatura de imagem** na grade de imagens
+1. Verifique se você está no guia **Navegador de arquivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Clique em qualquer **miniatura de imagem** na categoria de imagens
 3. A imagem abre na **área principal de visualização** (centro da tela)
-4. A imagem agora está carregada e pronta para visualização em tela cheia
+4. A imagem agora está anunciada e pronta para visualização em tela cheia
 
-### Abrindo a guia Visualizador de imagens
+### Abrindo o guia Visualizador de imagens
 
-Depois que uma imagem for carregada na área de visualização:
+Depois que uma imagem for compartilhada na área de visualização:
 
 1. Clique no ícone **Visualizador de imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
-2. A guia Visualizador de imagens é aberta, exibindo a imagem selecionada em tela inteira
+2. O guia Visualizador de imagens é aberto, exibindo a imagem selecionada em tela inteira
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
 ***
@@ -31,7 +31,7 @@ A maior parte da tela mostra sua imagem:
 
 * **Resolução total**: imagens exibidas em resolução nativa
 * **Zoomável**: use os controles ou a roda do mouse para ampliar
-* **Movimentável**: clique e arraste para mover quando ampliado
+* **Movimentável**: clique e atrai para mover quando ampliado
 * **Proporção mantida**: as imagens são dimensionadas proporcionalmente
 
 ***
@@ -50,7 +50,7 @@ Navegue pelo seu conjunto de imagens usando atalhos de teclado ou botões:
 
 #### Controles de zoom
 
-Ajuste a ampliação para inspecionar os detalhes da imagem:
+Ajuste a ampliação para executar os detalhes da imagem:
 
 **Ampliar:**
 
@@ -64,7 +64,7 @@ Ajuste a ampliação para inspecionar os detalhes da imagem:
 * Pressione a tecla **−** (menos)
 * Role a roda do mouse **para baixo**
 
-**Ajustar à tela:**
+**Ajustar tela:**
 
 * Clique no botão **↔** (Ajustar)
 * Pressione a tecla **0** (Zero)
@@ -79,7 +79,7 @@ Quando ampliado além do tamanho da tela:
 3. **Arraste** para mover a imagem
 4. Solte para parar de panoramizar
 
-**Alternativa**: use as teclas de seta para deslocar em pequenos incrementos
+**Alternativa**: use como teclas de seta para deslocar em pequenos incrementos
 
 ***
 
@@ -89,7 +89,7 @@ Quando ampliado além do tamanho da tela:
 
 À medida que você move o cursor do mouse sobre a imagem, os valores dos pixels são exibidos em tempo real:
 
-**Local de exibição do valor:**
+**Exibição local do valor:**
 
 * **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito**
 * **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado**
@@ -114,12 +114,12 @@ Quando ampliado além do tamanho da tela:
 
 * Vinheta corrigida
 * Refletância calibrada
-* TIFF multibanda (vermelho, verde, NIR, etc.)
+* Multibanda TIFF (vermelho, verde, NIR, etc.)
 * Dados científicos prontos para análise
 
 ### Imagens de índice
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif arquivos):**
+**NDVI, NDRE, GNDVI, etc.
 
 * Imagens em escala de cinza de banda única
 * Os valores de pixel representam resultados de cálculo de índice
@@ -130,15 +130,15 @@ Quando ampliado além do tamanho da tela:
 
 ## Aplicação de índice e LUT
 
-Aplique índices multiespectrais e tabelas de consulta de cores:
+Aplique índices multiespectrais e tabelas de consulta de núcleos:
 
-1. Localize **Index/LUT Sandbox** no **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
+1. Localizar **Index/LUT Sandbox** não **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> barra lateral
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
 3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (somente Cloros+)
 4. Aplicar gradiente de cor LUT para visualização
 5. Ajustar intervalos de valores e limites
 
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detalhadas.
 
 ***
 
@@ -155,19 +155,19 @@ See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
 
 * **+** ou **=**: Ampliar
 * **−**: Diminuir zoom
-* **0** (Zero): Ajustar à tela
+* **0** (Zero): Ajustar tela
 * **Roda do mouse**: Aumentar/diminuir zoom
 
 ### Ver controles
 
-* **P**: Alternar modo de porcentagem de pixels
-* **L**: Alternar painel de camadas
+* **P**: Modo alternativo de porcentagem de pixels
+* **L**: Painel alternativo de camadas
 * **Esc**: fecha a tela inteira ou retorna ao navegador de arquivos
 
 ### Outro
 
 * **Ctrl+S**: Salva a imagem atual
-* **F**: modo de tela inteira (se disponível)
+* **F**: modo de tela inteira (disponível)
 
 ***
 
@@ -180,8 +180,8 @@ Verifique se os índices foram calculados corretamente:
    * **NDVI**: Deve mostrar 0,4-0,9 para plantas saudáveis
    * **NDRE**: Valores mais altos para crescimento vigoroso
    * **GNDVI**: semelhante ao NDVI, mas sensível à clorofila
-3. Verifique a não vegetação:
-   * **Solo**: Perto de 0 ou ligeiramente negativo
+3. Verifique a não urbanização:
+   * **Solo**: Perto de 0 ou mínimo negativo
    * **Água**: Valores negativos (-0,5 a 0)
 
 ***
@@ -190,9 +190,9 @@ Verifique se os índices foram calculados corretamente:
 
 ### A imagem não abre
 
-**Possíveis causas:**
+**Causas possíveis:**
 
-* Arquivo corrompido durante o processamento
+* Arquivo transmitido durante o processamento
 * Formato de arquivo não suportado
 * Memória insuficiente para imagens grandes
 
@@ -200,15 +200,15 @@ Verifique se os índices foram calculados corretamente:
 
 1. Tente abrir no visualizador externo para verificar a integridade do arquivo
 2. Verifique se o formato do arquivo corresponde ao tipo esperado
-3. Feche outros aplicativos para liberar memória
+3. Baixe outros aplicativos para liberar memória
 4. Experimente uma imagem menor/diferente
 
 ### Exibição de imagem em preto ou branco
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Faixa de valores fora da capacidade de exibição
-* Imagem flutuante de 32 bits com valores incomuns
+* Imagem flutuante de 32 bits com valores esperados
 * Erro de cálculo do índice
 
 **Soluções:**
@@ -219,10 +219,10 @@ Verifique se os índices foram calculados corretamente:
 
 ### Os valores de pixel parecem errados
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Visualizando imagem errada (original vs processada)
-* A calibração não foi aplicada corretamente
+* A instrução não foi aplicada corretamente
 * Os dados do sensor de luz não foram incluídos na entrada
 * Modo percentual alternado incorretamente
 
@@ -236,11 +236,11 @@ Verifique se os índices foram calculados corretamente:
 
 ## Próximas etapas
 
-Agora que você pode visualizar as imagens em tela cheia:
+Agora você pode visualizar as imagens em tela cheia:
 
 * [**Image Layers**](image-layers.md) - Aprenda sobre visualização multibanda
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplicar índices personalizados e mapeamento de cores
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Entenda os índices disponíveis
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplicar índices personalizados e mapeamento de núcleos
+* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Descubra os índices disponíveis
 
 Para fluxo de trabalho de processamento, consulte:
 

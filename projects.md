@@ -1,6 +1,6 @@
 # Projetos
 
-O Chloros permite criar projetos que poderão ser reabertos no futuro.
+O Chloros permite criar projetos que possam ser reabertos no futuro.
 
 ## Novo Projeto
 
@@ -12,6 +12,6 @@ Selecione “Novo Projeto” no menu principal e insira um nome exclusivo para o
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Selecione "Abrir Projeto" para ver uma lista de projetos existentes na pasta de projetos. Se não existirem projetos, o menu lateral secundário não será aberto. Você pode ver alguns projetos criados pela GUI (t1, t2, t3) listados na foto acima. Os projetos DATE\_TIME foram criados pela CLI usando o esquema de nomenclatura de projeto padrão. Clicar em qualquer nome de projeto irá abri-lo.
+Selecione "Abrir Projeto" para ver uma lista de projetos existentes na pasta de projetos. Se não existirem projetos, o menu lateral secundário não será aberto. Você pode ver alguns projetos criados pela GUI (t1, t2, t3) listados na foto acima. Os projetos DATE\_TIME foram criados pela CLI usando o esquema de nomenclatura do projeto padrão. Clique em qualquer nome de projeto que irá abri-lo.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/page-2.md).
+Clicar no botão "Abrir pasta do projeto" abre o explorador de arquivos do seu computador no caminho do projeto. Você pode ajustar o caminho do projeto em [Configurações do projeto](project-settings/page-2.md).

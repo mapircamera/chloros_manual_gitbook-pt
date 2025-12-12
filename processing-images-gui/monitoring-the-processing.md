@@ -1,6 +1,6 @@
 # Monitorando o Processamento
 
-Após o início do processamento, o Chloros oferece diversas maneiras de monitorar o progresso, verificar problemas e entender o que está acontecendo com seu conjunto de dados. Esta página explica como rastrear seu processamento e interpretar as informações fornecidas pela Chloros.
+Após o início do processamento, o Chloros oferece diversas maneiras de monitorar o progresso, verificar problemas e entender o que está acontecendo com seu conjunto de dados. Esta página explica como rastrear seu processamento e interpretar as informações fornecidas pela Cloros.
 
 ## Visão geral da barra de progresso
 
@@ -12,7 +12,7 @@ Para usuários sem licença Chloros+:
 
 **Exibição de progresso em 2 estágios:**
 
-1. **Target Detect** - Encontrando alvos de calibração em imagens
+1. **Target Detect** - Encontrando alvos encontrados em imagens
 2. **Processando** - Aplicando correções e exportando
 
 **A barra de progresso mostra:**
@@ -23,11 +23,11 @@ Para usuários sem licença Chloros+:
 
 ### Barra de Progresso Cloros+
 
-Para usuários com licença Chloros+:
+Para usuários com licença Cloros+:
 
 **Exibição de progresso em 4 estágios:**
 
-1. **Detectando** - Encontrando alvos de calibração
+1. **Detectando** - Encontrando alvos específicos
 2. **Analisando** - Examinando imagens e preparando pipeline
 3. **Calibrando** - Aplicando correções de vinheta e refletância
 4. **Exportando** - Salvando arquivos processados
@@ -47,15 +47,15 @@ Para usuários com licença Chloros+:
 
 **O que está acontecendo:**
 
-* O Chloros verifica imagens marcadas com a caixa de seleção Target
-* Algoritmos de visão computacional identificam os 4 painéis de calibração
+* O Cloros verifica imagens marcadas com a caixa de seleção Target
+* Algoritmos de visão computacional identificam os 4 painéis defeituosos
 * Valores de refletância extraídos de cada painel
-* Carimbos de data e hora alvo registrados para agendamento de calibração adequado
+* Carimbos de dados e hora alvo registrados para agendamento de agendamento adequado
 
 **Duração:**
 
 * Com alvos marcados: 10-60 segundos
-* Sem alvos marcados: 5-30+ minutos (verifica todas as imagens)
+* Sem alvos marcados: 5-30+ minutos (verifique todas as imagens)
 
 **Indicador de progresso:**
 
@@ -65,7 +65,7 @@ Para usuários com licença Chloros+:
 
 **O que observar:**
 
-* Deve ser concluído rapidamente se os alvos estiverem devidamente marcados
+* Deve ser concluído rapidamente se os alvos forem devidamente marcados
 * Se demorar muito, os alvos podem não ser marcados
 * Verifique o log de depuração para mensagens "Destino encontrado"
 
@@ -73,8 +73,8 @@ Para usuários com licença Chloros+:
 
 **O que está acontecendo:**
 
-* Lendo metadados EXIF ​​​​de imagem (carimbos de data e hora, configurações de exposição)
-* Determinando a estratégia de calibração com base em carimbos de data/hora alvo
+* Lendo metadados EXIF​​de imagem (carimbos de dados e hora, configurações de exposição)
+* Determinando a estratégia de privacidade com base em carimbos de dados/hora alvo
 * Organizando fila de processamento de imagens
 * Preparando trabalhadores de processamento paralelo (somente Cloros+)
 
@@ -88,7 +88,7 @@ Para usuários com licença Chloros+:
 **O que observar:**
 
 * Deve progredir de forma constante, sem pausas
-* Avisos sobre metadados ausentes aparecerão no log de depuração
+* Avisos sobre metadados ausentes aparecem no log de depuração
 
 ### Etapa 3: Calibração
 
@@ -111,23 +111,23 @@ Para usuários com licença Chloros+:
 **Comportamento de processamento:**
 
 * **Modo livre**: processa uma imagem por vez sequencialmente
-* **Modo Cloros+**: Processa até 16 imagens simultaneamente
-* **Aceleração de GPU**: acelera significativamente esse estágio
+* **Modo Cloros+**: Processo até 16 imagens simultaneamente
+* **Aceleração de GPU**: aceleração significativamente esse estágio
 
 **O que observar:**
 
 * Progresso constante através da contagem de imagens
 * Verifique o log de depuração para mensagens de conclusão por imagem
-* Avisos sobre problemas de qualidade de imagem ou calibração
+* Avisos sobre problemas de qualidade de imagem ou sintonia
 
 ### Etapa 4: Exportação
 
 **O que está acontecendo:**
 
 * Gravando imagens calibradas em disco no formato selecionado
-* Exportando imagens de índice multiespectral com cores LUT
+* Exportando imagens de índice multiespectral com núcleos LUT
 * Criando subpastas de modelo de câmera
-* Preservando nomes de arquivos originais com sufixos apropriados
+* Preservando nomes de arquivos originais com sufixos protegidos
 
 **Duração:** 10-20% do tempo total de processamento
 
@@ -141,13 +141,13 @@ Para usuários com licença Chloros+:
 
 * Avisos de espaço em disco
 * Erros de gravação de arquivo
-* Conclusão de todas as saídas configuradas
+* Conclusão de todas as saídas definidas
 
 ***
 
 ## Guia Log de depuração
 
-O log de depuração fornece informações detalhadas sobre o progresso do processamento e quaisquer problemas encontrados.
+O log de detalhamento fornece informações planejadas sobre o andamento do processamento e quaisquer problemas encontrados.
 
 ### Acessando o log de depuração
 
@@ -179,7 +179,7 @@ Problemas não críticos que não param de ser processados:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Ação:** Revise os avisos após o processamento, mas não interrompa
+**Ação:** Revisar os avisos após o processamento, mas não interrompa
 
 #### Mensagens de erro (vermelho)
 
@@ -197,10 +197,10 @@ Problemas críticos que podem causar falha no processamento:
 
 | Mensagem | Significado | Ação necessária |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
+| "Alvo detectado em \[nome do arquivo]" | Alvo de calibração encontrado com sucesso | Nenhum - normal |
 | "Processando imagem X de Y" | Atualização do progresso atual | Nenhum - normal |
-| "Nenhum alvo encontrado" | Não foram detectados alvos de calibração | Marcar imagens alvo ou desativar calibração de refletância |
-| “Espaço em disco insuficiente” | Armazenamento insuficiente para saída | Libere espaço em disco |
+| "Nenhum alvo encontrado" | Não foram detectados alvos de descoberta | Marcar imagens alvo ou desativar a refletância |
+| “Espaço em disco insuficiente” | Armazenamento insuficiente para saída | Espaço livre em discoteca |
 | "Ignorando arquivo corrompido" | O arquivo de imagem está danificado | Copie novamente o arquivo do cartão SD |
 | “Dados PPK aplicados” | Correções GPS do arquivo .daq aplicadas | Nenhum - normal |
 
@@ -235,7 +235,7 @@ Para copiar o log para solução de problemas ou suporte:
 
 * Gerenciador de Tarefas do Windows (Ctrl+Shift+Esc)
 * Guia Desempenho → seção CPU
-* Procure por processos "Chloros" ou "cloros-backend"
+* Procure por processos "Cloros" ou "cloros-backend"
 
 ### Uso de memória (RAM)
 
@@ -248,9 +248,9 @@ Para copiar o log para solução de problemas ou suporte:
 
 **Se a memória estiver baixa:**
 
-* Processe lotes menores
-* Feche outros aplicativos
-* Atualize a RAM se processar regularmente grandes conjuntos de dados
+* Processar lotes menores
+* Buscar outros aplicativos
+* Atualizar a RAM para processar regularmente grandes conjuntos de dados
 
 ### Uso de GPU (Chloros+ com CUDA)
 
@@ -258,7 +258,7 @@ Quando a aceleração da GPU está habilitada:
 
 * GPU NVIDIA mostra alta utilização (60-90%)
 * O uso de VRAM aumenta (requer 4 GB + VRAM)
-* O estágio de calibração é significativamente mais rápido
+* O estágio de desligamento é significativamente mais rápido
 
 **Para monitorar:**
 
@@ -266,11 +266,11 @@ Quando a aceleração da GPU está habilitada:
 * Gerenciador de Tarefas → Desempenho → GPU
 * GPU-Z ou ferramenta de monitoramento semelhante
 
-### E/S de disco
+### E/S de discoteca
 
 **O que esperar:**
 
-* Alta leitura de disco durante o estágio de análise
+* Alta leitura do disco durante a etapa de análise
 * Alta gravação em disco durante o estágio de exportação
 * SSD significativamente mais rápido que HDD
 
@@ -278,7 +278,7 @@ Quando a aceleração da GPU está habilitada:
 
 * Use SSD para pasta do projeto quando possível
 * Evite unidades de rede para grandes conjuntos de dados
-* Certifique-se de que o disco não esteja próximo da capacidade máxima (afeta a velocidade de gravação)
+* -se de que o disco não esteja próximo da capacidade máxima (afeta a velocidade de gravação)
 
 ***
 
@@ -289,7 +289,7 @@ Quando a aceleração da GPU está habilitada:
 **Progresso paralisado (sem alteração por mais de 5 minutos):**
 
 * Verifique o log de depuração em busca de erros
-* Verifique o espaço em disco disponível
+* Confira o espaço em disco disponível
 * Verifique o Gerenciador de Tarefas para garantir que o Chloros esteja funcionando
 
 **Mensagens de erro aparecem com frequência:**
@@ -300,7 +300,7 @@ Quando a aceleração da GPU está habilitada:
 
 **O sistema não responde:**
 
-* Modo paralelo Chloros+ usando muitos recursos
+* Modo paralelo Cloros+ usando muitos recursos
 * Considere reduzir tarefas simultâneas ou atualizar hardware
 * O modo gratuito consome menos recursos
 
@@ -311,13 +311,13 @@ Pare o processamento se você vir:
 * ❌ Erros "Disco cheio" ou "Não é possível gravar arquivo"
 * ❌ Erros repetidos de corrupção de arquivos de imagem
 * ❌ Sistema completamente congelado (não responde)
-* ❌ Percebi que configurações erradas foram configuradas
+* ❌ Percebi que configurações erradas foram definidas
 * ❌ Imagens erradas importadas
 
 **Como parar:**
 
-1. Clique no **botão Parar/Cancelar** (substitui o botão Iniciar)
-2. O processamento é interrompido, o progresso é perdido
+1. Clique no **botão Parar/Cancelar** (substitua o botão Iniciar)
+2. O processamento está interrompido, o progresso está perdido
 3. Corrija problemas e reinicie desde o início
 
 ***
@@ -326,37 +326,37 @@ Pare o processamento se você vir:
 
 ### O processamento é muito lento
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Imagens de destino não marcadas (verificando todas as imagens)
 * HDD em vez de armazenamento SSD
-* Recursos de sistema insuficientes
+* Recursos de sistemas insuficientes
 * Muitos índices configurados
 * Acesso à unidade de rede
 
 **Soluções:**
 
 1. Se acabou de iniciar e está no estágio de detecção: cancelar, marcar alvos, reiniciar
-2. Para o futuro: use SSD, reduza índices, atualize hardware
+2. Para o futuro: usar SSD, reduzir índices, atualizar hardware
 3. Considere CLI para processamento em lote de grandes conjuntos de dados
 
 ### Avisos de “espaço em disco”
 
 **Soluções:**
 
-1. Libere espaço em disco imediatamente
+1. Espaço livre na discoteca imediatamente
 2. Mova o projeto para dirigir com mais espaço
 3. Reduzir o número de índices para exportar
 4. Use o formato JPG em vez de TIFF (arquivos menores)
 
-### Mensagens frequentes de “arquivo corrompido”
+### Mensagens de “arquivo danificado”
 
 **Soluções:**
 
 1. Copie novamente as imagens do cartão SD para garantir a integridade
 2. Teste o cartão SD em busca de erros
-3. Remova arquivos corrompidos do projeto
-4. Continue processando as imagens restantes
+3. Remoção de arquivos incluídos no projeto
+4. Continuar processando as imagens restantes
 
 ### Superaquecimento/estrangulamento do sistema
 
@@ -382,11 +382,11 @@ Quando o processamento terminar:
 
 ## Próximas etapas
 
-Assim que o processamento for concluído:
+Assim que o processamento para conclusão:
 
 1. **Revisar resultados** - Consulte [Concluindo o processamento](finishing-the-processing.md)
 2. **Verifique a pasta de saída** - Verifique todos os arquivos exportados corretamente
-3. **Revise o registro de depuração** - Verifique se há avisos ou erros
-4. **Visualizar imagens processadas** - Use o Image Viewer ou software externo
+3. **Revisar o registro de depuração** - Verifique se há avisos ou erros
+4. **Visualizar imagens processadas** - Utilize o Image Viewer ou software externo
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+Para obter informações sobre como revisar e usar os resultados processados, consulte [Finishing the Processing](finishing-the-processing.md).

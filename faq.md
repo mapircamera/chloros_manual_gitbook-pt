@@ -11,7 +11,7 @@ metaLinks:
 
 <summary>Can I process images from cameras that are not MAPIR brand with Chloros?</summary>
 
-No, Chloros only supports processing MAPIR camera images. Please see the list of [supported camera models](supported-cameras.md) for more information. We do offer processing of other cameras on MAPIR Cloud, see full list [here](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+Não, o Chloros suporta apenas o processamento de imagens de câmeras MAPIR. Consulte a lista de [modelos de câmeras compatíveis](supported-cameras.md) para obter mais informações. Oferecemos processamento de outras câmeras no MAPIR Cloud, veja a lista completa [aqui](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -19,7 +19,7 @@ No, Chloros only supports processing MAPIR camera images. Please see the list of
 
 <summary>Can I calibrate my images for reflectance without a calibration target?</summary>
 
-Não. Sem uma imagem do alvo de calibração capturada próximo ao momento em que as imagens não alvo são capturadas, você não será capaz de relacionar os valores de pixel da imagem a uma porcentagem de refletância conhecida. Se você também não incluir o registro de um sensor de luz MAPIR, o espectro de luz ambiente não será medido e os resultados de refletância não serão precisos.
+Não. Sem uma imagem do alvo de precisão capturada próximo ao momento em que as imagens não são alvo de capturadas, você não será capaz de relacionar os valores de pixel da imagem a uma porcentagem de refletância conhecida. Se você também não incluir o registro de um sensor de luz MAPIR, o espectro de luz ambiente não será medido e os resultados de refletância não serão precisos.
 
 </details>
 
@@ -35,7 +35,7 @@ Não. A Chloros assume que os dados de entrada não foram modificados. Não alte
 
 <summary>Can I set my MAPIR Survey3 cameras to auto exposure and process the images in Chloros?</summary>
 
-Os conjuntos de dados de imagens Survey3 devem ter uma exposição fixa/bloqueada, portanto, não há velocidade do obturador automático ou ISO automático. Todas as imagens do mesmo modelo de câmera devem ter velocidade de obturador e ISO (exposição) idênticos.
+Os conjuntos de dados de imagens Survey3 devem ter uma exposição fixa/bloqueada, portanto, não há velocidade do obturador automático ou ISO automático. Todas as imagens do mesmo modelo de câmera devem ter velocidade de obturador e ISO (exposição) idênticas.
 
 </details>
 
@@ -51,7 +51,7 @@ Não. Somente imagens individuais de câmeras MAPIR são suportadas, e não imag
 
 <summary>How can I speed up the target detection step of Chloros?</summary>
 
-Na tabela do navegador de arquivos, a pré-seleção das imagens alvo na coluna da direita dirá ao Chloros para procurar apenas alvos de calibração nessas imagens, acelerando bastante o processamento.
+Na tabela do navegador de arquivos, a pré-seleção das imagens alvo na coluna da direita dirá ao Cloros para procurar apenas alvos de restrição nessas imagens, acelerando bastante o processamento.
 
 </details>
 
@@ -59,7 +59,7 @@ Na tabela do navegador de arquivos, a pré-seleção das imagens alvo na coluna 
 
 <summary>If I will upload my images to <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> should I process in Chloros prior to uploading?</summary>
 
-If you plan to upload to our online processing platform [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) do not edit the images prior to uploading. Cloud will perform all the same processing and more.
+Se você planeja fazer upload para nossa plataforma de processamento on-line [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), não edite as imagens antes de fazer upload. A nuvem realizará todo o mesmo processamento e muito mais.
 
 </details>
 
@@ -67,6 +67,6 @@ If you plan to upload to our online processing platform [MAPIR Cloud](https://ww
 
 <summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
 
-We are always interested in receiving feedback on our products. If you find an issue with our products, or have a suggestion on how we can improve our products please [CONTACT US](https://www.mapir.camera/community/contact) to share your thoughts. Most of our R\&D is guided by listening to our customer's biggest needs.
+Estamos sempre interessados ​​em receber feedback sobre nossos produtos. Se você encontrar um problema com nossos produtos ou tiver uma sugestão sobre como podemos melhorá-los, [ENTRE EM CONTATO CONOSCO](https://www.mapir.camera/community/contact) para compartilhar suas idéias. A maior parte de nossa pesquisa e desenvolvimento é orientada por ouvir as maiores necessidades de nossos clientes.
 
 </details>

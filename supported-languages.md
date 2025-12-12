@@ -16,7 +16,7 @@ O Chloros suporta os seguintes idiomas:
 10. 🇹🇼 **繁體中文** (chinês tradicional)
 11. 🇷🇺 **Русский** (Russo)
 12. 🇳🇱 **Holanda** (holandês)
-13. 🇸🇦 **العربية** (Árabe)
+13. 🇸🇦 **العربية** (árabe)
 14. 🇵🇱 **Polski** (polonês)
 15. 🇹🇷 **Türkçe** (turco)
 16. 🇮🇳 **हिंदी** (hindi)
@@ -45,7 +45,7 @@ O Chloros suporta os seguintes idiomas:
 
 ## Como mudar o idioma
 
-### No desktop/navegador Chloros
+### Sem desktop/navegador Chloros
 
 1. Abra as configurações do aplicativo
 2. Navegue até o menu de seleção de idioma
@@ -56,7 +56,7 @@ O Chloros suporta os seguintes idiomas:
 
 Use o parâmetro idioma com seus comandos para definir o idioma da interface.
 
-### No SDK do Cloros Python
+### Sem SDK do Cloros Python
 
 Defina o parâmetro de idioma ao inicializar o SDK para obter mensagens e resultados no idioma de sua preferência.
 

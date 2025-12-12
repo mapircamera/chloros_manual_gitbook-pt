@@ -10,9 +10,9 @@ metaLinks:
 
 Saída em formato TIFF (.tif) de 16 bits (número digital de pixel 0 - 65535).
 
-### TIFF (32 bits, porcentagem %)
+### TIFF (32 bits, %%)
 
-Saída em formato TIFF (.tif) de 32 bits (pixel flutuante 0,0 - 1,0). Os valores de pixel representam porcentagens de refletância onde 0,0 = 0% e 1,0 = 100%.
+Sai em formato TIFF (.tif) de 32 bits (pixel flutuante 0,0 - 1,0). Os valores de pixel representam porcentagens de refletância onde 0,0 = 0% e 1,0 = 100%.
 
 ### **JPG (8 bits)**
 

@@ -1,20 +1,20 @@
 # Iniciando o processamento
 
-Depois de importar suas imagens, marcar seus alvos de calibração e definir as configurações do projeto, você estará pronto para iniciar o processamento. Esta página orienta você no início do pipeline de processamento do Chloros.
+Depois de importar suas imagens, marcar seus alvos de dificuldades e definir as configurações do projeto, você estará pronto para iniciar o processamento. Esta página orienta você no início do pipeline de processamento do Cloros.
 
 ## Lista de verificação de pré-processamento
 
 Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 
 * [ ] **Arquivos importados** - Todas as imagens aparecem no Navegador de Arquivos
-* [ ] **Imagens alvo marcadas** - Coluna alvo verificada para imagens de calibração
+* [ ] **Imagens alvo marcadas** - Coluna alvo verificada para imagens encontradas
 * [ ] **Modelos de câmera detectados** - A coluna Modelo de câmera mostra as câmeras corretas
-* [ ] **Configurações configuradas** - Configurações do projeto revisadas e ajustadas
-* [ ] **Índices selecionados** - Índices multiespectrais desejados adicionados (se necessário)
-* [ ] **Formato de exportação escolhido** - Formato de saída apropriado para seu fluxo de trabalho
+* [ ] **Configurações ajustadas** - Configurações do projeto revisadas e ajustadas
+* [ ] **Índices selecionados** - Índices multiespectrais desejados (se necessário)
+* [ ] **Formato de exportação escolhido** - Formato de saída adequada para seu fluxo de trabalho
 
 {% dica estilo = "info" %}
-**Dica**: clique em algumas imagens no Navegador de arquivos para verificar se foram carregadas corretamente antes do processamento.
+**Dica**: clique em algumas imagens no Navegador de arquivos para verificar se foram incluídas corretamente antes do processamento.
 {% endhint %}
 
 ***
@@ -23,7 +23,7 @@ Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 
 ### Localize o botão Iniciar
 
-O botão Iniciar/Reproduzir está localizado na barra de cabeçalho superior do Chloros:
+O botão/Reproduzir está localizado na barra de cabeçalho superior do Chloros:
 
 * Posição: Centro superior da janela
 * Ícone: **Botão Reproduzir/Iniciar** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
@@ -37,14 +37,14 @@ O botão Iniciar/Reproduzir está localizado na barra de cabeçalho superior do 
 4. Atualizações da barra de progresso, mostrando o status do processamento
 
 {% dica estilo = "sucesso" %}
-**Processamento iniciado**: Uma vez clicado, o Chloros lida automaticamente com todas as etapas de processamento - detecção de alvo, debayering, calibração, cálculo de índice e exportação.
+**Processamento iniciado**: Uma vez clicado, o Cloros lida automaticamente com todas as etapas de processamento - detecção de alvo, depuração, exclusão, cálculo de índice e exportação.
 {% endhint %}
 
 ***
 
 ## Compreendendo os modos de processamento
 
-A Chloros opera em dois modos de processamento diferentes dependendo da sua licença:
+A Chloros opera em dois modos de processamento diferentes dependendo de sua licença:
 
 ### Modo Livre (Processamento Sequencial)
 
@@ -58,28 +58,28 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **A barra de progresso mostra 2 etapas:**
 
-1. **Target Detect** - Procurando alvos de calibração
-2. **Processando** - Aplicando calibração e exportando imagens
+1. **Target Detect** - Procurando alvos específicos
+2. **Processando** - Aplicando internamente e exportando imagens
 
 **Tempo de processamento:**
 
-* Muito mais lento que o modo paralelo Chloros+
+* Muito mais lento que o modo paralelo Cloros+
 * Adequado para conjuntos de dados pequenos e médios (<200 imagens)
 
 ### Modo Cloros+ (processamento paralelo)
 
-**Requer licença Cloros+**
+**Solicitar licença Cloros+**
 
 **Como funciona:**
 
-* Processa múltiplas imagens simultaneamente
+* Processo múltiplas imagens simultaneamente
 * Operação multithread (até 16 trabalhadores paralelos)
-* Utiliza vários núcleos de CPU
+* Utilize vários núcleos de CPU
 * Aceleração GPU (CUDA) opcional com placas gráficas NVIDIA
 
 **A barra de progresso mostra 4 etapas:**
 
-1. **Detectando** - Encontrando alvos de calibração
+1. **Detectando** - Encontrando alvos específicos
 2. **Analisando** – Examinando metadados de imagem e preparando pipeline
 3. **Calibrando** - Aplicando correções e calibrações
 4. **Exportando** - Salvando imagens e índices processados
@@ -94,10 +94,10 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 * Significativamente mais rápido que o modo livre
 * Escala com contagem de núcleos de CPU
-* A aceleração da GPU melhora ainda mais a velocidade
+* A aceleração da GPU melhorou ainda mais a velocidade
 
 {% dica estilo = "info" %}
-**Chloros+ Speed**: o processamento paralelo pode ser de 5 a 10 vezes mais rápido que o modo sequencial para grandes conjuntos de dados. Um projeto de 500 imagens que leva 2 horas no modo livre pode ser concluído em 15 a 20 minutos com o Chloros+.
+**Cloros+ Speed**: o processamento paralelo pode ser de 5 a 10 vezes mais rápido que o modo sequencial para grandes conjuntos de dados. Um projeto de 500 imagens que leva 2 horas no modo livre pode ser concluído em 15 a 20 minutos com o Cloros+.
 {% endhint %}
 
 ***
@@ -108,10 +108,10 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **O que o Cloros faz:**
 
-* Verifica as imagens alvo marcadas (ou todas as imagens, se nenhuma estiver marcada)
-* Identifica os 4 painéis de calibração em cada alvo
+* Verifique as imagens alvo marcadas (ou todas as imagens, se não estiverem marcadas)
+* Identifique os 4 painéis defeituosos em cada alvo
 * Extrai valores de refletância de painéis de destino
-* Registra carimbos de data e hora alvo para agendamento de calibração
+* Registrar carimbos de dados e hora alvo para agendamento de reserva
 
 **Duração:** 1 a 30 segundos (com alvos marcados), 5 a 30+ minutos (sem marcação)
 
@@ -119,9 +119,9 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **O que o Cloros faz:**
 
-* Converte dados RAW do padrão Bayer em imagens RGB completas
-* Aplica algoritmo de demosaicing de alta qualidade
-* Preserva a máxima qualidade e detalhes da imagem
+* Converta dados RAW do padrão Bayer em imagens RGB completas
+* Aplicativo algoritmo de demosaicing de alta qualidade
+* Preservar a máxima qualidade e detalhes da imagem
 
 **Duração:** Varia de acordo com a contagem de imagens e a velocidade da CPU
 
@@ -129,10 +129,10 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **O que o Cloros faz:**
 
-* **Correção de vinheta**: remove o escurecimento da lente nas bordas
+* **Correção de vinheta**: remova o escurecimento da lente nas bordas
 * **Calibração de refletância**: normaliza usando valores de refletância alvo
-* Aplica correções em todas as bandas/canais
-* Usa alvo de calibração apropriado para cada imagem com base no carimbo de data/hora
+* Aplicar correções em todas as bandas/canais
+* Usa alvo de proteção protetora para cada imagem com base no carimbo de data/hora
 
 **Duração:** Maioria do tempo de processamento
 
@@ -140,8 +140,8 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **O que o Cloros faz:**
 
-* Calcula índices multiespectrais configurados (NDVI, NDRE, etc.)
-* Aplica matemática de banda a imagens calibradas
+* Calcular índices multiespectrais configurados (NDVI, NDRE, etc.)
+* Aplicação matemática de banda a imagens calibradas
 * Gera imagens de índice para cada índice selecionado
 
 **Duração:** Alguns segundos por imagem
@@ -150,10 +150,10 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 
 **O que o Cloros faz:**
 
-* Salva imagens calibradas no formato selecionado
-* Exporta imagens de índice com cores LUT configuradas
+* Salvar imagens calibradas no formato selecionado
+* Exportar imagens de índice com núcleos LUT configurados
 * Grava arquivos nas subpastas do modelo da câmera
-* Preserva nomes de arquivos originais com sufixos
+* Preservar nomes de arquivos originais com sufixos
 
 **Duração:** Varia de acordo com o formato de exportação e tamanho do arquivo
 
@@ -166,7 +166,7 @@ A Chloros opera em dois modos de processamento diferentes dependendo da sua lice
 Depois de iniciado, todo o pipeline é executado automaticamente:
 
 * Nenhuma interação do usuário necessária
-* Todas as etapas configuradas são executadas em sequência
+* Todas as etapas definidas são realizadas em sequência
 * Atualizações de progresso mostradas em tempo real
 
 ### Uso do computador durante o processamento
@@ -180,19 +180,19 @@ Depois de iniciado, todo o pipeline é executado automaticamente:
 **Modo Cloros+ Paralelo:**
 
 * Alto uso de CPU (multithread, até 16 núcleos)
-* Com aceleração de GPU: Alto uso de GPU
+* Com influência de GPU: Alto uso de GPU
 * O computador pode responder menos durante o processamento
 * Evite iniciar outras tarefas com uso intensivo de CPU
 
 {% dica estilo = "aviso" %}
-**Dica de desempenho**: Para obter melhor desempenho do Chloros+, feche outros aplicativos e deixe o Chloros usar todos os recursos do sistema.
+**Dica de desempenho**: Para obter melhor desempenho do Cloros+, feche outros aplicativos e deixe o Cloros usar todos os recursos do sistema.
 {% endhint %}
 
 ### O processamento não pode ser pausado
 
 **Limitações importantes:**
 
-* Uma vez iniciado, o processamento não pode ser pausado
+* Uma vez iniciado, o processamento não pode ser interrompido
 * Você pode cancelar o processamento, mas o progresso será perdido
 * Os resultados parciais não são salvos
 * Deve reiniciar do início se cancelado
@@ -210,7 +210,7 @@ Durante a execução do processamento, você pode:
 * **Verificar guia de log** - Veja mensagens e avisos detalhados de processamento
 * **Visualizar imagens concluídas** - Alguns arquivos de exportação podem aparecer durante o processamento
 
-For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+Para obter informações detalhadas sobre monitoramento, consulte [Monitoring the Processing](monitoring-the-processing.md).
 
 ***
 
@@ -239,10 +239,10 @@ Se você precisar interromper o processamento:
 * Revise e corrija quaisquer problemas
 * Ajuste as configurações conforme necessário
 * Reinicie o processamento desde o início
-* Para uma experiência mais limpa, feche completamente o Chloros e reinicie
+* Para uma experiência mais limpa, feche completamente o Cloros e reinicie
 
 {% dica estilo = "aviso" %}
-**Sem resultados parciais**: cancelar descarta todo o progresso. O Chloros não salva imagens parcialmente processadas.
+**Sem resultados parciais**: cancelar descartado todo o progresso. O Chloros não salva imagens parcialmente processadas.
 {% endhint %}
 
 ***
@@ -262,7 +262,7 @@ O tempo real de processamento varia muito com base em:
 
 ### Estimativas aproximadas (Chloros +, imagens de 12 MP, CPU moderna)
 
-| Contagem de imagens | Modo Livre | Cloros+ (CPU) | Cloros+ (GPU) |
+| Contagem de imagens | Modo Livre | Cloros+ (CPU) | Cloro+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
 | 50 imagens | 15-20 minutos | 5-8 minutos | 3-5 minutos |
 | 100 imagens | 30-40 minutos | 10-15 minutos | 5-8 minutos |
@@ -271,7 +271,7 @@ O tempo real de processamento varia muito com base em:
 | 1000 imagens | 4-6 horas | 1,5-2 horas | 40-60 minutos |
 
 {% dica estilo = "info" %}
-**Primeira execução**: o processamento inicial pode demorar mais, pois o Chloros cria caches e perfis. O processamento subsequente de conjuntos de dados semelhantes será mais rápido.
+**Primeira execução**: o processamento inicial pode demorar mais, pois o Cloros cria caches e perfis. O processamento subsequente de conjuntos de dados semelhantes será mais rápido.
 {% endhint %}
 
 ***
@@ -280,7 +280,7 @@ O tempo real de processamento varia muito com base em:
 
 ### Botão Iniciar desativado (acinzentado)
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Nenhuma imagem importada
 * Back-end não totalmente iniciado
@@ -289,14 +289,14 @@ O tempo real de processamento varia muito com base em:
 
 **Soluções:**
 
-1. Aguarde a inicialização completa do back-end (verifique o ícone do menu principal)
+1. Mantenha a inicialização completa do back-end (verifique o ícone do menu principal)
 2. Verifique se as imagens são importadas no navegador de arquivos
-3. Reinicie o Chloros se o botão permanecer desabilitado
+3. Reinicie o Cloros se o botão permanecer desativado
 4. Verifique o log de depuração para mensagens de erro
 
 ### O processamento começa e falha imediatamente
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Nenhuma imagem válida no projeto
 * Arquivos de imagem corrompidos
@@ -306,13 +306,13 @@ O tempo real de processamento varia muito com base em:
 **Soluções:**
 
 1. Verifique o log de depuração <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> para mensagens de erro
-2. Verifique o espaço em disco disponível
+2. Confira o espaço em disco disponível
 3. Tente processar um subconjunto menor de imagens
 4. Verifique se as imagens não estão corrompidas
 
 ### Aviso "Nenhum alvo detectado"
 
-**Possíveis causas:**
+**Causas possíveis:**
 
 * Esqueci de marcar as imagens alvo
 * As imagens alvo não contêm alvos visíveis
@@ -320,47 +320,47 @@ O tempo real de processamento varia muito com base em:
 
 **Soluções:**
 
-1. Revise [Escolhendo imagens de destino](choosing-target-images.md)
-2. Marque as imagens apropriadas na coluna Destino
+1. Revisar [Escolhendo imagens de destino](choosing-target-images.md)
+2. Marque as imagens comentadas na coluna Destino
 3. Verifique se os alvos estão visíveis nas imagens marcadas
 4. Ajuste as configurações de detecção de alvo, se necessário
 
 ***
 
-## Dicas para processamento bem-sucedido
+## Dicas para processamento bem sucedido
 
 ### Antes de começar
 
-1. **Teste primeiro com um subconjunto pequeno** - Processe de 10 a 20 imagens para verificar as configurações
-2. **Verifique o espaço em disco disponível** - Garanta que o tamanho do conjunto de dados esteja livre de 2 a 3 vezes
-3. **Feche aplicativos desnecessários** - Libere recursos do sistema
+1. **Teste primeiro com um subconjunto pequeno** - Processo de 10 a 20 imagens para verificar as configurações
+2. **Verifique o espaço em disco disponível** - Garanta que o tamanho do conjunto de dados fique livre de 2 a 3 vezes
+3. **Feche aplicativos desnecessários** - Recursos gratuitos do sistema
 4. **Verifique as imagens alvo** - Visualize os alvos marcados para garantir a qualidade
 5. **Salvar projeto** – O projeto é salvo automaticamente, mas é uma boa prática salvar manualmente
 
 ### Durante o processamento
 
 1. **Evite suspensão do sistema** - Desative os modos de economia de energia
-2. **Mantenha o Cloros em primeiro plano** - Ou pelo menos visível na barra de tarefas
-3. **Monitore o progresso ocasionalmente** - Verifique se há avisos ou erros
+2. **Mantenha o Cloros no primeiro plano** - Ou pelo menos visível na barra de tarefas
+3. **Monitore o progresso ocasional** - Verifique se há avisos ou erros
 4. **Não carregue outras aplicações pesadas** - Especialmente com o modo paralelo Chloros+
 
 ### Aceleração GPU Cloros+
 
-Se estiver usando aceleração de GPU NVIDIA:
+Se você estiver usando GPU NVIDIA:
 
-1. Atualize os drivers NVIDIA para a versão mais recente
-2. Certifique-se de que a GPU tenha 4 GB + VRAM
-3. Feche aplicativos com uso intensivo de GPU (jogos, edição de vídeo)
-4. Monitore a temperatura da GPU (garanta resfriamento adequado)
+1. Atualizar os drivers NVIDIA para a versão mais recente
+2. Se de que a GPU tenha 4 GB + VRAM
+3. Buscar aplicativos com uso intensivo de GPU (jogos, edição de vídeo)
+4. Monitore a temperatura da GPU (garanta o resfriamento adequado)
 
 ***
 
 ## Próximas etapas
 
-Assim que o processamento for iniciado:
+Assim que o processamento foi iniciado:
 
 1. **Monitore o progresso** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
 2. **Aguarde a conclusão** - O processamento é executado automaticamente
 3. **Revisar resultados** - Consulte [Concluindo o processamento](finishing-the-processing.md)
 
-For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
+Para obter informações sobre o que fazer durante o processamento, consulte [Monitorando o processamento](monitoring-the-processing.md).
