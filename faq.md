@@ -1,17 +1,16 @@
 ---
-description: Frequently Asked Questions
+description: Perguntas frequentes
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
-
 # Perguntas frequentes
 
 <details>
 
 <summary>Posso processar imagens de câmaras que não sejam da marca MAPIR com o Chloros?</summary>
 
-Não, o Chloros só suporta o processamento de imagens de câmaras MAPIR. Consulte a lista de [modelos de câmaras compatíveis](supported-cameras.md) para obter mais informações. Oferecemos o processamento de outras câmaras na MAPIR Cloud. Consulte a lista completa [aqui](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+Não, o Chloros só suporta o processamento de imagens de câmaras MAPIR. Consulte a lista de [modelos de câmaras suportados](supported-cameras.md) para obter mais informações. Oferecemos o processamento de outras câmaras na MAPIR Cloud. Consulte a lista completa [aqui](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -59,14 +58,14 @@ Na tabela do navegador de ficheiros, pré-selecionar as imagens-alvo na coluna d
 
 <summary>Se eu for carregar as minhas imagens para <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">o MAPIR Cloud,</a> devo processá-las no Chloros antes de carregá-las?</summary>
 
-Se planeia fazer o upload para a nossa plataforma de processamento online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), não edite as imagens antes do upload. A Cloud realizará todo o mesmo processamento e muito mais.
+Se planeia fazer o upload para a nossa plataforma de processamento online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), não edite as imagens antes de fazer o upload. A Cloud realizará todo o mesmo processamento e muito mais.
 
 </details>
 
 <details>
 
-<summary>O MAPIR irá suportar a funcionalidade X? Gostaria muito que o MAPIR oferecesse X.</summary>
+<summary>O MAPIR alguma vez suportará a funcionalidade X? Gostaria muito que o MAPIR oferecesse X.</summary>
 
-Estamos sempre interessados em receber feedback sobre os nossos produtos. Se encontrar algum problema com os nossos produtos ou tiver alguma sugestão sobre como podemos melhorá-los, entre em contacto connosco para partilhar as suas ideias. A maior parte da nossa investigação e desenvolvimento é orientada por ouvir as principais necessidades dos nossos clientes.
+Estamos sempre interessados em receber feedback sobre os nossos produtos. Se encontrar algum problema com os nossos produtos ou tiver alguma sugestão sobre como podemos melhorá-los, [CONTACTE-NOS](https://www.mapir.camera/community/contact) para partilhar as suas ideias. A maior parte da nossa I&amp;D é orientada por ouvir as principais necessidades dos nossos clientes.
 
 </details>
