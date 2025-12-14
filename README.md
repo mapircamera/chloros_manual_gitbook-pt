@@ -1,7 +1,6 @@
 ---
 metaLinks: {}
 ---
-
 # Introdução
 
 <div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
@@ -38,7 +37,7 @@ Embora o Chloros seja gratuito para a maioria das tarefas, poderá querer mais. 
 * **Aceleração GPU (CUDA)**: aproveite as opções de memória GPU mais altas atuais para acelerar ainda mais o pipeline de processamento de imagens. Recomendamos 4 GB ou mais de VRAM para obter melhores resultados.
 * **Chloros+** [**CLI**](CLI.md) **Acesso**: execute o Chloros+ a partir da linha de comando para automatizar e integrar no seu próprio software.
 * **Chloros+** [**API**](api-python-sdk.md) **Acesso:** execute o Chloros+ a partir do Python para controlo programático, permitindo uma integração perfeita com os seus pipelines de pesquisa, fluxos de trabalho de análise de dados e aplicações personalizadas.
-* **Utilização em vários dispositivos**: cada licença do Chloros+ permite o registo de mais de dois dispositivos. Utilize a sua conta MAPIR Cloud para gerir os dispositivos registados. Adicione suporte para mais dispositivos atualizando a sua licença do Chloros+.
+* **Utilização em vários dispositivos**: cada licença Chloros+ permite o registo de 2 ou mais dispositivos. Utilize a sua conta MAPIR Cloud para gerir os dispositivos registados. Adicione suporte para mais dispositivos atualizando a sua licença Chloros+.
 * **Fórmulas personalizadas de índices multiespectrais:** introduza índices multiespectrais personalizados nas calculadoras raster Chloros, tanto para processamento como para a área de visualização de imagens.
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Preços e inscrição no Chloros+</a></p>

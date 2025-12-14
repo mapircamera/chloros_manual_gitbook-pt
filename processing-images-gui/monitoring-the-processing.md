@@ -12,8 +12,8 @@ Para utilizadores sem licença do Chloros+:
 
 **Exibição do progresso em duas etapas:**
 
-1. **Detecção do alvo** - Localização de alvos de calibração nas imagens
-2. **Processamento** - Aplicação de correções e exportação
+1. **Detecção do alvo** - Encontrar alvos de calibração nas imagens
+2. **Processamento** - Aplicar correções e exportar
 
 **A barra de progresso mostra:**
 
@@ -30,20 +30,20 @@ Para utilizadores com licença Chloros+:
 1. **Detecção** - Localização de alvos de calibração
 2. **Análise** - Exame de imagens e preparação do pipeline
 3. **Calibração** - Aplicação de correções de vinheta e refletância
-4. **Exportação** - Gravação de ficheiros processados
+4. **Exportação** - Salvamento de ficheiros processados
 
 **Recursos interativos:**
 
 * **Passe o cursor sobre** a barra de progresso para ver o painel expandido de 4 etapas
 * **Clique** na barra de progresso para congelar/fixar o painel expandido
-* **Clique novamente** para descongelar e ocultar automaticamente ao sair com o rato
+* **Clique novamente** para descongelar e ocultar automaticamente ao sair com o mouse
 * Cada etapa mostra o progresso individual (0-100%)
 
 ***
 
-## Compreender cada etapa do processamento
+## Entendendo cada etapa do processamento
 
-### Etapa 1: Detecção (detecção de alvos)
+### Etapa 1: Detecção (detecção de alvo)
 
 **O que está a acontecer:**
 
@@ -111,13 +111,13 @@ Para utilizadores com licença Chloros+:
 **Comportamento do processamento:**
 
 * **Modo livre**: Processa uma imagem de cada vez sequencialmente
-* **Modo Chloros+**: Processa até 16 imagens simultaneamente
+* **Modo Chloros+: Processa até 16 imagens simultaneamente
 * **Aceleração GPU**: Acelera significativamente esta etapa
 
 **O que observar:**
 
 * Progresso constante através da contagem de imagens
-* Verifique o registo de depuração para mensagens de conclusão por imagem
+* Verifique o Log de Depuração para mensagens de conclusão por imagem
 * Avisos sobre qualidade de imagem ou problemas de calibração
 
 ### Etapa 4: Exportação
@@ -298,7 +298,7 @@ Quando a aceleração da GPU está ativada:
 * Causas comuns: espaço em disco, ficheiros corrompidos, problemas de memória
 * Consulte a secção Resolução de problemas abaixo
 
-**O sistema fica sem resposta:**
+**O sistema deixa de responder:**
 
 * O modo paralelo Chloros+ está a utilizar demasiados recursos
 * Considere reduzir as tarefas simultâneas ou atualizar o hardware
@@ -336,7 +336,7 @@ Interrompa o processamento se observar:
 
 **Soluções:**
 
-1. Se acabou de iniciar e está na fase de deteção: cancele, marque os alvos e reinicie
+1. Se acabou de começar e está na fase de deteção: cancele, marque os alvos, reinicie
 2. Para o futuro: use SSD, reduza os índices, atualize o hardware
 3. Considere o CLI para processamento em lote de grandes conjuntos de dados
 
@@ -344,12 +344,12 @@ Interrompa o processamento se observar:
 
 **Soluções:**
 
-1. Libere espaço em disco imediatamente
+1. Liberte espaço em disco imediatamente
 2. Mova o projeto para uma unidade com mais espaço
 3. Reduza o número de índices a exportar
 4. Use o formato JPG em vez de TIFF (ficheiros menores)
 
-### Mensagens frequentes de «Ficheiro corrompido»
+### Mensagens frequentes de «ficheiro corrompido»
 
 **Soluções:**
 
@@ -365,7 +365,7 @@ Interrompa o processamento se observar:
 1. Garanta ventilação adequada
 2. Limpe o pó das aberturas de ventilação do computador
 3. Reduza a carga de processamento (use o modo Livre em vez de Chloros+)
-4. Processe durante os períodos mais frescos do dia
+4. Processe durante os períodos mais frios do dia
 
 ***
 
@@ -374,8 +374,8 @@ Interrompa o processamento se observar:
 Quando o processamento terminar:
 
 * A barra de progresso atinge 100%
-* A mensagem **&quot;Processamento concluído&quot;** aparece no registo de depuração
-* O botão Iniciar fica ativado novamente
+* A mensagem **«Processamento concluído»** aparece no registo de depuração
+* O botão Iniciar fica novamente ativado
 * Todos os ficheiros de saída estão na subpasta do modelo da câmara
 
 ***

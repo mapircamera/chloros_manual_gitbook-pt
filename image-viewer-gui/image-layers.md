@@ -7,7 +7,7 @@ O menu suspenso Camadas de imagem no Visualizador de imagens Chloros permite alt
 No Chloros, **camadas** referem-se às diferentes saídas de imagem disponíveis para uma única imagem de origem. Quando processa imagens, o Chloros cria várias versões:
 
 * **Imagens originais** (ficheiros JPG e RAW da sua câmara)
-* Saídas **calibradas por refletância** (se a calibração de refletância estiver ativada)
+* Saídas **calibradas por refletância** (se a calibração por refletância estiver ativada)
 * **Imagens-alvo** (se a imagem contiver alvos de calibração)
 * **Imagens de índice** (NDVI, NDRE, GNDVI, etc., se os índices estiverem configurados)
 
@@ -33,14 +33,14 @@ O **menu suspenso Seletor de camadas** no canto superior direito do Visualizador
 ### RAW (Original)
 
 * Os dados originais do sensor RAW da sua câmara
-* Desembarrado sem pós-processamento aplicado
+* Desembayered sem pós-processamento aplicado
 * Maior profundidade de bits do que JPG (normalmente dados do sensor de 12 ou 14 bits)
 
 **Quando visualizar:**
 
 * Inspeção da qualidade dos dados originais do sensor
-* Verificar se há problemas ou artefactos no sensor
-* Comparar os resultados antes e depois do processamento
+* Verificação de problemas ou artefactos do sensor
+* Comparação dos resultados antes/depois do processamento
 
 ### RAW (alvo)
 
@@ -50,12 +50,12 @@ O **menu suspenso Seletor de camadas** no canto superior direito do Visualizador
 
 **Quando visualizar:**
 
-* Confirmar se os alvos de calibração foram detetados corretamente
-* Verificar a qualidade da imagem do alvo
-* Resolver problemas de calibração
+* Confirmação de que os alvos de calibração foram detetados corretamente
+* Verificação da qualidade da imagem do alvo
+* Resolução de problemas de calibração
 
 {% hint style=&quot;info&quot; %}
-**Camada de alvo**: esta camada só aparece no menu suspenso para imagens que contêm alvos de calibração. Imagens de captura regulares não terão essa opção.
+**Camada de alvo**: esta camada só aparece no menu suspenso para imagens que contêm alvos de calibração. Imagens de captura regulares não terão esta opção.
 {% endhint %}
 
 ### RAW (Refletância)
@@ -121,7 +121,7 @@ O **menu suspenso Seletor de camadas** no canto superior direito do Visualizador
 3. Clique em qualquer nome de camada para alternar para essa versão
 4. A imagem é atualizada imediatamente para mostrar a camada selecionada
 
-**Alternância rápida:**
+**Troca rápida:**
 
 * O menu suspenso lembra a sua última seleção
 * Ao navegar para a próxima imagem, o Chloros tenta mostrar o mesmo tipo de camada
@@ -175,7 +175,7 @@ Quando você navega para uma imagem diferente (usando as setas do teclado ou cli
 1. Abra a imagem processada no Visualizador de Imagens
 2. Selecione **RAW (Original)** no menu suspenso
 3. Observe a vinheta e os valores não calibrados
-4. Mude para **RAW (Refletância)** no menu suspenso
+4. Alterne para **RAW (Refletância)** no menu suspenso
 5. Compare - vinheta removida, valores calibrados
 
 ### Fluxo de trabalho 2: Revisão do índice
@@ -191,9 +191,9 @@ Quando você navega para uma imagem diferente (usando as setas do teclado ou cli
 
 ### Fluxo de trabalho 3: Verificação do alvo
 
-**Objetivo**: Verificar se todas as imagens-alvo foram detetadas corretamente
+**Objetivo**: Verificar se todas as imagens alvo foram detetadas corretamente
 
-1. Navegue até uma imagem-alvo
+1. Navegue até uma imagem alvo
 2. Selecione **RAW (Alvo)** no menu suspenso
 3. Verifique se os alvos de calibração estão claramente visíveis e foram detetados
 4. Navegue até a próxima imagem alvo
@@ -253,7 +253,7 @@ Camadas diferentes mostram intervalos de valores de pixels diferentes:
 
 * **Conhecimento dos atalhos do teclado**: embora não haja atalhos do teclado para camadas, as setas de navegação (←/→) funcionam em todas as camadas
 * **Fluxos de trabalho consistentes**: escolha uma camada (por exemplo, NDVI) e analise todo o conjunto de dados antes de mudar para outra
-* **Comparações rápidas**: alterne entre Original e Reflectância para verificar a qualidade do processamento
+* **Comparações rápidas**: alterne entre Original e Refletância para verificar a qualidade do processamento
 
 ### Considerações sobre desempenho
 
@@ -262,7 +262,7 @@ Camadas diferentes mostram intervalos de valores de pixels diferentes:
 * **Camadas de índice**: velocidade semelhante às camadas de refletância
 * **O primeiro carregamento é o mais lento**: as visualizações subsequentes da mesma camada são armazenadas em cache e são mais rápidas
 
-### Verificação de qualidade
+### Verificação da qualidade
 
 * **Verifique sempre o RAW (Original)**: verifique a qualidade dos dados de origem antes de confiar nos resultados processados
 * **Compare camadas**: use a alternância de camadas para validar se o processamento funcionou corretamente
@@ -272,7 +272,7 @@ Camadas diferentes mostram intervalos de valores de pixels diferentes:
 
 ## Resolução de problemas
 
-### Camada indisponível
+### Camada não disponível
 
 **Problema**: A camada esperada não aparece no menu suspenso
 
@@ -295,11 +295,11 @@ Camadas diferentes mostram intervalos de valores de pixels diferentes:
 
 **Causa**: A preferência de camada da imagem anterior foi transferida, mas essa camada não existe na imagem atual
 
-**Solução**: O Chloros recorre automaticamente ao JPG quando a camada preferida não está disponível - este é um comportamento normal
+**Solução:** O Chloros recorre automaticamente ao JPG quando a camada preferida não está disponível - este é um comportamento normal
 
 ### Não consigo ver os alvos de calibração
 
-**Problema**: A camada RAW (Alvo) não mostra a deteção do alvo
+**Problema:** A camada RAW (Alvo) não mostra a deteção do alvo
 
 **Possíveis causas:**
 
@@ -322,31 +322,31 @@ Camadas diferentes mostram intervalos de valores de pixels diferentes:
 
 Ao visualizar qualquer camada, pode utilizar:
 
-* **Controlos de zoom**: Amplie para inspecionar detalhes
-* **Panorâmica**: Clique e arraste para mover a imagem ampliada
-* **Inspeção do valor dos pixels**: Veja os valores na localização do cursor
-* **Setas de navegação**: Mova-se entre imagens mantendo a camada
-* **Modo Porcentagem de pixels**: Alterne entre a exibição DN e porcentagem
+* **Controlos de zoom**: amplie para inspecionar detalhes
+* **Panorâmica**: clique e arraste para mover a imagem ampliada
+* **Inspeção do valor do pixel**: veja os valores na localização do cursor
+* **Setas de navegação**: mova-se entre as imagens mantendo a camada
+* **Modo Porcentagem de Pixel**: alterne entre a exibição DN e porcentagem
 
-Consulte [Abrir uma imagem em ecrã inteiro](opening-an-image-full-screen.md) para obter a documentação completa do Visualizador de imagens.
+Consulte [Abrindo uma Imagem em Tela Cheia](opening-an-image-full-screen.md) para obter a documentação completa do Visualizador de Imagens.
 
-### Sandbox de índice/LUT
+### Sandbox de Índice/LUT
 
-Para testes e visualização interativos de índices:
+Para testes e visualização interativos do índice:
 
-* **Cálculo de índice em tempo real**: teste diferentes fórmulas de índice
-* **Mapeamento de cores LUT**: aplique gradientes de cor a índices em escala de cinza
+* **Cálculo do índice em tempo real**: teste diferentes fórmulas de índice
+* **Mapeamento de cores LUT**: aplique gradientes de cor aos índices em escala de cinza
 * **Exportar visualizações**: salve imagens de índice coloridas
 
-Consulte [Sandbox de índice/LUT](index-lut-sandbox.md) para obter detalhes.
+Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter detalhes.
 
 ***
 
 ## Próximos passos
 
-Agora que você entende as camadas de imagem:
+Agora que compreende as camadas de imagem:
 
-* [**Abrindo uma imagem em tela cheia**](opening-an-image-full-screen.md) - Guia completo do Visualizador de Imagens
+* [**Abrir uma imagem em ecrã inteiro**](opening-an-image-full-screen.md) - Guia completo do Visualizador de Imagens
 * [**Index/LUT Sandbox**](index-lut-sandbox.md) - Visualização interativa do índice
-* [**Fórmulas do índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência dos índices disponíveis
+* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Referência de índices disponíveis
 * [**Concluindo o processamento**](../processing-images-gui/finishing-the-processing.md) - Compreendendo os resultados processados

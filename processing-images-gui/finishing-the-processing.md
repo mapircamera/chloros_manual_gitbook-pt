@@ -33,7 +33,7 @@ Quando o processamento for concluído com sucesso, você verá vários indicador
 1. Navegue até à subpasta do modelo da câmara
 2. Selecione um ficheiro de imagem
 3. A pré-visualização aparece no painel de pré-visualização do Windows Explorer
-4. Use as teclas de seta para navegar pelas imagens
+4. Use as setas do teclado para navegar pelas imagens
 
 ### Pré-visualização em visualizadores de imagens externos
 
@@ -72,7 +72,7 @@ Consulte [Visualizador de Imagens](../image-viewer-gui/opening-an-image-full-scr
 
 Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
-1. Clique no botão **&quot;Copiar&quot;** ou **&quot;Transferir&quot;**
+1. Clique no botão **«Copiar»** ou **«Transferir»**
 2. Guarde como ficheiro de texto na pasta do projeto
 3. Inclua na documentação do projeto
 4. Envie para o suporte MAPIR se encontrar problemas
@@ -115,10 +115,10 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 **Possíveis causas:**
 
-* Nenhuma meta de calibração detetada
-* Modelo de meta de calibração incorreto selecionado
+* Nenhum alvo de calibração detetado
+* Modelo de alvo de calibração incorreto selecionado
 * Calibração de refletância desativada
-* Imagens de meta de baixa qualidade
+* Imagens de alvo de baixa qualidade
 
 **Soluções:**
 
@@ -170,7 +170,7 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 2. **Use imagens de refletância TIFF de 16 bits** para análise multibanda
 3. **Use imagens de índice** (NDVI, NDRE) como camadas de vegetação prontas para uso
 4. **Calculadora raster**: combine bandas para análise personalizada
-5. **Exportar**: crie mapas de classificação, deteção de alterações, mapas de saúde da vegetação
+5. **Exportar**: criar mapas de classificação, deteção de alterações, mapas de saúde da vegetação
 
 ### Para análise direta/relatórios
 
@@ -209,8 +209,8 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 Se processar conjuntos de dados semelhantes no futuro:
 
-1. **Salvar modelo do projeto** (se ainda não tiver feito isso)
-2. **Crie um novo projeto** usando o modelo guardado
+1. **Salve o modelo do projeto** (se ainda não tiver feito isso)
+2. **Crie um novo projeto** usando o modelo salvo
 3. **Importe novas imagens**
 4. **Processe** com configurações idênticas para manter a consistência
 
@@ -226,8 +226,8 @@ Para várias sessões/conjuntos de dados:
 
 **Opção 2: Chloros CLI (apenas Chloros+)**
 
-* Automatizar o processamento em lote
-* Processar várias pastas com scripts
+* Automatize o processamento em lote
+* Processe várias pastas com scripts
 * Consulte [Documentação do CLI](../CLI.md)
 
 **Opção 3: Python SDK (apenas Chloros+)**
@@ -278,10 +278,10 @@ Agora concluiu todo o fluxo de trabalho de processamento do Chloros:
 3. ✅ **Configurações ajustadas** - Consulte [Ajustar configurações do projeto](adjusting-project-settings.md)
 4. ✅ **Alvos marcados** - Consulte [Escolher imagens alvo](choosing-target-images.md)
 5. ✅ **Processamento iniciado** - Consulte [Iniciar o processamento](starting-the-processing.md)
-6. ✅ **Progresso monitorizado** - Consulte [Monitorizar o processamento](monitoring-the-processing.md)
-7. ✅ **Resultados revistos** - Esta página
+6. ✅ **Progresso monitorado** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
+7. ✅ **Resultados revisados** - Esta página
 
-**As suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
+**Suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
 
 ***
 

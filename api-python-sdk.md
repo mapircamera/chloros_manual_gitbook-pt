@@ -2,11 +2,11 @@
 
 O **Chloros Python SDK** fornece acesso programático ao motor de processamento de imagens Chloros, permitindo automação, fluxos de trabalho personalizados e integração perfeita com as suas aplicações Python e pipelines de pesquisa.
 
-### Principais funcionalidades
+### Principais recursos
 
 * 🐍 **Python nativo** - API limpo e Pythonic para processamento de imagens
 * 🔧 **Acesso total ao API** - Controlo total sobre o processamento do Chloros
-* 🚀 **Automação** - Crie fluxos de trabalho de processamento em lote personalizados
+* 🚀 **Automação** - Crie fluxos de trabalho personalizados de processamento em lote
 * 🔗 **Integração** - Incorpore o Chloros em aplicações Python existentes
 * 📊 **Pronto para pesquisa** - Perfeito para pipelines de análise científica
 * ⚡ **Processamento paralelo** - Escala para os núcleos da sua CPU (Chloros+)
@@ -23,7 +23,7 @@ O **Chloros Python SDK** fornece acesso programático ao motor de processamento 
 | **Internet**         | Necessária para ativação da licença                                     |
 
 {% hint style=&quot;warning&quot; %}
-**Requisito de licença**: O Python SDK requer uma subscrição paga do Chloros+ para acesso ao API. Os planos padrão (gratuitos) não têm acesso ao API/SDK. Visite [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) para atualizar.
+**Requisitos de licença**: O Python SDK requer uma subscrição paga do Chloros+ para acesso ao API. Os planos padrão (gratuitos) não têm acesso ao API/SDK. Visite [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) para atualizar.
 {% endhint %}
 
 ## Início rápido
@@ -152,11 +152,11 @@ print(f"Backend running: {status['running']}")
 
 ***
 
-## Referência API
+## Referência do API
 
 ### Classe ChlorosLocal
 
-Classe principal para processamento de imagem local Chloros.
+Classe principal para processamento de imagens locais do Chloros.
 
 #### Construtor
 
@@ -258,11 +258,11 @@ Configura as definições de processamento.
 
 | Parâmetro                 | Tipo | Padrão                 | Descrição                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | &quot;Alta qualidade (mais rápido)&quot; | Método Debayer                  |
+| `debayer`                 | str  | &quot;Alta qualidade (mais rápida)&quot; | Método Debayer                  |
 | `vignette_correction`     | bool | `True`                  | Ativar correção de vinheta      |
 | `reflectance_calibration` | bool | `True`                  | Ativar calibração de refletância  |
 | `indices`                 | lista | `None`                  | Índices de vegetação a calcular |
-| `export_format`           | str  | «TIFF (16 bits)»         | Formato de saída                   |
+| `export_format`           | str  | &quot;TIFF (16 bits)&quot;         | Formato de saída                   |
 | `ppk`                     | bool | `False`                 | Ativar correções PPK          |
 | `custom_settings`         | dict | `None`                  | Configurações personalizadas avançadas        |
 
@@ -308,7 +308,7 @@ Processe as imagens do projeto.
 
 | Parâmetro           | Tipo     | Padrão      | Descrição                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Modo de processamento: «paralelo» ou «serial»   |
+| `mode`              | str      | `"parallel"` | Modo de processamento: «parallel» ou «serial»   |
 | `wait`              | bool     | `True`       | Aguardar conclusão                       |
 | `progress_callback` | callable | `None`       | Função de retorno de chamada de progresso (progress, msg) |
 | `poll_interval`     | float    | `2.0`        | Intervalo de sondagem para progresso (segundos)   |
@@ -435,9 +435,9 @@ results = process_folder(
 
 ***
 
-## Suporte ao gerenciador de contexto
+## Suporte ao gestor de contexto
 
-O SDK suporta gerenciadores de contexto para limpeza automática:
+O SDK suporta gestores de contexto para limpeza automática:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -472,7 +472,7 @@ print(f"Processing complete: {results}")
 
 ### Exemplo 2: Fluxo de trabalho personalizado
 
-Controle total sobre o pipeline de processamento:
+Controlo total sobre o pipeline de processamento:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -566,7 +566,7 @@ print("All flights processed!")
 
 ### Exemplo 4: Integração do pipeline de pesquisa
 
-Integre o Chloros com a análise de dados:
+Integrar o Chloros com a análise de dados:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -785,7 +785,7 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ## Tratamento de exceções
 
-O SDK fornece classes de exceção específicas para diferentes tipos de erro:
+O SDK fornece classes de exceção específicas para diferentes tipos de erros:
 
 ### Hierarquia de exceções
 
@@ -984,7 +984,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 chloros = ChlorosLocal(api_url="http://localhost:5001")
 ```
 
-Ou localize e feche o processo em conflito:
+Ou encontre e feche o processo em conflito:
 
 ```powershell
 # PowerShell
@@ -995,9 +995,9 @@ Get-NetTCPConnection -LocalPort 5000
 
 ## Dicas de desempenho
 
-### Otimize a velocidade de processamento
+### Otimizar a velocidade de processamento
 
-1. **Use o modo paralelo** (requer Chloros+)
+1. **Usar o modo paralelo** (requer Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
@@ -1009,14 +1009,14 @@ chloros.process(mode="parallel")  # Up to 16 workers
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 ```
 
-3. **Desativar índices desnecessários**
+3. **Desative índices desnecessários**
 
 ```python
 # Only calculate needed indices
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Processar em SSD** (não em HDD)
+4. **Processe em SSD** (não em HDD)
 
 ***
 
@@ -1151,10 +1151,10 @@ chloros.process(progress_callback=notebook_progress)
 
 ### P: Posso distribuir aplicações criadas com o SDK?
 
-**R:** O código SDK pode ser integrado às suas aplicações, mas:
+**R:** O código SDK pode ser integrado nas suas aplicações, mas:
 
-* Os utilizadores finais precisam ter o Chloros instalado
-* Os utilizadores finais precisam ter licenças ativas do Chloros+
+* Os utilizadores finais precisam de ter o Chloros instalado
+* Os utilizadores finais precisam de licenças Chloros+ ativas
 * A distribuição comercial requer licenciamento OEM
 
 Contacte o info@mapir.camera para consultas sobre OEM.
@@ -1171,7 +1171,7 @@ pip install --upgrade chloros-sdk
 
 ### P: Onde as imagens processadas são guardadas?
 
-Por predefinição, no Caminho do Projeto:
+Por predefinição, no Caminho do projeto:
 
 ```
 Project_Path/
@@ -1193,7 +1193,7 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Agende através do Agendador de Tarefas para ser executado diariamente.
+Agende através do Agendador de Tarefas para executar diariamente.
 
 ***
 
@@ -1237,4 +1237,4 @@ Todos os exemplos listados aqui foram testados e estão prontos para produção.
 
 **Software proprietário** - Copyright (c) 2025 MAPIR Inc.
 
-O SDK requer uma subscrição ativa do Chloros+. É proibida a utilização, distribuição ou modificação não autorizadas.
+O SDK requer uma subscrição ativa do Chloros+. É proibida a utilização, distribuição ou modificação não autorizada.

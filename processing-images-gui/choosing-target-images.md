@@ -77,15 +77,15 @@ Antes do processamento, verifique novamente:
 
 **Iluminação:**
 
-* A mesma iluminação ambiente do seu sensor de luz DAQ
+* A mesma iluminação ambiente do sensor de luz DAQ
 * Evite sombras nas superfícies do alvo
-* Não bloqueie a sua fonte de luz com o seu corpo, veículo ou vegetação
-* Condições nubladas proporcionam resultados mais consistentes
+* Não bloqueie a fonte de luz com o corpo, veículo ou vegetação
+* Condições de céu nublado proporcionam resultados mais consistentes
 
 **Condição do alvo:**
 
 * Mantenha os painéis do alvo limpos e secos
-* Todos os 4 painéis devem estar claramente visíveis e desobstruídos
+* Todos os 4 painéis devem estar claramente visíveis e sem obstruções
 * Alvos perpendiculares/nadir à fonte de luz, se possível
 
 ### Quantas imagens do alvo?
@@ -102,7 +102,7 @@ Antes do processamento, verifique novamente:
 
 ## Trabalhando com várias câmaras
 
-### Configurações de duas câmaras
+### Configurações com duas câmaras
 
 Se estiver a utilizar duas câmaras MAPIR simultaneamente (por exemplo, Survey3W RGN + Survey3N OCN):
 
@@ -120,15 +120,15 @@ A coluna **Modelo da Câmara** ajuda a identificar quais imagens vieram de qual 
 * Survey3W\_RGB
 * etc.
 
-Use esta coluna para verificar se você marcou alvos para cada tipo de câmara no seu projeto.
+Use esta coluna para verificar se marcou alvos para cada tipo de câmara no seu projeto.
 
 ***
 
-## Configurações de detecção de alvos
+## Definições de deteção de alvos
 
-### Ajustando a sensibilidade de detecção
+### Ajustar a sensibilidade de deteção
 
-Se o Chloros não estiver a detectar os seus alvos corretamente, ajuste estas configurações em [Configurações do projeto](adjusting-project-settings.md):
+Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas definições em [Definições do projeto](adjusting-project-settings.md):
 
 **Área mínima da amostra de calibração:**
 
@@ -168,14 +168,14 @@ Se o Chloros não estiver a detectar os seus alvos corretamente, ajuste estas co
 
 * Edifícios brancos, veículos ou cobertura do solo confundidos com alvos
 * Manchas brilhantes na vegetação
-* Sensibilidade de deteção muito baixa
+* Sensibilidade de detecção muito baixa
 
 **Soluções:**
 
-1. Marque apenas imagens de alvos reais para limitar o âmbito da deteção
+1. Marque apenas imagens de alvos reais para limitar o âmbito da detecção
 2. Aumente a área mínima da amostra de calibração
 3. Aumente o valor mínimo de agrupamento de alvos
-4. Certifique-se de que as imagens de alvos mostram apenas o alvo (mínimo de interferências no fundo)
+4. Certifique-se de que as imagens de alvos mostram apenas o alvo (mínimo de interferência do fundo)
 
 ***
 
@@ -184,7 +184,7 @@ Se o Chloros não estiver a detectar os seus alvos corretamente, ajuste estas co
 Antes de iniciar o processamento, verifique a seleção da imagem do alvo:
 
 * [ ] Pelo menos 1 imagem do alvo marcada por sessão
-* [ ] As caixas de seleção da coluna Alvo estão marcadas para todas as imagens do alvo
+* [ ] As caixas de seleção da coluna do alvo estão marcadas para todas as imagens do alvo
 * [ ] Imagens do alvo capturadas no mesmo período da pesquisa
 * [ ] Alvos claramente visíveis na pré-visualização quando clicados
 * [ ] Todos os 4 painéis de calibração visíveis em cada imagem do alvo

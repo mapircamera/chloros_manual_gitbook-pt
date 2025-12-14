@@ -3,7 +3,6 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
-
 # Formatos de imagem de saída
 
 ### TIFF (16 bits)

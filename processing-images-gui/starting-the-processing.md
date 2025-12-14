@@ -129,12 +129,12 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **O que o Chloros faz:**
 
-* **Correção de vinheta**: remove o escurecimento da lente nas bordas
+* **Correção de vinheta**: remove o escurecimento das lentes nas bordas
 * **Calibração de refletância**: normaliza usando valores de refletância alvo
 * Aplica correções em todas as bandas/canais
 * Usa alvo de calibração apropriado para cada imagem com base no carimbo de data/hora
 
-**Duração:** Maioria do tempo de processamento
+**Duração:** a maior parte do tempo de processamento
 
 ### Fase 4: Cálculo do índice
 
@@ -146,14 +146,14 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **Duração:** Alguns segundos por imagem
 
-### Etapa 5: Exportação
+### Fase 5: Exportação
 
 **O que o Chloros faz:**
 
 * Guarda imagens calibradas no formato selecionado
 * Exporta imagens de índice com cores LUT configuradas
-* Grava ficheiros nas subpastas do modelo da câmara
-* Preserva os nomes de ficheiros originais com sufixos
+* Grava ficheiros em subpastas do modelo da câmara
+* Preserva nomes de ficheiros originais com sufixos
 
 **Duração:** Varia de acordo com o formato de exportação e o tamanho do ficheiro
 
@@ -179,8 +179,8 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 
 **Chloros+ Modo paralelo:**
 
-* Utilização elevada da CPU (multithread, até 16 núcleos)
-* Com aceleração da GPU: utilização elevada da GPU
+* Elevada utilização da CPU (multi-threaded, até 16 núcleos)
+* Com aceleração da GPU: uso elevado da GPU
 * O computador pode ficar menos responsivo durante o processamento
 * Evite iniciar outras tarefas que exijam muito da CPU
 
@@ -193,9 +193,9 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 **Limitações importantes:**
 
 * Uma vez iniciado, o processamento não pode ser pausado
-* Pode cancelar o processamento, mas o progresso será perdido
+* É possível cancelar o processamento, mas o progresso será perdido
 * Resultados parciais não são guardados
-* Deve reiniciar do início se cancelado
+* É necessário reiniciar do início se for cancelado
 
 **Dica de planeamento:** Para projetos muito grandes, considere processar em lotes ou usar o CLI para um melhor controlo.
 
@@ -206,9 +206,9 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 Enquanto o processamento estiver em execução, pode:
 
 * **Observar a barra de progresso** - Veja a percentagem geral de conclusão
-* **Ver a fase atual** - Detetar, Analisar, Calibrar ou Exportar
-* **Verificar o separador de registo** - Veja mensagens e avisos detalhados do processamento
-* **Pré-visualizar imagens concluídas** - Alguns ficheiros de exportação podem aparecer durante o processamento
+* **Ver o estágio atual** - Detectar, Analisar, Calibrar ou Exportar
+* **Verificar a guia de registo** - Veja mensagens e avisos detalhados do processamento
+* **Visualizar imagens concluídas** - Alguns ficheiros de exportação podem aparecer durante o processamento
 
 Para obter informações detalhadas sobre o monitoramento, consulte [Monitorando o processamento](monitoring-the-processing.md).
 
@@ -242,7 +242,7 @@ Se precisar interromper o processamento:
 * Para uma experiência mais limpa, feche completamente o Chloros e reinicie
 
 {% hint style=&quot;warning&quot; %}
-**Sem resultados parciais**: O cancelamento descarta todo o progresso. O Chloros não guarda imagens parcialmente processadas.
+**Sem resultados parciais**: o cancelamento descarta todo o progresso. O Chloros não guarda imagens parcialmente processadas.
 {% endhint %}
 
 ***
@@ -292,7 +292,7 @@ O tempo de processamento real varia muito com base em:
 1. Aguarde até que o backend seja totalmente inicializado (verifique o ícone do menu principal)
 2. Verifique se as imagens foram importadas no Navegador de Ficheiros
 3. Reinicie o Chloros se o botão permanecer desativado
-4. Verifique o Registo de Depuração para ver se há mensagens de erro
+4. Verifique o Log de Depuração para mensagens de erro
 
 ### O processamento inicia e falha imediatamente
 
@@ -310,12 +310,12 @@ O tempo de processamento real varia muito com base em:
 3. Tente processar um subconjunto menor de imagens
 4. Verifique se as imagens não estão corrompidas
 
-### Aviso &quot;Nenhum alvo detetado&quot;
+### Aviso «Nenhum alvo detetado»
 
 **Possíveis causas:**
 
-* Esqueceu-se de marcar as imagens alvo
-* As imagens alvo não contêm alvos visíveis
+* Esqueceu-se de marcar as imagens-alvo
+* As imagens-alvo não contêm alvos visíveis
 * As configurações de deteção de alvos são muito rígidas
 
 **Soluções:**
@@ -335,7 +335,7 @@ O tempo de processamento real varia muito com base em:
 2. **Verifique o espaço disponível em disco** - Certifique-se de que há 2 a 3 vezes o tamanho do conjunto de dados livre
 3. **Feche aplicações desnecessárias** - Libere recursos do sistema
 4. **Verifique as imagens-alvo** - Visualize os alvos marcados para garantir a qualidade
-5. **Salve o projeto** - O projeto é salvo automaticamente, mas é uma boa prática salvá-lo manualmente
+5. **Guarde o projeto** - O projeto é guardado automaticamente, mas é boa prática guardá-lo manualmente
 
 ### Durante o processamento
 
@@ -351,7 +351,7 @@ Se estiver a utilizar a aceleração da GPU NVIDIA:
 1. Atualize os controladores NVIDIA para a versão mais recente
 2. Certifique-se de que a GPU tem 4 GB+ de VRAM
 3. Feche aplicações que utilizam muito a GPU (jogos, edição de vídeo)
-4. Monitorize a temperatura da GPU (garanta um arrefecimento adequado)
+4. Monitore a temperatura da GPU (garanta um arrefecimento adequado)
 
 ***
 
@@ -359,7 +359,7 @@ Se estiver a utilizar a aceleração da GPU NVIDIA:
 
 Depois de iniciar o processamento:
 
-1. **Monitorize o progresso** - Consulte [Monitorizar o processamento](monitoring-the-processing.md)
+1. **Monitore o progresso** - Consulte [Monitorar o processamento](monitoring-the-processing.md)
 2. **Aguarde a conclusão** - O processamento é executado automaticamente
 3. **Analise os resultados** - Consulte [Concluindo o processamento](finishing-the-processing.md)
 

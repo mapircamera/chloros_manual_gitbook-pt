@@ -32,7 +32,7 @@ A guia Configurações do projeto permite ajustar as configurações globais e d
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Navegador de ficheiros
 
-Adicione ficheiros/pastas e remova ficheiros do projeto. Ficheiros duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino, e o processamento irá considerar apenas as imagens marcadas como destinos, acelerando significativamente o seu tempo de processamento.
+Adicione ficheiros/pastas e remova ficheiros do projeto. Ficheiros duplicados são ignorados. Marque a caixa da coluna de destino para qualquer imagem de destino, e o processamento irá considerar apenas as imagens marcadas como destinos, acelerando significativamente o tempo de processamento.
 
 #### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Visualizador de imagens](image-viewer-gui/opening-an-image-full-screen.md)
 

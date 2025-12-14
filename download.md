@@ -3,10 +3,9 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
-
 # Download
 
-Faça o download da versão mais recente do Chloros para o Windows para começar a trabalhar com o processamento de imagens multiespectrais.
+Faça o download da versão mais recente do Chloros para Windows para começar a trabalhar com o processamento de imagens multiespectrais.
 
 ### Requisitos do sistema
 
@@ -89,8 +88,8 @@ Desbloqueie funcionalidades avançadas com uma subscrição Chloros+:
 * 🚀 **Processamento multithread** - Processe imagens em paralelo
 * ⚡ **Aceleração GPU (CUDA)** - Aproveite o poder da GPU NVIDIA
 * 💻 **Acesso CLI** - Automatize com ferramentas de linha de comando
-* 🐍 **Python SDK** - Acesso programático ao API
-* 📱 **Vários dispositivos** - Utilize em 2 a 10 ou mais dispositivos (dependendo do plano)
+* 🐍 **Python SDK** - Acesso programático API
+* 📱 **Vários dispositivos** - Use em 2 a 10+ dispositivos (dependendo do plano)
 * 🧮 **Fórmulas personalizadas** - Crie índices multiespectrais personalizados
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planos e preços do Chloros+</a></p>***
@@ -110,7 +109,7 @@ Desbloqueie funcionalidades avançadas com uma subscrição Chloros+:
 * Experimente a versão Chloros (navegador)
 * Verifique se o Windows 10/11 (64 bits) está instalado
 * Atualize os controladores gráficos
-* Verifique o Windows Visualizador de Eventos para obter detalhes sobre o erro
+* Verifique o Windows Event Viewer para obter detalhes sobre o erro
 * Contacte o suporte com os registos de erros
 
 **Problemas de ativação da licença:**
@@ -163,6 +162,8 @@ Precisa de ajuda com a instalação ou configuração?
 
 É proibido o uso, distribuição ou modificação não autorizados.
 
-**Versão gratuita**: disponível para uso pessoal e comercial com limitações de funcionalidades
+**Versão gratuita**: Disponível para uso pessoal e comercial com limitações de funcionalidades
 
-**Chloros+**: licença baseada em assinatura para funcionalidades avançadas e implementações comerciais
+**Chloros+**: Licença baseada em assinatura para funcionalidades avançadas e implementações comerciais
+
+<figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption></figcaption></figure>

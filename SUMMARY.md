@@ -17,9 +17,9 @@
 
 * [Ajustar configurações do projeto](processing-images-gui/adjusting-project-settings.md)
 * [Adicionar ficheiros a um projeto](processing-images-gui/adding-files-to-a-project.md)
-* [Escolher imagens de destino](processing-images-gui/choosing-target-images.md)
+* [Selecionar imagens de destino](processing-images-gui/choosing-target-images.md)
 * [Iniciar o processamento](processing-images-gui/starting-the-processing.md)
-* [Monitorizar o processamento](processing-images-gui/monitoring-the-processing.md)
+* [Monitorar o processamento](processing-images-gui/monitoring-the-processing.md)
 * [Concluir o processamento](processing-images-gui/finishing-the-processing.md)
 
 ## CONFIGURAÇÕES DO PROJETO
