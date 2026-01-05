@@ -17,9 +17,9 @@
 
 * [Ajustar configurações do projeto](processing-images-gui/adjusting-project-settings.md)
 * [Adicionar ficheiros a um projeto](processing-images-gui/adding-files-to-a-project.md)
-* [Selecionar imagens de destino](processing-images-gui/choosing-target-images.md)
+* [Escolher imagens de destino](processing-images-gui/choosing-target-images.md)
 * [Iniciar o processamento](processing-images-gui/starting-the-processing.md)
-* [Monitorar o processamento](processing-images-gui/monitoring-the-processing.md)
+* [Monitorizar o processamento](processing-images-gui/monitoring-the-processing.md)
 * [Concluir o processamento](processing-images-gui/finishing-the-processing.md)
 
 ## CONFIGURAÇÕES DO PROJETO
@@ -29,6 +29,8 @@
 
 ## VISUALIZADOR DE IMAGENS (GUI)
 
+* [Grade de imagens](image-viewer-gui/image-grid.md)
 * [Abrir uma imagem em ecrã inteiro](image-viewer-gui/opening-an-image-full-screen.md)
 * [Camadas de imagem](image-viewer-gui/image-layers.md)
 * [Sandbox de índice/LUT](image-viewer-gui/index-lut-sandbox.md)
+* [Marcadores de mapa](image-viewer-gui/map-markers.md)

@@ -1,0 +1,161 @@
+# Marcadores do mapa
+
+A guia Mapa exibe as suas imagens num mapa 2D interativo com base nas coordenadas GPS. Isso fornece uma visão geral geográfica da sua sessão de captura e ajuda a visualizar a cobertura espacial. Também é útil ao importar as suas imagens pela primeira vez para remover rapidamente quaisquer imagens que não precise processar.
+
+## Aceder ao separador Mapa
+
+1. Abra ou crie um projeto no Chloros
+2. Importe imagens que contenham metadados GPS
+3. Clique no separador **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> na barra lateral esquerda
+4. O mapa exibirá marcadores na localização GPS de cada imagem
+
+{% hint style=&quot;info&quot; %}
+**GPS necessário**: Apenas imagens com coordenadas GPS incorporadas nos seus metadados EXIF aparecerão no mapa. Certifique-se de que a sua câmara tem o GPS ativado durante a captura.
+{% endhint %}
+
+***
+
+## Ajustar imagens a partir do separador Mapa
+
+O separador **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tem as mesmas opções de adicionar  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e remover  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que a guia [**Navegador de ficheiros**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Também mostra a mesma lista de ficheiros de projeto, mas com cabeçalhos de coluna diferentes:
+
+### Nome do ficheiro
+
+* Nome do ficheiro original da câmara
+* Mantém a convenção de nomenclatura da câmara (por exemplo, IMG\_0001.RAW)
+
+### Latitude
+
+* A latitude da imagem
+
+### Longitude
+
+* A longitude da imagem
+
+### Altitude
+
+* Altitude da imagem
+
+{% hint style=&quot;info&quot; %}
+Clicar nos cabeçalhos das colunas da tabela também ordena os dados da linha
+{% endhint %}
+
+***
+
+## Marcadores de imagem
+
+Cada imagem com dados GPS é representada por um marcador no mapa:
+
+### Exibição do marcador
+
+* Os marcadores indicam as coordenadas GPS exatas onde cada imagem foi capturada
+* Os marcadores agrupados podem ser reunidos quando se diminui o zoom
+* Aumente o zoom para ver as localizações individuais das imagens
+
+{% hint style=&quot;success&quot; %}
+SUPER-ZOOM: Quando atinge o nível máximo de zoom do fornecedor do mosaico do mapa, o mosaico é ampliado ao ampliar ainda mais, permitindo ver marcadores que estão próximos uns dos outros.
+{% endhint %}
+
+### Pré-visualização ao passar o cursor
+
+* **Passe o rato** sobre qualquer marcador para ver uma pré-visualização em miniatura dessa imagem
+* Isto permite uma identificação visual rápida sem sair da visualização do mapa
+* Útil para localizar imagens específicas numa sessão de captura grande
+
+***
+
+## Fornecedores de mosaicos de mapas
+
+{% hint style=&quot;success&quot; %}
+**Seleção automática**: Chloros escolhe automaticamente o serviço de mosaicos que oferece o melhor nível de zoom para a sua localização atual no mapa. Pode alternar manualmente entre os fornecedores, se desejar.
+{% endhint %}
+
+A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do mapa:
+
+### Google Maps
+
+* Imagens padrão de satélite e mapa do Google
+* Ideal para cobertura geral em todo o mundo
+
+### ESRI
+
+* Imagens de satélite e aéreas do ESRI ArcGIS
+* Geralmente fornece imagens de alta resolução em determinadas regiões
+
+***
+
+## Tipos de mosaicos de mapa
+
+Pode escolher o tipo de camada do mapa (da esquerda para a direita):
+
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
+
+Mostra perfis de elevação e mosaicos de mapa com detalhes (estradas, etc.)
+
+### Mapa
+
+Mostra mosaicos de mapa padrão (baixa largura de banda) com detalhes (estradas, etc.)
+
+### Satélite
+
+Mostra mosaicos de mapa de satélite detalhados (alta largura de banda)
+
+### Híbrido
+
+Mostra mosaicos de mapa de satélite com detalhes adicionais (estradas, etc.)
+
+***
+
+## Navegação no mapa
+
+### Controlos de zoom
+
+* **Aumentar/diminuir zoom**: use a roda do mouse ou os botões de zoom
+* **Tela inteira**: exibe o mapa em tela inteira
+
+### Controlos de panorâmica
+
+* **Panorâmica**: clique e arraste para se mover pelo mapa***
+
+## Casos de uso
+
+### Visualização da trajetória de voo
+
+* Veja a área de cobertura das sessões de captura do drone
+* Identifique lacunas na cobertura da imagem
+* Verifique a execução da trajetória de voo
+
+### Revisão do levantamento terrestre
+
+* Veja a distribuição espacial das capturas terrestres
+* Localize imagens-alvo de calibração em relação à área de levantamento
+* Planeje locais de captura adicionais
+
+### Controlo de qualidade
+
+* Identifique rapidamente imagens capturadas em locais inesperados
+* Verifique a precisão do GPS em todo o conjunto de dados
+* Cruze as localizações das imagens com as notas de campo
+
+***
+
+## Resolução de problemas
+
+### Não aparecem marcadores
+
+**Possíveis causas:**
+
+* As imagens não contêm metadados GPS
+* O GPS estava desativado na câmara durante a captura
+* Os dados EXIF foram removidos por software externo
+
+**Solução**: Verifique se o GPS está ativado na sua câmara e reimporte os ficheiros originais
+
+### Marcadores em localização errada
+
+**Possíveis causas:**
+
+* O GPS da câmara tinha uma fixação de satélite deficiente
+* Desvio do GPS durante a captura
+
+**Solução**: Normalmente, trata-se de um problema relacionado com o tempo de captura; considere a utilização de GPS PPK/RTK para aplicações de precisão

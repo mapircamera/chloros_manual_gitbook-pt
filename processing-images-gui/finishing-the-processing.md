@@ -9,16 +9,15 @@ Quando o processamento for concluído com sucesso, você verá vários indicador
 * ✅ **Barra de progresso**: atinge 100% de conclusão
 * ✅ **Registo de depuração**: mostra a mensagem &quot;Processamento concluído&quot;
 * ✅ **Botão Iniciar**: fica ativado novamente (pronto para a próxima execução do processamento)
-* ✅ **Ficheiros de saída**: Todas as imagens processadas são guardadas na subpasta do modelo da câmara
-
-***
+* ✅ **Ficheiros de saída**: Todas as imagens processadas são guardadas na subpasta do modelo da câmara***
 
 ## Localizar as suas imagens processadas
 
 ### Abrir a pasta de saída
 
-1. Clique no ícone **Menu principal** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
-2. Selecione **&quot;Abrir pasta do projeto&quot;**
+1. Clique no ícone **Menu principal** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> (canto superior esquerdo)
+2. Selecione **«Abrir pasta do projeto»**
+
 3. O seu explorador de ficheiros abre no diretório do projeto
 4. Localize o seu projeto pelo nome
 
@@ -33,13 +32,11 @@ Quando o processamento for concluído com sucesso, você verá vários indicador
 1. Navegue até à subpasta do modelo da câmara
 2. Selecione um ficheiro de imagem
 3. A pré-visualização aparece no painel de pré-visualização do Windows Explorer
-4. Use as setas do teclado para navegar pelas imagens
+4. Use as teclas de seta para navegar pelas imagens
 
 ### Pré-visualização em visualizadores de imagens externos
 
-**Visualizadores recomendados:**
-
-* **QGIS** - Software GIS gratuito (ideal para análise multiespectral georreferenciada)
+**Visualizadores recomendados:*** **QGIS** - Software GIS gratuito (ideal para análise multiespectral georreferenciada)
 * **IrfanView** - Visualizador de imagens rápido e leve (compatível com TIFF)
 * **Adobe Photoshop** - Edição profissional (suporte a TIFF)
 * **GIMP** - Alternativa gratuita ao Photoshop
@@ -72,7 +69,8 @@ Consulte [Visualizador de Imagens](../image-viewer-gui/opening-an-image-full-scr
 
 Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
-1. Clique no botão **«Copiar»** ou **«Transferir»**
+1. Clique no botão **&quot;Copiar&quot;**ou**&quot;Transferir&quot;**
+
 2. Guarde como ficheiro de texto na pasta do projeto
 3. Inclua na documentação do projeto
 4. Envie para o suporte MAPIR se encontrar problemas
@@ -94,7 +92,7 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 1. Verifique o registo de depuração para mensagens de omissão/erro
 2. Verifique se o espaço em disco era suficiente
-3. Conte os ficheiros: Deve corresponder (contagem original - contagem de destino) × (índices + 1)
+3. Conte os ficheiros: deve corresponder (contagem original - contagem de destino) × (índices + 1)
 4. Reimporte e reprocesse quaisquer ficheiros em falta
 
 ### Problema: Bordas escuras ou brilhantes (vinheta ainda visível)
@@ -115,10 +113,10 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 **Possíveis causas:**
 
-* Nenhum alvo de calibração detetado
-* Modelo de alvo de calibração incorreto selecionado
+* Nenhuma meta de calibração detetada
+* Modelo de meta de calibração incorreto selecionado
 * Calibração de refletância desativada
-* Imagens de alvo de baixa qualidade
+* Imagens de meta de baixa qualidade
 
 **Soluções:**
 
@@ -129,14 +127,10 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 ### Problema: Os valores NDVI parecem incorretos
 
-**Intervalos NDVI esperados:**
-
-* **Água, rochas, solo**: -0,1 a 0,2
+**Intervalos NDVI esperados:*** **Água, rochas, solo**: -0,1 a 0,2
 * **Vegetação escassa/doente**: 0,2 a 0,4
 * **Vegetação moderada**: 0,4 a 0,6
-* **Vegetação saudável e densa**: 0,6 a 0,9
-
-**Se os valores estiverem fora destes intervalos:**
+* **Vegetação saudável e densa**: 0,6 a 0,9**Se os valores estiverem fora destes intervalos:**
 
 1. Verifique se a calibração da refletância foi aplicada
 2. Verifique se o registo do sensor de luz foi incluído
@@ -152,7 +146,7 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 **Fluxo de trabalho recomendado:**
 
-1. **Importe imagens de refletância calibradas** para o software de fotogrametria:
+1.**Importe imagens de refletância calibradas** para o software de fotogrametria:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
@@ -166,65 +160,55 @@ Para manter um registo do processamento ou enviar para o suporte MAPIR:
 
 **Fluxo de trabalho recomendado:**
 
-1. **Carregue no QGIS, ArcGIS ou similar**
-2. **Use imagens de refletância TIFF de 16 bits** para análise multibanda
+1.**Carregue no QGIS, ArcGIS ou similar**
+
+2.**Use imagens de refletância TIFF de 16 bits** para análise multibanda
 3. **Use imagens de índice** (NDVI, NDRE) como camadas de vegetação prontas para uso
 4. **Calculadora raster**: combine bandas para análise personalizada
-5. **Exportar**: criar mapas de classificação, deteção de alterações, mapas de saúde da vegetação
+5. **Exportar**: crie mapas de classificação, deteção de alterações, mapas de saúde da vegetação
 
 ### Para análise direta/relatórios
 
 **Fluxo de trabalho recomendado:**
 
-1. **Use imagens de índice com cores LUT** para relatórios visuais
+1.**Use imagens de índice com cores LUT** para relatórios visuais
 2. **Extraia estatísticas**: média NDVI por campo/parcela
 3. **Série temporal**: compare índices em várias sessões
-4. **Gere relatórios**: inclua mapas, estatísticas e visualizações
-
-***
+4. **Gere relatórios**: inclua mapas, estatísticas e visualizações***
 
 ## Arquivamento e backup
 
 ### Estratégia de backup recomendada
 
-**O que salvar:**
-
-* ✅ **Imagens RAW/JPG originais** - arquive em unidade/nuvem separada
+**O que salvar:*** ✅ **Imagens RAW/JPG originais** - arquive em unidade/nuvem separada
 * ✅ **Resultados processados** - Mantenha imagens e índices calibrados
 * ✅ **Ficheiro do projeto** - Contém todas as configurações para reprocessamento, se necessário
 * ✅ **Registo de depuração** - Documenta detalhes do processamento
-* ✅ **Imagens de alvo de calibração** - Para verificação e reprocessamento
-
-**Recomendações de armazenamento:**
-
-* **Cópia de segurança imediata**: Disco rígido externo
+* ✅ **Imagens de alvo de calibração** - Para verificação e reprocessamento**Recomendações de armazenamento:*** **Cópia de segurança imediata**: Disco rígido externo
 * **Arquivo de longo prazo**: Armazenamento na nuvem (Google Drive, Dropbox, etc.)
-* **Dados críticos**: Mantenha 2-3 cópias em locais diferentes
-
-***
+* **Dados críticos**: Mantenha 2-3 cópias em locais diferentes***
 
 ## Próximas execuções de processamento
 
-### Reutilização das configurações do projeto
+### Reutilização das definições do projeto
 
 Se processar conjuntos de dados semelhantes no futuro:
 
 1. **Salve o modelo do projeto** (se ainda não tiver feito isso)
 2. **Crie um novo projeto** usando o modelo salvo
 3. **Importe novas imagens**
-4. **Processe** com configurações idênticas para manter a consistência
+
+4.**Processe**com configurações idênticas para manter a consistência
 
 ### Processamento em lote de várias sessões
 
-Para várias sessões/conjuntos de dados:
-
-**Opção 1: GUI - Vários projetos**
+Para várias sessões/conjuntos de dados:**Opção 1: GUI - Vários projetos**
 
 * Crie um projeto separado para cada sessão
 * Use configurações de modelo consistentes
 * Processe um de cada vez
 
-**Opção 2: Chloros CLI (apenas Chloros+)**
+**Opção 2: Chloros CLI (somente Chloros+)**
 
 * Automatize o processamento em lote
 * Processe várias pastas com scripts
@@ -265,23 +249,19 @@ Se tiver problemas:
 * 📧 **E-mail**: info@mapir.camera (inclua o registo de depuração)
 * 🌐 **Suporte**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Perguntas frequentes**: [Perguntas frequentes](../faq.md)
-* 📖 **Documentação**: [Manual do Chloros](../)
+* 📖 **Documentação**: [Manual do Chloros](../)***
 
-***
+## Resumo: Fluxo de trabalho completo
 
-## Resumo: fluxo de trabalho completo
-
-Agora concluiu todo o fluxo de trabalho de processamento do Chloros:
+Agora você concluiu o fluxo de trabalho completo de processamento do Chloros:
 
 1. ✅ **Projeto criado** - Consulte [Projetos](../projects.md)
 2. ✅ **Arquivos adicionados** - Consulte [Adicionar arquivos](adding-files-to-a-project.md)
 3. ✅ **Configurações ajustadas** - Consulte [Ajustar configurações do projeto](adjusting-project-settings.md)
-4. ✅ **Alvos marcados** - Consulte [Escolher imagens alvo](choosing-target-images.md)
+4. ✅ **Alvos marcados** - Consulte [Escolher imagens-alvo](choosing-target-images.md)
 5. ✅ **Processamento iniciado** - Consulte [Iniciar o processamento](starting-the-processing.md)
-6. ✅ **Progresso monitorado** - Consulte [Monitorando o processamento](monitoring-the-processing.md)
-7. ✅ **Resultados revisados** - Esta página
-
-**Suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
+6. ✅ **Progresso monitorado** - Consulte [Monitorar o processamento](monitoring-the-processing.md)
+7. ✅ **Resultados revistos** - Esta página**As suas imagens multiespectrais calibradas e com correção de refletância estão prontas para análise!**
 
 ***
 

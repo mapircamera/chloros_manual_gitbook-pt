@@ -26,7 +26,7 @@ Antes de clicar no botão Iniciar, verifique se tudo está pronto:
 O botão Iniciar/Reproduzir está localizado na barra de cabeçalho superior do Chloros:
 
 * Posição: parte superior central da janela
-* Ícone: **botão Reproduzir/Iniciar** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Ícone: **botão Reproduzir/Iniciar** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 * Estado: O botão fica ativado (brilhante) quando está pronto para processar
 
 ### Clique para iniciar
@@ -58,10 +58,8 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **A barra de progresso mostra 2 etapas:**
 
-1. **Detecção do alvo** - Verificação de alvos de calibração
-2. **Processamento** - Aplicação da calibração e exportação de imagens
-
-**Tempo de processamento:**
+1.**Detecção de alvo** - Verificação de alvos de calibração
+2. **Processamento** - Aplicação de calibração e exportação de imagens**Tempo de processamento:**
 
 * Muito mais lento do que o modo paralelo Chloros+
 * Adequado para conjuntos de dados pequenos a médios (&lt; 200 imagens)
@@ -79,18 +77,12 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 **A barra de progresso mostra 4 etapas:**
 
-1. **Detecção** - Encontrar alvos de calibração
+1.**Detecção** - Encontrar alvos de calibração
 2. **Análise** - Examinar metadados da imagem e preparar pipeline
 3. **Calibrando** - Aplicando correções e calibrações
-4. **Exportando** - Salvando imagens processadas e índices
-
-**Interação com a barra de progresso:**
-
-* **Passe o mouse** sobre a barra para ver o painel suspenso detalhado de 4 etapas
+4. **Exportando** - Salvando imagens processadas e índices**Interação com a barra de progresso:*** **Passe o mouse** sobre a barra para ver o painel suspenso detalhado de 4 etapas
 * **Clique** na barra de progresso para congelar o painel suspenso no lugar
-* **Clique novamente** para descongelar e ocultar o painel
-
-**Tempo de processamento:**
+* **Clique novamente** para descongelar e ocultar o painel**Tempo de processamento:**
 
 * Significativamente mais rápido do que o modo gratuito
 * Escala com a contagem de núcleos da CPU
@@ -127,14 +119,12 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 
 ### Fase 3: Calibração
 
-**O que o Chloros faz:**
-
-* **Correção de vinheta**: remove o escurecimento das lentes nas bordas
+**O que o Chloros faz:*** **Correção de vinheta**: remove o escurecimento da lente nas bordas
 * **Calibração de refletância**: normaliza usando valores de refletância alvo
 * Aplica correções em todas as bandas/canais
 * Usa alvo de calibração apropriado para cada imagem com base no carimbo de data/hora
 
-**Duração:** a maior parte do tempo de processamento
+**Duração:** Maioria do tempo de processamento
 
 ### Fase 4: Cálculo do índice
 
@@ -153,11 +143,9 @@ O Chloros funciona em dois modos de processamento diferentes, dependendo da sua 
 * Guarda imagens calibradas no formato selecionado
 * Exporta imagens de índice com cores LUT configuradas
 * Grava ficheiros em subpastas do modelo da câmara
-* Preserva nomes de ficheiros originais com sufixos
+* Preserva os nomes de ficheiros originais com sufixos
 
-**Duração:** Varia de acordo com o formato de exportação e o tamanho do ficheiro
-
-***
+**Duração:** Varia de acordo com o formato de exportação e o tamanho do ficheiro***
 
 ## Comportamento do processamento
 
@@ -179,8 +167,8 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 
 **Chloros+ Modo paralelo:**
 
-* Elevada utilização da CPU (multi-threaded, até 16 núcleos)
-* Com aceleração da GPU: uso elevado da GPU
+* Utilização elevada da CPU (multithread, até 16 núcleos)
+* Com aceleração da GPU: utilização elevada da GPU
 * O computador pode ficar menos responsivo durante o processamento
 * Evite iniciar outras tarefas que exijam muito da CPU
 
@@ -193,30 +181,28 @@ Uma vez iniciado, todo o pipeline é executado automaticamente:
 **Limitações importantes:**
 
 * Uma vez iniciado, o processamento não pode ser pausado
-* É possível cancelar o processamento, mas o progresso será perdido
+* Pode cancelar o processamento, mas o progresso será perdido
 * Resultados parciais não são guardados
-* É necessário reiniciar do início se for cancelado
+* Deve reiniciar do início se cancelar
 
-**Dica de planeamento:** Para projetos muito grandes, considere processar em lotes ou usar o CLI para um melhor controlo.
-
-***
+**Dica de planeamento:** para projetos muito grandes, considere processar em lotes ou usar o CLI para um melhor controlo.***
 
 ## Monitorizar o seu processamento
 
-Enquanto o processamento estiver em execução, pode:
+Enquanto o processamento está a decorrer, pode:
 
-* **Observar a barra de progresso** - Veja a percentagem geral de conclusão
-* **Ver o estágio atual** - Detectar, Analisar, Calibrar ou Exportar
-* **Verificar a guia de registo** - Veja mensagens e avisos detalhados do processamento
-* **Visualizar imagens concluídas** - Alguns ficheiros de exportação podem aparecer durante o processamento
+* **Observar a barra de progresso** - Ver a percentagem global de conclusão
+* **Ver a fase atual** - Detetar, Analisar, Calibrar ou Exportar
+* **Verificar o separador de registo** - Ver mensagens e avisos detalhados do processamento
+* **Pré-visualizar imagens concluídas** - Alguns ficheiros exportados podem aparecer durante o processamento
 
-Para obter informações detalhadas sobre o monitoramento, consulte [Monitorando o processamento](monitoring-the-processing.md).
+Para obter informações detalhadas sobre o monitorização, consulte [Monitorização do processamento](monitoring-the-processing.md).
 
 ***
 
-## Cancelando o processamento
+## Cancelar o processamento
 
-Se precisar interromper o processamento:
+Se precisar de parar o processamento:
 
 ### Como cancelar
 
@@ -236,7 +222,7 @@ Se precisar interromper o processamento:
 
 **Após o cancelamento:**
 
-* Revise e corrija quaisquer problemas
+* Reveja e corrija quaisquer problemas
 * Ajuste as configurações conforme necessário
 * Reinicie o processamento desde o início
 * Para uma experiência mais limpa, feche completamente o Chloros e reinicie
@@ -254,7 +240,7 @@ O tempo de processamento real varia muito com base em:
 * Número de imagens
 * Resolução da imagem
 * Formato de entrada RAW vs JPG
-* Modo de processamento (Gratuito vs Chloros+)
+* Modo de processamento (Free vs Chloros+)
 * Velocidade da CPU e número de núcleos
 * Disponibilidade da GPU (apenas Chloros+)
 * Número de índices a calcular
@@ -262,7 +248,7 @@ O tempo de processamento real varia muito com base em:
 
 ### Estimativas aproximadas (Chloros+, imagens de 12 MP, CPU moderna)
 
-| Contagem de imagens | Modo gratuito | Chloros+ (CPU) | Chloros+ (GPU) |
+| Número de imagens | Modo gratuito | Chloros+ (CPU) | Chloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
 | 50 imagens   | 15-20 min | 5-8 min        | 3-5 min        |
 | 100 imagens  | 30-40 min | 10-15 min      | 5-8 min        |
@@ -292,7 +278,7 @@ O tempo de processamento real varia muito com base em:
 1. Aguarde até que o backend seja totalmente inicializado (verifique o ícone do menu principal)
 2. Verifique se as imagens foram importadas no Navegador de Ficheiros
 3. Reinicie o Chloros se o botão permanecer desativado
-4. Verifique o Log de Depuração para mensagens de erro
+4. Verifique o Registo de Depuração para ver se há mensagens de erro
 
 ### O processamento inicia e falha imediatamente
 
@@ -314,8 +300,8 @@ O tempo de processamento real varia muito com base em:
 
 **Possíveis causas:**
 
-* Esqueceu-se de marcar as imagens-alvo
-* As imagens-alvo não contêm alvos visíveis
+* Esqueceu-se de marcar as imagens de destino
+* As imagens de destino não contêm alvos visíveis
 * As configurações de deteção de alvos são muito rígidas
 
 **Soluções:**
@@ -339,9 +325,9 @@ O tempo de processamento real varia muito com base em:
 
 ### Durante o processamento
 
-1. **Evite o modo de suspensão do sistema** - Desative os modos de economia de energia
+1. **Evite o modo de suspensão do sistema** - Desative os modos de poupança de energia
 2. **Mantenha o Chloros em primeiro plano** - Ou, pelo menos, visível na barra de tarefas
-3. **Monitore o progresso ocasionalmente** - Verifique se há avisos ou erros
+3. **Monitorize o progresso ocasionalmente** - Verifique se há avisos ou erros
 4. **Não carregue outras aplicações pesadas** - Especialmente com o modo paralelo Chloros+
 
 ### Chloros+ Aceleração da GPU
@@ -351,7 +337,7 @@ Se estiver a utilizar a aceleração da GPU NVIDIA:
 1. Atualize os controladores NVIDIA para a versão mais recente
 2. Certifique-se de que a GPU tem 4 GB+ de VRAM
 3. Feche aplicações que utilizam muito a GPU (jogos, edição de vídeo)
-4. Monitore a temperatura da GPU (garanta um arrefecimento adequado)
+4. Monitorize a temperatura da GPU (garanta um arrefecimento adequado)
 
 ***
 
@@ -359,7 +345,7 @@ Se estiver a utilizar a aceleração da GPU NVIDIA:
 
 Depois de iniciar o processamento:
 
-1. **Monitore o progresso** - Consulte [Monitorar o processamento](monitoring-the-processing.md)
+1. **Monitorize o progresso** - Consulte [Monitorizar o processamento](monitoring-the-processing.md)
 2. **Aguarde a conclusão** - O processamento é executado automaticamente
 3. **Analise os resultados** - Consulte [Concluindo o processamento](finishing-the-processing.md)
 

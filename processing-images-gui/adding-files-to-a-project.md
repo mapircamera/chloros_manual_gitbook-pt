@@ -22,29 +22,22 @@ Existem duas formas principais de adicionar imagens ao seu projeto:
 
 Use esta opção para importar ficheiros de imagem individuais ou uma pequena seleção de ficheiros.
 
-1. Clique no botão **&quot;Adicionar ficheiros&quot;** na parte superior do painel Navegador de ficheiros.
-2. Navegue até à pasta que contém as suas imagens.
-3. Selecione um ou mais ficheiros de imagem (mantenha pressionada a tecla **Ctrl** para selecionar vários ficheiros).
-4. Clique em **&quot;Abrir&quot;** para importar os ficheiros selecionados.
+1. Clique no botão **&quot;Adicionar ficheiros&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> na parte superior do painel Navegador de ficheiros
+2. Navegue até à pasta que contém as suas imagens
+3. Selecione um ou mais ficheiros de imagem (mantenha **Ctrl** pressionado para selecionar vários ficheiros)
+4. Clique em **&quot;Abrir&quot;** para importar os ficheiros selecionados
 
 ### Método 2: Adicionar pasta
 
 Use esta opção para importar todas as imagens de uma pasta de uma só vez.
 
-1. Clique no botão **&quot;Adicionar pasta&quot;** na parte superior do painel Navegador de ficheiros
+1. Clique no botão **&quot;Adicionar pasta&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> na parte superior do painel Navegador de ficheiros
 2. Navegue até à pasta que contém as imagens da sua sessão de captura e selecione-a
-3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta
-
-***
+3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta***
 
 ## Compreender a tabela do Navegador de ficheiros
 
 Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
-
-### Miniatura
-
-* Pequena pré-visualização de cada imagem
-* Clique na miniatura para ver a imagem completa na área de pré-visualização principal
 
 ### Nome do ficheiro
 
@@ -55,7 +48,7 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 * Data e hora em que a imagem foi capturada
 * Extraído dos metadados EXIF da imagem
-* Usado para sincronização PPK e deteção de alvos de calibração
+* Utilizado para sincronização PPK e deteção do alvo de calibração
 
 ### Modelo da câmara
 
@@ -67,46 +60,42 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 * Marque esta caixa para imagens que contêm alvos de calibração
 * Acelera significativamente a deteção de alvos durante o processamento
-* Consulte [Escolhendo imagens alvo](choosing-target-images.md) para obter detalhes
+* Consulte [Escolher imagens de destino](choosing-target-images.md) para obter detalhes
 
 ***
 
-## Gerenciando ficheiros no seu projeto
+## Gerir ficheiros no seu projeto
 
-### Removendo ficheiros
+### Remover ficheiros
 
 Para remover imagens indesejadas do seu projeto:
 
 1. Selecione uma ou mais imagens na tabela do Navegador de ficheiros
-2. Clique no botão **&quot;Remover selecionados&quot;**
-3. Confirme a remoção (os ficheiros não são excluídos do disco, apenas removidos do projeto)
+2. Clique no botão **&quot;Remover selecionados&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> .
+3. Confirme a remoção (os ficheiros não são eliminados do disco, apenas removidos do projeto)
 
-### Classificar e filtrar
+### Ordenar e filtrar
 
-* **Classificar por coluna**: Clique em qualquer cabeçalho de coluna para classificar as imagens
-* **Classificação por data e hora**: útil para organizar sequências de captura cronológicas
-* **Filtro de modelo de câmara**: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras
-
-***
+* **Ordenar por coluna**: clique em qualquer cabeçalho de coluna para ordenar as imagens
+* **Ordenar por data e hora**: útil para organizar sequências de captura cronológicas
+* **Filtro de modelo de câmara: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras***
 
 ## Pré-visualização de imagens
 
 ### Visualizar imagem completa
 
-Clique em qualquer miniatura de imagem no Navegador de ficheiros para exibi-la na área de pré-visualização principal:
+Clique em qualquer miniatura de imagem no Navegador de ficheiros para a exibir na área de pré-visualização principal:
 
 1. A imagem aparece no painel de pré-visualização central
-2. Use os controlos de zoom para inspecionar os detalhes da imagem
-3. Navegue entre as imagens usando as teclas de seta
+2. Utilize os controlos de zoom para inspecionar os detalhes da imagem
+3. Navegue entre as imagens utilizando as teclas de seta
 
 ### Navegação rápida
 
 * **Imagem anterior**: Clique na seta para a esquerda ou pressione a tecla ←
 * **Imagem seguinte**: Clique na seta para a direita ou pressione a tecla →
 * **Aumentar/diminuir zoom**: Use a roda do mouse ou os botões de zoom
-* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom
-
-***
+* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom***
 
 ## Tratamento de ficheiros duplicados
 
@@ -122,7 +111,7 @@ O Chloros deteta e ignora automaticamente ficheiros duplicados:
 
 ***
 
-## Conjuntos de dados de câmaras mistas
+## Conjuntos de dados de câmaras mistos
 
 Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
@@ -131,9 +120,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 3. O Navegador de ficheiros exibe o modelo da câmara na coluna Modelo da câmara
 4. O processamento aplica as configurações corretas para cada tipo de câmara
 
-**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla
-
-***
+**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla***
 
 ## Melhores práticas
 
@@ -176,7 +163,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 * Metadados EXIF modificados
 * Imagens editadas em software externo
-* Transferência incompleta do ficheiro
+* Transferência de ficheiros incompleta
 
 **Solução**: Reimporte os ficheiros originais, não modificados, da câmara/cartão SD
 
@@ -184,12 +171,10 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 **Possíveis causas:**
 
-* Relógio da câmara não definido corretamente
+* Relógio da câmara não ajustado corretamente
 * Dados EXIF removidos por software externo
 
-**Solução**: Verifique se as configurações de hora da câmara estavam corretas durante a captura
-
-***
+**Solução**: Verifique se as configurações de hora da câmara estavam corretas durante a captura***
 
 ## Próximos passos
 
