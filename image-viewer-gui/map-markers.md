@@ -88,7 +88,7 @@ A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do ma
 
 Pode escolher o tipo de camada do mapa (da esquerda para a direita):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
 
 Mostra perfis de elevação e mosaicos de mapa com detalhes (estradas, etc.)
 
