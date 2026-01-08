@@ -2,6 +2,8 @@
 
 A guia Mapa exibe as suas imagens num mapa 2D interativo com base nas coordenadas GPS. Isso fornece uma visão geral geográfica da sua sessão de captura e ajuda a visualizar a cobertura espacial. Também é útil ao importar as suas imagens pela primeira vez para remover rapidamente quaisquer imagens que não precise processar.
 
+<figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
+
 ## Aceder ao separador Mapa
 
 1. Abra ou crie um projeto no Chloros
@@ -9,15 +11,15 @@ A guia Mapa exibe as suas imagens num mapa 2D interativo com base nas coordenada
 3. Clique no separador **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> na barra lateral esquerda
 4. O mapa exibirá marcadores na localização GPS de cada imagem
 
-{% hint style=&quot;info&quot; %}
-**GPS necessário**: Apenas imagens com coordenadas GPS incorporadas nos seus metadados EXIF aparecerão no mapa. Certifique-se de que a sua câmara tem o GPS ativado durante a captura.
+{% hint style="info" %}
+**GPS necessário**: apenas imagens com coordenadas GPS incorporadas nos seus metadados EXIF aparecerão no mapa. Certifique-se de que a sua câmara tem o GPS ativado durante a captura.
 {% endhint %}
 
 ***
 
 ## Ajustar imagens a partir do separador Mapa
 
-O separador **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tem as mesmas opções de adicionar  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e remover  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que a guia [**Navegador de ficheiros**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Também mostra a mesma lista de ficheiros de projeto, mas com cabeçalhos de coluna diferentes:
+O separador **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tem as mesmas funções de adicionar  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e remover  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que a guia [**Navegador de ficheiros**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Também mostra a mesma lista de ficheiros do projeto, mas com cabeçalhos de coluna diferentes:
 
 ### Nome do ficheiro
 
@@ -36,7 +38,7 @@ O separador **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size
 
 * Altitude da imagem
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 Clicar nos cabeçalhos das colunas da tabela também ordena os dados da linha
 {% endhint %}
 
@@ -52,13 +54,13 @@ Cada imagem com dados GPS é representada por um marcador no mapa:
 * Os marcadores agrupados podem ser reunidos quando se diminui o zoom
 * Aumente o zoom para ver as localizações individuais das imagens
 
-{% hint style=&quot;success&quot; %}
-SUPER-ZOOM: Quando atinge o nível máximo de zoom do fornecedor do mosaico do mapa, o mosaico é ampliado ao ampliar ainda mais, permitindo ver marcadores que estão próximos uns dos outros.
+{% hint style="success" %}
+SUPERZOOM: Quando atinge o nível máximo de zoom do fornecedor de mosaicos do mapa, o mosaico é ampliado ao aumentar ainda mais o zoom, permitindo ver os marcadores que estão próximos uns dos outros.
 {% endhint %}
 
 ### Pré-visualização ao passar o cursor
 
-* **Passe o rato** sobre qualquer marcador para ver uma pré-visualização em miniatura dessa imagem
+* **Passe o cursor do rato** sobre qualquer marcador para ver uma pré-visualização em miniatura dessa imagem
 * Isto permite uma identificação visual rápida sem sair da visualização do mapa
 * Útil para localizar imagens específicas numa sessão de captura grande
 
@@ -66,8 +68,8 @@ SUPER-ZOOM: Quando atinge o nível máximo de zoom do fornecedor do mosaico do m
 
 ## Fornecedores de mosaicos de mapas
 
-{% hint style=&quot;success&quot; %}
-**Seleção automática**: Chloros escolhe automaticamente o serviço de mosaicos que oferece o melhor nível de zoom para a sua localização atual no mapa. Pode alternar manualmente entre os fornecedores, se desejar.
+{% hint style="success" %}
+**Seleção automática**: Chloros escolhe automaticamente o serviço de mosaicos que fornece o melhor nível de zoom para a sua localização atual no mapa. Pode alternar manualmente entre fornecedores, se desejar.
 {% endhint %}
 
 A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do mapa:
@@ -80,11 +82,11 @@ A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do ma
 ### ESRI
 
 * Imagens de satélite e aéreas do ESRI ArcGIS
-* Geralmente fornece imagens de alta resolução em determinadas regiões
+* Frequentemente fornece imagens de alta resolução em determinadas regiões
 
 ***
 
-## Tipos de mosaicos de mapa
+## Tipos de mosaicos de mapas
 
 Pode escolher o tipo de camada do mapa (da esquerda para a direita):
 
@@ -94,11 +96,11 @@ Mostra perfis de elevação e mosaicos de mapa com detalhes (estradas, etc.)
 
 ### Mapa
 
-Mostra mosaicos de mapa padrão (baixa largura de banda) com detalhes (estradas, etc.)
+Mostra mosaicos de mapa padrão (banda larga mais baixa) com detalhes (estradas, etc.)
 
 ### Satélite
 
-Mostra mosaicos de mapa de satélite detalhados (alta largura de banda)
+Mostra mosaicos de mapa de satélite detalhados (banda larga mais alta)
 
 ### Híbrido
 
@@ -111,11 +113,13 @@ Mostra mosaicos de mapa de satélite com detalhes adicionais (estradas, etc.)
 ### Controlos de zoom
 
 * **Aumentar/diminuir zoom**: use a roda do mouse ou os botões de zoom
-* **Tela inteira**: exibe o mapa em tela inteira
+* **Ecrã inteiro**: exibe o mapa em ecrã inteiro
 
 ### Controlos de panorâmica
 
-* **Panorâmica**: clique e arraste para se mover pelo mapa***
+* **Panorâmica**: clique e arraste para se mover pelo mapa
+
+***
 
 ## Casos de uso
 

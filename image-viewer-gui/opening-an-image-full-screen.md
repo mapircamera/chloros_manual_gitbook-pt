@@ -1,6 +1,6 @@
 # Abrir uma imagem em ecrã inteiro
 
-O Visualizador de Imagens Chloros fornece uma interface dedicada em ecrã inteiro para visualizar, analisar e manipular as suas imagens multiespectrais. Seja para visualizar imagens originais ou resultados processados, o Visualizador de Imagens oferece ferramentas poderosas para inspeção e análise.
+O Visualizador de Imagens Chloros oferece uma interface dedicada em ecrã inteiro para visualizar, analisar e manipular as suas imagens multiespectrais. Seja para visualizar imagens originais ou resultados processados, o Visualizador de Imagens oferece ferramentas poderosas para inspeção e análise.
 
 ## Aceder ao Visualizador de Imagens
 
@@ -18,12 +18,12 @@ A forma mais comum de abrir uma imagem no Visualizador de Imagens:
 Depois de uma imagem ser carregada na área de pré-visualização:
 
 1. Clique no ícone **Visualizador de Imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
-2. O separador Visualizador de Imagens abre, exibindo a imagem selecionada em ecrã inteiro
+2. O separador Visualizador de imagens abre, exibindo a imagem selecionada em ecrã inteiro
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
 ***
 
-## Visão geral da interface do Visualizador de Imagens
+## Visão geral da interface do Visualizador de imagens
 
 ### Área de exibição principal
 
@@ -42,44 +42,38 @@ A maior parte do ecrã mostra a sua imagem:
 
 #### Navegar pelas imagens
 
-Navegue pelo seu conjunto de imagens usando atalhos do teclado ou botões:
+Navegue pelo seu conjunto de imagens usando atalhos de teclado ou botões:
 
 * **Imagem seguinte**: Clique no botão → ou pressione a tecla **→** (seta para a direita)
 * **Imagem anterior**: Clique no botão ← ou pressione a tecla **←** (seta para a esquerda)
-* **Ir para uma imagem específica**: Volte ao Navegador de Ficheiros e clique na miniatura desejada
+* **Ir para uma imagem específica**: Volte ao Navegador de ficheiros e clique na miniatura desejada
 
 #### Controlos de zoom
 
 Ajuste a ampliação para inspecionar os detalhes da imagem:
 
-**Aumentar:**
+**Ampliar:**
 
 * Clique no botão **+** (Mais)
 * Pressione a tecla **+** ou **=**
 * Role a roda do rato **para cima**
 
-**Diminuir:**
+**Reduzir:**
 
 * Clique no botão **−** (Menos)
 * Pressione a tecla **−** (Menos)
 * Role a roda do rato **para baixo**
 
-**Ajustar à tela:**
+#### Deslocar quando ampliado
 
-* Clique no botão **↔** (Ajustar)
-* Pressione a tecla **0** (Zero)
-* Clique duas vezes na imagem
-
-#### Panorâmica ao ampliar
-
-Ao ampliar além do tamanho da tela:
+Quando ampliado além do tamanho da tela:
 
 1. Mova o cursor do mouse sobre a imagem
 2. Clique e **mantenha pressionado o botão esquerdo do mouse**
 3. **Arraste** para mover a imagem
-4. Solte para parar a panorâmica
+4. Solte para parar o deslocamento
 
-**Alternativa**: Use as teclas de seta para fazer uma panorâmica em pequenos incrementos
+**Alternativa**: Use as teclas de seta para deslocar em pequenos incrementos
 
 ***
 
@@ -92,23 +86,25 @@ Ao ampliar além do tamanho da tela:
 **Localização da exibição do valor:**
 
 * **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito**
-* **Ao ampliar ainda mais, valor flutuante próximo ao cursor e pixel destacado**
+* **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado**
 * Mostra os valores dos pixels **sob o cursor ou destacados**
-* Atualiza conforme move o rato
+* Atualiza à medida que move o rato
 
 ***
 
 ## Tipos de imagens que pode visualizar
 
-### Imagens originais (pré-processamento)
+### JPG
 
-**Imagens RAW + JPG da câmara:**
+**Imagens JPG da câmara:**
 
-* Exibe os dados RAW conforme visualizados
-* Mostra os valores originais, sem correção
+* Exibe os dados JPG conforme pré-visualizados
+* Mostra os valores originais, não corrigidos
 * Útil para verificar a qualidade da imagem antes do processamento
 
-### Imagens de refletância calibradas
+### RAW (Original)
+
+### RAW (Refletância)
 
 **Após o processamento:**
 
@@ -117,7 +113,7 @@ Ao ampliar além do tamanho da tela:
 * Multibanda TIFF (Red, Green, NIR, etc.)
 * Dados científicos prontos para análise
 
-### Imagens de índice
+### RAW (Índice)
 
 **NDVI, NDRE, GNDVI, etc. (ficheiros \_NDVI.tif):**
 
@@ -136,7 +132,7 @@ Aplique índices multiespectrais e tabelas de consulta de cores:
 2. Selecione o índice de vegetação (NDVI, NDRE, etc.)
 3. Selecione a fórmula multiespectral ou crie a sua própria fórmula personalizada (apenas Chloros+)
 4. Aplique o gradiente LUT de cor para visualização
-5. Ajuste os intervalos de valores e os limiares
+5. Ajuste os intervalos de valores e os limites
 
 Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detalhadas.
 
@@ -155,19 +151,7 @@ Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detal
 
 * **+** ou **=**: Ampliar
 * **−**: Reduzir
-* **0** (Zero): Ajustar à tela
-* **Roda do mouse**: Ampliar/reduzir
-
-### Controlos de visualização
-
-* **P**: Alternar modo de percentagem de pixels
-* **L**: Alternar painel de camadas
-* **Esc**: Fechar ecrã inteiro ou voltar ao Navegador de ficheiros
-
-### Outros
-
-* **Ctrl+S**: Guardar imagem atual
-* **F**: Modo de ecrã inteiro (se disponível)
+* **Roda do rato**: Ampliar/reduzir
 
 ***
 
@@ -198,9 +182,9 @@ Verifique se os índices foram calculados corretamente:
 
 **Soluções:**
 
-1. Tente abrir em um visualizador externo para verificar a integridade do ficheiro
+1. Tente abrir num visualizador externo para verificar a integridade do ficheiro
 2. Verifique se o formato do ficheiro corresponde ao tipo esperado
-3. Feche outros aplicativos para liberar memória
+3. Feche outras aplicações para liberar memória
 4. Tente uma imagem menor/diferente
 
 ### Exibição de imagem em preto ou branco
@@ -240,8 +224,8 @@ Agora que pode visualizar imagens em ecrã inteiro:
 
 * [**Camadas de imagem**](image-layers.md) - Saiba mais sobre visualização multibanda
 * [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplique índices personalizados e mapeamento de cores
-* [**Fórmulas de índice multiespectral**](../project-settings/multispectral-index-formulas.md) - Entenda os índices disponíveis
+* [**Fórmulas de Índice Multiespectral**](../project-settings/multispectral-index-formulas.md) - Compreenda os índices disponíveis
 
 Para o fluxo de trabalho de processamento, consulte:
 
-* [**Processamento de imagens (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guia completo de processamento
+* [**Processamento de Imagens (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Guia completo de processamento

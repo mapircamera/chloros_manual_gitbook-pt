@@ -8,8 +8,8 @@ Depois de criar ou abrir um projeto no Chloros, o próximo passo é adicionar as
 2. Clique no ícone **Navegador de arquivos** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> na barra lateral esquerda
 3. O painel Navegador de ficheiros exibirá a lista de ficheiros do seu projeto
 
-{% hint style=&quot;info&quot; %}
-**Tipos de ficheiros suportados**: O Chloros suporta ficheiros de imagem RAW+JPG e JPG das câmaras MAPIR Survey3W e Survey3N. Recomenda-se apenas RAW+JPG.
+{% hint style="info" %}
+**Tipos de ficheiros suportados**: O Chloros suporta ficheiros de imagem RAW+JPG e JPG das câmaras MAPIR, Survey3W e Survey3N. Recomenda-se apenas RAW+JPG.
 {% endhint %}
 
 ***
@@ -33,7 +33,9 @@ Use esta opção para importar todas as imagens de uma pasta de uma só vez.
 
 1. Clique no botão **&quot;Adicionar pasta&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> na parte superior do painel Navegador de ficheiros
 2. Navegue até à pasta que contém as imagens da sua sessão de captura e selecione-a
-3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta***
+3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta
+
+***
 
 ## Compreender a tabela do Navegador de ficheiros
 
@@ -48,7 +50,7 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 * Data e hora em que a imagem foi capturada
 * Extraído dos metadados EXIF da imagem
-* Utilizado para sincronização PPK e deteção do alvo de calibração
+* Usado para sincronização PPK e deteção do alvo de calibração
 
 ### Modelo da câmara
 
@@ -60,7 +62,13 @@ Depois de importadas, as imagens aparecem numa tabela com as seguintes colunas:
 
 * Marque esta caixa para imagens que contêm alvos de calibração
 * Acelera significativamente a deteção de alvos durante o processamento
-* Consulte [Escolher imagens de destino](choosing-target-images.md) para obter detalhes
+* Consulte [Escolher imagens-alvo](choosing-target-images.md) para obter detalhes
+
+### Visualizar metadados da imagem
+
+Clicar no botão de alternância no canto superior direito acima da tabela mostra os metadados da imagem selecionada na área da grelha de imagens.
+
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -72,46 +80,50 @@ Para remover imagens indesejadas do seu projeto:
 
 1. Selecione uma ou mais imagens na tabela do Navegador de ficheiros
 2. Clique no botão **&quot;Remover selecionados&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> .
-3. Confirme a remoção (os ficheiros não são eliminados do disco, apenas removidos do projeto)
+3. Confirme a remoção (os ficheiros não são eliminados do disco, apenas removidos do projeto).
 
 ### Ordenar e filtrar
 
-* **Ordenar por coluna**: clique em qualquer cabeçalho de coluna para ordenar as imagens
-* **Ordenar por data e hora**: útil para organizar sequências de captura cronológicas
-* **Filtro de modelo de câmara: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras***
+* **Ordenar por coluna**: clique em qualquer cabeçalho de coluna para ordenar as imagens.
+* **Ordenar por data e hora**: útil para organizar sequências de captura cronológicas.
+* **Filtro de modelo de câmara**: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras.
 
-## Pré-visualização de imagens
+***
 
-### Visualizar imagem completa
+## Pré-visualização da imagem
+
+### Visualizar a imagem completa
 
 Clique em qualquer miniatura de imagem no Navegador de ficheiros para a exibir na área de pré-visualização principal:
 
 1. A imagem aparece no painel de pré-visualização central
-2. Utilize os controlos de zoom para inspecionar os detalhes da imagem
-3. Navegue entre as imagens utilizando as teclas de seta
+2. Use os controlos de zoom para inspecionar os detalhes da imagem
+3. Navegue entre as imagens usando as teclas de seta
 
 ### Navegação rápida
 
 * **Imagem anterior**: Clique na seta para a esquerda ou pressione a tecla ←
 * **Imagem seguinte**: Clique na seta para a direita ou pressione a tecla →
 * **Aumentar/diminuir zoom**: Use a roda do mouse ou os botões de zoom
-* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom***
+* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom
+
+***
 
 ## Tratamento de ficheiros duplicados
 
-O Chloros deteta e ignora automaticamente ficheiros duplicados:
+O Chloros detecta e ignora automaticamente ficheiros duplicados:
 
 * Os ficheiros com nomes idênticos são ignorados
 * Evita o processamento duplo acidental
 * É exibida uma mensagem de aviso quando são detetadas duplicatas
 
-{% hint style=&quot;warning&quot; %}
-**Importante**: Não renomeie nem modifique os seus ficheiros de imagem originais antes de importar. O Chloros depende dos nomes de ficheiros e metadados originais para um processamento adequado.
+{% hint style="warning" %}
+**Importante**: Não renomeie nem modifique os seus ficheiros de imagem originais antes de importar. O Chloros depende dos nomes de ficheiros originais e dos metadados para um processamento adequado.
 {% endhint %}
 
 ***
 
-## Conjuntos de dados de câmaras mistos
+## Conjuntos de dados de câmaras mistas
 
 Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
@@ -120,20 +132,22 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 3. O Navegador de ficheiros exibe o modelo da câmara na coluna Modelo da câmara
 4. O processamento aplica as configurações corretas para cada tipo de câmara
 
-**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla***
+**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla
+
+***
 
 ## Melhores práticas
 
 ### Organize antes de importar
 
-* Mantenha as imagens de alvo de calibração na mesma pasta que as imagens do levantamento
+* Mantenha as imagens de alvo de calibração na mesma pasta que as imagens de levantamento
 * Mantenha a estrutura original da pasta da sua câmara/cartão SD
 * Não misture conjuntos de dados de sessões diferentes num único projeto
 
 ### Nomeação de ficheiros
 
 * Preserve os nomes de ficheiros originais da câmara (IMG\_0001.RAW, etc.)
-* Não renomeie os ficheiros antes da importação
+* Não renomeie os ficheiros antes de importar
 * Os nomes originais contêm metadados importantes
 
 ### Imagens de alvo de calibração
@@ -171,17 +185,19 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 **Possíveis causas:**
 
-* Relógio da câmara não ajustado corretamente
+* Relógio da câmara não definido corretamente
 * Dados EXIF removidos por software externo
 
-**Solução**: Verifique se as configurações de hora da câmara estavam corretas durante a captura***
+**Solução**: Verifique se as definições de hora da câmara estavam corretas durante a captura
+
+***
 
 ## Próximos passos
 
 Depois de importar os seus ficheiros:
 
 1. **Revise a lista de ficheiros** - Certifique-se de que todas as imagens foram carregadas corretamente
-2. **Verifique os modelos de câmara** - Verifique se a deteção da câmara está correta
+2. **Verifique os modelos da câmara** - Verifique se a deteção da câmara está correta
 3. **Marque as imagens de destino** - Consulte [Escolher imagens de destino](choosing-target-images.md)
 4. **Ajuste as configurações** - Configure as opções de processamento em [Configurações do projeto](adjusting-project-settings.md)
 5. **Inicie o processamento** - Consulte [Iniciar o processamento](starting-the-processing.md)
