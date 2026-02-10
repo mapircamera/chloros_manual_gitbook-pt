@@ -9,7 +9,7 @@ Depois de criar ou abrir um projeto no Chloros, o próximo passo é adicionar as
 3. O painel Navegador de ficheiros exibirá a lista de ficheiros do seu projeto
 
 {% hint style="info" %}
-**Tipos de ficheiros suportados**: O Chloros suporta ficheiros de imagem RAW+JPG e JPG das câmaras MAPIR, Survey3W e Survey3N. Recomenda-se apenas RAW+JPG.
+**Tipos de ficheiros suportados**: O Chloros suporta ficheiros de imagem RAW+JPG e JPG das câmaras MAPIR Survey3W e Survey3N. Recomenda-se apenas RAW+JPG.
 {% endhint %}
 
 ***
@@ -33,9 +33,7 @@ Use esta opção para importar todas as imagens de uma pasta de uma só vez.
 
 1. Clique no botão **&quot;Adicionar pasta&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> na parte superior do painel Navegador de ficheiros
 2. Navegue até à pasta que contém as imagens da sua sessão de captura e selecione-a
-3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta
-
-***
+3. Clique em **&quot;Selecionar pasta&quot;** para importar todas as imagens suportadas dessa pasta***
 
 ## Compreender a tabela do Navegador de ficheiros
 
@@ -86,9 +84,7 @@ Para remover imagens indesejadas do seu projeto:
 
 * **Ordenar por coluna**: clique em qualquer cabeçalho de coluna para ordenar as imagens.
 * **Ordenar por data e hora**: útil para organizar sequências de captura cronológicas.
-* **Filtro de modelo de câmara**: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras.
-
-***
+* **Filtro de modelo de câmara**: agrupe imagens por tipo de câmara se estiver a utilizar várias câmaras.***
 
 ## Pré-visualização da imagem
 
@@ -105,9 +101,7 @@ Clique em qualquer miniatura de imagem no Navegador de ficheiros para a exibir n
 * **Imagem anterior**: Clique na seta para a esquerda ou pressione a tecla ←
 * **Imagem seguinte**: Clique na seta para a direita ou pressione a tecla →
 * **Aumentar/diminuir zoom**: Use a roda do mouse ou os botões de zoom
-* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom
-
-***
+* **Panorâmica**: Clique e arraste na imagem quando estiver com zoom***
 
 ## Tratamento de ficheiros duplicados
 
@@ -118,7 +112,7 @@ O Chloros detecta e ignora automaticamente ficheiros duplicados:
 * É exibida uma mensagem de aviso quando são detetadas duplicatas
 
 {% hint style="warning" %}
-**Importante**: Não renomeie nem modifique os seus ficheiros de imagem originais antes de importar. O Chloros depende dos nomes de ficheiros originais e dos metadados para um processamento adequado.
+**Importante**: Não renomeie nem modifique os seus ficheiros de imagem originais antes de importar. O Chloros depende dos nomes de ficheiros e metadados originais para um processamento adequado.
 {% endhint %}
 
 ***
@@ -132,9 +126,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 3. O Navegador de ficheiros exibe o modelo da câmara na coluna Modelo da câmara
 4. O processamento aplica as configurações corretas para cada tipo de câmara
 
-**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla
-
-***
+**Exemplo de cenário**: Survey3W RGN + Survey3N OCN configuração de câmara dupla***
 
 ## Melhores práticas
 
@@ -188,9 +180,7 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 * Relógio da câmara não definido corretamente
 * Dados EXIF removidos por software externo
 
-**Solução**: Verifique se as definições de hora da câmara estavam corretas durante a captura
-
-***
+**Solução**: Verifique se as definições de hora da câmara estavam corretas durante a captura***
 
 ## Próximos passos
 

@@ -19,11 +19,11 @@ A guia Mapa exibe as suas imagens num mapa 2D interativo com base nas coordenada
 
 ## Ajustar imagens a partir do separador Mapa
 
-O separador **Mapa** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tem as mesmas funções de adicionar  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e remover  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que a guia [**Navegador de ficheiros**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Também mostra a mesma lista de ficheiros do projeto, mas com cabeçalhos de coluna diferentes:
+O separador **Mapa**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tem as mesmas funções de adicionar  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  e remover  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  que a guia [**Navegador de ficheiros**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Também mostra a mesma lista de arquivos de projeto, mas com cabeçalhos de coluna diferentes:
 
-### Nome do ficheiro
+### Nome do arquivo
 
-* Nome do ficheiro original da câmara
+* Nome do arquivo original da câmara
 * Mantém a convenção de nomenclatura da câmara (por exemplo, IMG\_0001.RAW)
 
 ### Latitude
@@ -82,7 +82,7 @@ A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do ma
 ### ESRI
 
 * Imagens de satélite e aéreas do ESRI ArcGIS
-* Frequentemente fornece imagens de alta resolução em determinadas regiões
+* Geralmente fornece imagens de alta resolução em determinadas regiões
 
 ***
 
@@ -90,7 +90,7 @@ A guia Mapa suporta dois fornecedores de mosaicos para as imagens de fundo do ma
 
 Pode escolher o tipo de camada do mapa (da esquerda para a direita):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terreno
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terreno
 
 Mostra perfis de elevação e mosaicos de mapa com detalhes (estradas, etc.)
 
@@ -113,13 +113,11 @@ Mostra mosaicos de mapa de satélite com detalhes adicionais (estradas, etc.)
 ### Controlos de zoom
 
 * **Aumentar/diminuir zoom**: use a roda do mouse ou os botões de zoom
-* **Ecrã inteiro**: exibe o mapa em ecrã inteiro
+* **Tela inteira**: exibe o mapa em tela inteira
 
 ### Controlos de panorâmica
 
-* **Panorâmica**: clique e arraste para se mover pelo mapa
-
-***
+* **Panorâmica**: clique e arraste para se mover pelo mapa***
 
 ## Casos de uso
 

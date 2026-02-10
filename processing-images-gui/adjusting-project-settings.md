@@ -1,6 +1,6 @@
 # Ajustar as definições do projeto
 
-Antes de processar as suas imagens, é importante configurar as definições do projeto para corresponder aos requisitos do seu fluxo de trabalho. O painel Definições do projeto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> oferece controle abrangente sobre calibração, opções de processamento, índices multiespectrais e formatos de exportação.
+Antes de processar as suas imagens, é importante configurar as definições do projeto para corresponder aos requisitos do seu fluxo de trabalho. O painel Definições do projeto <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> oferece controlo abrangente sobre calibração, opções de processamento, índices multiespectrais e formatos de exportação.
 
 ## Acessando as configurações do projeto
 
@@ -8,7 +8,7 @@ Antes de processar as suas imagens, é importante configurar as definições do 
 2. Clique no ícone **Configurações do projeto** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> na barra lateral esquerda
 3. O painel Configurações do projeto exibe todas as opções de configuração
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **As configurações são guardadas automaticamente** com o seu projeto. Quando reabre um projeto, todas as configurações são restauradas.
 {% endhint %}
 
@@ -18,11 +18,11 @@ Antes de processar as suas imagens, é importante configurar as definições do 
 
 ### Configurações padrão (recomendadas para a maioria dos utilizadores)
 
-Para fluxos de trabalho típicos da câmara MAPIR Survey3, as definições padrão funcionam bem:
+Para fluxos de trabalho típicos da câmara MAPIR Survey3, as configurações padrão funcionam bem:
 
-* ✅ **Correção de vinheta**: Ativada
-* ✅ **Calibração de refletância**: Ativada (requer imagens de alvos MAPIR)
-* ✅ **Método Debayer**: Alta qualidade (mais rápido)
+* ✅ **Correção de vinheta**: ativada
+* ✅ **Calibração de refletância**: ativada (requer imagens de alvos MAPIR)
+* ✅ **Método Debayer**: Padrão (rápido, qualidade média)
 * ✅ **Formato de exportação**: TIFF (16 bits)
 
 Basta importar as suas imagens e iniciar o processamento com estas predefinições.
@@ -31,39 +31,41 @@ Basta importar as suas imagens e iniciar o processamento com estas predefiniçõ
 
 ## Visão geral das definições do projeto
 
-O painel Configurações do projeto está organizado em várias categorias. Abaixo está um resumo de cada secção. Para obter a documentação completa, consulte [Configurações do projeto](../project-settings/project-settings.md).
+O painel Definições do projeto está organizado em várias categorias. Abaixo está um resumo de cada secção. Para obter a documentação completa, consulte [Definições do projeto](../project-settings/project-settings.md).
 
 ### Detecção de alvos
 
-Controla como o Chloros identifica alvos de calibração nas suas imagens.
+Controla como o Chloros identifica os alvos de calibração nas suas imagens.
 
-**Configurações principais:**
+**Configurações principais:*** **Área mínima da amostra de calibração**: limite de tamanho para deteção de alvos (padrão: 25 pixels)
+* **Agrupamento mínimo de alvos**: limite de similaridade para agrupar regiões-alvo (padrão: 60)**Quando ajustar:**
 
-* **Área mínima da amostra de calibração**: limite de tamanho para deteção de alvos (padrão: 25 pixels)
-* **Agrupamento mínimo de alvos**: limite de similaridade para agrupar regiões-alvo (padrão: 60)
-
-**Quando ajustar:**
-
-* Aumente a área da amostra se estiver a obter deteções falsas
+* Aumente a área da amostra se houver deteções falsas
 * Diminua se os alvos não estiverem a ser detetados
 * Ajuste o agrupamento se os alvos estiverem a ser divididos em várias deteções
 
 ### Processamento
 
-Principais opções de processamento e calibração de imagens.
+Principais opções de processamento de imagem e calibração.
 
-**Configurações principais:**
-
-* **Correção de vinheta**: Compensa o escurecimento da lente nas bordas ✅ Recomendado
+**Configurações principais:*** **Correção de vinheta**: Compensa o escurecimento da lente nas bordas ✅ Recomendado
 * **Calibração de refletância**: Normaliza os valores usando alvos de calibração ✅ Recomendado
 * **Método Debayer**: Algoritmo para converter RAW em multiespectral de 3 canais
-* **Intervalo mínimo de recalibração**: Tempo entre o uso de alvos de calibração (0 = usar todos)
-
-**Configurações avançadas:**
-
-* **Desvio de fuso horário do sensor de luz**: Para sincronização de tempo PPK (padrão: 0)
-* **Aplicar correções PPK**: Usa dados de GPS/pino de exposição de ficheiros .daq
+* **Intervalo mínimo de recalibração**: Tempo entre o uso de alvos de calibração (0 = usar todos)**Configurações avançadas:*** **Desvio de fuso horário do sensor de luz**: Para sincronização de tempo PPK (padrão: 0)
+* **Aplicar correções PPK**: Utiliza dados de GPS/pino de exposição de ficheiros .daq
 * **Pino de exposição 1/2**: Atribui câmaras a pinos de exposição para configurações de câmara dupla
+
+### Método Debayer
+
+Atualmente, oferecemos 2 métodos de debayering no Chloros:
+
+#### Padrão (rápido, qualidade média)
+
+O debayer padrão processa rapidamente, mas apresenta ruído de cor de debayering, resultando em imagens menos precisas e com mais ruído.
+
+#### Texture Aware (Lento, Qualidade máxima) \[Chloros+ Apenas]
+
+O Texture Aware usa um debayer de alta qualidade sensível às bordas combinado com um modelo de redução de ruído AI/ML que remove quase todo o ruído de debayering. O modelo Texture Aware requer memória GPU (VRAM) para funcionar. Recomendamos usá-lo quando tiver &gt;4 GB de VRAM disponível para um processamento mais rápido.
 
 ### Índice (Índices multiespectrais)
 
@@ -71,20 +73,17 @@ Configure quais índices de vegetação calcular e exportar.
 
 **Como adicionar índices:**
 
-1. Clique no botão **&quot;Adicionar índice&quot;**
+1. Clique no botão**«Adicionar índice»**
+
 2. Selecione um índice no menu suspenso (NDVI, NDRE, GNDVI, etc.)
 3. Configure as definições de visualização (cores LUT, intervalos de valores)
 4. Adicione vários índices, conforme necessário
 
-**Índices populares:**
-
-* **NDVI**: Saúde geral da vegetação (mais comum)
+**Índices populares:*** **NDVI**: Saúde geral da vegetação (mais comum)
 * **NDRE**: Detecção precoce de stress com RedEdge
 * **GNDVI**: Sensível à concentração de clorofila
 * **OSAVI**: Funciona bem com solo visível
-* **EVI**: Regiões com alto índice de área foliar (LAI)
-
-**Fórmulas personalizadas (apenas Chloros+):**
+* **EVI**: Regiões com alto índice de área foliar (LAI)**Fórmulas personalizadas (apenas Chloros+):**
 
 * Crie fórmulas de índice multiespectral personalizadas
 * Use matemática de banda com todos os canais de imagem
@@ -96,14 +95,10 @@ Para todos os índices e fórmulas disponíveis, consulte [Fórmulas de Índice 
 
 Controla o formato e a qualidade do ficheiro de saída.
 
-**Formatos disponíveis:**
-
-* **TIFF (16 bits)**: Recomendado para GIS e análise científica (intervalo de 0 a 65.535)
-* **TIFF (32 bits, porcentagem)**: Valores de refletância de ponto flutuante (intervalo de 0,0 a 1,0)
+**Formatos disponíveis:*** **TIFF (16 bits)**: Recomendado para GIS e análise científica (intervalo de 0 a 65.535)
+* **TIFF (32 bits, percentagem)**: Valores de refletância de ponto flutuante (intervalo de 0,0 a 1,0)
 * **PNG (8 bits)**: Compressão sem perdas para visualização (intervalo de 0 a 255)
-* **JPG (8 bits)**: Ficheiros menores, compressão com perdas (intervalo de 0 a 255)
-
-***
+* **JPG (8 bits)**: Ficheiros menores, compressão com perdas (intervalo de 0 a 255)***
 
 ## Guardar e carregar definições
 
@@ -112,28 +107,29 @@ Controla o formato e a qualidade do ficheiro de saída.
 Crie modelos reutilizáveis para fluxos de trabalho consistentes:
 
 1. Configure todas as definições desejadas no painel Definições do projeto
-2. Role até a secção **&quot;Guardar modelo do projeto&quot;** na parte inferior
-3. Insira um nome descritivo para o modelo (por exemplo, &quot;Survey3N\_RGN\_Agricultura&quot;)
-4. Clique no ícone Guardar
+2. Percorra até à secção **«Guardar modelo de projeto»** na parte inferior
+3. Introduza um nome descritivo para o modelo (por exemplo, «Survey3N\_RGN\_Agricultura»)
+4. Clique no ícone de guardar
 
-**Benefícios:**
+**Vantagens:**
 
 * Aplique configurações idênticas em vários projetos
 * Partilhe configurações com membros da equipa
-* Mantenha a consistência para pesquisas repetidas
+* Mantenha a consistência em levantamentos repetidos
 
-### Carregar modelo em novo projeto
+### Carregar modelo num novo projeto
 
 Ao criar um novo projeto:
 
 1. Selecione **«Novo projeto»** no menu principal
 2. Escolha a opção **«Carregar a partir do modelo»**
-3. Selecione o modelo guardado
-4. Todas as configurações são aplicadas automaticamente
+
+3. Selecione o seu modelo guardado
+4. Todas as definições são aplicadas automaticamente
 
 ### Diretório de trabalho
 
-A configuração **&quot;Guardar pasta do projeto&quot;** especifica onde os novos projetos são criados por predefinição:
+A definição **&quot;Guardar pasta do projeto&quot;** especifica onde os novos projetos são criados por predefinição:
 
 * **Localização predefinida**: `C:\Users\[Username]\Chloros Projects`
 * **Alterar localização**: Clique no ícone de edição e selecione uma nova pasta
@@ -152,24 +148,21 @@ Se estiver a utilizar gravadores MAPIR DAQ com GPS para geolocalização precisa
 
 * MAPIR DAQ com módulo GPS (GNSS)
 * Ficheiro de registo .daq com entradas de pinos de exposição
-* Câmara conectada aos pinos de exposição DAQ durante a sessão de captura
+* Câmara ligada aos pinos de exposição DAQ durante a sessão de captura
 
-### Etapas de configuração
+### Passos de configuração
 
 1. Coloque o ficheiro de registo .daq na pasta do seu projeto
-2. Em Configurações do projeto, marque a caixa de seleção **&quot;Aplicar correções PPK&quot;**
-3. Defina **&quot;Desvio de fuso horário do sensor de luz&quot;**, se necessário (padrão: 0 para UTC)
+2. Em Definições do projeto, ative a caixa de seleção **«Aplicar correções PPK»**
+
+3. Defina**&quot;Desfasamento do fuso horário do sensor de luz&quot;**, se necessário (padrão: 0 para UTC)
 4. Atribua câmaras aos pinos de exposição:
-   * **Câmara única**: Atribuída automaticamente ao pino 1
-   * **Câmaras duplas**: atribua manualmente cada câmara ao pino correto
-
-**Atribuição do pino de exposição:**
-
-* **Pino de exposição 1**: selecione o modelo da câmara no menu suspenso
-* **Pino de exposição 2**: selecione a segunda câmara ou &quot;Não usar&quot;
+   * **Câmara única**: atribuída automaticamente ao pino 1
+   * **Câmaras duplas**: atribua manualmente cada câmara ao pino correto**Atribuição do pino de exposição:*** **Pino de exposição 1**: Selecione o modelo da câmara no menu suspenso
+* **Pino de exposição 2**: Selecione a segunda câmara ou &quot;Não usar&quot;
 * A mesma câmara não pode ser atribuída a ambos os pinos
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **Importante**: Os pinos de exposição devem ser atribuídos corretamente às respetivas câmaras. A atribuição incorreta resultará em dados de geolocalização errados.
 {% endhint %}
 
@@ -181,12 +174,12 @@ Se estiver a utilizar gravadores MAPIR DAQ com GPS para geolocalização precisa
 
 Ao processar imagens de várias câmaras MAPIR num único projeto:
 
-1. Chloros deteta automaticamente cada modelo de câmara
+1. O Chloros deteta automaticamente cada modelo de câmara
 2. Cada câmara recebe o perfil de processamento adequado
 3. PPK: atribua manualmente cada câmara ao pino de exposição correto
-4. Todas as câmaras utilizam o mesmo formato de exportação e índices
+4. Todas as câmaras usam o mesmo formato de exportação e índices
 
-**Exemplo**: Survey3W RGN + Survey3N OCN equipamento de câmara dupla
+**Exemplo**: Survey3W RGN + Survey3N OCN equipamento com duas câmaras
 
 ### Levantamentos com intervalos de tempo ou em várias datas
 

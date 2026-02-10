@@ -23,7 +23,7 @@ Estas definições controlam como o Chloros deteta e processa alvos de calibraç
 * **Padrão**: 25 pixels
 * **Descrição**: Define a área mínima (em pixels) necessária para que uma região detetada seja considerada uma amostra válida de alvo de calibração. Valores menores detetarão alvos menores, mas podem aumentar os falsos positivos. Valores maiores exigem regiões-alvo maiores e mais nítidas para deteção.
 * **Quando ajustar**:
-  * Aumente se estiver a obter deteções falsas em pequenos artefactos de imagem.
+  * Aumente se estiver a obter detecções falsas em pequenos artefactos de imagem.
   * Diminua se os seus alvos de calibração parecerem pequenos nas suas imagens e não estiverem a ser detetados.
 
 ### Agrupamento mínimo de alvos (0-100)
@@ -31,16 +31,16 @@ Estas definições controlam como o Chloros deteta e processa alvos de calibraç
 * **Tipo**: Número
 * **Intervalo**: 0 a 100
 * **Padrão**: 60
-* **Descrição**: Controla o limite de agrupamento para agrupar regiões de cores semelhantes ao detetar alvos de calibração. Valores mais altos exigem que cores mais semelhantes sejam agrupadas, resultando em uma detecção de alvos mais conservadora. Valores mais baixos permitem mais variação de cores dentro de um grupo de alvos.
+* **Descrição**: Controla o limite de agrupamento para agrupar regiões de cores semelhantes ao detetar alvos de calibração. Valores mais altos exigem que cores mais semelhantes sejam agrupadas, resultando em uma deteção de alvos mais conservadora. Valores mais baixos permitem mais variação de cores dentro de um grupo de alvos.
 * **Quando ajustar**:
-  * Aumente se os alvos de calibração estiverem a ser divididos em várias detecções
-  * Diminua se os alvos de calibração com variação de cor não estiverem a ser totalmente detetados
+  * Aumente se os alvos de calibração estiverem a ser divididos em várias detecções.
+  * Diminua se os alvos de calibração com variação de cor não estiverem a ser totalmente detetados.
 
 ***
 
 ## Processamento
 
-Estas definições controlam como o Chloros processa e calibra as suas imagens.
+Estas configurações controlam como o Chloros processa e calibra as suas imagens.
 
 ### Correção de vinheta
 
@@ -54,15 +54,16 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Tipo**: Caixa de seleção
 * **Padrão**: Ativado (marcado)
 * **Descrição**: Ativa a calibração automática de refletância usando alvos de calibração detetados nas suas imagens. Isso normaliza os valores de refletância em todo o seu conjunto de dados e garante medições consistentes, independentemente das condições de iluminação.
-* **Quando desativar**: Desative apenas se pretender processar imagens brutas e não calibradas ou se estiver a utilizar um fluxo de trabalho de calibração diferente.
+* **Quando desativar**: Desative apenas se pretender processar imagens brutas, não calibradas, ou se estiver a utilizar um fluxo de trabalho de calibração diferente.
 
 ### Método Debayer
 
 * **Tipo**: Seleção suspensa
 * **Opções**:
-  * Alta qualidade (mais rápido) - Atualmente a única opção disponível
-* **Padrão**: Alta qualidade (mais rápido)
-* **Descrição**: Seleciona o algoritmo de demosaicing usado para converter dados brutos do sensor de padrão Bayer em imagens coloridas. O método &quot;Alta qualidade (mais rápido)&quot; oferece um equilíbrio ideal entre velocidade de processamento e qualidade de imagem.
+  * Padrão (rápido, qualidade média)
+  * Sensível à textura (lento, qualidade máxima) \[Chloros+]
+* **Padrão**: Padrão (rápido, qualidade média)
+* **Descrição**: Seleciona o algoritmo de demosaicing usado para converter dados brutos do sensor de padrão Bayer em imagens coloridas. O método &quot;Padrão (rápido, qualidade média)&quot; oferece um equilíbrio ideal entre velocidade de processamento e qualidade de imagem. O método &quot;Sensível à textura (lento, qualidade máxima)&quot; \[Chloros+] utiliza um debayer de alta qualidade sensível às bordas combinado com um modelo de redução de ruído AI/ML que remove quase todo o ruído do debayering. O modelo Sensível à textura requer memória GPU (VRAM) para funcionar. Recomendamos utilizá-lo quando tiver &gt;4 GB de VRAM disponível para um processamento mais rápido.
 * **Observação**: Métodos adicionais de debayer podem ser adicionados em versões futuras do Chloros.
 
 ### Intervalo mínimo de recalibração
@@ -70,18 +71,18 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 * **Tipo**: Número
 * **Intervalo**: 0 a 3.600 segundos
 * **Padrão**: 0 segundos
-* **Descrição**: Define o intervalo de tempo mínimo (em segundos) entre o uso de alvos de calibração. Quando definido como 0, o Chloros usará todos os alvos de calibração detectados. Quando definido como um valor mais alto, o Chloros usará apenas alvos de calibração separados por pelo menos esse número de segundos, reduzindo o tempo de processamento para conjuntos de dados com capturas frequentes de alvos de calibração.
+* **Descrição**: Define o intervalo de tempo mínimo (em segundos) entre a utilização de alvos de calibração. Quando definido como 0, o Chloros utilizará todos os alvos de calibração detetados. Quando definido para um valor mais alto, o Chloros utilizará apenas alvos de calibração que estejam separados por pelo menos esse número de segundos, reduzindo o tempo de processamento para conjuntos de dados com capturas frequentes de alvos de calibração.
 * **Quando ajustar**:
   * Defina como 0 para obter a máxima precisão de calibração quando as condições de iluminação variam
-  * Aumente (por exemplo, para 60-300 segundos) para um processamento mais rápido quando a iluminação é consistente e você tem imagens frequentes de alvos de calibração
+  * Aumente (por exemplo, para 60-300 segundos) para um processamento mais rápido quando a iluminação é consistente e tem imagens frequentes de alvos de calibração
 
-### Desvio de fuso horário do sensor de luz
+### Desfasamento do fuso horário do sensor de luz
 
 * **Tipo**: Número
 * **Intervalo**: -12 a +12 horas
 * **Padrão**: 0 horas
 * **Descrição**: Especifica o desvio do fuso horário (em horas a partir do UTC) para os carimbos de data/hora dos dados do sensor de luz. Isso é usado ao processar ficheiros de dados PPK (cinemática pós-processada) para garantir a sincronização correta do tempo entre as capturas de imagem e os dados GPS.
-* **Quando ajustar**: Defina isso para o desvio do fuso horário local se os seus dados PPK usarem a hora local em vez de UTC. Por exemplo:
+* **Quando ajustar**: Defina isso para o desvio do fuso horário local se os seus dados PPK usarem a hora local em vez do UTC. Por exemplo:
   * Hora do Pacífico: -8 ou -7 (dependendo do horário de verão)
   * Hora do Leste: -5 ou -4 (dependendo do horário de verão)
   * Hora da Europa Central: +1 ou +2 (dependendo do horário de verão)
@@ -90,40 +91,38 @@ Estas definições controlam como o Chloros processa e calibra as suas imagens.
 
 * **Tipo**: Caixa de seleção
 * **Padrão**: Desativado (desmarcado)
-* **Descrição**: Permite o uso de correções cinemáticas pós-processadas (PPK) de gravadores MAPIR DAQ contendo um GPS (GNSS). Quando ativado, o Chloros utilizará quaisquer ficheiros de registo .daq que contenham dados de pinos de exposição no diretório do seu projeto e aplicará correções precisas de geolocalização às suas imagens.
-* **Requisito**: o ficheiro de registo .daq com entradas de pinos de exposição deve estar presente no diretório do seu projeto
-* **Quando ativar**: recomenda-se ativar sempre a correção PPK se tiver entradas de feedback de exposição no seu ficheiro de registo .daq.
+* **Descrição**: Permite a utilização de correções cinemáticas pós-processadas (PPK) de gravadores MAPIR DAQ que contêm um GPS (GNSS). Quando ativado, o Chloros utilizará quaisquer ficheiros de registo .daq que contenham dados de pinos de exposição no diretório do seu projeto e aplicará correções precisas de geolocalização às suas imagens.
+* **Requisito**: O ficheiro de registo .daq com entradas de pinos de exposição deve estar presente no diretório do seu projeto
+* **Quando ativar**: Recomenda-se ativar sempre a correção PPK se tiver entradas de feedback de exposição no seu ficheiro de registo .daq.
 
-### Pino de exposição 1
+### Pin de exposição 1
 
 * **Tipo**: Seleção suspensa
-* **Visibilidade**: Visível apenas quando «Aplicar correções PPK» está ativado E os dados de exposição estão disponíveis para o pino 1
+* **Visibilidade**: Visível apenas quando «Aplicar correções PPK» está ativado E os dados de exposição estão disponíveis para o Pin 1
 * **Opções**:
-  * Nomes de modelos de câmaras detetados no projeto
-  * «Não usar» - Ignorar este pino de exposição
+  * Nomes dos modelos de câmaras detetados no projeto
+  * «Não usar» - Ignorar este pin de exposição
 * **Padrão**: Selecionado automaticamente com base na configuração do projeto
 * **Descrição**: Atribui uma câmara específica ao Pino de exposição 1 para sincronização de tempo PPK. O pino de exposição regista o momento exato em que o obturador da câmara é acionado, o que é fundamental para uma geolocalização PPK precisa.
 * **Comportamento de seleção automática**:
   * Câmara única + pino único: Seleciona automaticamente a câmara
   * Câmara única + dois pinos: O pino 1 é automaticamente atribuído à câmara
-  * Várias câmaras: seleção manual necessária
+  * Várias câmaras: É necessária a seleção manual
 
 ### Pino de exposição 2
 
-* **Tipo**: seleção suspensa
-* **Visibilidade**: visível apenas quando «Aplicar correções PPK» está ativado E os dados de exposição estão disponíveis para o pino 2
+* **Tipo**: Seleção suspensa
+* **Visibilidade**: Visível apenas quando «Aplicar correções PPK» está ativado E os dados de exposição estão disponíveis para o pino 2
 * **Opções**:
   * Nomes de modelos de câmaras detetados no projeto
-  * «Não usar» - Ignora este pino de exposição
+  * «Não usar» - Ignorar este pino de exposição
 * **Padrão**: Selecionado automaticamente com base na configuração do projeto
 * **Descrição**: Atribui uma câmara específica ao Pino de exposição 2 para sincronização de tempo PPK ao usar uma configuração de câmara dupla.
 * **Comportamento de seleção automática**:
   * Câmara única + pino único: Pino 2 definido automaticamente como &quot;Não usar&quot;
   * Câmara única + dois pinos: O pino 2 é automaticamente definido como &quot;Não utilizar&quot;
   * Várias câmaras: É necessária a seleção manual
-* **Nota**: A mesma câmara não pode ser atribuída simultaneamente ao pino 1 e ao pino 2.
-
-***
+* **Nota**: A mesma câmara não pode ser atribuída simultaneamente ao pino 1 e ao pino 2.***
 
 ## Índice
 
@@ -148,7 +147,7 @@ Estas definições permitem-lhe configurar índices multiespectrais para anális
 ### Fórmulas personalizadas (Recurso Chloros+)
 
 * **Tipo**: Matriz de definições de fórmulas personalizadas
-* **Descrição**: Permite criar e salvar fórmulas de índice multiespectral personalizadas usando matemática de banda. As fórmulas personalizadas são salvas com as configurações do seu projeto e podem ser usadas da mesma forma que os índices integrados.
+* **Descrição**: Permite criar e salvar fórmulas de índice multiespectral personalizadas usando matemática de banda. As fórmulas personalizadas são salvas com as configurações do seu projeto e podem ser usadas como índices integrados.
 * **Como criar**:
   1. No painel de configuração do Índice, procure a opção de fórmula personalizada
   2. Defina a sua fórmula usando identificadores de banda (por exemplo, NIR, Red, Green, Blue)
@@ -178,9 +177,7 @@ Estas definições controlam o formato e a qualidade das imagens processadas exp
   * **TIFF (16 bits)**: Recomendado para análises científicas e fluxos de trabalho profissionais. Preserva a máxima qualidade dos dados sem artefactos de compressão. Ideal para análises multiespectrais e processamento adicional em software GIS.
   * **TIFF (32 bits, percentagem)**: Ideal para fluxos de trabalho que requerem valores de refletância em percentagem (0-100%). Oferece a máxima precisão para medições radiométricas.
   * **PNG (8 bits)**: Bom para visualização na web e visualização geral. Tamanhos de ficheiro menores com compressão sem perdas, mas com gama dinâmica reduzida.
-  * **JPG (8 bits)**: Tamanhos de ficheiro menores, ideal apenas para pré-visualizações e exibição na web. Utiliza compressão com perdas, o que não é adequado para análises científicas.
-
-***
+  * **JPG (8 bits)**: Tamanhos de ficheiro menores, ideal apenas para pré-visualizações e exibição na web. Utiliza compressão com perdas, o que não é adequado para análises científicas.***
 
 ## Guardar modelo de projeto
 
@@ -195,7 +192,7 @@ Esta funcionalidade permite-lhe guardar as definições atuais do seu projeto co
 * **Como usar**:
   1. Configure todas as configurações desejadas do projeto
   2. Introduza um nome para o modelo (por exemplo, «RedEdge Survey3 NDVI Padrão»)
-  3. Clique no ícone de guardar
+  3. Clique no ícone Guardar
   4. O modelo pode agora ser carregado ao criar novos projetos
 
 ***
@@ -208,16 +205,14 @@ Esta configuração especifica onde os novos projetos são guardados por predefi
 * **Predefinição**: `C:\Users\[Username]\Chloros Projects`
 * **Descrição**: Mostra o diretório predefinido atual onde os novos projetos Chloros são criados. Clique no ícone Editar para selecionar um diretório diferente.
 * **Quando alterar**:
-  * Defina como uma unidade de rede para colaboração em equipa
+  * Defina para uma unidade de rede para colaboração em equipa
   * Altere para uma unidade com mais espaço de armazenamento para grandes conjuntos de dados
   * Organize projetos por ano, cliente ou tipo de projeto em pastas diferentes
-* **Observação**: alterar esta configuração afeta apenas NOVOS projetos. Os projetos existentes permanecem em seus locais originais.
-
-***
+* **Observação**: alterar esta configuração afeta apenas NOVOS projetos. Os projetos existentes permanecem nos seus locais originais.***
 
 ## Persistência das configurações
 
-Todas as configurações do projeto são salvas automaticamente com o seu ficheiro de projeto (formato de projeto `.mapir`). Quando reabre um projeto, todas as configurações são restauradas exatamente como as deixou.
+Todas as configurações do projeto são salvas automaticamente com o ficheiro do projeto (formato de projeto `.mapir`). Quando reabre um projeto, todas as configurações são restauradas exatamente como as deixou.
 
 ### Hierarquia das configurações
 
@@ -230,7 +225,7 @@ As configurações são aplicadas na seguinte ordem:
 
 ### Definições e processamento de imagens
 
-A maioria das alterações nas definições (especialmente nas categorias Processamento e Exportação) irá desencadear o reprocessamento das imagens para refletir as novas definições. No entanto, algumas configurações são &quot;somente para exportação&quot; e não requerem reprocessamento imediato:
+A maioria das alterações nas definições (especialmente nas categorias Processamento e Exportação) irá desencadear o reprocessamento das imagens para refletir as novas definições. No entanto, algumas definições são «apenas para exportação» e não requerem reprocessamento imediato:
 
 * Guardar modelo do projeto
 * Diretório de trabalho
@@ -240,11 +235,11 @@ A maioria das alterações nas definições (especialmente nas categorias Proces
 
 ## Melhores práticas
 
-1. **Comece com as predefinições**: as configurações padrão funcionam bem para a maioria dos sistemas de câmaras MAPIR e fluxos de trabalho típicos.
-2. **Crie modelos**: Depois de otimizar as configurações para um fluxo de trabalho ou câmara específica, guarde-as como um modelo para garantir a consistência entre os projetos.
-3. **Teste antes do processamento completo**: Ao experimentar novas configurações, teste num pequeno subconjunto de imagens antes de processar todo o conjunto de dados.
-4. **Documente as suas configurações**: use nomes de modelos descritivos que indiquem o sistema de câmaras, o tipo de processamento e o uso pretendido (por exemplo, &quot;Survey3\_RGB\_NDVI\_Agricultura&quot;).
-5. **Seleção do formato de exportação**: Escolha o formato de exportação com base na sua utilização final:
+1. **Comece com as predefinições**: As definições predefinidas funcionam bem para a maioria dos sistemas de câmaras MAPIR e fluxos de trabalho típicos.
+2. **Crie modelos**: Depois de otimizar as definições para um fluxo de trabalho ou câmara específicos, guarde-as como um modelo para garantir a consistência entre projetos.
+3. **Teste antes do processamento completo**: Ao experimentar novas configurações, teste em um pequeno subconjunto de imagens antes de processar todo o conjunto de dados.
+4. **Documente as suas configurações**: Use nomes de modelos descritivos que indiquem o sistema de câmera, o tipo de processamento e o uso pretendido (por exemplo, &quot;Survey3\_RGB\_NDVI\_Agricultura&quot;).
+5. **Seleção do formato de exportação**: escolha o formato de exportação com base na sua utilização final:
    * Análise científica → TIFF (16 bits ou 32 bits)
    * Processamento GIS → TIFF (16 bits)
    * Visualização rápida → PNG (8 bits)

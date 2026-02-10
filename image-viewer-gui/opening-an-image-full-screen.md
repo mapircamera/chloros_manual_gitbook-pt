@@ -1,6 +1,6 @@
 # Abrir uma imagem em ecrã inteiro
 
-O Visualizador de Imagens Chloros oferece uma interface dedicada em ecrã inteiro para visualizar, analisar e manipular as suas imagens multiespectrais. Seja para visualizar imagens originais ou resultados processados, o Visualizador de Imagens oferece ferramentas poderosas para inspeção e análise.
+O Visualizador de Imagens Chloros fornece uma interface dedicada em ecrã inteiro para visualizar, analisar e manipular as suas imagens multiespectrais. Quer esteja a visualizar imagens originais ou resultados processados, o Visualizador de Imagens oferece ferramentas poderosas para inspeção e análise.
 
 ## Aceder ao Visualizador de Imagens
 
@@ -18,23 +18,21 @@ A forma mais comum de abrir uma imagem no Visualizador de Imagens:
 Depois de uma imagem ser carregada na área de pré-visualização:
 
 1. Clique no ícone **Visualizador de Imagens** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> na barra lateral esquerda
-2. O separador Visualizador de imagens abre, exibindo a imagem selecionada em ecrã inteiro
+2. A guia Visualizador de Imagens é aberta, exibindo a imagem selecionada em tela cheia
 3. Ferramentas avançadas de visualização e análise ficam disponíveis na barra lateral esquerda
 
 ***
 
-## Visão geral da interface do Visualizador de imagens
+## Visão geral da interface do Visualizador de Imagens
 
 ### Área de exibição principal
 
-A maior parte do ecrã mostra a sua imagem:
+A maior parte da tela mostra a sua imagem:
 
 * **Resolução total**: imagens exibidas na resolução nativa
 * **Zoom**: use os controlos ou a roda do rato para ampliar
-* **Panorâmica**: clique e arraste para se mover quando ampliar
-* **Proporção mantida**: as imagens são dimensionadas proporcionalmente
-
-***
+* **Deslocamento**: clique e arraste para se deslocar quando ampliar
+* **Proporção mantida**: as imagens são dimensionadas proporcionalmente***
 
 ## Opções de visualização
 
@@ -42,25 +40,20 @@ A maior parte do ecrã mostra a sua imagem:
 
 #### Navegar pelas imagens
 
-Navegue pelo seu conjunto de imagens usando atalhos de teclado ou botões:
+Navegue pelo seu conjunto de imagens usando atalhos do teclado ou botões:
 
-* **Imagem seguinte**: Clique no botão → ou pressione a tecla **→** (seta para a direita)
-* **Imagem anterior**: Clique no botão ← ou pressione a tecla **←** (seta para a esquerda)
+* **Próxima imagem**: Clique no botão → ou pressione a tecla**→** (seta para a direita)
+* **Imagem anterior**: Clique no botão ← ou pressione a tecla**←** (seta para a esquerda)
 * **Ir para uma imagem específica**: Volte ao Navegador de ficheiros e clique na miniatura desejada
 
 #### Controlos de zoom
 
 Ajuste a ampliação para inspecionar os detalhes da imagem:
 
-**Ampliar:**
+**Ampliar:*** Clique no botão **+** (Mais)
+* Pressione a tecla **+**ou**=*** Role a roda do rato **para cima**
 
-* Clique no botão **+** (Mais)
-* Pressione a tecla **+** ou **=**
-* Role a roda do rato **para cima**
-
-**Reduzir:**
-
-* Clique no botão **−** (Menos)
+**Reduzir:*** Clique no botão **−** (Menos)
 * Pressione a tecla **−** (Menos)
 * Role a roda do rato **para baixo**
 
@@ -70,25 +63,17 @@ Quando ampliado além do tamanho da tela:
 
 1. Mova o cursor do mouse sobre a imagem
 2. Clique e **mantenha pressionado o botão esquerdo do mouse**
-3. **Arraste** para mover a imagem
+
+3.**Arraste** para mover a imagem
 4. Solte para parar o deslocamento
 
-**Alternativa**: Use as teclas de seta para deslocar em pequenos incrementos
-
-***
+**Alternativa**: Use as teclas de seta para deslocar em pequenos incrementos***
 
 ## Inspeção do valor dos pixels
 
 ### Visualização dos valores dos pixels no cursor
 
-À medida que move o cursor do rato sobre a imagem, os valores dos pixels são exibidos em tempo real:
-
-**Localização da exibição do valor:**
-
-* **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito**
-* **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado**
-* Mostra os valores dos pixels **sob o cursor ou destacados**
-* Atualiza à medida que move o rato
+À medida que move o cursor do rato sobre a imagem, os valores dos pixels são exibidos em tempo real:**Localização da exibição do valor:*** **Número flutuante e linha vermelha na legenda do gradiente LUT do índice do lado direito*** **Quando ampliado ainda mais, valor flutuante próximo ao cursor e pixel destacado*** Mostra os valores dos pixels **sob o cursor ou destacados*** Atualiza à medida que move o rato
 
 ***
 
@@ -98,7 +83,7 @@ Quando ampliado além do tamanho da tela:
 
 **Imagens JPG da câmara:**
 
-* Exibe os dados JPG conforme pré-visualizados
+* Exibe os dados JPG conforme visualizados
 * Mostra os valores originais, não corrigidos
 * Útil para verificar a qualidade da imagem antes do processamento
 
@@ -119,7 +104,7 @@ Quando ampliado além do tamanho da tela:
 
 * Imagens em escala de cinza de banda única
 * Os valores dos pixels representam os resultados do cálculo do índice
-* Intervalo normalmente de -1 a +1 para índices normalizados
+* Faixa normalmente de -1 a +1 para índices normalizados
 * É possível aplicar LUTs de cor para visualização
 
 ***
@@ -149,11 +134,9 @@ Consulte [Index/LUT Sandbox](index-lut-sandbox.md) para obter instruções detal
 
 ### Zoom
 
-* **+** ou **=**: Ampliar
+* **+**ou**=**: Ampliar
 * **−**: Reduzir
-* **Roda do rato**: Ampliar/reduzir
-
-***
+* **Roda do rato**: Ampliar/reduzir***
 
 ### Verificar cálculos de índice
 
@@ -166,9 +149,7 @@ Verifique se os índices foram calculados corretamente:
    * **GNDVI**: Semelhante ao NDVI, mas sensível à clorofila
 3. Verifique a não vegetação:
    * **Solo**: Perto de 0 ou ligeiramente negativo
-   * **Água**: Valores negativos (-0,5 a 0)
-
-***
+   * **Água**: Valores negativos (-0,5 a 0)***
 
 ## Resolução de problemas de visualização
 
@@ -223,8 +204,8 @@ Verifique se os índices foram calculados corretamente:
 Agora que pode visualizar imagens em ecrã inteiro:
 
 * [**Camadas de imagem**](image-layers.md) - Saiba mais sobre visualização multibanda
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Aplique índices personalizados e mapeamento de cores
-* [**Fórmulas de Índice Multiespectral**](../project-settings/multispectral-index-formulas.md) - Compreenda os índices disponíveis
+* [**Sandbox de índice/LUT**](index-lut-sandbox.md) - Aplique índices personalizados e mapeamento de cores
+* [**Fórmulas de Índice Multiespectral**](../project-settings/multispectral-index-formulas.md) - Entenda os índices disponíveis
 
 Para o fluxo de trabalho de processamento, consulte:
 
