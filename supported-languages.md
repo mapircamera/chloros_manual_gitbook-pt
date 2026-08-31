@@ -1,12 +1,12 @@
 # Idiomas suportados
 
-O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a utilizadores de todo o mundo. Pode alternar de idioma instantaneamente em todas as interfaces: Ambiente de trabalho, Navegador, CLI e Python SDK.
+O Chloros oferece suporte completo à interface em **38 idiomas em todo o mundo**, tornando-o acessível a utilizadores de todo o mundo. É possível alternar de idioma instantaneamente, tanto na interface gráfica do ambiente de trabalho como no CLI.
 
 O Chloros suporta os seguintes idiomas:
 
-| # | Idioma | Nome nativo | Código CLI |
+| # | Idioma | Nome nativo | Código do CLI |
 |---|----------|-------------|----------|
-| 1 | 🇺🇸 Inglês | Inglês | `en` |
+| 1 | 🇺🇸 Inglês | English | `en` |
 | 2 | 🇪🇸 Espanhol | Español | `es` |
 | 3 | 🇵🇹 Português | Português | `pt` |
 | 4 | 🇫🇷 Francês | Français | `fr` |
@@ -14,8 +14,8 @@ O Chloros suporta os seguintes idiomas:
 | 6 | 🇮🇹 Italiano | Italiano | `it` |
 | 7 | 🇯🇵 Japonês | 日本語 | `ja` |
 | 8 | 🇰🇷 Coreano | 한국어 | `ko` |
-| 9 | 🇨🇳 Chinês (Simplificado) | 简体中文 | `zh` |
-| 10 | 🇹🇼 Chinês (Tradicional) | 繁體中文 | `zh-TW` |
+| 9 | 🇨🇳 Chinês (simplificado) | 简体中文 | `zh` |
+| 10 | 🇹🇼 Chinês (tradicional) | 繁體中文 | `zh-TW` |
 | 11 | 🇷🇺 Russo | Русский | `ru` |
 | 12 | 🇳🇱 Holandês | Nederlands | `nl` |
 | 13 | 🇸🇦 Árabe | العربية | `ar` |
@@ -47,7 +47,7 @@ O Chloros suporta os seguintes idiomas:
 
 ## Como alterar o idioma
 
-### No Chloros Desktop/Navegador
+### No Chloros Desktop
 
 1. Abra as definições da aplicação
 2. Aceda ao menu de seleção de idioma
@@ -56,7 +56,7 @@ O Chloros suporta os seguintes idiomas:
 
 ### No Chloros CLI
 
-Utilize o comando `language` para visualizar ou alterar o idioma da interface CLI:
+Utilize o comando `language` para visualizar ou alterar o idioma da interface do CLI:
 
 ```bash
 # View current language
@@ -75,19 +75,15 @@ chloros-cli language pt-BR
 chloros-cli language --list
 ```
 
-Para mais detalhes, consulte a [documentação CLI](CLI.md).
-
-### No Chloros Python SDK
-
-Defina o parâmetro de idioma ao inicializar o SDK para obter mensagens e saídas no seu idioma preferido.
+Para mais detalhes, consulte a [documentação do CLI](CLI.md).
 
 ## Cobertura
 
 Todos os 38 idiomas são totalmente suportados em:
 
 * **Chloros Desktop** - Tradução completa da GUI
-* **Chloros Browser** - Interface web em todos os idiomas
-* **Chloros CLI** - Interface de linha de comando e mensagens de saída
-* **Chloros Python SDK** - Mensagens e documentação
+* **Chloros CLI** - Interface de linha de comandos e mensagens de saída
 
-O suporte a idiomas garante que utilizadores de todo o mundo possam trabalhar de forma eficiente na sua língua nativa, sem barreiras.
+O Python SDK API e a sua [documentação de referência](reference/sdk-reference.md) são fornecidos em inglês.
+
+O suporte a vários idiomas garante que os utilizadores de todo o mundo possam trabalhar de forma eficiente na sua língua nativa, sem barreiras.
