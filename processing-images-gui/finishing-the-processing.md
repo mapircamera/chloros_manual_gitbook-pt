@@ -1,7 +1,6 @@
 # Conclusão do processamento
 
-Assim que o Chloros
-concluir o processamento, é altura de analisar os resultados, verificar a qualidade da saída e preparar as imagens processadas para utilização no seu fluxo de trabalho. Esta página orienta-o através dos passos finais e das próximas ações.
+Assim que o Chloros concluir o processamento, é altura de analisar os resultados, verificar a qualidade da saída e preparar as imagens processadas para utilização no seu fluxo de trabalho. Esta página orienta-o através dos passos finais e das próximas ações.
 
 ## Indicação de conclusão do processamento
 
@@ -13,10 +12,7 @@ Quando o processamento terminar com sucesso, verá vários indicadores:
 * ✅ **Ficheiros de saída**: Todas as imagens processadas são guardadas na árvore de saída do projeto (abaixo)
 
 {% hint style="warning" %}
-**Uma execução que não grava imagens é considerada uma falha.** Se solicitou produtos de imagem e a execução não gravou nenhum, o Chloros
-reporta-a como uma falha — o `[RUN-SUMMARY]` no nome do registo sugere a causa provável (nada importado, nenhum alvo detetado ou todos os produtos solicitados ignorados por serem inaplicáveis). O equivalente na CLI
-sai com um valor diferente de zero. Uma execução deliberada apenas com metadados (todos os produtos de exportação desativados, sem índices) continua a ser considerada bem-sucedida. Consulte [a Referência da CLI
-](../reference/cli-reference.md#a-run-that-writes-no-images-fails).
+**Uma execução que não grava imagens é considerada uma falha.** Se solicitou produtos de imagem e a execução não gravou nenhum, o Chloros reporta-a como uma falha — o `[RUN-SUMMARY]` no nome do registo sugere a causa provável (nada importado, nenhum alvo detetado ou todos os produtos solicitados ignorados por serem inaplicáveis). O equivalente na CLI sai com um valor diferente de zero. Uma execução deliberada apenas com metadados (todos os produtos de exportação desativados, sem índices) continua a ser considerada bem-sucedida. Consulte [a Referência da CLI](../reference/cli-reference.md#a-run-that-writes-no-images-fails).
 {% endhint %}
 
 ***
@@ -48,10 +44,8 @@ Os produtos são guardados **na pasta do projeto, agrupados por câmara e, em se
         └── Radiance_Images/             # float32 radiance always lands here
 ```
 
-* **Pasta da câmara**: `LATT-<sensor>-<lens>-F<filter>` para a LATTICE (correspondendo ao EXIF da captura `Model`), `<model>_<filter>` para o Survey3
-(por exemplo, `Survey3N_RGN`). Duas câmaras que partilham um sensor e um filtro, mas que têm lentes diferentes, mantêm árvores separadas — a vinheta, o campo de visão e a distorção diferem.
-* **Pasta de formato**: segue a sua configuração de formato de exportação — `tiff16`, `tiff8`, `png8`, `jpg8`, ou `tiff32` para TIFF
-(32 bits, Porcentagem). A radianância é sempre float32 e é sempre guardada em `tiff32`.
+* **Pasta da câmara**: `LATT-<sensor>-<lens>-F<filter>` para a LATTICE (correspondendo ao EXIF da captura `Model`), `<model>_<filter>` para o Survey3 (por exemplo, `Survey3N_RGN`). Duas câmaras que partilham um sensor e um filtro, mas que têm lentes diferentes, mantêm árvores separadas — a vinheta, o campo de visão e a distorção diferem.
+* **Pasta de formato**: segue a sua configuração de formato de exportação — `tiff16`, `tiff8`, `png8`, `jpg8`, ou `tiff32` para TIFF (32 bits, Porcentagem). A radianância é sempre float32 e é sempre guardada em `tiff32`.
 * **Pastas de produtos**:
   * `Reflectance_Calibrated_Images/` — refletância calibrada
   * `Debayered_Images/` — sem debayering linear (LATTICE): desvio de escuridão removido e sem demosaico, sem campo plano nem desmistura, na orientação nativa do sensor
@@ -70,8 +64,7 @@ Os produtos são guardados **na pasta do projeto, agrupados por câmara e, em se
 
 ### Quantos ficheiros devem existir?
 
-Não conte com base numa fórmula — o número de resultados depende dos produtos que foram ativados e dos que se aplicam a cada câmara (por exemplo, as câmaras RGB
-não têm radiação/refletância). A contagem oficial encontra-se no registo: a linha final `[RUN-SUMMARY]` indica exatamente quantos ficheiros foram gravados, e as linhas de sugestão explicam tudo o que foi omitido.
+Não conte com base numa fórmula — o número de resultados depende dos produtos que foram ativados e dos que se aplicam a cada câmara (por exemplo, as câmaras RGB não têm radiação/refletância). A contagem oficial encontra-se no registo: a linha final `[RUN-SUMMARY]` indica exatamente quantos ficheiros foram gravados, e as linhas de sugestão explicam tudo o que foi omitido.
 
 ***
 
@@ -79,8 +72,7 @@ não têm radiação/refletância). A contagem oficial encontra-se no registo: a
 
 ### Pré-visualização rápida no Explorador de Ficheiros
 
-**Pré-visualização integrada do Windows
-:**
+**Pré-visualização integrada do Windows:**
 
 1. Navegue até uma pasta de produtos (por exemplo, `tiff16/Reflectance_Calibrated_Images/`)
 2. Selecione um ficheiro de imagem
@@ -91,19 +83,15 @@ não têm radiação/refletância). A contagem oficial encontra-se no registo: a
 ### Pré-visualização em visualizadores de imagens externos
 
 **Visualizadores recomendados:*** **QGIS** - Software SIG gratuito (ideal para análise multiespectral georreferenciada)
-* **IrfanView** - Visualizador de imagens rápido e leve (suporta TIFF
-)
-* **Adobe Photoshop** - Edição profissional (suporte a TIFF
-)
+* **IrfanView** - Visualizador de imagens rápido e leve (suporta TIFF)
+* **Adobe Photoshop** - Edição profissional (suporte a TIFF)
 * **GIMP** - Alternativa gratuita ao Photoshop
-* **Fotos do Windows** - Visualização básica (pode não suportar TIFF
-de 16 bits)
+* **Fotos do Windows** - Visualização básica (pode não suportar TIFF de 16 bits)
 
 ### Pré-visualização no Visualizador de Imagens do Chloros
 
 
-Utilize o Visualizador de Imagens integrado do Chloros
-para uma visualização avançada:
+Utilize o Visualizador de Imagens integrado do Chloros para uma visualização avançada:
 
 1. Clique numa miniatura de imagem no Navegador de Ficheiros
 2. A imagem abre-se na área principal de pré-visualização
@@ -122,9 +110,7 @@ A refletância é armazenada como um valor inteiro DN, e **o valor de DN que cor
 | Origem          | ρ = 1,0 corresponde a | Como determinar                                        |
 | --------------- | ---------- | -------------------------------------------------- |
 | LATTICE (M3C/M3M) | **32768** (margem até ρ 2,0) | A etiqueta XMP `Chloros:PixelScale=32768` está inserida no ficheiro |
-| Survey3
-         | **65535** (limitado a ρ 1,0)     | Não existe a etiqueta `Chloros:PixelScale` — essa ausência é o indício (os produtos Survey3
-incluem outras etiquetas de processamento `Chloros:*`) |
+| Survey3          | **65535** (limitado a ρ 1,0)     | Não existe a etiqueta `Chloros:PixelScale` — essa ausência é o indício (os produtos Survey3 incluem outras etiquetas de processamento `Chloros:*`) |
 
 **Leia a etiqueta `Chloros:PixelScale` e divida por esse valor**, em vez de assumir um valor genérico de 65535 — dividir a refletância do LATTICE por 65535 reduz silenciosamente todos os valores para metade. Um ficheiro de refletância anterior à versão 1.3.0, gravado em 8 bits, foi cortado, não redimensionado, e não possui qualquer etiqueta de escala: reexporte-o em 16 bits ou 32 bits, em vez de o dividir. Consulte [Formatos de Imagem de Saída](../output-image-formats.md) para obter a informação completa.***
 
@@ -152,15 +138,11 @@ corrompe a saída do LATTICE), e as etiquetas `ExifImageWidth` / `ExifImageHeigh
 porque descrevem a captura original — uma exportação que foi redimensionada acabaria, de outra forma,
 por reivindicar dimensões que o seu próprio raster contradiz.
 
-O Chloros
-também grava as suas próprias etiquetas XMP `Chloros:*`, que descrevem o que foi feito a cada produto
+O Chloros também grava as suas próprias etiquetas XMP `Chloros:*`, que descrevem o que foi feito a cada produto
 (por exemplo, `Chloros:ProcessingLevel`, `Chloros:CalibrationApplied`,
-`Chloros:VignetteCorrected`). A partir da versão 1.3.0, os produtos do Survey3
-incluem-nas em todos os modos de processamento
-; os produtos de índice descrevem o próprio índice (`Chloros:ProcessingLevel=index`, a
+`Chloros:VignetteCorrected`). A partir da versão 1.3.0, os produtos do Survey3 incluem-nas em todos os modos de processamento; os produtos de índice descrevem o próprio índice (`Chloros:ProcessingLevel=index`, a
 fórmula e se foi calculado a partir da refletância ou da radianância), em vez de repetirem as
-etiquetas dos dados brutos de origem; e os produtos em pastas com nomes com mais de 260 caracteres também mantêm os seus metadados
-. Consulte [Formatos de Imagem de Saída](../output-image-formats.md#index-products).
+etiquetas dos dados brutos de origem; e os produtos em pastas com nomes com mais de 260 caracteres também mantêm os seus metadados. Consulte [Formatos de Imagem de Saída](../output-image-formats.md#index-products).
 
 ***
 
@@ -173,23 +155,19 @@ etiquetas dos dados brutos de origem; e os produtos em pastas com nomes com mais
 2. Percorra as mensagens
 3. Procure avisos a amarelo ou erros a vermelho
 4. Leia as linhas `[RUN-SUMMARY]` e quaisquer sugestões
-5. Contacte o suporte da MAPIR
-para obter assistência
+5. Contacte o suporte da MAPIR para obter assistência
 
 ### Guardar o registo
 
-Para manter um registo do processamento ou para enviar ao Suporte da MAPIR
-:
+Para manter um registo do processamento ou para enviar ao Suporte da MAPIR:
 
 1. Clique no botão **«Copiar»**ou**«Descarregar»**
 
 2. Guarde como ficheiro de texto na pasta do projeto
 3. Inclua-o na documentação do projeto
-4. Envie para o suporte da MAPIR
-caso surjam problemas
+4. Envie para o suporte da MAPIR caso surjam problemas
 
-Para enviar um problema diretamente à MAPIR
-, utilize o ícone de bug (**Reportar um bug**) na parte superior do separador «Registo de Depuração» — consulte [Reportar um bug a partir do separador «Registo de Depuração»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Para enviar um problema diretamente à MAPIR, utilize o ícone de bug (**Reportar um bug**) na parte superior do separador «Registo de Depuração» — consulte [Reportar um bug a partir do separador «Registo de Depuração»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
 
 ## Problemas comuns de saída e soluções
 
@@ -197,8 +175,7 @@ Para enviar um problema diretamente à MAPIR
 
 **Possíveis causas:**
 
-* O produto não se aplica a essa câmara (por exemplo, radianância/refletância para câmaras RGB
-— o registo indica isso)
+* O produto não se aplica a essa câmara (por exemplo, radianância/refletância para câmaras RGB — o registo indica isso)
 * Faltava uma referência obrigatória (por exemplo, refletância sem alvo e sem `.daq` de radiação descendente)
 * A caixa de seleção de exportação do produto estava desativada nas «Definições do projeto»
 * Esgotou-se o espaço em disco durante a exportação
@@ -223,8 +200,7 @@ Para enviar um problema diretamente à MAPIR
 
 1. Verifique se a correção de vinheta estava ativada nas Definições do projeto
 2. Verifique se o modelo da câmara foi detetado corretamente
-3. Contacte o suporte da MAPIR
-se a vinheta persistir
+3. Contacte o suporte da MAPIR se a vinheta persistir
 
 ### Problema: Cores ou valores incorretos
 
@@ -242,11 +218,9 @@ se a vinheta persistir
 3. Analise a qualidade das imagens dos alvos
 4. Reprocesse com os alvos adequados marcados
 
-### Problema: Os valores de NDVI
-parecem estar errados
+### Problema: Os valores de NDVI parecem estar errados
 
-**Intervalos de NDVI
-esperados:*** **Água, rochas, solo**: -0,1 a 0,2
+**Intervalos de NDVI esperados:*** **Água, rochas, solo**: -0,1 a 0,2
 * **Vegetação escassa/doente**: 0,2 a 0,4
 * **Vegetação moderada**: 0,4 a 0,6
 * **Vegetação saudável e densa**: 0,6 a 0,9**Se os valores estiverem fora destes intervalos:**
@@ -273,10 +247,8 @@ esperados:*** **Água, rochas, solo**: -0,1 a 0,2
    * WebODM
 2. **Conservar os metadados EXIF**: Certifique-se de que os dados GPS são preservados para georreferenciamento
 3. **Fluxos de trabalho calibrados**: Utilize imagens de refletância para obter precisão científica — a refletância LATTICE contém as etiquetas de calibração XMP que o Pix4D lê
-4. **Processar mosaicos de índice**: Crie ortomosaicos NDVI
-a partir de imagens de índice individuais
-5. **Exportar GeoTIFF
-georreferenciado**: Para utilização em aplicações SIG
+4. **Processar mosaicos de índice**: Crie ortomosaicos NDVI a partir de imagens de índice individuais
+5. **Exportar GeoTIFF georreferenciado**: Para utilização em aplicações SIG
 
 ### Para análise SIG
 
@@ -284,11 +256,8 @@ georreferenciado**: Para utilização em aplicações SIG
 
 1.**Carregar no QGIS, ArcGIS ou similar**
 
-2.**Utilize imagens de refletância TIFF
-de 16 bits** para análise multibanda (divida pelo valor `Chloros:PixelScale` do ficheiro)
-3. **Utilize imagens de índice** (NDVI
-, NDRE
-) como camadas de vegetação prontas a utilizar
+2.**Utilize imagens de refletância TIFF de 16 bits** para análise multibanda (divida pelo valor `Chloros:PixelScale` do ficheiro)
+3. **Utilize imagens de índice** (NDVI, NDRE) como camadas de vegetação prontas a utilizar
 4. **Calculadora raster**: Combine bandas para análises personalizadas
 5. **Exportar**: Crie mapas de classificação, deteção de alterações e mapas de saúde da vegetação
 
@@ -297,8 +266,7 @@ de 16 bits** para análise multibanda (divida pelo valor `Chloros:PixelScale` do
 **Fluxo de trabalho recomendado:**
 
 1.**Utilize imagens de índice com cores LUT** para relatórios visuais
-2. **Extrair estatísticas**: NDVI
-médio por campo/parcela
+2. **Extrair estatísticas**: NDVI médio por campo/parcela
 3. **Séries temporais**: Comparar índices entre várias sessões
 4. **Gerar relatórios**: Incluir mapas, estatísticas e visualizações***
 
@@ -335,27 +303,17 @@ Para várias sessões/conjuntos de dados:**Opção 1: GUI - Vários projetos**
 * Utilize definições de modelo consistentes
 * Processe um de cada vez
 
-**Opção 2: Chloros
-CLI
-(apenas Chloros
-+)**
+**Opção 2: Chloros CLI (apenas Chloros+)**
 
 * Automatizar o processamento em lote
 * Processar várias pastas com scripts
-* Consulte a [Documentação da CLI
-](../CLI.md) e a [Referência da CLI
-](../reference/cli-reference.md)
+* Consulte a [Documentação da CLI](../CLI.md) e a [Referência da CLI](../reference/cli-reference.md)
 
-**Opção 3: SDK
-Python do Python
-(apenas Chloros
-+)**
+**Opção 3: SDK Python do Python (apenas Chloros+)**
 
 * Controlo programático
 * Integração com pipelines de análise
-* Consulte a [Documentação da API
-](../api-python-sdk.md) e a [Referência do SDK
-](../reference/sdk-reference.md)
+* Consulte a [Documentação da API](../api-python-sdk.md) e a [Referência do SDK](../reference/sdk-reference.md)
 
 ***
 
@@ -386,15 +344,13 @@ Se tiver problemas:
 * 📧 **E-mail**: info@mapir.camera (inclua o registo de depuração)
 * 🌐 **Suporte**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Perguntas frequentes**: [Perguntas frequentes](../faq.md)
-* 📖 **Documentação**: [Manual do Chloros
-](../)
+* 📖 **Documentação**: [Manual do Chloros](../)
 
 ***
 
 ## Resumo: Fluxo de trabalho completo
 
-Concluiu agora o fluxo de trabalho completo de processamento do Chloros
-:
+Concluiu agora o fluxo de trabalho completo de processamento do Chloros:
 
 1. ✅ **Projeto criado** - Consulte [Projetos](../projects.md)
 2. ✅ **Adicionou ficheiros** - Consulte [Adicionar ficheiros](adding-files-to-a-project.md)
@@ -417,11 +373,8 @@ Concluiu agora o fluxo de trabalho completo de processamento do Chloros
 ### Automatização e integração
 
 * [**Documentação da CLI**](../CLI.md) - Processamento em lote na linha de comandos
-* [**Python
-SDK
-**](../api-python-sdk.md) - Automatização programática
-* [**Funcionalidades do Chloros
-+**](../#chloros) - Capacidades avançadas de processamento
+* [**Python SDK**](../api-python-sdk.md) - Automatização programática
+* [**Funcionalidades do Chloros+**](../#chloros) - Capacidades avançadas de processamento
 
 ### Suporte e Formação
 

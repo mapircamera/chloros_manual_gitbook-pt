@@ -84,7 +84,7 @@ Cada imagem com dados GPS recebe um marcador nas suas coordenadas.
 
 Escolha o tipo de camada de mapa com os botões (da esquerda para a direita):
 
-![](&lt;../.gitbook/assets/image (14).png&gt;)
+![](<../.gitbook/assets/image (14).png>)
 
 | Tipo                 | Mostra                                                                |
 | -------------------- | -------------------------------------------------------------------- |

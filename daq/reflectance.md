@@ -2,14 +2,12 @@
 
 Um sensor de luz DAQ transforma imagens radiométricas em refletância. Existem dois fluxos de trabalho distintos:
 
-1. **Sensor único** — um DAQ mede a irradiância descendente enquanto uma câmara captura a imagem, e o Chloros
-divide a radianância da câmara por essa referência.
+1. **Sensor único** — um DAQ mede a irradiância descendente enquanto uma câmara captura a imagem, e o Chloros divide a radianância da câmara por essa referência.
 2. **Sensor duplo** — dois sensores DAQ, um a monitorizar o céu e outro a monitorizar um objeto, produzem uma curva de refletância espectral em tempo real sem o envolvimento de uma câmara.
 
 ## Sensor único + câmara (referência descendente)
 
-O DAQ funciona como sensor de luz descendente (DLS): a câmara mede a radianância ascendente **L**(W/m²/sr/nm), o DAQ mede a irradiância descendente**E** (W/m²/nm) e o Chloros
-calcula a refletância por banda da seguinte forma:
+O DAQ funciona como sensor de luz descendente (DLS): a câmara mede a radianância ascendente **L**(W/m²/sr/nm), o DAQ mede a irradiância descendente**E** (W/m²/nm) e o Chloros calcula a refletância por banda da seguinte forma:
 
 > ρ = π · L / E
 
@@ -24,8 +22,7 @@ Associe o DAQ a uma câmara no separador «Câmaras»: o painel de definições 
 
 Dois comportamentos que vale a pena conhecer:
 
-* **Sem ligação ao DAQ → a refletância é recusada, não simulada.** O Chloros
-rejeita o produto de refletância e regista o motivo da omissão, em vez de devolver silenciosamente um produto inferior.
+* **Sem ligação ao DAQ → a refletância é recusada, não simulada.** O Chloros rejeita o produto de refletância e regista o motivo da omissão, em vez de devolver silenciosamente um produto inferior.
 * **A leitura utilizada é preservada.** Para cada fotograma de refletância, a leitura do DAQ efetivamente aplicada é gravada como um ficheiro `.daq` na pasta `daq/` das capturas, para que a captura possa ser reprocessada posteriormente ([Gravação e o formato .daq](recording.md)). Um ficheiro `.daq.cameras.json` ao lado identifica as câmaras a que se refere, e o reprocessamento associa-o apenas às imagens dessas câmaras.
 
 ### Processamento de imagens gravadas
@@ -41,21 +38,15 @@ A referência de refletância é selecionável no momento do processamento — `
 | `daq` | DAQ como autoridade |
 | `target` | Alvo estritamente dentro do quadro; sem substituição por DAQ |
 
-Consulte [Alvos de Calibração](../calibration-targets.md) para fluxos de trabalho de alvos e o [capítulo LATTICE](../lattice/README.md), bem como a [Referência CLI
-](../reference/cli-reference.md) para o pipeline de processamento completo. Ao ler os píxeis de refletância exportados, utilize a escala indicada (LATTICE: 32768 = ρ 1,0, XMP `Chloros:PixelScale`; Survey3
-: 65535) — consulte [Formatos de imagem de saída](../output-image-formats.md).
+Consulte [Alvos de Calibração](../calibration-targets.md) para fluxos de trabalho de alvos e o [capítulo LATTICE](../lattice/README.md), bem como a [Referência CLI](../reference/cli-reference.md) para o pipeline de processamento completo. Ao ler os píxeis de refletância exportados, utilize a escala indicada (LATTICE: 32768 = ρ 1,0, XMP `Chloros:PixelScale`; Survey3: 65535) — consulte [Formatos de imagem de saída](../output-image-formats.md).
 
 ### Bandas fora da gama calibrada do DAQ
 
-A faixa radiometricamente calibrada do DAQ é de ~374–974 nm. O Chloros
-rejeita a refletância baseada no DAQ para qualquer banda da câmara com menos de metade do seu peso espectral dentro desse intervalo, indicando o motivo de omissão `dls-uncalibrated-band-<nm>`. Entre os SKUs disponíveis, isto afeta apenas a F988: a refletância da F988 é calibrada utilizando um painel de refletância na cena; como a banda se situa fora da gama calibrada do sensor de luz do DAQ, o Chloros
-aplica a sua captura mais recente do painel e mantém-na entre as observações do painel. Se uma câmara F988 for utilizada apenas com o DAQ, o Chloros
-rejeita a refletância baseada no DAQ para essa banda com o motivo de omissão `dls-uncalibrated-band-988` — o fluxo de trabalho com o painel é a via suportada.
+A faixa radiometricamente calibrada do DAQ é de ~374–974 nm. O Chloros rejeita a refletância baseada no DAQ para qualquer banda da câmara com menos de metade do seu peso espectral dentro desse intervalo, indicando o motivo de omissão `dls-uncalibrated-band-<nm>`. Entre os SKUs disponíveis, isto afeta apenas a F988: a refletância da F988 é calibrada utilizando um painel de refletância na cena; como a banda se situa fora da gama calibrada do sensor de luz do DAQ, o Chloros aplica a sua captura mais recente do painel e mantém-na entre as observações do painel. Se uma câmara F988 for utilizada apenas com o DAQ, o Chloros rejeita a refletância baseada no DAQ para essa banda com o motivo de omissão `dls-uncalibrated-band-988` — o fluxo de trabalho com o painel é a via suportada.
 
 ## Sensor duplo (ambiente + objeto)
 
-Dois sensores DAQ — qualquer par, em qualquer tipo de transporte — fornecem um espectro de refletância em tempo real sem necessidade de câmara: um sensor está virado para o céu (**Fonte de Luz Ambiente**), outro está virado para o objeto (**Scanner de Objeto**), e o Chloros
-calcula por comprimento de onda:
+Dois sensores DAQ — qualquer par, em qualquer tipo de transporte — fornecem um espectro de refletância em tempo real sem necessidade de câmara: um sensor está virado para o céu (**Fonte de Luz Ambiente**), outro está virado para o objeto (**Scanner de Objeto**), e o Chloros calcula por comprimento de onda:
 
 > R(λ) = objeto(λ) / ambiente(λ)
 
@@ -70,24 +61,11 @@ Com ambos os sensores ligados no separador «Sensores de Luz», abra a sobreposi
 <!-- SCREENSHOT-NEEDED: A live Apparent Reflectance chart from an Ambient+Object DAQ pair in list view, with the vegetation-index table visible below the chart (NDVI etc. showing live values). -->
 
 
-Abaixo do gráfico de refletância (visualização em lista), uma **tabela de índices de vegetação** em tempo real calcula os índices a partir da curva utilizando os centros das bandas em azul 450 / verde 550 / vermelho 670 / NIR
-800 nm. Os índices baseados em rácios que anulam a escala absoluta (NDVI
-, GNDVI
-, ENDVI, WDRVI
-, GRVI
-, CVI
-, GCI
-, MSR) são sempre apresentados; os índices que requerem refletância absoluta (EVI
-, SAVI
-, OSAVI
-, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI
-, NLI, MNLI, FCI, GEMI
-) só aparecem quando ambos os sensores são modelos calibrados em potência.
+Abaixo do gráfico de refletância (visualização em lista), uma **tabela de índices de vegetação** em tempo real calcula os índices a partir da curva utilizando os centros das bandas em azul 450 / verde 550 / vermelho 670 / NIR 800 nm. Os índices baseados em rácios que anulam a escala absoluta (NDVI, GNDVI, ENDVI, WDRVI, GRVI, CVI, GCI, MSR) são sempre apresentados; os índices que requerem refletância absoluta (EVI, SAVI, OSAVI, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI, NLI, MNLI, FCI, GEMI) só aparecem quando ambos os sensores são modelos calibrados em potência.
 
 ### Aparente vs. Relativa — a regra de rotulagem O
 
-Chloros
-rotula a saída do sensor duplo de acordo com o que o par de sensores pode efetivamente afirmar:
+Chloros rotula a saída do sensor duplo de acordo com o que o par de sensores pode efetivamente afirmar:
 
 | Par de sensores | Rotulagem |
 | --- | --- |
@@ -99,8 +77,4 @@ Todos os três modelos são radiométricos: assim que o pacote de calibração d
 ### A partir de Python
 
 
-Não existe uma chamada dedicada para dois sensores na interface do SDK
-agrupado: abra duas sessões com o `chloros_sdk.connect_daq_sensor()` e faça você mesmo a relação entre os seus espectros `latest()`, aplicando a mesma convenção de rotulagem. (Existe também uma ferramenta de gravação para dois sensores na interface interna de acesso direto ao hardware da MAPIR
-, listada na [Referência da CLI
-](../reference/cli-reference.md) por uma questão de exaustividade — não faz parte da CLI
-fornecida; o fluxo de trabalho da GUI acima é o caminho ativo suportado.)
+Não existe uma chamada dedicada para dois sensores na interface do SDK agrupado: abra duas sessões com o `chloros_sdk.connect_daq_sensor()` e faça você mesmo a relação entre os seus espectros `latest()`, aplicando a mesma convenção de rotulagem. (Existe também uma ferramenta de gravação para dois sensores na interface interna de acesso direto ao hardware da MAPIR, listada na [Referência da CLI](../reference/cli-reference.md) por uma questão de exaustividade — não faz parte da CLI fornecida; o fluxo de trabalho da GUI acima é o caminho ativo suportado.)

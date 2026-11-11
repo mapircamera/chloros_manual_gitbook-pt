@@ -4,11 +4,7 @@ O **menu suspenso de camadas** no canto superior direito do Visualizador de Imag
 
 ## O que são camadas de imagem?
 
-Uma «camada» no Chloros
-
-é um **ficheiro de produto**registado em relação a uma imagem de origem. A importação fornece-lhe os ficheiros de origem; o processamento adiciona uma camada para cada produto gerado pela execução. Os ficheiros exportados mantêm o nome do ficheiro de origem — é a**pasta** que identifica o produto, e o nome da camada é a etiqueta que o Chloros
-
-atribui a essa pasta.
+Uma «camada» no Chloros é um **ficheiro de produto**registado em relação a uma imagem de origem. A importação fornece-lhe os ficheiros de origem; o processamento adiciona uma camada para cada produto gerado pela execução. Os ficheiros exportados mantêm o nome do ficheiro de origem — é a**pasta** que identifica o produto, e o nome da camada é a etiqueta que o Chloros atribui a essa pasta.
 
 <!-- SCREENSHOT-NEEDED: Image Viewer full screen with the layer dropdown open on a processed LATTICE multispectral image, showing the full list: TIFF base, RAW (Original), RAW (Debayered), RAW (Preview), RAW (Radiance), RAW (Reflectance), and one RAW (NDVI Index) entry. -->
 
@@ -20,17 +16,7 @@ atribui a essa pasta.
 
 | Camada | O que é |
 | --- | --- |
-| **JPG**(ou**PNG
-
-**/**TIFF
-
-**) | O ficheiro base que veio com a captura. O Survey3
-
-importa um `.JPG` ao lado de cada `.RAW`; as capturas do LATTICE trazem uma pré-visualização de exibição em PNG
-
-ou TIFF
-
-. Rotulado de acordo com o que foi efetivamente importado |
+| **JPG**(ou**PNG**/**TIFF**) | O ficheiro base que veio com a captura. O Survey3 importa um `.JPG` ao lado de cada `.RAW`; as capturas do LATTICE trazem uma pré-visualização de exibição em PNG ou TIFF. Rotulado de acordo com o que foi efetivamente importado |
 | **RAW (Original)** | O fotograma bruto de origem, submetido a débayering para visualização, sem correções aplicadas. Disponível desde o momento da importação — não necessita de processamento |
 
 Uma captura do LATTICE cujo ficheiro base **é** o seu quadro bruto não tem uma entrada de base separada: o `RAW (Original)` já o abrange.
@@ -57,31 +43,19 @@ O LATTICE captura o fan-out nestes níveis numa única passagem de processamento
 
 | Camada | Gravada em | Aplica-se a |
 | --- | --- | --- |
-| **RAW (sem debayering)** | `Debayered_Images/` | RGB
-
-e multiespectral |
+| **RAW (sem debayering)** | `Debayered_Images/` | RGB e multiespectral |
 | **RAW (Pré-visualização)** | `Preview_Images/` | Multiespectral (estiramento de cores falsas) |
-| **Equilíbrio de brancos** | `Preview_Images/` | Câmaras principais RGB
-
-— a pré-visualização RGB
-
-é registada com este nome para que corresponda à camada do Survey3
-
-com o mesmo nome |
+| **Equilíbrio de brancos** | `Preview_Images/` | Câmaras principais RGB — a pré-visualização RGB é registada com este nome para que corresponda à camada do Survey3 com o mesmo nome |
 | **RAW (Radiação)** | `Radiance_Images/` | Apenas multiespectral |
 | **RAW (Refletância)** | `Reflectance_Calibrated_Images/` | Apenas multiespectral, e apenas quando um registo descendente `.daq` correspondente ou um alvo no quadro aprovado no controlo de qualidade (QA) cobrir o quadro |
 
-As câmaras principais RGB
-
-não têm radiometria por banda, pelo que a radiação e a refletância são ignoradas para elas como **não aplicáveis** — o registo indica isso em vez de falhar silenciosamente.
+As câmaras principais RGB não têm radiometria por banda, pelo que a radiação e a refletância são ignoradas para elas como **não aplicáveis** — o registo indica isso em vez de falhar silenciosamente.
 
 {% hint style="info" %}
 **As camadas brutas e sem debayering alinham-se com os produtos (novidade na versão 1.3.0).**Os ficheiros brutos e sem debayering do LATTICE são guardados na orientação nativa do sensor e registam no XMP a orientação que lhes pertence; os outros produtos são guardados com essa orientação já aplicada. O visualizador e a grelha de imagens alternam entre**RAW (Original)**e**RAW (Sem Bayes)** de acordo com esse registo para efeitos de visualização, pelo que o fotograma já não se inverte quando se alterna entre uma camada de produto e uma camada bruta. Trata-se apenas de uma alteração de visualização — os ficheiros nunca são reescritos. Os ficheiros sem um registo de orientação (capturados antes da versão 1.3.0 ou criados por outro software) são apresentados tal como estão armazenados. Consulte [Formatos de imagem de saída](../output-image-formats.md#orientation).
 {% endhint %}
 
-As máscaras de limitação (`*_clampmask.tif` numa pasta `clamp_masks/`) não são camadas: o Chloros
-
-ignora-as durante a importação. Consulte [Formatos de imagem de saída](../output-image-formats.md#clamp-masks).
+As máscaras de limitação (`*_clampmask.tif` numa pasta `clamp_masks/`) não são camadas: o Chloros ignora-as durante a importação. Consulte [Formatos de imagem de saída](../output-image-formats.md#clamp-masks).
 
 ### Camadas de índice, LUT e sandbox
 
@@ -124,44 +98,24 @@ O [painel «Valores do cursor»](opening-an-image-full-screen.md#cursor-values) 
 
 | Camada | Unidade apresentada | Notas |
 | --- | --- | --- |
-| Base (pré-visualização JPG / PNG
-
-/ TIFF
-
-) | DN, 0–255 | Valores de visualização, com correção gama em RGB
-
-. Apenas para inspeção visual |
+| Base (pré-visualização JPG / PNG / TIFF) | DN, 0–255 | Valores de visualização, com correção gama em RGB. Apenas para inspeção visual |
 | RAW (Original) | DN | Valores digitais brutos do sensor. O eixo do histograma indica a profundidade: 255 (8 bits), 4095 (12 bits) ou 65535 (16 bits) |
 | RAW (sem debayering) | DN | Linear, sem ampliação na exibição |
 | RAW (Pré-visualização) / Equilíbrio de brancos | DN | Produto de exibição — ampliado ou com correção de gama. Não se destina a medição |
 | RAW (Radiação) | **W/m²/sr/nm** | Radiação física em Float32. Sem coluna DN |
 | RAW (Refletância) | DN **e %** | Percentagem calculada com a escala própria desse ficheiro — ver abaixo |
-| Exportações de índice / LUT / sandbox | Valor de índice ou componentes RGB
-
-| Um ficheiro de índice de canal único apresenta o valor de índice; um ficheiro LUT com mapeamento de cores apresenta os componentes Red
-
-/Green
-
-/Blue
-
-|
+| Exportações de índice / LUT / sandbox | Valor de índice ou componentes RGB | Um ficheiro de índice de canal único apresenta o valor de índice; um ficheiro LUT com mapeamento de cores apresenta os componentes Red /Green /Blue |
 
 ### Refletância: a escala é específica de cada ficheiro
 
 {% hint style="warning" %}
-**«Dividir por 65 535» só está correto para o Survey3
-
-.** A refletância do LATTICE é armazenada numa escala diferente, e misturar os dois divisores é a forma mais comum de obter valores de refletância que são exatamente metade do que deveriam ser.
+**«Dividir por 65 535» só está correto para o Survey3.** A refletância do LATTICE é armazenada numa escala diferente, e misturar os dois divisores é a forma mais comum de obter valores de refletância que são exatamente metade do que deveriam ser.
 {% endhint %}
 
 | Fonte | DN que equivale à refletância 1,0 | Identificado por |
 | --- | --- | --- |
 | **LATTICE**(M3C / M3M) |**32768** | A etiqueta XMP `Chloros:PixelScale=32768` incluída em todas as exportações de refletância do LATTICE. A margem de 2× significa que valores de ρ superiores a 1,0 são representáveis, em vez de serem cortados |
-| **Survey3**| **65535** | Sem etiqueta de escala XMP do Chloros
-
-— a calibração do Survey3
-
-grava ρ × dtype-max e corta no valor 1,0 |
+| **Survey3**| **65535** | Sem etiqueta de escala XMP do Chloros — a calibração do Survey3 grava ρ × dtype-max e corta no valor 1,0 |
 
 Para SIG e scripts: leia `Chloros:PixelScale` do ficheiro e divida por esse valor. Se a etiqueta estiver ausente, o ficheiro está na escala dSurvey3
 
@@ -169,42 +123,18 @@ Para SIG e scripts: leia `Chloros:PixelScale` do ficheiro e divida por esse valo
 
 Armazenamento específico do formato, além dessa escala:
 
-* **TIFF
-
-(32 bits, Porcentagem)** armazena DN / 65535 como um número flutuante
-* **PNG
-
-(8 bits)**e**JPG (8 bits)** armazenam DN × 255 / 65535
+* **TIFF (32 bits, Porcentagem)** armazena DN / 65535 como um número flutuante
+* **PNG (8 bits)**e**JPG (8 bits)** armazenam DN × 255 / 65535
 * Um **produto DN de 8 bits de uma captura de 8 bits**, ou um ficheiro de refletância gravado antes da versão 1.3.0, é limitado ao intervalo 0–255 e não contém qualquer etiqueta de escala. O painel apresenta apenas o DN para esses ficheiros, sem coluna de percentagem
 
 ### Intervalos de valores do índice
 
 | Família de índices | Intervalo típico | Leitura |
 | --- | --- | --- |
-| Diferença normalizada (NDVI
-
-, GNDVI
-
-, NDRE
-
-, ENDVI…) | −1 a +1 | Vegetação saudável normalmente entre 0,4 e 0,9; solo nu próximo de 0; água com valores negativos |
-| Ajustado ao solo (SAVI
-
-, OSAVI
-
-, MSAVI2…) | aproximadamente de −1 a +1,5 | Leitura semelhante à do NDVI
-
-, com o fundo do solo suprimido |
-| Rácio (GRVI
-
-, GCI
-
-, MSR, CIRE…) | ilimitado para valores superiores | Os rácios aumentam sem limite à medida que a banda do denominador se aproxima de zero |
-| EVI
-
-/ LAI
-
-| 0 a ~1, 0 a ~3,5 | As nuvens e outros píxeis saturados fazem com que ambos fiquem fora do intervalo — é necessário máscar esses píxeis primeiro |
+| Diferença normalizada (NDVI, GNDVI, NDRE, ENDVI…) | −1 a +1 | Vegetação saudável normalmente entre 0,4 e 0,9; solo nu próximo de 0; água com valores negativos |
+| Ajustado ao solo (SAVI, OSAVI, MSAVI2…) | aproximadamente de −1 a +1,5 | Leitura semelhante à do NDVI, com o fundo do solo suprimido |
+| Rácio (GRVI, GCI, MSR, CIRE…) | ilimitado para valores superiores | Os rácios aumentam sem limite à medida que a banda do denominador se aproxima de zero |
+| EVI / LAI | 0 a ~1, 0 a ~3,5 | As nuvens e outros píxeis saturados fazem com que ambos fiquem fora do intervalo — é necessário máscar esses píxeis primeiro |
 
 Consulte [Fórmulas dos Índices Multiespectrais](../project-settings/multispectral-index-formulas.md) para conhecer a fórmula exata por trás de cada predefinição.
 
@@ -236,9 +166,7 @@ Consulte [Fórmulas dos Índices Multiespectrais](../project-settings/multispect
 1. Selecione **RAW (Refletância)**
 
 2. Leia a coluna**%** no painel «Valores do cursor» — já está devidamente escalada para esse ficheiro
-3. Faça uma verificação de coerência em relação a materiais conhecidos no fotograma: a vegetação saudável apresenta valores elevados no NIR
-
-e baixos no vermelho; um alvo de calibração deve apresentar valores próximos da sua refletância publicada
+3. Faça uma verificação de coerência em relação a materiais conhecidos no fotograma: a vegetação saudável apresenta valores elevados no NIR e baixos no vermelho; um alvo de calibração deve apresentar valores próximos da sua refletância publicada
 
 ***
 
@@ -250,25 +178,19 @@ e baixos no vermelho; um alvo de calibração deve apresentar valores próximos 
 
 * A imagem nunca foi processada — existem apenas a base e a `RAW (Original)`
 * A opção de exportação do produto está desmarcada nas Definições do Projeto
-* O produto não se aplica a essa câmara (radianância e refletância num master RGB
-
-; qualquer índice numa câmara monocromática M3M de banda única)
+* O produto não se aplica a essa câmara (radianância e refletância num master RGB; qualquer índice numa câmara monocromática M3M de banda única)
 * A calibração de refletância não teve dados com que trabalhar — sem cobertura descendente do `.daq` e sem alvo no quadro aprovado no controlo de qualidade — pelo que o quadro recorreu à correção de vinheta ou à resposta do sensor
 
 **O que fazer**
 
-1. Verifique o registo da execução: o Chloros
-
-indica quando um produto de exportação solicitado foi impossível de gerar e porquê
+1. Verifique o registo da execução: o Chloros indica quando um produto de exportação solicitado foi impossível de gerar e porquê
 2. Verifique as opções de exportação por produto em [Definições do projeto](../project-settings/project-settings.md)
 3. Confirme se a pasta do produto existe na árvore de saída do projeto
 4. Reprocesse com o produto ativado
 
 ### A lista de camadas parece desatualizada
 
-O Chloros
-
-volta a analisar as pastas de produtos do projeto enquanto uma execução está em curso e corrige registos de camadas em falta com base no que está efetivamente no disco; por isso, uma camada cuja exportação tenha terminado normalmente aparece por si só numa sondagem. Sair da imagem e voltar a ela força uma nova resolução.
+O Chloros volta a analisar as pastas de produtos do projeto enquanto uma execução está em curso e corrige registos de camadas em falta com base no que está efetivamente no disco; por isso, uma camada cuja exportação tenha terminado normalmente aparece por si só numa sondagem. Sair da imagem e voltar a ela força uma nova resolução.
 
 ### Os valores de refletância parecem ser metade do que deveriam ser
 

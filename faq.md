@@ -27,15 +27,9 @@ Sim. O Chloros 1.3.0 suporta os módulos de câmara LATTICE M3C e M3M de ponta a
 
 <summary>Posso calibrar as minhas imagens para refletância sem um alvo de calibração?</summary>
 
-**Survey3
+**Survey3:** Não. Sem uma imagem do alvo de calibração capturada ao mesmo tempo que as imagens que não são do alvo, não será possível relacionar os valores dos píxeis da imagem com uma percentagem de refletância conhecida. Se também não incluir o registo de um sensor de luz MAPIR, o espectro da luz ambiente não será medido e os resultados de refletância não serão precisos.
 
-:** Não. Sem uma imagem do alvo de calibração capturada ao mesmo tempo que as imagens que não são do alvo, não será possível relacionar os valores dos píxeis da imagem com uma percentagem de refletância conhecida. Se também não incluir o registo de um sensor de luz MAPIR
-
-, o espectro da luz ambiente não será medido e os resultados de refletância não serão precisos.
-
-**LATTICE:** Sim. A refletância pode ser referenciada à irradiância descendente medida por um sensor de luz DAQ em vez de um painel (ρ = π·L/E). Quando um alvo dentro do enquadramento que tenha sido aprovado no controlo de qualidade *está* presente, torna-se a referência absoluta por predefinição (`--reflectance-source auto`), a menos que seja aprovado com um sinalizador, caso em que o alvo e as cadeias do DAQ competem com base na pontuação medida. Uma exceção: «A refletância F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se fora da gama calibrada do sensor de luz do DAQ, pelo que o Chloros
-
-aplica a sua captura de painel mais recente e mantém-na entre as observações do painel.» Consulte [Alvos de Calibração](calibration-targets.md).
+**LATTICE:** Sim. A refletância pode ser referenciada à irradiância descendente medida por um sensor de luz DAQ em vez de um painel (ρ = π·L/E). Quando um alvo dentro do enquadramento que tenha sido aprovado no controlo de qualidade *está* presente, torna-se a referência absoluta por predefinição (`--reflectance-source auto`), a menos que seja aprovado com um sinalizador, caso em que o alvo e as cadeias do DAQ competem com base na pontuação medida. Uma exceção: «A refletância F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se fora da gama calibrada do sensor de luz do DAQ, pelo que o Chloros aplica a sua captura de painel mais recente e mantém-na entre as observações do painel.» Consulte [Alvos de Calibração](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ aplica a sua captura de painel mais recente e mantém-na entre as observações 
 
 <summary>Preciso de um sensor de luz DAQ?</summary>
 
-Não para a radianância: as exportações de radianância do LATTICE provêm da calibração radiométrica de fábrica de cada câmara e não necessitam nem de um sensor DAQ nem de um alvo. Para a **refletância**, é necessária uma referência para a luz ambiente — quer seja uma medição descendente de um sensor de luz DAQ, quer seja um alvo de calibração no enquadramento. Um sensor DAQ permite-lhe produzir refletância calibrada**sem colocar quaisquer painéis na cena**. Os ficheiros `.daq` gravados são automaticamente associados às suas imagens através do carimbo de data/hora. Consulte [Alvos de Calibração](calibration-targets.md) e a [Referência da CLI
-
-](reference/cli-reference.md).
+Não para a radianância: as exportações de radianância do LATTICE provêm da calibração radiométrica de fábrica de cada câmara e não necessitam nem de um sensor DAQ nem de um alvo. Para a **refletância**, é necessária uma referência para a luz ambiente — quer seja uma medição descendente de um sensor de luz DAQ, quer seja um alvo de calibração no enquadramento. Um sensor DAQ permite-lhe produzir refletância calibrada**sem colocar quaisquer painéis na cena**. Os ficheiros `.daq` gravados são automaticamente associados às suas imagens através do carimbo de data/hora. Consulte [Alvos de Calibração](calibration-targets.md) e a [Referência da CLI](reference/cli-reference.md).
 
 </details>
 
@@ -143,9 +135,7 @@ Na tabela do navegador de ficheiros, a pré-seleção das imagens-alvo na coluna
 
 <summary>Se pretender carregar as minhas imagens para <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">a MAPIR Cloud,</a> devo processá-las no Chloros antes do carregamento?</summary>
 
-Se pretender carregar as imagens para a nossa plataforma de processamento online [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), não edite as imagens antes do carregamento. A Cloud realizará todo o processamento e muito mais.
+Se pretender carregar as imagens para a nossa plataforma de processamento online [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), não edite as imagens antes do carregamento. A Cloud realizará todo o processamento e muito mais.
 
 </details>
 
@@ -186,9 +176,7 @@ Sim! O Chloros inclui a [Adaptação Dinâmica de Computação](processing-archi
 <summary>O que é o pipeline de processamento de 4 threads?</summary>
 O
 
-Chloros
-utiliza uma arquitetura em pipeline de 4 threads para utilizadores do Chloros
-+: A thread 1 (Detecção) carrega imagens e deteta alvos de calibração; a thread 2 (Calibração) calcula a calibração de refletância; a thread 3 (Processamento) realiza o debayering acelerado por GPU e o cálculo do índice; e a thread 4 (Exportação) grava os ficheiros de saída. É possível ter várias imagens em diferentes threads simultaneamente para obter o máximo rendimento. Consulte [Pipeline de Processamento](processing-architecture/processing-pipeline.md) para mais detalhes.
+Chloros utiliza uma arquitetura em pipeline de 4 threads para utilizadores do Chloros+: A thread 1 (Detecção) carrega imagens e deteta alvos de calibração; a thread 2 (Calibração) calcula a calibração de refletância; a thread 3 (Processamento) realiza o debayering acelerado por GPU e o cálculo do índice; e a thread 4 (Exportação) grava os ficheiros de saída. É possível ter várias imagens em diferentes threads simultaneamente para obter o máximo rendimento. Consulte [Pipeline de Processamento](processing-architecture/processing-pipeline.md) para mais detalhes.
 
 </details>
 

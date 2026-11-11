@@ -16,49 +16,21 @@ Quando estiver com a sessão iniciada, os detalhes da sua conta serão apresenta
 | Plano | `plan_id` | Tipo |
 | --- | --- | --- |
 | Iron | `0` | Gratuito |
-| Copper | `1` | Pago (Chloros
-
-+) |
-| Bronze | `2` | Pago (Chloros
-
-+) |
-| Silver | `3` | Pago (Chloros
-
-+) |
-| Ouro | `4` | Pago (Chloros
-
-+) |
+| Copper | `1` | Pago (Chloros+) |
+| Bronze | `2` | Pago (Chloros+) |
+| Silver | `3` | Pago (Chloros+) |
+| Ouro | `4` | Pago (Chloros+) |
 
 Consulte [planos e preços](https://cloud.mapir.camera/pricing) para saber o que cada nível pago inclui.
 
-### O acesso à CLI
+### O acesso à CLI/SDK requer um nível pago
 
-/SDK
+O acesso à CLI e ao Python SDK requer **qualquer nível pago do Chloros+ (Cobre ou superior)**. Esta regra é aplicada**do lado do servidor** — cada pedido de CLI/SDK deve incluir tanto uma sessão ativa como um plano pago:
 
-requer um nível pago
-
-O acesso à CLI
-
-e ao Python
-
-SDK
-
-requer **qualquer nível pago do Chloros
-
-+ (Cobre ou superior)**. Esta regra é aplicada**do lado do servidor** — cada pedido de CLI
-
-/SDK
-
-deve incluir tanto uma sessão ativa como um plano pago:
-
-| Estado HTTP
-
-| `error_code` | Significado | Solução |
+| Estado HTTP | `error_code` | Significado | Solução |
 | --- | --- | --- | --- |
 | `401` | `AUTH_REQUIRED` | Não está com sessão iniciada nesta máquina | `chloros-cli login <email> <password>` |
-| `403` | `PLAN_UPGRADE_REQUIRED` | Iniciou sessão, mas o nível do plano é demasiado baixo (nível gratuito «Iron») | Atualize para qualquer plano pago «Chloros
-
-+» |
+| `403` | `PLAN_UPGRADE_REQUIRED` | Iniciou sessão, mas o nível do plano é demasiado baixo (nível gratuito «Iron») | Atualize para qualquer plano pago «Chloros+» |
 
 O `chloros-cli status` continua acessível no nível gratuito, pelo que pode sempre ver o seu plano atual e o motivo pelo qual o acesso foi recusado.
 
@@ -77,13 +49,7 @@ Cada plano estabelece um limite para o número de câmaras LATTICE e sensores de
 
 
 
-Inicie sessão com as suas credenciais do Chloros
-
-+ para ativar o processamento via CLI
-
-. No Linux
-
-(sem GUI), esta é a única forma de ativar a sua licença.
+Inicie sessão com as suas credenciais do Chloros+ para ativar o processamento via CLI. No Linux (sem GUI), esta é a única forma de ativar a sua licença.
 
 **Sintaxe:**
 
@@ -92,13 +58,7 @@ chloros-cli login <email> <password>
 ```
 
 {% hint style="info" %}
-**Utilizadores do SDK**: O Python
-
-SDK
-
-também disponibiliza um método programático `logout()` para limpar as credenciais armazenadas em cache. Consulte a [Referência do SDK
-
-](reference/sdk-reference.md) para obter mais detalhes.
+**Utilizadores do SDK**: O Python SDK também disponibiliza um método programático `logout()` para limpar as credenciais armazenadas em cache. Consulte a [Referência do SDK](reference/sdk-reference.md) para obter mais detalhes.
 {% endhint %}
 
 **Exemplo:**
@@ -125,23 +85,13 @@ As credenciais e a configuração em cache são armazenadas na pasta `.chloros` 
 | **Windows** | `%USERPROFILE%\.chloros\` |
 | **Linux** | `~/.chloros/` |
 
-A instalação de uma versão mais recente sobre uma já existente mantém os seus dados de início de sessão, no Windows
-
-(o instalador) e no Linux
-
-(o `.deb`, incluindo o `chloros-cli update`). A desinstalação do Chloros
-
-— ou a remoção do pacote Linux
-
-— limpa o login armazenado em cache, pelo que terá de iniciar sessão novamente após uma nova instalação.
+A instalação de uma versão mais recente sobre uma já existente mantém os seus dados de início de sessão, no Windows (o instalador) e no Linux (o `.deb`, incluindo o `chloros-cli update`). A desinstalação do Chloros — ou a remoção do pacote Linux — limpa o login armazenado em cache, pelo que terá de iniciar sessão novamente após uma nova instalação.
 
 ### Expiração do plano e período de tolerância offline
 
 A data de expiração do plano na interface gráfica indica quando a sua licença deixará de ser válida. Para subscrições mensais recorrentes, a expiração ocorre no final do mês; para subscrições anuais, ocorre um ano após o início da subscrição.
 
-O Chloros
-
-valida a sua licença online, mas o funcionamento offline é suportado durante um período de tolerância:
+O Chloros valida a sua licença online, mas o funcionamento offline é suportado durante um período de tolerância:
 
 * As validações bem-sucedidas no servidor são armazenadas em cache durante **5 minutos**, pelo que a utilização normal implica muito poucas chamadas de licença.
 * Um cache de licenças assinadas e vinculadas ao equipamento cobre períodos offline mais longos: **30 dias para planos mensais**e**até à data de expiração da sua subscrição (no máximo 365 dias) para planos anuais**.
@@ -149,13 +99,7 @@ valida a sua licença online, mas o funcionamento offline é suportado durante u
 
 ### Limite de dispositivos
 
-Cada plano Chloros
-
-+ oferece um número diferente de dispositivos registados. Cada dispositivo em que iniciar sessão com uma conta Chloros
-
-+ conta para o seu número de dispositivos registados. Pode renomear e remover um dispositivo na página da sua conta MAPIR
-
-Cloud.
+Cada plano Chloros+ oferece um número diferente de dispositivos registados. Cada dispositivo em que iniciar sessão com uma conta Chloros+ conta para o seu número de dispositivos registados. Pode renomear e remover um dispositivo na página da sua conta MAPIR Cloud.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Plano Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Dispositivos compatíveis</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
 

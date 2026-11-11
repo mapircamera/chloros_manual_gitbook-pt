@@ -26,28 +26,10 @@ Três botões de modo na parte superior do painel:
 | **Contínua**| Capturas consecutivas até uma condição de paragem. | Parar por**Número de capturas** (padrão 1) *ou* **Duração da captura** (padrão 10 s; unidades: segundos / minutos / horas / dias). |
 | **Intervalo**(timelapse) | Série de capturas com temporizador. |**Capturas / intervalo**(padrão 1) ·**A cada**N unidades (padrão 5 s) ·**Durante** N unidades (padrão 1 m). |
 
-Nos modos Contínuo ou Intervalo, o botão «Capturar tudo» transforma-se num botão «**Parar (N)**» durante a execução, contando as capturas à medida que estas são efetuadas. Um drive completo interrompe a execução (ver [O fluxo «Capturar tudo»](#the-capture-all-flow)).**O modo «Contínuo» em matrizes é executado no backend (novidade na versão 1.3.0).** Quando todas as câmaras da lista pertencem a uma matriz (câmaras autónomas ocultas ou excluídas), o modo «Continuo» deixa de enviar um pedido por captura: o backend do Chloros
-
-executa ele próprio o ciclo de captura, gravando um grupo sincronizado enquanto seleciona o seguinte, e o botão verifica a sua contagem. Com câmaras autónomas na lista, o Chloros
-
-efetua as capturas passo a passo, tal como anteriormente.
+Nos modos Contínuo ou Intervalo, o botão «Capturar tudo» transforma-se num botão «**Parar (N)**» durante a execução, contando as capturas à medida que estas são efetuadas. Um drive completo interrompe a execução (ver [O fluxo «Capturar tudo»](#the-capture-all-flow)).**O modo «Contínuo» em matrizes é executado no backend (novidade na versão 1.3.0).** Quando todas as câmaras da lista pertencem a uma matriz (câmaras autónomas ocultas ou excluídas), o modo «Continuo» deixa de enviar um pedido por captura: o backend do Chloros executa ele próprio o ciclo de captura, gravando um grupo sincronizado enquanto seleciona o seguinte, e o botão verifica a sua contagem. Com câmaras autónomas na lista, o Chloros efetua as capturas passo a passo, tal como anteriormente.
 
 {% hint style="warning" %}
-**Captura rápida no Windows
-
-: mantenha o backend do Chloros
-
-excluído do Microsoft Defender.** A verificação em tempo real de cada ficheiro gravado por uma captura de alta taxa consome cerca de 30 % da taxa de captura nos testes da MAPIR
-
-(centenas de ficheiros por segundo numa pequena área de interesse). O instalador do Windows
-
-oferece a opção **«Excluir o backend do Chloros
-
-da verificação do Microsoft Defender (captura de câmara muito mais rápida; recomendado)»**, marcada por predefinição, e remove a exclusão aquando da desinstalação. Se tiver desmarcado esta opção, volte a executar o instalador com a opção marcada ou adicione uma exclusão de processo do Defender para `chloros-backend.exe` (na pasta `backend` da pasta de instalação do Chloros
-
-). Quando o Defender utiliza um núcleo da CPU ou mais durante a captura contínua de um conjunto, o backend do Chloros
-
-regista isso uma vez no seu log, apresentando estas mesmas duas soluções.
+**Captura rápida no Windows: mantenha o backend do Chloros excluído do Microsoft Defender.** A verificação em tempo real de cada ficheiro gravado por uma captura de alta taxa consome cerca de 30 % da taxa de captura nos testes da MAPIR (centenas de ficheiros por segundo numa pequena área de interesse). O instalador do Windows oferece a opção **«Excluir o backend do Chloros da verificação do Microsoft Defender (captura de câmara muito mais rápida; recomendado)»**, marcada por predefinição, e remove a exclusão aquando da desinstalação. Se tiver desmarcado esta opção, volte a executar o instalador com a opção marcada ou adicione uma exclusão de processo do Defender para `chloros-backend.exe` (na pasta `backend` da pasta de instalação do Chloros). Quando o Defender utiliza um núcleo da CPU ou mais durante a captura contínua de um conjunto, o backend do Chloros regista isso uma vez no seu log, apresentando estas mesmas duas soluções.
 {% endhint %}
 
 <!-- SCREENSHOT-NEEDED: the capture-mode area of Capture Settings with Interval selected — showing the "Captures / interval", "Every N (unit)" and "For N (unit)" rows with their defaults (1, 5 s, 1 m). -->
@@ -67,26 +49,16 @@ O texto de ajuda do painel resume tudo: escolha quais as câmaras e os tipos de 
 
 Existem seis tipos de exportação: **Raw, Debayered, Radiance, Reflectance, Preview, Index**. Apenas os tipos aplicáveis aparecem na linha de cada câmara:
 
-| Tipo de exportação | Conteúdo | RGB
-
-(FRGB) | Multiespectral Bayer (FRGN/FOCN/FNGB) | Mono (M3M) |
+| Tipo de exportação | Conteúdo | RGB (FRGB) | Multiespectral Bayer (FRGN/FOCN/FNGB) | Mono (M3M) |
 | --- | --- | --- | --- | --- |
 | **Raw** | Mosaico de Bayer (mono: a banda única) diretamente do sensor | ✓ | ✓ | ✓ |
-| **Sem mosaico** | Desmosaico linear: o desvio de escuro (DSNU) do pacote de calibração removido do ficheiro raw, seguido de um desmosaico sensível às arestas — sem correção de linearidade, campo plano ou separação de cores. Guardado como um ficheiro RGB
-
-de 3 canais TIFF
-
-(mono: escala de cinzentos de 1 canal) | ✓ | ✓ | ✓ |
-| **Pré-visualização** | Cadeia de exibição completa (equilíbrio de brancos + gama de acordo com o perfil da câmara, além da configuração de Destaques da câmara RGB
-
-; multiespectral: alongamento de cores falsas) | ✓ | ✓ | ✓ |
+| **Sem mosaico** | Desmosaico linear: o desvio de escuro (DSNU) do pacote de calibração removido do ficheiro raw, seguido de um desmosaico sensível às arestas — sem correção de linearidade, campo plano ou separação de cores. Guardado como um ficheiro RGB de 3 canais TIFF (mono: escala de cinzentos de 1 canal) | ✓ | ✓ | ✓ |
+| **Pré-visualização** | Cadeia de exibição completa (equilíbrio de brancos + gama de acordo com o perfil da câmara, além da configuração de Destaques da câmara RGB; multiespectral: alongamento de cores falsas) | ✓ | ✓ | ✓ |
 | **Radiação** | float32 W/m²/sr/nm através da cadeia radiométrica completa | — (não disponível) | ✓ | ✓ |
 | **Refletância** | uint16 ρ (32768 = 1,0) | — (não disponível) | ✓ — apenas apresentado quando a câmara possui um sensor de luz DAQ (próprio ou herdado da sua matriz) | igual ao multiespectral |
 | **Índice** | Representação do índice de vegetação (LUT) | — | ✓ — requer uma expressão de índice ativada e não vazia na câmara, e não está disponível para membros de matrizes combinadas (a matriz possui um índice partilhado) | — (um índice requer ≥2 bandas; ver [Câmaras Mono e Índices de Vegetação](mono-indices.md)) |
 
-A radiação e a refletância nunca estão disponíveis para câmaras RGB
-
-— a radiação por pixel Bayer não é significativa para um sensor fotométrico de banda larga.
+A radiação e a refletância nunca estão disponíveis para câmaras RGB — a radiação por pixel Bayer não é significativa para um sensor fotométrico de banda larga.
 
 ### Captura mais rápida
 
@@ -151,15 +123,11 @@ As capturas são guardadas no projeto aberto em `<project>/captures/`. Cada tipo
 * **Uma assimetria a ter em conta:** o nível de visualização é armazenado numa pasta denominada `preview/`, enquanto os ficheiros mantêm `_display` no nome — a pasta e o sufixo diferem apenas para esse nível.
 * Os níveis desconhecidos são colocados numa pasta com o seu próprio nome; se não for possível criar uma subpasta, o ficheiro é gravado na raiz das capturas, em vez de se perder.
 * Os ficheiros TIFF de captura são comprimidos sem perdas (DEFLATE) por predefinição e contêm todos os seus metadados de calibração e processamento **dentro do XMP do ficheiro** — as capturas são autodescritivas, sem ficheiros complementares além da leitura `.daq` (e do seu `.daq.cameras.json`).
-* **Máscaras de limitação (novidade na versão 1.3.0).**Nos casos em que a separação espectral 3×3 teve de limitar uma banda a 0 em pelo menos um píxel, os produtos de radiação, refletância e índice recebem uma máscara por píxel, `clamp_masks/<product folder>/<product name>_clampmask.tif` (bit 0 = a banda no canal R do produto, bit 1 = G, bit 2 = B); a etiqueta XMP do produto, `Chloros:UnmixClampMask`, aponta para ela. As máscaras encontram-se**ao lado** das pastas dos produtos, nunca dentro delas, pelo que uma pasta de produto como a `reflectance/` pode ser entregue ao software de fotogrametria tal como está. O próprio importador do Chloros
-
-ignora as máscaras.
+* **Máscaras de limitação (novidade na versão 1.3.0).**Nos casos em que a separação espectral 3×3 teve de limitar uma banda a 0 em pelo menos um píxel, os produtos de radiação, refletância e índice recebem uma máscara por píxel, `clamp_masks/<product folder>/<product name>_clampmask.tif` (bit 0 = a banda no canal R do produto, bit 1 = G, bit 2 = B); a etiqueta XMP do produto, `Chloros:UnmixClampMask`, aponta para ela. As máscaras encontram-se**ao lado** das pastas dos produtos, nunca dentro delas, pelo que uma pasta de produto como a `reflectance/` pode ser entregue ao software de fotogrametria tal como está. O próprio importador do Chloros ignora as máscaras.
 * **Orientação (1.3.0).** Os produtos Preview, Radiance, Reflectance e Index de uma câmara autónoma são rodados pela sua configuração de Espelho/Rotação; os ficheiros Raw e Debayered permanecem tal como foram lidos pelo sensor. Todos os ficheiros membros da matriz permanecem no formato nativo. Cada ficheiro regista a configuração no seu XMP, pelo que o reprocessamento a aplica da mesma forma.
 * **A que câmara pertence um `.daq` (1.3.0).** O `.daq` de uma captura é associado, no momento do processamento, apenas a imagens das câmaras cujos nomes constam no seu `.daq.cameras.json`. Uma câmara autónoma sem sensor de luz próprio deixa, portanto, de utilizar a leitura de outra câmara — associe-lhe um sensor ou registe um na separador «Sensores de luz». Um registo do sensor de luz (e qualquer `.daq` sem esse ficheiro, incluindo capturas mais antigas) continua a servir todas as câmaras.
 
-Este é o mesmo layout que os ficheiros `chloros-cli lattice capture` / `array-capture` escrevem no seu diretório `-o` — documentado na [Referência da CLI
-
-§ Como é uma pasta de capturas](../reference/cli-reference.md#what-a-captures-folder-looks-like).
+Este é o mesmo layout que os ficheiros `chloros-cli lattice capture` / `array-capture` escrevem no seu diretório `-o` — documentado na [Referência da CLI § Como é uma pasta de capturas](../reference/cli-reference.md#what-a-captures-folder-looks-like).
 
 <!-- SCREENSHOT-NEEDED: OS file explorer showing a real <project>/captures/ folder after a multi-level array capture — the raw/debayered/radiance/reflectance/preview subfolders, the daq/ and clamp_masks/ folders, and sync_<ts>_SN<serial>_<level>.tif filenames visible inside one subfolder. -->
 
@@ -179,11 +147,7 @@ O `process` normalmente importa apenas a pasta que indicar, mas quando essa past
 Nomear diretamente uma subpasta de nível (por exemplo, `…/captures/raw/`) também funciona, mas deixa para trás a pasta `daq/` — copie-a juntamente com as outras quandoderivar um produto radiométrico a partir de `raw/`; caso contrário, a correspondência do carimbo de data/hora não terá nada com que se relacionar.
 
 {% hint style="warning" %}
-**O processamento começa sempre a partir de `raw`.** Em cada captura, o fotograma bruto é a fonte do pipeline; `debayered`, `radiance`, `reflectance`, e `preview` surgem como modos visualizáveis, mas nunca são reenviados através do pipeline — o reprocessamento de um produto derivado reaplicaria a vinheta, a cor e os cálculos de radiação já incorporados nos seus píxeis, pelo que o Chloros
-
-, em vez de efetuar um duplo processamento, opta por recusar. As renderizações `index/` e `composite/` nunca são processadas (são saídas, não capturas). Uma pasta de capturas guardada **sem** importações em bruto é apresentada normalmente, mas o `process` ignora-a e indica isso mesmo; o `--input-level {raw,debayered,processed}` é a via de escape deliberada que força um ponto de entrada. Consulte a [Referência da CLI
-
-](../reference/cli-reference.md#what-a-captures-folder-looks-like) para ver as mensagens exatas de omissão.
+**O processamento começa sempre a partir de `raw`.** Em cada captura, o fotograma bruto é a fonte do pipeline; `debayered`, `radiance`, `reflectance`, e `preview` surgem como modos visualizáveis, mas nunca são reenviados através do pipeline — o reprocessamento de um produto derivado reaplicaria a vinheta, a cor e os cálculos de radiação já incorporados nos seus píxeis, pelo que o Chloros, em vez de efetuar um duplo processamento, opta por recusar. As renderizações `index/` e `composite/` nunca são processadas (são saídas, não capturas). Uma pasta de capturas guardada **sem** importações em bruto é apresentada normalmente, mas o `process` ignora-a e indica isso mesmo; o `--input-level {raw,debayered,processed}` é a via de escape deliberada que força um ponto de entrada. Consulte a [Referência da CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like) para ver as mensagens exatas de omissão.
 {% endhint %}
 
 Mais dois comportamentos que vale a pena conhecer ao criar scripts de reprocessamento:
@@ -197,9 +161,7 @@ Mais dois comportamentos que vale a pena conhecer ao criar scripts de reprocessa
 
 Tudo nesta página pode ser executado em modo headless. Os modos de captura da GUI correspondem diretamente ao `chloros-cli lattice array-capture`:
 
-| GUI | CLI
-
-|
+| GUI | CLI |
 | --- | --- |
 | Única | `chloros-cli lattice array-capture` |
 | Contínua | `array-capture --continuous [--count N] [--duration S]` |
@@ -210,6 +172,4 @@ Tudo nesta página pode ser executado em modo headless. Os modos de captura da G
 | Gravar vídeo de índice | `chloros-cli lattice array-record` |
 | Gravar rajada em formato bruto / Criar vídeo | `chloros-cli lattice array-burst` / `array-build-video` |
 
-As tabelas completas de sinalizadores, a opção de captura estabilizada com AE inteligente (`--smart`) e o modelo de taxa sustentada encontram-se na [Referência da CLI
-
-§ Modos de Captura, Gravadores e Reprocessamento Offline](../reference/cli-reference.md#capture-modes-recorders--offline-reprocess).
+As tabelas completas de sinalizadores, a opção de captura estabilizada com AE inteligente (`--smart`) e o modelo de taxa sustentada encontram-se na [Referência da CLI § Modos de Captura, Gravadores e Reprocessamento Offline](../reference/cli-reference.md#capture-modes-recorders--offline-reprocess).

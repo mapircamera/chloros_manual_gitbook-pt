@@ -21,15 +21,7 @@ MAPIR oferece vários alvos de calibração para cobrir uma vasta gama de aplica
 
 Isto significa que, em cada imagem captada com as nossas câmaras, pode utilizar uma fotografia dos nossos alvos de refletância, tais como o [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) ou [T4-R125](https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t4-r125), para calibrar as imagens em termos de refletância. Uma vez calibrada, cada pixel da imagem corresponde a uma percentagem de refletância.
 
-No caso das saídas do **Survey3**, se exportar as imagens calibradas no Chloros
-
-nos formatos típicos JPG ou TIFF
-
-, a percentagem de refletância é calculada dividindo o valor do pixel pela profundidade de bits do formato da imagem. Assim, para JPG, divide-se por 255 e, para TIFF
-
-, divide-se por 65 535. Também pode escolher o formato de saída PERCENT no Chloros
-
-; nesse caso, cada pixel variará entre um valor percentual de 0,0 e 1,0 (0% a 100% de refletância). Tenha apenas em conta que algumas aplicações de imagem não aceitam imagens em percentagem (ponto flutuante) e que estas ocupam muito espaço de armazenamento.
+No caso das saídas do **Survey3**, se exportar as imagens calibradas no Chloros nos formatos típicos JPG ou TIFF, a percentagem de refletância é calculada dividindo o valor do pixel pela profundidade de bits do formato da imagem. Assim, para JPG, divide-se por 255 e, para TIFF, divide-se por 65 535. Também pode escolher o formato de saída PERCENT no Chloros; nesse caso, cada pixel variará entre um valor percentual de 0,0 e 1,0 (0% a 100% de refletância). Tenha apenas em conta que algumas aplicações de imagem não aceitam imagens em percentagem (ponto flutuante) e que estas ocupam muito espaço de armazenamento.
 
 {% hint style="info" %}
 **A refletância LATTICE utiliza uma escala de píxeis diferente.** A refletância LATTICE é armazenada com DN 32768 = 100% de refletância (e não 65535), e cada ficheiro contém uma etiqueta XMP `Chloros:PixelScale` que indica a sua escala. Leia a etiqueta e divida por esse valor, em vez de assumir uma constante — consulte [Formatos de imagem de saída](output-image-formats.md).
@@ -37,38 +29,26 @@ nos formatos típicos JPG ou TIFF
 
 ## Alvos de calibração com câmaras LATTICE
 
-Com as câmaras LATTICE, um alvo de calibração é **opcional** para a refletância: o Chloros
-
-pode, em vez disso, referenciar a refletância à irradiância descendente medida por um sensor de luz DAQ (ρ = π·L/E). A referência é escolhida através da configuração da fonte de refletância do projeto, definida com `chloros-cli process --reflectance-source` (a interface gráfica não dispõe de qualquer controlo para este efeito e utiliza o valor armazenado do projeto, `auto` por predefinição — ver [Definições do projeto](project-settings/project-settings.md)):
+Com as câmaras LATTICE, um alvo de calibração é **opcional** para a refletância: o Chloros pode, em vez disso, referenciar a refletância à irradiância descendente medida por um sensor de luz DAQ (ρ = π·L/E). A referência é escolhida através da configuração da fonte de refletância do projeto, definida com `chloros-cli process --reflectance-source` (a interface gráfica não dispõe de qualquer controlo para este efeito e utiliza o valor armazenado do projeto, `auto` por predefinição — ver [Definições do projeto](project-settings/project-settings.md)):
 
 | Valor | Comportamento |
 | --- | --- |
-| `auto` *(padrão)* | Um alvo dentro do quadro que passe no controlo de qualidade (QA) é a **referência absoluta**; quando não há nenhum alvo presente ou o QA falha, o Chloros
-
-recorre à divisão de fluxo descendente do DAQ. Um alvo que passe no controlo de qualidade com um sinalizador (um painel excluído ou uma banda fora de serviço) não é automaticamente preferido: as cadeias «alvo», «alvo+DAQ» e «apenas DAQ» são testadas por ordem da pontuação medida nos painéis de validação. |
+| `auto` *(padrão)* | Um alvo dentro do quadro que passe no controlo de qualidade (QA) é a **referência absoluta**; quando não há nenhum alvo presente ou o QA falha, o Chloros recorre à divisão de fluxo descendente do DAQ. Um alvo que passe no controlo de qualidade com um sinalizador (um painel excluído ou uma banda fora de serviço) não é automaticamente preferido: as cadeias «alvo», «alvo+DAQ» e «apenas DAQ» são testadas por ordem da pontuação medida nos painéis de validação. |
 | `target` | Exclusivamente alvo — sem substituição por DAQ. |
 | `daq` | Autoridade do DAQ — a medição descendente é sempre a referência. |
 
 Comportamento adicional do alvo para o LATTICE:
 
 * **Geometrias do alvo** — São suportados painéis marcados com ArUco, painéis com ROI fixa e alvos em faixa; a geometria provém da configuração do alvo do projeto.
-* **Dados de alvo medidos por unidade** — `--target-reflectance-dir DIR` aponta para um diretório de varreduras de refletância de alvos medidas por unidade (`<serial>.csv`, consultadas através do número de série/QR da unidade do alvo). Em caso de falha, o Chloros
-
-recorre aos espectros nominais T3/T4P.
+* **Dados de alvo medidos por unidade** — `--target-reflectance-dir DIR` aponta para um diretório de varreduras de refletância de alvos medidas por unidade (`<serial>.csv`, consultadas através do número de série/QR da unidade do alvo). Em caso de falha, o Chloros recorre aos espectros nominais T3/T4P.
 * **Ancoragem temporal** — um alvo detetado calibra os fotogramas à sua volta e é mantido entre os avistamentos do alvo.
 
-A semântica completa dos sinalizadores e os exemplos encontram-se na [Referência da CLI
-
-](reference/cli-reference.md) (ver «Opções de exportação por produto»).
+A semântica completa dos sinalizadores e os exemplos encontram-se na [Referência da CLI](reference/cli-reference.md) (ver «Opções de exportação por produto»).
 
 ### F988
 
-«A refletância F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se fora da gama calibrada do sensor de luz do DAQ, pelo que o Chloros
+«A refletância F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se fora da gama calibrada do sensor de luz do DAQ, pelo que o Chloros aplica a sua captura mais recente do painel e mantém-na entre as observações do painel.»
 
-aplica a sua captura mais recente do painel e mantém-na entre as observações do painel.»
-
-Se o F988 for executado com calibração apenas por DAQ, o Chloros
-
-rejeita a refletância baseada no DAQ para essa banda e indica o motivo (motivo da omissão `dls-uncalibrated-band-988`); o fluxo de trabalho com o painel é o caminho suportado.
+Se o F988 for executado com calibração apenas por DAQ, o Chloros rejeita a refletância baseada no DAQ para essa banda e indica o motivo (motivo da omissão `dls-uncalibrated-band-988`); o fluxo de trabalho com o painel é o caminho suportado.
 
 <div><figure><img src=".gitbook/assets/t3-125.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_closed.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure></div>

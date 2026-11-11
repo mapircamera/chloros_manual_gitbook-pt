@@ -20,16 +20,12 @@ Antes de processar as suas imagens, é importante configurar as definições do 
 
 ### Definições predefinidas (recomendadas para a maioria dos utilizadores)
 
-As definições predefinidas funcionam bem para fluxos de trabalho típicos do Survey3
-e do LATTICE:
+As definições predefinidas funcionam bem para fluxos de trabalho típicos do Survey3 e do LATTICE:
 
 * ✅ **Correção de vinheta**: Ativada
-* ✅ **Calibração de refletância / equilíbrio de brancos**: Ativada (utiliza alvos MAPIR
-e/ou dados do sensor de luz DAQ)
+* ✅ **Calibração de refletância / equilíbrio de brancos**: Ativada (utiliza alvos MAPIR e/ou dados do sensor de luz DAQ)
 * ✅ **Método de debayering**: Padrão (Rápido, Qualidade Média)
-* ✅ **Formato de exportação**: TIFF
-(16 bits) (TIFF
-(8 bits) para um projeto totalmente em 8 bits)
+* ✅ **Formato de exportação**: TIFF (16 bits) (TIFF (8 bits) para um projeto totalmente em 8 bits)
 * ✅ **Todos os produtos de exportação**: Ativado (o LATTICE captura automaticamente os resultados do «fan out» em imagens sem debayering, pré-visualização, radiação e refletância)
 
 Basta importar as suas imagens e iniciar o processamento com estas predefinições.
@@ -46,8 +42,7 @@ O painel «Definições do projeto» está organizado nas secções abaixo. Duas
 
 ### Detecção de alvos
 
-Controla a forma como o Chloros
-identifica os alvos de calibração nas suas imagens.
+Controla a forma como o Chloros identifica os alvos de calibração nas suas imagens.
 
 **Principais definições:*** **Área mínima da amostra de calibração (px)**: Limite de tamanho para a deteção de alvos (padrão:**25**, intervalo 0–10 000)
 * **Agrupamento mínimo de alvos (0-100)**: limiar de similaridade para agrupar regiões-alvo (padrão:**60**)**Quando ajustar:**
@@ -65,19 +60,15 @@ Estas definições ficam desativadas quando a **calibração de refletância / e
 Principais opções de processamento de imagem e calibração.
 
 **Definições principais:*** **Correção de vinheta**: Compensa o escurecimento da lente nas bordas ✅ Recomendado
-* **Calibração de refletância / equilíbrio de brancos**: Calibra as imagens utilizando alvos detetados (Survey3
-) e/ou dados do sensor de luz DAQ (LATTICE) ✅ Recomendado
+* **Calibração de refletância / equilíbrio de brancos**: Calibra as imagens utilizando alvos detetados (Survey3) e/ou dados do sensor de luz DAQ (LATTICE) ✅ Recomendado
 * **Método de debayerização**: Algoritmo para converter RAW em multiespectral de 3 canais
 * **Intervalo mínimo de recalibração**: Tempo mínimo, em segundos, entre a utilização de alvos de calibração (predefinição:**0** = utilizar todos, intervalo 0–3600)**Produtos alternativos não calibrados:**Quando um fotograma não pode ser calibrado em termos de refletância (sem alvo disponível ou calibração desativada), é exportado como um de dois produtos alternativos —**existe exatamente um do par por execução**, escolhido pelo seletor de correção de vinheta:
 
 * **Exportar resposta do sensor**: grava `Sensor_Response_Images` — utilizado quando a correção de vinheta está**desativada*** **Exportar com correção de vinheta**: grava `Vignette_Corrected_Images` — utilizado quando a correção de vinheta está**ativada**A caixa de seleção que não está em uso fica a cinzento. Desmarcar a caixa ativa impede completamente que esse ficheiro seja gravado.**Produtos de exportação do LATTICE** (apresentados para todos os projetos; aplicam-se às capturas do LATTICE):
 
-* **Exportar sem demosaico**: a imagem linear sem efeito de bayes (`Debayered_Images`): o desvio de escuro do pacote de calibração é removido e, em seguida, é removido o efeito de bayes, sem campo plano nem desmistura — o mesmo ficheiro que uma captura guarda no seu nível sem efeito de bayes — na orientação nativa do sensor. Aplica-se aos módulos RGB
-e multiespectrais.
-* **Exportar pré-visualização**: a pré-visualização no ecrã (`Preview_Images`). RGB
-= equilíbrio de brancos (iluminante DAQ, quando disponível; caso contrário, «gray-world») + gama; multiespectral = alongamento de cores falsas.
-* **Exportar radianância**: radianância espectral float32 (`Radiance_Images`, W/m²/sr/nm). Apenas módulos multiespectrais — não aplicável a mestres RGB
-.
+* **Exportar sem demosaico**: a imagem linear sem efeito de bayes (`Debayered_Images`): o desvio de escuro do pacote de calibração é removido e, em seguida, é removido o efeito de bayes, sem campo plano nem desmistura — o mesmo ficheiro que uma captura guarda no seu nível sem efeito de bayes — na orientação nativa do sensor. Aplica-se aos módulos RGB e multiespectrais.
+* **Exportar pré-visualização**: a pré-visualização no ecrã (`Preview_Images`). RGB = equilíbrio de brancos (iluminante DAQ, quando disponível; caso contrário, «gray-world») + gama; multiespectral = alongamento de cores falsas.
+* **Exportar radianância**: radianância espectral float32 (`Radiance_Images`, W/m²/sr/nm). Apenas módulos multiespectrais — não aplicável a mestres RGB.
 * **Exportar refletância**: refletância uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1,0) quando uma leitura descendente `.daq` ou um alvo no quadro cobre o quadro. Apenas módulos multiespectrais.
 
 Todas as quatro opções estão **ativadas por predefinição**— um quadro bruto LATTICE importado é distribuído por todos os produtos ativados e aplicáveis numa única passagem de processamento. A caixa de seleção**Exportar refletância** fica desativada quando a calibração de refletância está desativada. As definições cujo interruptor principal as torna impossíveis estão sempre desativadas, com uma dica de ferramenta que indica o interruptor a alterar.**Definições avançadas:*** **Desvio do fuso horário do sensor de luz**: Horas em relação ao UTC para sincronização do tempo do sensor de luz (predefinição: 0, intervalo de −12 a +12)
@@ -85,28 +76,23 @@ Todas as quatro opções estão **ativadas por predefinição**— um quadro bru
 * **Pino de exposição 1/2**: Atribui câmaras aos pinos de exposição para configurações com duas câmaras
 
 {% hint style="info" %}
-**O nível de entrada do LATTICE é automático.** As capturas do LATTICE incluem o seu nível de processamento nos metadados XMP, e o processamento entra sempre no pipeline a partir do fotograma bruto — não há nada para configurar na GUI. (O sinalizador CLI
-`--input-level` existe como uma opção de substituição para utilizadores avançados, no caso de capturas com metadados perdidos; consulte a [Referência CLI
-](../reference/cli-reference.md).)
+**O nível de entrada do LATTICE é automático.** As capturas do LATTICE incluem o seu nível de processamento nos metadados XMP, e o processamento entra sempre no pipeline a partir do fotograma bruto — não há nada para configurar na GUI. (O sinalizador CLI `--input-level` existe como uma opção de substituição para utilizadores avançados, no caso de capturas com metadados perdidos; consulte a [Referência CLI](../reference/cli-reference.md).)
 {% endhint %}
 
 ### Método de remoção de pixelização
 
-Atualmente, oferecemos dois métodos de remoção de pixelização no Chloros
-:
+Atualmente, oferecemos dois métodos de remoção de pixelização no Chloros:
 
 #### Padrão (Rápido, Qualidade Média)
 
 O método padrão processa rapidamente, mas apresenta ruído de cor na remoção de pixelização, resultando em imagens menos precisas e com mais ruído.
 
-#### Sensível à Textura (Lento, Qualidade Máxima) \[Apenas Chloros
-+]
+#### Sensível à Textura (Lento, Qualidade Máxima) \[Apenas Chloros+]
 
 O método Sensível à Textura utiliza um debayer de alta qualidade sensível às arestas, combinado com um modelo de redução de ruído baseado em IA/ML que remove quase todo o ruído do processo de debayering. O modelo requer memória da GPU (VRAM) para funcionar: com **7 GB ou mais de VRAM**, pode processar várias imagens em simultâneo; com menos de 7 GB, processa uma imagem de cada vez (de forma visivelmente mais lenta). Consulte [Adaptação Dinâmica de Computação](../processing-architecture/dynamic-compute-adaptation.md).
 
 {% hint style="info" %}
-**As capturas do LATTICE utilizam sempre o demosaico padrão.** Não existe um modelo «Texture Aware» treinado para o LATTICE, pelo que a opção não está disponível para imagens do LATTICE — as imagens do Survey3
-no mesmo projeto ainda podem utilizá-la.
+**As capturas do LATTICE utilizam sempre o demosaico padrão.** Não existe um modelo «Texture Aware» treinado para o LATTICE, pelo que a opção não está disponível para imagens do LATTICE — as imagens do Survey3 no mesmo projeto ainda podem utilizá-la.
 {% endhint %}
 
 ### Índice (Índices Multiespectrais)
@@ -115,10 +101,7 @@ Configure quais os índices de vegetação a calcular e exportar. O menu suspens
 
 1. Clique no botão**«Adicionar índice»**
 
-2. Selecione um índice no menu suspenso (NDVI
-, NDRE
-, GNDVI
-, etc.)
+2. Selecione um índice no menu suspenso (NDVI, NDRE, GNDVI, etc.)
 3. Configure as definições de visualização (cores da LUT, intervalos de valores)
 4. Adicione vários índices, conforme necessário
 
@@ -126,56 +109,40 @@ Configure quais os índices de vegetação a calcular e exportar. O menu suspens
 * **NDRE**: Detecção precoce de stress com RedEdge
 * **GNDVI**: Sensível à concentração de clorofila
 * **OSAVI**: Funciona bem com solo visível
-* **EVI**: Regiões com elevado índice de área foliar (LAI
-)
+* **EVI**: Regiões com elevado índice de área foliar (LAI)
 
 **Fórmulas personalizadas:**
 
 * Crie fórmulas personalizadas de índices multiespectrais com cálculos matemáticos entre bandas em todos os canais da imagem
 * Guarde fórmulas personalizadas para reutilização
-* As fórmulas personalizadas são uma funcionalidade do Chloros
-+; a disponibilidade depende do seu nível de plano
+* As fórmulas personalizadas são uma funcionalidade do Chloros+; a disponibilidade depende do seu nível de plano
 
-Para todos os índices e fórmulas disponíveis — incluindo quais os nomes que existem apenas na GUI e quais os que também funcionam na CLI
-/SDK
-— consulte [Fórmulas de Índices Multiespectrais](../project-settings/multispectral-index-formulas.md).
+Para todos os índices e fórmulas disponíveis — incluindo quais os nomes que existem apenas na GUI e quais os que também funcionam na CLI/SDK — consulte [Fórmulas de Índices Multiespectrais](../project-settings/multispectral-index-formulas.md).
 
 ### Exportação
 
 Controla o formato do ficheiro de saída.
 
-**Formatos disponíveis**(configuração:**Formato de imagem calibrada**, predefinição**TIFF
-(16 bits)**):
+**Formatos disponíveis**(configuração:**Formato de imagem calibrada**, predefinição**TIFF (16 bits)**):
 
-* **TIFF
-(16 bits)**: Recomendado para SIG e análise científica
-* **TIFF
-(8 bits)**: TIFF
-de 8 bits* **TIFF
-(32 bits, Porcentagem)**: Valores de ponto flutuante
-* **PNG
-(8 bits)**: Compressão sem perdas para visualização
+* **TIFF (16 bits)**: Recomendado para SIG e análise científica
+* **TIFF (8 bits)**: TIFF de 8 bits* **TIFF (32 bits, Porcentagem)**: Valores de ponto flutuante
+* **PNG (8 bits)**: Compressão sem perdas para visualização
 * **JPG (8 bits)**: Ficheiros mais pequenos, compressão com perdas
 
-A lista mostra o que as imagens do projeto podem conter: o Chloros
-não aumenta a profundidade de bits. As imagens totalmente de 8 bits oferecem apenas TIFF
-(8 bits), PNG
-(8 bits) e JPG (8 bits), sendo que a predefinição é TIFF
-(8 bits). Num projeto misto, cada captura é exportada com a sua própria profundidade de bits ou uma inferior. O Radiance mantém-se em 32 bits de ponto flutuante.
+A lista mostra o que as imagens do projeto podem conter: o Chloros não aumenta a profundidade de bits. As imagens totalmente de 8 bits oferecem apenas TIFF (8 bits), PNG (8 bits) e JPG (8 bits), sendo que a predefinição é TIFF (8 bits). Num projeto misto, cada captura é exportada com a sua própria profundidade de bits ou uma inferior. O Radiance mantém-se em 32 bits de ponto flutuante.
 
 Os ficheiros de saída são gravados na pasta do projeto, agrupados por câmara e formato: `<project>/<camera>/<format>/<Product>_Images/`. O Radiance é **sempre** gravado como float32 na pasta `tiff32`, independentemente desta configuração. Os ficheiros exportados mantêm o nome do ficheiro de origem — a pasta identifica o produto. As exportações multiespectrais do LATTICE também podem gravar máscaras de limitação por pixel numa pasta `clamp_masks/`, ao lado das pastas dos produtos. Consulte [Conclusão do processamento](finishing-the-processing.md) para ver a árvore de saída completa.
 
 {% hint style="warning" %}
-**Leitura de valores de refletância**: o DN que corresponde a ρ = 1,0 depende da câmara de origem — o LATTICE utiliza 32768 (indicado como XMP `Chloros:PixelScale`), enquanto o Survey3
-utiliza 65535. Leia a etiqueta em vez de assumir um valor constante. Consulte [Formatos de imagem de saída](../output-image-formats.md).
+**Leitura de valores de refletância**: o DN que corresponde a ρ = 1,0 depende da câmara de origem — o LATTICE utiliza 32768 (indicado como XMP `Chloros:PixelScale`), enquanto o Survey3 utiliza 65535. Leia a etiqueta em vez de assumir um valor constante. Consulte [Formatos de imagem de saída](../output-image-formats.md).
 {% endhint %}
 
 ### Sensor de luz DAQ
 
 Esta secção lista todos os ficheiros de luz descendente do DAQ (`.daq` / `.csv`) no seu projeto, uma linha por ficheiro, mostrando o modelo do sensor, o nome do ficheiro e a **capa** do difusor em vigor para esse ficheiro.
 
-* **Substituição da tampa (todos os ficheiros)**: um único menu suspenso para todo o projeto.**Auto** (predefinição) utiliza a cap registada em cada ficheiro — presume-se luz solar quando nada foi registado, mas o DAQ-U, o DAQ-M e o DAQ-E são fornecidos sem cap e o Chloros
-não consegue ver o que foi ajustado, pelo que o processamento emite um aviso sobre uma cap presumida: escolha a cap que foi ajustada. A seleção de um limite substitui todos os ficheiros, exceto os de um DAQ-E-S, cujo difusor faz parte da sua calibração: as gravações em bruto são corrigidas com ele e as gravações que já incluem um limite são re-referenciadas (a correção registada é anulada e o limite selecionado é aplicado).
+* **Substituição da tampa (todos os ficheiros)**: um único menu suspenso para todo o projeto.**Auto** (predefinição) utiliza a cap registada em cada ficheiro — presume-se luz solar quando nada foi registado, mas o DAQ-U, o DAQ-M e o DAQ-E são fornecidos sem cap e o Chloros não consegue ver o que foi ajustado, pelo que o processamento emite um aviso sobre uma cap presumida: escolha a cap que foi ajustada. A seleção de um limite substitui todos os ficheiros, exceto os de um DAQ-E-S, cujo difusor faz parte da sua calibração: as gravações em bruto são corrigidas com ele e as gravações que já incluem um limite são re-referenciadas (a correção registada é anulada e o limite selecionado é aplicado).
 * As linhas apresentam um aviso quando uma tampa registada era o valor predefinido assumido pelo hub, em vez de ter sido confirmada pelo operador, e quando a tampa selecionada não tem perfil para esse modelo de dispositivo (a substituição é recusada para esse ficheiro).
 
 As gravações DAQ efetuadas no separador «Sensores de Luz» são adicionadas automaticamente ao projeto aberto, e os ficheiros `.daq` / `.csv` importados aparecem aqui assim que são adicionados.
@@ -196,9 +163,7 @@ Crie modelos reutilizáveis para fluxos de trabalho consistentes:
 
 1. Configure todas as definições pretendidas no painel «Definições do projeto»
 2. Deslize até à secção **«Guardar modelo de projeto»** na parte inferior
-3. Introduza um nome descritivo para o modelo (por exemplo, «Survey3N
-
-\_RGN\_Agriculture»)
+3. Introduza um nome descritivo para o modelo (por exemplo, «Survey3N\_RGN\_Agriculture»)
 4. Clique no ícone de guardar
 
 **Vantagens:**
@@ -217,16 +182,12 @@ Ao criar um novo projeto:
 
 ### Diretório de Trabalho
 
-A definição **&quot;Diretório de Trabalho&quot;** especifica onde os novos projetos são criados por predefinição:
+A definição **"Diretório de Trabalho"** especifica onde os novos projetos são criados por predefinição:
 
-* **Localização predefinida**: `Documents\MAPIR\Chloros Projects` na pasta «Documentos» do Windows
-
-(normalmente `C:\Users\[Username]\Documents\MAPIR\Chloros Projects`; acompanha a pasta «Documentos» caso o OneDrive ou um perfil móvel a mova)
+* **Localização predefinida**: `Documents\MAPIR\Chloros Projects` na pasta «Documentos» do Windows (normalmente `C:\Users\[Username]\Documents\MAPIR\Chloros Projects`; acompanha a pasta «Documentos» caso o OneDrive ou um perfil móvel a mova)
 * **Alterar localização**: clique no ícone de edição e selecione uma nova pasta
 * **Partilhado com o CLI**: `chloros-cli` utiliza a mesma configuração predefinida da pasta do projeto
-* **Mantenha o nome curto no Windows**: a menos que os caminhos longos do Windows
-
-estejam ativados, uma pasta de projeto com mais de cerca de 130 caracteres é rejeitada antes do processamento — consulte [Iniciar o processamento](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer)
+* **Mantenha o nome curto no Windows**: a menos que os caminhos longos do Windows estejam ativados, uma pasta de projeto com mais de cerca de 130 caracteres é rejeitada antes do processamento — consulte [Iniciar o processamento](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer)
 * **Quando alterar**:
   * Unidade de rede para colaboração em equipa
   * Unidade diferente com mais espaço de armazenamento
@@ -242,9 +203,7 @@ com GPS para geolocalização precisa:
 
 ### Pré-requisitos
 
-* DAQ MAPIR
-
-com módulo GPS (GNSS)
+* DAQ MAPIR com módulo GPS (GNSS)
 * Ficheiro de registo .daq com entradas dos pinos de exposição
 * Câmara ligada aos pinos de exposição do DAQ durante a sessão de captura
 
@@ -270,32 +229,14 @@ com módulo GPS (GNSS)
 
 ### Projetos com várias câmaras
 
-Ao processar imagens de várias câmaras MAPIR
+Ao processar imagens de várias câmaras MAPIR num único projeto:
 
-num único projeto:
-
-1. O Chloros
-
-deteta automaticamente cada modelo de câmara (tanto Survey3
-
-como LATTICE)
+1. O Chloros deteta automaticamente cada modelo de câmara (tanto Survey3 como LATTICE)
 2. Cada câmara recebe perfis de processamento adequados e cada uma tem a sua própria árvore de pastas de saída
-3. PPK: Atribua manualmente cada câmara Survey3
-
-ao pino de exposição correto
+3. PPK: Atribua manualmente cada câmara Survey3 ao pino de exposição correto
 4. Todas as câmaras utilizam o mesmo formato de exportação e os mesmos índices
 
-**Exemplos**: configuração de duas câmaras Survey3W
-
-RGN
-
-+ Survey3N
-
-OCN
-
-, ou um conjunto LATTICE que combine uma câmara principal RGB
-
-com módulos de banda estreita
+**Exemplos**: configuração de duas câmaras Survey3W RGN + Survey3N OCN, ou um conjunto LATTICE que combine uma câmara principal RGB com módulos de banda estreita
 
 ### Levantamentos em time-lapse ou com várias datas
 
@@ -312,14 +253,8 @@ Para levantamentos repetidos da mesma área ao longo do tempo:
 Para projetos com muitas imagens (mais de 500):
 
 * Considere dividir em projetos mais pequenos por data ou área
-* Utilize o processamento paralelo do Chloros
-
-+ para obter resultados mais rápidos
-* Considere utilizar a CLI
-
-ou a API
-
-para a automatização em lote
+* Utilize o processamento paralelo do Chloros+ para obter resultados mais rápidos
+* Considere utilizar a CLI ou a API para a automatização em lote
 * Ajuste o intervalo mínimo de recalibração para reduzir o tempo de deteção dos alvos
 
 ***
@@ -331,9 +266,7 @@ Antes de iniciar o processamento, reveja estas definições essenciais:
 * [ ] Modelo da câmara detetado corretamente no Navegador de Ficheiros
 * [ ] Correção de vinheta ativada
 * [ ] Calibração de refletância ativada
-* [ ] Para o Survey3
-
-: pelo menos uma imagem de alvo de calibração importada e verificada; para o LATTICE: presença de um alvo e/ou de um registo descendente `.daq`
+* [ ] Para o Survey3: pelo menos uma imagem de alvo de calibração importada e verificada; para o LATTICE: presença de um alvo e/ou de um registo descendente `.daq`
 * [ ] Índices multiespectrais desejados adicionados
 * [ ] Formato de exportação adequado ao seu fluxo de trabalho
 * [ ] Definições PPK configuradas (se estiver a utilizar ficheiros .daq com eventos de exposição)

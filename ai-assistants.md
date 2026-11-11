@@ -43,7 +43,7 @@ As ferramentas do servidor abrangem o que o [Python SDK](api-python-sdk.md) faz.
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**adicione isto a `claude_desktop_config.json` (**Definições &gt; Desenvolvedor &gt; Editar Configuração**abre-o) e, em seguida, reinicie o Claude Desktop. O**cursor** recebe a mesma entrada em `~/.cursor/mcp.json`.
+**Claude Desktop:**adicione isto a `claude_desktop_config.json` (**Definições > Desenvolvedor > Editar Configuração**abre-o) e, em seguida, reinicie o Claude Desktop. O**cursor** recebe a mesma entrada em `~/.cursor/mcp.json`.
 
 ```json
 {

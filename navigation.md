@@ -22,19 +22,7 @@ Da esquerda para a direita, o cabeçalho superior contém:
 * **Ligar ao sensor de luz** — aceder ao [separador «Sensores de luz»](daq/) para ligar um sensor de luz DAQ. Funciona sem ter um projeto aberto.
 
 {% hint style="info" %}
-**Apenas Windows**: A interface gráfica do Chloros
-
-Desktop está disponível no Windows
-
-. Os utilizadores de Linux
-
-devem consultar a documentação da [CLI
-
-](CLI.md) e do [Python
-
-SDK
-
-](api-python-sdk.md) para o processamento sem interface gráfica.
+**Apenas Windows**: A interface gráfica do Chloros Desktop está disponível no Windows. Os utilizadores de Linux devem consultar a documentação da [CLI](CLI.md) e do [Python SDK](api-python-sdk.md) para o processamento sem interface gráfica.
 {% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1) (1).png" alt="" data-size="line">
@@ -49,15 +37,9 @@ Barra de progresso <img src=".gitbook/assets/image (5).png" alt="" data-size="li
 
 
 
-No modo gratuito do Chloros
+No modo gratuito do Chloros, que processa todos os ficheiros sequencialmente, a barra de progresso mostra duas fases: Detecção de alvos e Processamento.
 
-, que processa todos os ficheiros sequencialmente, a barra de progresso mostra duas fases: Detecção de alvos e Processamento.
-
-No modo pago com licença do Chloros
-
-+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra quatro fases: Detecção, Análise, Calibração e Exportação. Se passar o cursor do rato sobre a barra de progresso do Chloros
-
-+, será exibido um painel suspenso com as 4 fases da barra de progresso, para que possa acompanhar o processo. Ao clicar na barra de progresso superior, o painel suspenso fica fixo; ao clicar novamente, é desbloqueado.
+No modo pago com licença do Chloros+, que processa todos os ficheiros simultaneamente, a barra de progresso mostra quatro fases: Detecção, Análise, Calibração e Exportação. Se passar o cursor do rato sobre a barra de progresso do Chloros+, será exibido um painel suspenso com as 4 fases da barra de progresso, para que possa acompanhar o processo. Ao clicar na barra de progresso superior, o painel suspenso fica fixo; ao clicar novamente, é desbloqueado.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 

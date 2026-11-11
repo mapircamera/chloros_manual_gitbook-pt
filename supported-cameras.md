@@ -6,23 +6,10 @@ metaLinks:
 
 # Câmaras compatíveis O
 
-Chloros
-processa imagens de duas famílias de câmaras MAPIR
-em **todas as plataformas** (Windows
-, Linux
-amd64 e Linux
-arm64/Jetson):
+Chloros processa imagens de duas famílias de câmaras MAPIR em **todas as plataformas** (Windows, Linux amd64 e Linux arm64/Jetson):
 
-* **Survey3** — Câmaras Survey3W
-(grande angular) e Survey3N
-(angular estreita). Entrada: `RAW+JPG`.
-* **LATTICE**— módulos de câmara multiespectral M3C e M3M. Entrada: capturas `.tif`/`.tiff`. As câmaras LATTICE também podem ser**controladas em tempo real** a partir do Chloros
-— através do separador «Câmaras» da interface gráfica (GUI) (Windows
-) ou do `chloros-cli lattice` / do Python
-SDK
-(Windows
-e Linux
-) — incluindo conjuntos sincronizados de várias câmaras. Consulte o [guia do LATTICE](lattice/).
+* **Survey3** — Câmaras Survey3W (grande angular) e Survey3N (angular estreita). Entrada: `RAW+JPG`.
+* **LATTICE**— módulos de câmara multiespectral M3C e M3M. Entrada: capturas `.tif`/`.tiff`. As câmaras LATTICE também podem ser**controladas em tempo real** a partir do Chloros — através do separador «Câmaras» da interface gráfica (GUI) (Windows) ou do `chloros-cli lattice` / do Python SDK (Windows e Linux) — incluindo conjuntos sincronizados de várias câmaras. Consulte o [guia do LATTICE](lattice/).
 
 O pipeline de processamento também aceita ficheiros de entrada `.dng`.
 
@@ -36,9 +23,7 @@ A linha LATTICE é um sistema modular de câmaras multiespectrais baseado no sen
 <sensor>-<lens>-F<filter>        e.g.  M3C-L41-FRGN,  M3M-L87-F550
 ``` O
 
-Chloros
-
-apresenta-a com o prefixo `LATT-` (por exemplo, `LATT-M3M-L41-F550`), e a cadeia de caracteres do modelo controla tudo a jusante — o perfil do sensor, a disposição das bandas e a calibração são definidos automaticamente; não há nada a configurar por câmara. O número da lente corresponde ao **campo de visão horizontal em graus**: `L41` = estreito 41°, `L87` = amplo 87°.
+Chloros apresenta-a com o prefixo `LATT-` (por exemplo, `LATT-M3M-L41-F550`), e a cadeia de caracteres do modelo controla tudo a jusante — o perfil do sensor, a disposição das bandas e a calibração são definidos automaticamente; não há nada a configurar por câmara. O número da lente corresponde ao **campo de visão horizontal em graus**: `L41` = estreito 41°, `L87` = amplo 87°.
 
 Existem duas configurações de sensor:
 
@@ -49,52 +34,20 @@ Existem duas configurações de sensor:
 
 ### Opções de filtro M3C (Bayer)
 
-| Filtro | Bandas (nome @ centro nm / FWHM
-
-nm)       |
+| Filtro | Bandas (nome @ centro nm / FWHM nm)       |
 | ------ | ---------------------------------------- |
-| `FRGB` | Blue
+| `FRGB` | Blue 475/30 · Green 550/30 · Red 625/30  |
+| `FRGN` | Red 660/21 · Green 550/30 · NIR 850/30   |
+| `FOCN` | Orange 618,4/46 · Cyan 494,1/40 · NIR 821,6/54 (medido — ver abaixo) |
+| `FNGB` | Blue 475/30 · Green 550/30 · NIR 850/30  |
 
-475/30 · Green
-
-550/30 · Red
-
-625/30  |
-| `FRGN` | Red
-
-660/21 · Green
-
-550/30 · NIR
-
-850/30   |
-| `FOCN` | Orange
-
-618,4/46 · Cyan
-
-494,1/40 · NIR
-
-821,6/54 (medido — ver abaixo) |
-| `FNGB` | Blue
-
-475/30 · Green
-
-550/30 · NIR
-
-850/30  |
-
-Para o `FOCN`, os valores correspondem à banda de meio-máximo **medida** do filtro (Chloros
-
-1.3.0 e versões posteriores; as versões anteriores utilizavam os valores da ficha técnica 615/21 · 490/38 · 808/14). Os nomes das bandas mantêm-se como `Orange_615`, `Cyan_490` e `NIR_808`, e o centro e a largura medidos são os valores que o Chloros
-
-inclui em cada exportação calibrada.
+Para o `FOCN`, os valores correspondem à banda de meio-máximo **medida** do filtro (Chloros 1.3.0 e versões posteriores; as versões anteriores utilizavam os valores da ficha técnica 615/21 · 490/38 · 808/14). Os nomes das bandas mantêm-se como `Orange_615`, `Cyan_490` e `NIR_808`, e o centro e a largura medidos são os valores que o Chloros inclui em cada exportação calibrada.
 
 ### Catálogo de filtros M3M (mono) — 23 SKUs
 
 O número F é a referência do SKU; a banda medida (gravada em cada produto calibrado para exportação) corresponde à análise do filtro por lote:
 
-| SKU    | Centro (nm, medido) | Largura FWHM
-
-(nm) | Largura (nm) |
+| SKU    | Centro (nm, medido) | Largura FWHM (nm) | Largura (nm) |
 | ------ | --------------------- | --------------- | ---------- |
 | F385   | 379,4                 | 367–392         | 25         |
 | F405   | 403,9                 | 390–417         | 27         |
@@ -120,14 +73,8 @@ O número F é a referência do SKU; a banda medida (gravada em cada produto cal
 | F950   | 945,1                 | 929–961         | 32         |
 | F988 † | 985,3                 | 968–1003        | 35         |
 
-_«Os limites das bandas são medidos como valores de largura total ao meio do máximo a partir das digitalizações de filtros por lote da MAPIR
+_«Os limites das bandas são medidos como valores de largura total ao meio do máximo a partir das digitalizações de filtros por lote da MAPIR — os mesmos valores que a Chloros grava em cada exportação calibrada.»_ "— (nominal)" = ainda não existe uma varredura do lote; para esses SKUs, o centro indicado é o número do SKU e a largura é o valor fornecido pelo fabricante.
 
-— os mesmos valores que a Chloros
-
-grava em cada exportação calibrada.»_ &quot;— (nominal)&quot; = ainda não existe uma varredura do lote; para esses SKUs, o centro indicado é o número do SKU e a largura é o valor fornecido pelo fabricante.
-
-† «A refletância da F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se para além da gama calibrada do sensor de luz do DAQ, pelo que o Chloros
-
-aplica a sua captura mais recente do painel e mantém-na entre as observações do painel.» Consulte [Alvos de calibração](calibration-targets.md).
+† «A refletância da F988 é calibrada utilizando um painel de refletância na cena: a banda situa-se para além da gama calibrada do sensor de luz do DAQ, pelo que o Chloros aplica a sua captura mais recente do painel e mantém-na entre as observações do painel.» Consulte [Alvos de calibração](calibration-targets.md).
 
 Para controlo de câmara em tempo real, matrizes, configuração de rede e a cadeia de processamento radiométrico, consulte o [guia LATTICE](lattice/).
