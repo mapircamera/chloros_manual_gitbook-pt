@@ -1,26 +1,30 @@
-# API : Python SDK
+# API: Python SDK
 
 {% hint style="info" %}
-**Está à procura do API completo?** Esta página é um tutorial prático. Todas as classes públicas, métodos, assinaturas exatas e exemplos que podem ser copiados e colados encontram-se na [Referência do SDK](reference/sdk-reference.md), que está otimizada para assistentes de IA.**Está a trabalhar com um assistente de IA?** Cole este URL no chat para que tenha o Chloros 1.2.0 API completo e atualizado:
+**Está à procura da API completa?** Esta página é um tutorial prático. Todas as classes públicas, métodos, assinaturas exatas e exemplos que podem ser copiados e colados encontram-se na [Referência do SDK](reference/sdk-reference.md), que está otimizada para assistentes de IA.**Está a trabalhar com um assistente de IA?** Cole este URL no chat para que tenha acesso à API completa e atualizada do Chloros 1.3.0:
 
 `https://mapir.gitbook.io/chloros/reference/sdk-reference.md`
 
-Todas as páginas deste manual estão disponíveis em formato Markdown bruto no endereço com o slug em minúsculas + `.md`, e o manual completo está indexado em `https://mapir.gitbook.io/chloros/llms.txt`.
+Cada página deste manual está disponível como markdown bruto no seu slug em minúsculas + `.md`, e o manual completo está indexado em `https://mapir.gitbook.io/chloros/llms.txt`.
 {% endhint %}
 
-O **Chloros Python SDK** (`chloros-sdk` no PyPI) controla todas as funcionalidades do aplicativo de ambiente de trabalho a partir de Python: processamento em lote de imagens, controlo em tempo real de câmaras e matrizes LATTICE, sessões de sensores de luz DAQ e automação de projetos guardados. Trata-se de uma camada fina sobre o mesmo backend local que a GUI e o CLI utilizam (HTTP no `127.0.0.1:5000`), pelo que o comportamento é idêntico nas três interfaces.
+O **Chloros Python SDK** (`chloros-sdk` no PyPI) controla tudo o que a aplicação de ambiente de trabalho pode fazer a partir de Python: processamento de imagens em lote, controlo em tempo real da câmara LATTICE e da matriz, sessões de aquisição de dados (DAQ) com sensores de luz e automatização de projetos guardados. Trata-se de uma camada fina sobre o mesmo backend local que a GUI e a CLI utilizam (HTTP em `127.0.0.1:5000`), pelo que o comportamento é idêntico nas três interfaces.
 
 ## Instalação
 
-A instalação é feita em duas etapas: primeiro, o pacote para computador Chloros (que fornece o backend de processamento e os runtimes de hardware) e, em seguida, o pacote Python.
+O SDK vem incluído no pacote de ambiente de trabalho do Chloros, que também fornece o backend de processamento e os runtimes de hardware, e a sua versão corresponde sempre à do pacote.
 
-**Passo 1 — Instalar o Chloros.** Windows: execute o instalador para ambiente de trabalho (caminho predefinido `C:\Program Files\MAPIR\Chloros\`) a partir da página [Transferências](download.md). Linux: instale o pacote `.deb` ([Instalação do Linux](linux/linux-installation.md)).**Passo 2 — Instalar o SDK** (Python 3.7+):
+**Passo 1 — Instalar o Chloros.** Windows: execute o instalador para ambiente de trabalho (caminho predefinido `C:\Program Files\Chloros\`) a partir da página [Download](download.md). Linux: instale o pacote `.deb` com o `sudo apt install ./chloros_1.3.0_<arch>.deb` ([Instalação no Linux](linux/linux-installation.md)).**Passo 2 — Verificar o SDK** (Python 3.7+). Normalmente, não é necessário instalar nada:
+
+* **Windows:** o instalador instala o wheel do SDK incluído no Python do seu sistema (se não estiver instalado nenhum Python, este passo é ignorado).
+* **Linux:** o `.deb` instala o SDK para o sistema `python3` no `/usr/lib/python3/dist-packages`. Os seus pré-requisitos, `python3-numpy` e `python3-requests`, são recomendados pelo pacote: o `apt install` inclui-os, enquanto o `dpkg -i` não.
+* **Um virtualenv** não reconhece os pacotes do sistema; instale o ficheiro «wheel» incluído no pacote nele: `pip install /usr/lib/chloros/sdk/chloros_sdk-*.whl` no Linux, ou o `chloros_sdk-*.whl` na pasta `sdk` da pasta de instalação do Windows (`C:\Program Files\Chloros\sdk\` por predefinição).
 
 ```bash
-pip install chloros-sdk
+python3 -c "import chloros_sdk; print(chloros_sdk.__version__)"   # Windows: py -c "…"
 ```
 
-Pode nem precisar do pip: todos os instaladores incluem um wheel SDK correspondente. O instalador Windows instala-o automaticamente no seu sistema Python; o Linux `.deb` coloca-o em `/usr/lib/chloros/sdk/` e apresenta o comando exato `pip install --user`. O PyPI é atualizado nas compilações de lançamento, pelo que o `pip install chloros-sdk` corresponde à versão estável mais recente.
+Numa máquina sem o pacote Chloros, cujo SDK controla um backend noutra máquina (ver [O que uma instalação apenas com o pip obtém](#what-a-pip-only-install-gets)), instale-o a partir do PyPI: `pip install chloros-sdk`. O PyPI é atualizado nas compilações de lançamento, pelo que corresponde à versão estável mais recente.
 
 **Passo 3 — Inicie sessão uma vez por máquina:**
 
@@ -28,31 +32,31 @@ Pode nem precisar do pip: todos os instaladores incluem um wheel SDK corresponde
 chloros-cli login user@example.com 'YourPassword'
 ```
 
-As credenciais são armazenadas em cache em `~/.chloros/` (em ambas as plataformas). No Windows, pode iniciar sessão de forma equivalente através do separador «<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">» do utilizador na aplicação para computador. O SDK requer um plano Chloros+ pago — consulte [Requisitos de licença](#license-requirement) abaixo.
+As credenciais são armazenadas em cache no `~/.chloros/` (em ambas as plataformas). No Windows, pode efetuar o início de sessão de forma equivalente através do separador «Utilizador» <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> da aplicação para computador. O SDK requer um plano Chloros+ pago — consulte [Requisitos de licença](#license-requirement) abaixo.
 
 | Requisito | Detalhes |
 | --- | --- |
-| **Chloros instalado** | Windows: instalador para computador; Linux: pacote `.deb` (fornece o binário de backend) |
+| **Chloros instalado** | Windows: instalador para computador; Linux: pacote `.deb` (fornece o binário do backend e o SDK) |
 | **Python** | 3.7 ou superior (desenvolvido/testado na versão 3.10) |
 | **Sistema operativo** | Windows 10/11 de 64 bits, Ubuntu 22.04 LTS ou mais recente, ou NVIDIA Jetson (JetPack 6) |
-| **Licença** | Início de sessão ativo no Chloros+, qualquer nível pago (Copper ou superior) |
+| **Licença** | Login ativo no Chloros+, qualquer nível pago (Copper ou superior) |
 
 ## A vitória em 60 segundos
 
-Uma única chamada cria um projeto, importa uma pasta, configura o processamento e executa o pipeline — iniciando automaticamente o backend, caso este ainda não esteja a funcionar:
+Uma única chamada cria um projeto, importa uma pasta, configura o processamento e executa o pipeline — iniciando automaticamente o backend, caso ainda não esteja a funcionar:
 
 ```python
 import chloros_sdk
 
 results = chloros_sdk.process_folder(
     "C:/DroneImages/Flight001",
-    indices=["NDVI", "NDRE", "GNDVI"],
+    indices=["NDVI", "GNDVI", "OSAVI"],
 )
 ```
 
-(No Linux, utilize os caminhos do Linux: `/home/user/drone_images/flight001`. O SDK funciona de forma idêntica em ambas as plataformas.)
+(No Linux, utilize caminhos do Linux: `/home/user/drone_images/flight001`. O SDK funciona de forma idêntica em ambas as plataformas.)
 
-A processar uma pasta de captura do LATTICE? Utilize o wrapper compatível com o LATTICE — este aplica as predefinições corretas (sem deteção do alvo do painel, debayer padrão):
+A processar uma pasta de capturas LATTICE? Utilize o wrapper compatível com o LATTICE — este aplica as predefinições corretas (sem deteção do alvo do painel, debayer padrão):
 
 ```python
 results = chloros_sdk.process_lattice_capture(
@@ -63,7 +67,7 @@ results = chloros_sdk.process_lattice_capture(
 
 ## `ChlorosLocal` — controlo total do pipeline
 
-Para qualquer coisa que vá além de uma linha de comando, utilize o `ChlorosLocal`. Este programa inicia o backend na primeira utilização (`auto_start_backend=True`), cria e configura projetos, monitoriza o progresso e apresenta um resumo após a execução.
+Para qualquer coisa que vá além de uma linha de comando, utilize o `ChlorosLocal`. Este utiliza um backend que já esteja em execução (o da aplicação para computador) ou inicia o que está instalado na primeira utilização (`auto_start_backend=True`; no Windows, a partir da pasta `backend` da pasta de instalação do Chloros; `C:\Program Files\Chloros\backend\` por predefinição), cria e configura projetos, monitoriza o progresso e apresenta um resumo após a execução.
 
 ```python
 ChlorosLocal(
@@ -78,10 +82,10 @@ ChlorosLocal(
 ```
 
 {% hint style="info" %}
-Mantenha o `http://127.0.0.1:5000` predefinido em vez de substituí-lo pelo `localhost` — no Windows, o `localhost` é resolvido primeiro para o `::1` e demora cerca de 2 segundos por pedido no backend apenas IPv4.
+Mantenha o `http://127.0.0.1:5000` predefinido em vez de substituir por `localhost` — no Windows, o `localhost` é resolvido primeiro como `::1` e demora cerca de 2 segundos por pedido no backend apenas para IPv4.
 {% endhint %}
 
-Utilize-o como gestor de contexto para garantir a limpeza:
+Utilize-o como um gestor de contexto. Ao sair do bloco, termina-se a utilização do backend por esta instância, não o próprio backend: este permanece em execução para o próximo script e desliga-se automaticamente após 30 minutos sem utilização. O `shutdown_backend()` encerra uma instância já iniciada.
 
 ```python
 import chloros_sdk
@@ -92,7 +96,7 @@ with chloros_sdk.ChlorosLocal() as cl:
     cl.configure(
         vignette_correction=True,
         reflectance_calibration=True,
-        indices=["NDVI", "NDRE", "GNDVI"],
+        indices=["NDVI", "GNDVI", "OSAVI"],
         export_format="TIFF (16-bit)",
     )
     results = cl.process(mode="parallel", wait=True)
@@ -104,6 +108,7 @@ O `configure()` aceita estas palavras-chave: `debayer`, `vignette_correction`, `
 ```python
 # export_format
 "TIFF (16-bit)"           # default, recommended
+"TIFF (8-bit)"            # 8-bit TIFF; what all-8-bit images get for a deeper format
 "TIFF (32-bit, Percent)"  # reflectance percentage as float32
 "PNG (8-bit)"
 "JPG (8-bit)"
@@ -113,7 +118,7 @@ O `configure()` aceita estas palavras-chave: `debayer`, `vignette_correction`, `
 "Texture Aware (Slow, Highest Quality)"  # neural debayer, Chloros+ only
 ```
 
-Os controlos específicos da LATTICE (`input_level`, `radiometric_output`, a família `array_alignment*`) estão documentados com as suas tabelas completas de valores na [Referência do SDK](reference/sdk-reference.md#supported-values).
+Os parâmetros específicos do LATTICE (`input_level`, `radiometric_output` e a família `array_alignment*`) estão documentados com as suas tabelas completas de valores na [Referência do SDK](reference/sdk-reference.md#supported-values).
 
 ### Acompanhar o progresso
 
@@ -130,7 +135,7 @@ with chloros_sdk.ChlorosLocal() as cl:
 
 ### Ler o resumo pós-execução — e detetar execuções vazias
 
-Após a conclusão, o `process()` anexa o resumo de processamento do backend como `result["summary"]`. Cada entrada no `summary["hints"]` é uma frase completa que explica qualquer aspeto digno de nota — por exemplo, por que razão uma execução produziu zero resultados — e cada indicação é também reemitida como um Python `UserWarning`, pelo que as execuções vazias são autodiagnosticáveis, mesmo que nunca inspecione o dicionário:
+Após a conclusão, o `process()` anexa o resumo de processamento do backend como `result["summary"]`. Cada entrada no `summary["hints"]` é uma frase completa que explica qualquer aspeto digno de nota — por exemplo, por que razão uma execução não produziu qualquer resultado — e cada indicação é também reemitida como um `UserWarning` em Python, pelo que as execuções vazias são autodiagnosticáveis, mesmo que nunca se inspecione o dicionário:
 
 ```python
 result = cl.process()
@@ -141,12 +146,12 @@ for hint in result.get("summary", {}).get("hints", []):
 ```
 
 {% hint style="warning" %}
-**`process()` não é gerado quando uma execução não produz imagens.** Este é o único ponto em que o SDK e o CLI diferem deliberadamente: O `chloros-cli process` trata «foram solicitados produtos, nenhum foi gravado» como uma falha e termina com um valor diferente de zero, enquanto o SDK termina normalmente e reporta a condição através do `summary` / dicas. Se o seu pipeline tiver de parar numa execução vazia, verifique isso por si próprio — inspecione o `summary` (ou conte os ficheiros na pasta do projeto) em vez de confiar numa exceção.
+**O `process()` não é acionado quando uma execução não produz imagens.** Este é o único ponto em que o SDK e a CLI diferem deliberadamente: O `chloros-cli process` trata «foram solicitados produtos, nenhum foi gravado» como uma falha e termina com um valor diferente de zero, enquanto o SDK retorna normalmente e reporta a condição através do `summary` / dicas. Se o seu pipeline tiver de parar numa execução vazia, verifique isso por si próprio — inspecione o `summary` (ou conte os ficheiros na pasta do projeto) em vez de confiar numa exceção.
 {% endhint %}
 
 ## Smart Connect — hardware ativo
 
-Três auxiliares abrem sessões persistentes no conjunto de hardware do backend — o mesmo conjunto que a GUI utiliza, pelo que os scripts SDK coexistem com a aplicação de ambiente de trabalho sem disputarem portas seriais ou largura de banda de rede. Todos os três iniciam automaticamente um backend local, caso nenhum esteja a ser executado.
+Três auxiliares abrem sessões persistentes no conjunto de hardware do backend — o mesmo conjunto que a CLI, outros scripts e os separadores de câmara da GUI utilizam, para que os scripts do SDK coexistam com eles sem disputarem portas seriais ou largura de banda de rede. Todos os três iniciam automaticamente um backend local se nenhum estiver a ser executado. O painel DAQ da GUI não faz parte do conjunto: feche um sensor de luz na GUI antes de o abrir a partir de um script.
 
 ### Câmara LATTICE única — `connect_camera`
 
@@ -159,9 +164,13 @@ with chloros_sdk.connect_camera("213800234") as cam:
     cam.capture("output/")
 ```
 
+{% hint style="info" %}
+**Os caminhos relativos apontam para o local onde o seu script é executado (alterado na versão 1.3.0).** Com um backend local, um caminho relativo `output_dir` (incluindo o caminho padrão `"output"`) — e os outros caminhos que o backend abre (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — são resolvidos em relação ao diretório de trabalho do seu script, pelo que o `cam.capture("output/")` grava no `<current folder>/output/`. Na versão 1.2.0, um backend instalado resolvia-os na sua própria pasta de instalação e apresentava a falha «Acesso negado». No caso de um backend remoto, os caminhos são enviados tal como foram digitados.
+{% endhint %}
+
 ### Matriz sincronizada — `connect_array`
 
-O `connect_array` é o ponto de entrada recomendado para configurações com várias câmaras. Executa o mesmo fluxo de preparação inteligente que a interface gráfica: análise de rede, seleção automática do nível de sincronização, sincronização de tempo PTP, seleção do formato de píxeis por câmara, inicialização do AE e ativação do gatilho GPIO. A **primeira porta série é a mestre** (é ela que dispara o impulso de acionamento do hardware); as restantes são escravas.
+O `connect_array` é o ponto de entrada recomendado para configurações com várias câmaras. Executa o mesmo fluxo de preparação inteligente que a GUI: análise de rede, seleção automática do nível de sincronização, sincronização de tempo PTP, seleção do formato de píxeis por câmara, inicialização do AE e ativação do disparador GPIO. A **primeira porta série é a mestre** (é ela que dispara o impulso de acionamento do hardware); as restantes são escravas.
 
 ```python
 with chloros_sdk.connect_array(
@@ -169,7 +178,15 @@ with chloros_sdk.connect_array(
     arr.capture("output/", processing="reflectance")
 ```
 
-Adicione o `smart=True` a qualquer captura em matriz para aguardar que a exposição automática se estabilize em todas as câmaras antes do disparo. Para os modos de captura (Única / Contínua / Intervalo / Mais rápida), gravadores, burst-to-video e alinhamento de matriz, consulte a [Referência do SDK](reference/sdk-reference.md#synchronized-array--arraysession-smart-prep).
+Adicione `smart=True` a qualquer captura em matriz para aguardar que a exposição automática se estabilize em todas as câmaras antes do disparo.
+
+Novidade na versão 1.3.0: um `ArraySession` também fornece-lhe fotogramas sincronizados diretamente, sem gravar ficheiros:
+
+* O `arr.grab()` devolve um fotograma por câmara, todos a partir de um único disparo, como matrizes numpy (`{serial: array}`); `.group_id` é o disparador partilhado e `.errors` identifica qualquer câmara que tenha ficado de fora.
+* `arr.frame_stream(fps=5.0)` produz um conjunto deste tipo por tick, para processamento em tempo real no seu próprio pipeline.
+* `arr.continuous("output/")` executa a captura contínua própria do backend (o modo «Contínuo» da GUI) e devolve um `ContinuousHandle` com `status()`, `wait()` e `stop()` — utilize-o em vez de um ciclo de captura quando precisar que cada disparo seja guardado a uma taxa elevada.
+
+Para os modos de captura (Único / Contínuo / Intervalo / Mais rápido), gravadores, burst-to-video e alinhamento de matrizes, consulte a [Referência do SDK](reference/sdk-reference.md#synchronized-array--arraysession-smart-prep).
 
 ### Sensor de luz DAQ — `connect_daq_sensor`
 
@@ -181,7 +198,7 @@ with chloros_sdk.connect_daq_sensor() as daq:    # smart-detect USB / BLE / ETH
         print(frame["spectrum"][:10])
 ```
 
-Cada quadro transporta o valor de 135 pontos `spectrum` (W/m²/nm quando calibrado), um sinalizador `is_saturated` e CIE `x`, `y`, `z`. Para especificar um sensor ou protocolo de transporte específico — a escolha mais fiável em hosts com várias interfaces de rede, onde a deteção automática por Ethernet pode não identificar um DAQ-E em bom estado na primeira tentativa —, passe uma indicação explícita:
+Cada quadro transporta o `spectrum` de 135 pontos (W/m²/nm quando calibrado), um sinalizador `is_saturated` e CIE `x`, `y` e CIE `x`. Para selecionar um sensor ou protocolo de transporte específico, passe uma indicação explícita:
 
 ```python
 daq = chloros_sdk.connect_daq_sensor(transport="usb", port="COM3")
@@ -189,13 +206,13 @@ daq = chloros_sdk.connect_daq_sensor(mac="AA:BB:CC:DD:EE:FF")        # implies B
 daq = chloros_sdk.connect_daq_sensor(eth_host="daq-e-xxx.local")     # implies Ethernet
 ```
 
-Note que os perfis de correção de maiúsculas (`cap_id`) **não** são um controlador SDK — selecione-os através de `chloros-cli daq pool-connect --cap-id …` / `pool-set-cap`.
+Note que os perfis de correção de teto (`cap_id`) **não** são um parâmetro do SDK — selecione-os através de `chloros-cli daq pool-connect --cap-id …` / `pool-set-cap`.
 
 ### Projetos guardados — `open_project`
 
-Um projeto Chloros guardado mantém o hardware ligado (`cameras.json` + `sensors.json` juntamente com `project.json`), e o `chloros_sdk.open_project(path)` pode voltar a ligar tudo de uma só vez e efetuar capturas por nome do dispositivo. Consulte [Automatização de Projetos](reference/sdk-reference.md#project-automation--chlorosproject) na referência.
+Um projeto Chloros guardado mantém o hardware ligado (`cameras.json` + `sensors.json` juntamente com `project.json`), e o `chloros_sdk.open_project(path)` pode voltar a ligar as suas câmaras, matrizes e sensores de luz de uma só vez e iniciar capturas pelo nome do dispositivo. Os sensores de luz voltam a ligar-se através de um backend do Chloros em execução, com as suas definições e capacidade guardadas. Consulte [Automatização de Projetos](reference/sdk-reference.md#project-automation--chlorosproject) na referência.
 
-## O que uma instalação apenas via pip oferece
+## O que uma instalação apenas com o pip oferece
 
 Verifique os indicadores de disponibilidade ao nível do módulo antes de utilizar superfícies de hardware:
 
@@ -203,26 +220,35 @@ Verifique os indicadores de disponibilidade ao nível do módulo antes de utiliz
 import chloros_sdk
 print(chloros_sdk.__version__)
 print("CAMERA_AVAILABLE =", chloros_sdk.CAMERA_AVAILABLE)    # True iff lattice_sdk imported cleanly
-print("DAQ_AVAILABLE    =", chloros_sdk.DAQ_AVAILABLE)       # True iff daq_sdk imported cleanly
 print("PROJECT_AVAILABLE =", chloros_sdk.PROJECT_AVAILABLE)  # True iff ChlorosProject deps available
 ```
 
 Num anfitrião com **apenas** o `pip install chloros-sdk` e sem o pacote de ambiente de trabalho Chloros:
 
-* O `ChlorosLocal`, o `process_folder` e o `process_lattice_capture` **não** funcionam — necessitam do binário de backend incluído no instalador do ambiente de trabalho.
-* Os auxiliares de ligação inteligente (`connect_camera`, `connect_array`, `connect_daq_sensor`) são clientes puros do HTTP, pelo que funcionam com um backend noutro computador — mas os backends fornecidos ligam-se apenas ao loopback, pelo que terá de reencaminhar a porta manualmente (por exemplo, `ssh -N -L 5000:127.0.0.1:5000 user@chloros-host`) e passar o `backend_url="http://127.0.0.1:5000"` com o `auto_start_backend=False`. Consulte [Modo de Backend Remoto](reference/sdk-reference.md#remote-backend-mode-pip-only-host-via-tunnel).
-* As classes LATTICE de hardware direto (`LatticeCamera`, `CameraPool`, …) podem ser importadas, mas necessitam do tempo de execução Arena SDK do pacote para computador — sem ele, `CAMERA_AVAILABLE` é `False`.
-* O `daq_sdk` (as classes DAQ diretas) é fornecido com a instalação para computador, e não com o pacote PyPI, pelo que o `DAQ_AVAILABLE` é o `False` num host que utilize apenas o pip — em vez disso, controle os sensores DAQ através do `connect_daq_sensor()` contra um backend (tunelado).
+* `ChlorosLocal`, `process_folder` e `process_lattice_capture` **não** funcionam — necessitam do binário de backend incluído no instalador do ambiente de trabalho.
+* Os auxiliares smart-connect (`connect_camera`, `connect_array`, `connect_daq_sensor`) são clientes HTTP puros, pelo que funcionam com um backend noutro computador — mas os backends fornecidos ligam-se apenas ao loopback, pelo que deve reencaminhar a porta manualmente (por exemplo, `ssh -N -L 5000:127.0.0.1:5000 user@chloros-host`) e passar o `backend_url="http://127.0.0.1:5000"` juntamente com o `auto_start_backend=False`. Consulte [Modo de Backend Remoto](reference/sdk-reference.md#remote-backend-mode-pip-only-host-via-tunnel).
+* As classes LATTICE de hardware direto (`LatticeCamera`, `CameraPool`, …) são importadas, mas requerem o tempo de execução do SDK da Arena, proveniente do pacote para computador — sem ele, o `CAMERA_AVAILABLE` é o `False`.
+* Os sensores DAQ são controlados apenas através de um backend (tunelado) — `connect_daq_sensor()`, ou o `proj.sensors` de um projeto; o backend abre o sensor na sua própria máquina.
+
+## Assistentes de IA — `chloros-mcp`
+
+O SDK inclui o `chloros-mcp`, um servidor MCP que permite ao Claude Desktop, ao Claude Code, ao Cursor e a outros clientes MCP controlar o Chloros: processar imagens e operar câmaras LATTICE, matrizes e sensores de luz DAQ. As suas ferramentas abrangem as funcionalidades deste SDK. É instalado juntamente com o SDK, pelo que, para o Claude Code, a configuração resume-se a uma única linha:
+
+```bash
+claude mcp add chloros -- chloros-mcp
+```
+
+Outros clientes: [Utilizar o Chloros com assistentes de IA](ai-assistants.md). Opções e todas as ferramentas: [Servidor MCP (assistentes de IA)](reference/sdk-reference.md#mcp-server-ai-assistants).
 
 ## Requisitos de licença
 
-O acesso ao SDK requer um login ativo no Chloros+ em qualquer nível pago — **Copper ou superior**(Copper / Bronze / Silver / Gold); o plano gratuito Iron não tem acesso ao SDK/CLI. A aplicação é**do lado do servidor**: cada pedido SDK deve incluir tanto uma sessão ativa como um plano pago; caso contrário, o backend devolve `403` / `PLAN_UPGRADE_REQUIRED` (gerado como `ChlorosLicenseError` pelo `ChlorosLocal` e como `ChlorosConnectError` pelos auxiliares `connect_*`). Um utilizador que tenha saído da sessão recebe os códigos de erro `401` / `AUTH_REQUIRED` (`ChlorosAuthenticationError`) — a reexecução do `chloros-cli login` corrige o primeiro caso, mas não o segundo.
+O acesso ao SDK requer um login ativo no Chloros+ em qualquer nível pago — **Copper ou superior**(Copper / Bronze / Silver / Gold); o plano gratuito Iron não tem acesso ao SDK/CLI. A aplicação desta regra é**do lado do servidor**: cada pedido de SDK deve incluir tanto uma sessão ativa como um plano pago; caso contrário, o backend devolve `403` / `PLAN_UPGRADE_REQUIRED` (gerado como `ChlorosLicenseError` pelo `ChlorosLocal` e como `ChlorosConnectError` pelos auxiliares `connect_*`). Um utilizador que tenha terminado a sessão recebe `401` / `AUTH_REQUIRED` (`ChlorosAuthenticationError`) — a reexecução do `chloros-cli login` corrige o primeiro caso, mas não o segundo.
 
-A utilização offline funciona dentro do período de carência do plano: o nível é lido a partir da cache de validação do servidor (5 minutos) ou da cache de licenças assinadas e vinculadas ao equipamento (30 dias para planos mensais; até ao termo da subscrição para planos anuais). Quando o período de carência expira, o plano passa a ser gratuito e o acesso ao SDK é interrompido até que o computador se ligue ao servidor uma vez. O `chloros-cli status` permanece acessível no nível gratuito, pelo que o motivo está sempre visível. Consulte [Chloros+ Início de sessão](chloros+-login.md).
+A utilização offline funciona dentro do período de carência do plano: o nível é lido a partir da cache de validação do servidor (5 minutos) ou da cache de licenças assinadas e vinculadas ao equipamento (30 dias para planos mensais; até ao termo da subscrição para planos anuais). Quando o período de carência expira, o plano passa a ser gratuito e o acesso ao SDK é suspenso até que o computador se ligue ao servidor pelo menos uma vez. O `chloros-cli status` permanece acessível no nível gratuito, pelo que o motivo está sempre visível. Consulte [Início de sessão no Chloros+](chloros+-login.md).
 
 ## Exceções
 
-Intercepte a classe base para lidar com «qualquer coisa que tenha corrido mal»:
+Intercepte a classe base para tratar «qualquer problema no Chloros»:
 
 ```python
 import chloros_sdk
@@ -237,10 +263,11 @@ except chloros_sdk.ChlorosError as e:
     print(f"Chloros error: {e}")
 ```
 
-Todas as exceções do pipeline (`ChlorosBackendError`, `ChlorosConnectionError`, `ChlorosLicenseError`, `ChlorosAuthenticationError`, `ChlorosConfigurationError`, `ChlorosProcessingError`) derivam de `ChlorosError`. Uma observação importante: `ChlorosConnectError` — gerado apenas por `connect_camera` / `connect_array` / `connect_daq_sensor` — deriva do simples `Exception`, **não** do `ChlorosError`, pelo que o `except ChlorosError` não o detetará. A hierarquia completa encontra-se na [Referência do SDK](reference/sdk-reference.md#exceptions).
+Todas as exceções do pipeline (`ChlorosBackendError`, `ChlorosConnectionError`, `ChlorosLicenseError`, `ChlorosAuthenticationError`, `ChlorosConfigurationError`, `ChlorosProcessingError`) derivam de `ChlorosError`. Uma observação importante: `ChlorosConnectError` — gerado apenas por `connect_camera` / `connect_array` / `connect_daq_sensor` — deriva diretamente de `Exception`, **não** de `ChlorosError`, pelo que `except ChlorosError` não o detetará. A hierarquia completa encontra-se na [Referência do SDK](reference/sdk-reference.md#exceptions).
 
 ## Ver também
 
-* [Referência do SDK](reference/sdk-reference.md) — a superfície completa do API, otimizada para assistentes de IA.
-* [Referência do CLI](reference/cli-reference.md) — cada subcomando do CLI corresponde a uma chamada do SDK.
-* [Descarregar](download.md) — programas de instalação para o Windows e o Linux.
+* [Referência do SDK](reference/sdk-reference.md) — a superfície completa da API, otimizada para assistentes de IA.
+* [Referência da CLI](reference/cli-reference.md) — cada subcomando da CLI corresponde a uma chamada ao SDK.
+* [Utilizar o Chloros com assistentes de IA](ai-assistants.md) — receitas de configuração e prompts do `chloros-mcp`.
+* [Descarregar](download.md) — instaladores para Windows e Linux.

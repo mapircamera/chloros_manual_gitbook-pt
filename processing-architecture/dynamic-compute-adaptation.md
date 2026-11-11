@@ -1,18 +1,21 @@
-# Adaptação Dinâmica de Computação
+# Adaptação dinâmica de computação O
 
-O Chloros 1.2.0 utiliza a deteção de hardware e a seleção automática da estratégia de processamento. O motor de processamento adapta-se ao seu hardware — desde um Jetson Orin Nano até uma estação de trabalho com várias GPUs — sem qualquer configuração manual.
+Chloros
+1.3.0 utiliza a deteção de hardware e a seleção automática da estratégia de processamento. O motor de processamento adapta-se ao seu hardware — desde um Jetson Orin Nano até uma estação de trabalho com várias GPUs — sem qualquer configuração manual.
 
 ***
 
 ## Como funciona
 
-Quando o Chloros é iniciado, faz um perfil do seu sistema:
+Quando o Chloros
+é iniciado, faz um perfil do seu sistema:
 
-1. **Deteta o sistema operativo** — Windows ou Linux
+1. **Deteta o sistema operativo** — Windows
+ou Linux
 2. **Identifica os núcleos da CPU e a RAM total**
 
-3.**Deteta a presença de GPU** — Capacidade NVIDIA CUDA, VRAM, modelo
-4. **Identifica o modelo Jetson** (se aplicável) — através do `/proc/device-tree/model`
+3.**Deteta a presença de GPU** — capacidade NVIDIA CUDA, VRAM, modelo
+4. **Identifica o modelo Jetson** (se aplicável) — através de `/proc/device-tree/model`
 5. **Verifica os sensores térmicos** (Jetson) — para um processamento sensível à temperatura
 6. **Seleciona a estratégia de computação** — com base em todo o hardware detetado
 7. **Configura automaticamente o número de trabalhadores, o tipo de pipeline e a alocação de memória**
@@ -21,31 +24,42 @@ O perfil detetado é armazenado em cache para a sessão, tanto na memória como 
 
 | Plataforma | Perfil em cache |
 | --- | --- |
-| **Linux / Jetson** | `~/.config/chloros/system_config.json` (respeita o `XDG_CONFIG_HOME`) |
+| **Linux
+/ Jetson** | `~/.config/chloros/system_config.json` (aceita `XDG_CONFIG_HOME`) |
 | **Windows** | `%LOCALAPPDATA%\Chloros\config\system_config.json` |
 
-Elimine esse ficheiro para forçar uma nova deteção — útil após adicionar uma GPU ou mais memória RAM. O Chloros também volta a detetar automaticamente quando o cache foi gravado por uma versão anterior incompatível.
+Elimine esse ficheiro para forçar uma nova deteção — útil após adicionar uma GPU ou mais RAM. O Chloros
+também volta a detetar automaticamente quando o cache foi gravado por uma versão anterior incompatível.
 
 ***
 
-## Estratégias de computação
+## Estratégias de Computação
 
-O Chloros seleciona uma de três estratégias de computação com base no seu hardware:
+O Chloros
+seleciona uma de três estratégias de computação com base no seu hardware:
 
 | Estratégia | Selecionada quando | Trabalhadores | Executor | Pipeline |
 | --- | --- | --- | --- | --- |
-| **`GPU_PARALLEL`**| GPU CUDA com**12 GB ou mais de VRAM**(na memória unificada do Jetson, requer também 12 GB ou mais de RAM partilhada total) | `min(4, VRAM ÷ 4GB)`, mínimo de 2 —**limitado a 2 no Jetson** | `ProcessPoolExecutor` (spawn) | `fused_gpu` |
-| **`GPU_SINGLE`**| GPU CUDA com**2 a 12 GB de VRAM**| 3 (sobreposição de E/S; acesso à GPU serializado por um semáforo).**1 (sequencial) em Jetsons com menos de 12 GB de RAM** | `ProcessPoolExecutor` (spawn); sequencial no próprio processo em Jetsons com pouca RAM | `fused_gpu` / `tiled_gpu` |
+| **`GPU_PARALLEL`**| GPU CUDA com**12 GB ou mais de VRAM**(na memória unificada do Jetson, requer também 12 GB+ de RAM partilhada total) | `min(4, ⌊(VRAM − 0.5GB) × 0.9 ÷ 3.5GB⌋)`, mínimo de 2 —**limitado a 2 no Jetson** | Processos de trabalho (contextos CUDA separados) | `fused_gpu` |
+| **`GPU_SINGLE`**| GPU CUDA com**2-12 GB de VRAM**| 3 (sobreposição de E/S; acesso à GPU serializado por um semáforo).**1 (sequencial) em Jetsons com menos de 12 GB de RAM** | Processos de trabalho (contextos CUDA separados); sequencial no próprio processo em Jetsons com pouca RAM | `fused_gpu` / `tiled_gpu` |
 | **`CPU_PARALLEL`** | Sem GPU CUDA ou com menos de 2 GB de VRAM | `max(2, physical cores − 1)` | `ThreadPoolExecutor` | `cpu_fallback` |
 
-Exemplos práticos da fórmula de trabalhadores do `GPU_PARALLEL`: 12 GB de VRAM → 3 trabalhadores, 16 GB ou mais → 4 trabalhadores, qualquer Jetson → 2 trabalhadores.
+Exemplos práticos da fórmula de trabalhadores `GPU_PARALLEL`: 12 GB de VRAM → 2 trabalhadores, 16 GB → 3 trabalhadores, 20 GB ou mais → 4 trabalhadores. A cada trabalhador são atribuídos 3,5 GB, a necessidade estimada para uma tarefa «Texture Aware», dentro de 90% da VRAM restante após uma reserva de 0,5 GB.
 
-O paralelismo é implementado com o `concurrent.futures` padrão do Python: As estratégias de GPU utilizam um `ProcessPoolExecutor` com o método de início **spawn** (cada worker é um processo separado com o seu próprio contexto CUDA — o `fork` copiaria um estado CUDA já inicializado e corromperia os processos filhos), e a estratégia de CPU utiliza um `ThreadPoolExecutor`. O Chloros não utiliza qualquer framework distribuído de terceiros (como o Ray).
+{% hint style="info" %}
+**As estratégias de GPU requerem um PyTorch capaz de utilizar CUDA.** Uma máquina cujo PyTorch não disponha de nenhum dispositivo CUDA utilizável recebe o `CPU_PARALLEL`, independentemente da sua GPU. O pacote Jetson 1.3.0 utiliza a compilação CUDA do PyTorch do JetPack 6, pelo que um Jetson é elegível assim que as bibliotecas CUDA e cuDNN do JetPack estiverem instaladas. Um Jetson com menos de 12 GB de RAM processa sempre uma imagem de cada vez, em processo (registado como `GPU_SINGLE`).
+{% endhint %}
+
+As estratégias de GPU executam um conjunto de processos de trabalho, cada um deles um processo separado do sistema operativo com o seu próprio contexto CUDA, que o Chloros
+inicia ao lançar novamente o seu próprio programa de backend instalado (não através do `multiprocessing` do Python
+, cuja inicialização dos processos de trabalho não funciona dentro da aplicação empacotada). A estratégia de CPU utiliza um conjunto de threads (o `ThreadPoolExecutor` do Python
+). O Chloros
+não utiliza qualquer framework distribuído de terceiros (como o Ray).
 
 ### Tipos de pipeline
 
 * **`fused_gpu`** — Percurso de processamento totalmente na GPU. As operações de debayer, correção e indexação são executadas na GPU numa única passagem fusionada. Apresenta o maior débito, mas requer mais VRAM.
-* **`tiled_gpu`** — Percurso de GPU com eficiência de memória. Processa imagens em blocos para caberem na memória limitada da GPU. Tem um rendimento inferior, mas funciona em dispositivos com restrições de memória.
+* **`tiled_gpu`** — Percurso de GPU com eficiência de memória. Processa imagens em blocos para caberem na memória limitada da GPU. Rendimento mais baixo, mas funciona em dispositivos com restrições de memória.
 * **`cpu_fallback`** — Processamento exclusivamente na CPU utilizando paralelismo multithread. Utilizado quando não está disponível nenhuma GPU NVIDIA e como último recurso quando ambas as vias da GPU falham.
 
 A cadeia de alternativas em tempo de execução é sempre `fused_gpu` → `tiled_gpu` → `cpu_fallback`.
@@ -54,14 +68,15 @@ A cadeia de alternativas em tempo de execução é sempre `fused_gpu` → `tiled
 
 ## Substituição manual da estratégia
 
-Defina a variável de ambiente `CHLOROS_STRATEGY` para forçar uma estratégia específica — uma opção avançada para quando a deteção automática escolher algo inadequado para a sua situação (por exemplo, manter a GPU livre para outras tarefas):
+Defina a variável de ambiente `CHLOROS_STRATEGY` para forçar uma estratégia específica — uma opção de emergência para especialistas, para quando a deteção automática escolher algo inadequado para a sua situação (por exemplo, manter a GPU livre para outras tarefas):
 
 ```bash
 # Valid values: CPU_PARALLEL, GPU_SINGLE, GPU_PARALLEL
 CHLOROS_STRATEGY=CPU_PARALLEL chloros-cli process ~/datasets/flight001
 ```
 
-A correspondência da variável não distingue maiúsculas de minúsculas; tudo o que não for um dos três nomes é ignorado e a deteção automática prossegue normalmente. Mesmo com uma substituição, o Chloros continua a selecionar o número de trabalhadores por si:
+A variável é comparada sem distinção entre maiúsculas e minúsculas; qualquer valor que não seja um dos três nomes é ignorado e a deteção automática prossegue normalmente. Mesmo com uma substituição, o Chloros
+continua a selecionar o número de trabalhadores por si:
 
 | Substituição | Número de trabalhadores utilizado |
 | --- | --- |
@@ -69,7 +84,9 @@ A correspondência da variável não distingue maiúsculas de minúsculas; tudo 
 | `GPU_SINGLE` | 3 |
 | `GPU_PARALLEL` | `min(4, physical cores)` |
 
-É preferível definir isto por comando, em vez de de forma permanente, para que as execuções normais continuem a adaptar-se automaticamente.
+Uma substituição por `GPU_SINGLE` ou `GPU_PARALLEL` numa máquina sem nenhum dispositivo CUDA utilizável é recusada, com uma linha `[STRATEGY]` no registo, e a execução utiliza o `CPU_PARALLEL`.
+
+É preferível definir esta configuração por comando, em vez de de forma permanente, para que as execuções normais continuem a adaptar-se automaticamente.
 
 ***
 
@@ -78,11 +95,11 @@ A correspondência da variável não distingue maiúsculas de minúsculas; tudo 
 | Plataforma | Estratégia | Trabalhadores | Pipeline | Notas |
 | --- | --- | --- | --- | --- |
 | **Jetson Orin Nano 8 GB** | `GPU_SINGLE` | 1 | `tiled_gpu` (sequencial) | Modo eficiente em termos de memória, uma imagem de cada vez |
-| **Jetson Orin NX 8 GB** | `GPU_SINGLE` | 1 | `tiled_gpu` (sequencial) | A memória RAM partilhada inferior a 12 GB obriga ao processamento sequencial |
+| **Jetson Orin NX 8 GB** | `GPU_SINGLE` | 1 | `tiled_gpu` (sequencial) | A RAM partilhada inferior a 12 GB obriga ao processamento sequencial |
 | **Jetson Orin NX 16 GB** | `GPU_PARALLEL` | 2 | `fused_gpu` (concorrente) | Dispositivo de borda recomendado — limite do Jetson em 2 trabalhadores |
 | **Jetson AGX Orin 32-64 GB** | `GPU_PARALLEL` | 2 | `fused_gpu` (concorrente) | Desempenho máximo na periferia (também limitado pelo Jetson a 2 trabalhadores) |
 | **Computador de secretária com GPU de 8 GB** | `GPU_SINGLE` | 3 | `fused_gpu` / `tiled_gpu` | 3 trabalhadores sobrepõem E/S enquanto um semáforo serializa o acesso à GPU |
-| **Computador de secretária com GPU de 12 GB ou mais** | `GPU_PARALLEL` | 3-4 | `fused_gpu` (concorrente) | Desempenho ideal no computador de secretária: 12 GB → 3 trabalhadores, 16 GB ou mais → 4 |
+| **Computador de secretária com GPU de 12 GB ou mais** | `GPU_PARALLEL` | 2-4 | `fused_gpu` (concorrentes) | Desempenho ideal do computador de secretária: 12 GB → 2 trabalhadores, 16 GB → 3, 20 GB+ → 4 |
 | **Sistema apenas com CPU** | `CPU_PARALLEL` | núcleos físicos − 1 (mín. 2) | `cpu_fallback` | Não requer GPU, utiliza um conjunto de threads |
 
 {% hint style="info" %}
@@ -91,7 +108,7 @@ A correspondência da variável não distingue maiúsculas de minúsculas; tudo 
 
 ### Orçamento da GPU por VRAM (GPUs discretas)
 
-Em anfitriões x86_64 com uma GPU NVIDIA discreta, a VRAM detetada também define a quantidade de recursos que o processamento da placa pode reclamar e até que tamanho os lotes podem atingir:
+Em anfitriões x86_64 com uma GPU NVIDIA discreta, a VRAM detetada também define a quantidade de recursos que o processamento da placa pode reivindicar e o tamanho máximo que os lotes podem atingir:
 
 | VRAM detetada | Limite máximo do orçamento da GPU | Multiplicador do tamanho do lote |
 | --- | --- | --- |
@@ -101,29 +118,30 @@ Em anfitriões x86_64 com uma GPU NVIDIA discreta, a VRAM detetada também defin
 | **2-3,5 GB** | 75% | ×1,25 |
 | **Menos de 2 GB** | 70% | ×1,0 |
 
-As GPUs discretas reservam apenas 0,5 GB para o sistema, uma vez que não partilham a memória RAM do sistema. Os perfis Jetson reservam muito mais e têm um limite inferior — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#per-model-gpu-budget).
+As GPUs discretas reservam apenas 0,5 GB para o sistema, uma vez que não partilham a RAM do sistema. Os perfis Jetson reservam muito mais e têm um limite inferior — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#per-model-gpu-budget).
 
 ***
 
 ## Atribuição dinâmica de memória da GPU
 
-O Chloros utiliza um [pipeline de processamento de 4 threads](processing-pipeline.md):
+O Chloros
+utiliza um [pipeline de processamento de 4 threads](processing-pipeline.md):
 
-* **Thread 1** (Detecção) — Carregamento da imagem, análise de EXIF, deteção do alvo
+* **Thread 1** (Detecção) — Carregamento de imagens, análise de EXIF, deteção de alvos
 * **Thread 2** (Calibração) — Cálculo da calibração de refletância
 * **Thread 3** (Processamento) — Debayer da GPU, correção de vinheta, cálculo do índice
 * **Thread 4** (Exportação) — Gravação de ficheiros, incorporação de metadados
 
-As threads 1, 2 e 4 consomem poucos recursos da GPU; a thread 3 é a que mais consome. À medida que as threads anteriores do pipeline terminam, a sua quota de GPU é **redistribuída pelas restantes threads ativas**, pelo que a thread 3 recebe progressivamente mais memória à medida que a execução avança.
+As threads 1, 2 e 4 consomem poucos recursos da GPU; A thread 3 é a que mais recursos consome. À medida que as threads anteriores do pipeline terminam, a sua quota de GPU é **redistribuída pelas restantes threads ativas**, pelo que a thread 3 recebe progressivamente mais memória à medida que a execução avança.
 
 ### Fases de alocação
 
-| Fase | Threads ativos | Distribuição da memória da GPU |
+| Fase | Threads ativas | Distribuição da memória da GPU |
 | --- | --- | --- |
-| **Inicial** | 1, 2, 3, 4 | Dividida por todos os threads, a maior parte para o Thread 3 |
-| **Início-meio** | 2, 3, 4 | A quota do Thread 1 é redistribuída |
-| **Meio-fim** | 3, 4 | As quotas dos Threads 1 e 2 vão para os Threads 3 e 4 |
-| **Tardia** | 3 ou 4 | A última thread ativa recebe a sua alocação máxima |
+| **Inicial** | 1, 2, 3, 4 | Dividida por todas as threads, a maior parte para a Thread 3 |
+| **Início-meio** | 2, 3, 4 | A parte da Thread 1 é redistribuída |
+| **Fase intermédia-final** | 3, 4 | As quotas das threads 1 e 2 são atribuídas às threads 3 e 4 |
+| **Final** | 3 ou 4 | A última thread ativa recebe a sua alocação máxima |
 
 Duas regras regem estes valores:
 
@@ -134,15 +152,22 @@ O valor efetivamente utilizado em tempo de execução é o **mais baixo** entre 
 
 ## Processamento sensível à textura
 
-O debayer sensível à textura (**apenas Chloros+** — `--debayer texture-aware`) executa um modelo de redução de ruído baseado em IA/ML que necessita de cerca de 1,75 GB de VRAM em FP16 por cópia, pelo que utiliza muito mais memória da GPU do que o método padrão:
+O debayer com reconhecimento de textura (**apenas Chloros
++** — `--debayer texture-aware`) executa um modelo de redução de ruído de IA/ML que necessita de cerca de 1,75 GB de VRAM em FP16 por cópia, pelo que utiliza muito mais memória da GPU do que o método padrão:
 
 * Os sistemas com **menos de 7 GB de VRAM**processam o «Texture Aware» num**ciclo síncrono, uma imagem de cada vez** — não é possível acomodar várias cópias do modelo, e um conjunto de trabalhadores apenas aumentaria a contenção
-* Os sistemas com **7 GB ou mais de VRAM** podem processar o Texture Aware em simultâneo, embora com um número reduzido de trabalhadores em comparação com o método Standard
-* No **Jetson**, o Texture Aware é sempre atribuído a um único trabalhador e, em modelos de baixo consumo (Nano, Orin Nano), também aplica automaticamente um limite de frequência da GPU — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)***
+* Os sistemas com **7 GB ou mais de VRAM** podem processar o Texture Aware em simultâneo, embora com um número reduzido de trabalhadores em comparação com o Standard
+* No **Jetson**, o Texture Aware é sempre atribuído a um único trabalhador
+* Sem **uma GPU CUDA utilizável**, a execução utiliza o debayer padrão, e o backend regista uma linha `[DEBAYER] … needs a CUDA GPU …` a explicar o motivo
+* Nos Jetsons de baixo consumo (Nano, Orin Nano), a CLI
+aplica um limite à frequência da GPU quando se solicita o Texture Aware — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)
+
+***
 
 ## Gestão térmica (Jetson)
 
-Os dispositivos Jetson têm restrições térmicas, especialmente em implementações em espaços fechados ou a bordo de aeronaves. O Chloros monitoriza os sensores de temperatura integrados no Jetson e ajusta automaticamente o tamanho dos lotes:
+Os dispositivos Jetson têm restrições térmicas, especialmente em implementações em espaços fechados ou a bordo de aeronaves. O Chloros
+monitoriza os sensores de temperatura integrados no Jetson e ajusta automaticamente o tamanho dos lotes:
 
 | Temperatura | Resposta |
 | --- | --- |
@@ -157,47 +182,58 @@ Em sistemas de secretária com refrigeração adequada, a limitação térmica r
 
 ## Gestão da pressão de memória
 
-O Chloros monitoriza continuamente a memória da GPU durante o processamento e reage em três níveis.
+O Chloros
+monitoriza continuamente a memória da GPU durante o processamento e reage em três níveis.
 
-**Dimensionamento de lotes.** Um lote começa com 8 imagens multiplicadas pelo multiplicador da plataforma, conforme as tabelas acima. Chloros verifica então a VRAM livre, reserva 20% da mesma para a sobrecarga própria do PyTorch e assume cerca de 100 MB de memória da GPU por imagem de 12 MP — o lote é o menor entre o limite derivado da memória e a base da plataforma. Nunca desce abaixo de 1.**Redução preventiva.**Acima de**85% de utilização da VRAM**, os tamanhos dos lotes são reduzidos antes que ocorra qualquer falha.**Redução da alocação por thread.** À medida que a utilização em tempo real aumenta, o orçamento de GPU de cada thread é reduzido: ×0,75 acima de 80% de utilização, ×0,5 acima de 90%. Os intervalos de monitorização são 70% (conservador), 85% (limite normal de funcionamento) e 95% (risco de OOM).**Retrocesso e recuperação em caso de OOM.** Se, mesmo assim, ocorrer um evento de falta de memória:
+**Dimensão do lote.** Um lote começa com 8 imagens multiplicadas pelo multiplicador da plataforma, conforme as tabelas acima. O Chloros
+verifica então a VRAM livre, reserva 20% da mesma para a sobrecarga do próprio PyTorch e assume cerca de 100 MB de memória da GPU por imagem de 12 MP — o lote é o menor entre o limite derivado da memória e a base da plataforma. Nunca desce abaixo de 1.
+
+**Redução preventiva.**Acima de**85% de utilização da VRAM**, os tamanhos dos lotes são reduzidos antes que ocorra qualquer falha.**Redução da alocação por thread.** À medida que a utilização em tempo real aumenta, o orçamento de GPU de cada thread é reduzido: ×0,75 acima de 80% de utilização, ×0,5 acima de 90%. Os intervalos do monitor são 70% (conservador), 85% (limite normal de funcionamento) e 95% (risco de OOM).**Retrocesso e recuperação em caso de OOM.** Se, mesmo assim, ocorrer um evento de falta de memória:
 
 * o tamanho do lote é **reduzido para metade** e, novamente, para metade em cada OOM consecutivo — cada lote subsequente bem-sucedido recua essa penalização um passo
 * as alocações das threads ativas são reduzidas para 70% do seu valor atual e o alocador muda para a sua estratégia conservadora, relaxando novamente após uma série de alocações bem-sucedidas
 * sob pressão severa, o pipeline recua de `fused_gpu` para `tiled_gpu` e, como último recurso, para `cpu_fallback`
 
-**RAM do anfitrião (Jetson).** Antes do processamento, o CLI estima o pico de memória do anfitrião com base na contagem de imagens e no modo de debayer e avisa se a RAM, juntamente com o espaço de troca suportado por ficheiros, for provavelmente insuficiente, apresentando os comandos exatos para adicionar espaço de troca — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).***
+**RAM do anfitrião (Jetson).** Antes do processamento, a CLI
+estima o pico de memória do anfitrião com base na contagem de imagens e no modo de debayer e avisa se a RAM, juntamente com o espaço de troca suportado por ficheiros, for provavelmente insuficiente, apresentando os comandos exatos para adicionar espaço de troca — consulte o [Guia NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).
 
-## Monitorização da Adaptação de Computação
+***
 
-### Diagnósticos do Sistema
+## Monitorização da adaptação computacional
 
-O `chloros-cli selftest` é a forma mais rápida de confirmar o que a camada de computação deteta:
+### Diagnósticos do sistema
+
+O `chloros-cli selftest` é a forma mais rápida de confirmar o que a camada computacional deteta:
 
 ```bash
 chloros-cli selftest
 ```
 
-As suas 7 verificações abrangem a versão, a disponibilidade das portas, o arranque do backend, o `/api/test`, as informações do sistema, a presença do modelo de redução de ruído e a prontidão do CUDA + redução de ruído. A verificação 5 apresenta diretamente a linha de hardware:
+As suas 7 verificações abrangem a versão, a disponibilidade das portas, o arranque do backend, o `/api/test`, as informações do sistema, a presença do modelo de redução de ruído e a disponibilidade do CUDA + redução de ruído. A verificação 5 apresenta diretamente a linha de hardware:
 
 ```
       GPU: NVIDIA RTX A4000, CUDA: True, PyTorch: 2.7.0
 ```
 
-A verificação 7 apresenta o resultado `CUDA: <bool>, Denoiser: <bool>` — ambas as condições têm de ser verdadeiras para que o Texture Aware possa ser utilizado.
+A verificação 7 apresenta o `CUDA: <bool>, Denoiser: <bool>` — ambas têm de ser verdadeiras para que o Texture Aware possa ser utilizado.
 
 ### Registos do backend
 
-A estratégia e o número de trabalhadores são escolhidos no backend no início de cada execução — não há nenhum banner CLI que os anuncie. Quando algo se comporta de forma inesperada (um caminho de GPU a recuar, um OOM, um denoiser que não carrega), é no registo do backend dessa sessão que isso aparece:
+A estratégia e o número de trabalhadores são escolhidos no backend no início de cada execução — não existe um banner da CLI
+que os anuncie. Quando algo se comporta de forma inesperada (um caminho de GPU a recuar, um OOM, um denoiser que não carrega), é no registo do backend dessa sessão que isso aparece:
 
 | Plataforma | Localização do registo |
 | --- | --- |
-| **Linux / Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (um ficheiro por execução) |
-| **Linux, backend CLI iniciado** | também `~/.chloros/backend.log` |
+| **Linux
+/ Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (um ficheiro por execução) |
+| **Linux
+, backend iniciado pela CLI** | também `~/.chloros/backend.log` |
 | **Windows** | `%LOCALAPPDATA%\Chloros\logs\` |
 
 ### Progresso em tempo real
 
-Durante uma execução, o CLI apresenta o progresso em tempo real por thread (Detecção, Análise, Processamento, Exportação) transmitido através de Server-Sent Events — a forma prática de verificar se a Thread 3 é o gargalo. Ver [Pipeline de Processamento](processing-pipeline.md).
+Durante uma execução, a CLI
+mostra o progresso em tempo real por thread (Detecção, Análise, Processamento, Exportação) transmitido através de Server-Sent Events — a forma prática de verificar se a Thread 3 é o gargalo. Consulte [Pipeline de processamento](processing-pipeline.md).
 
 ***
 
@@ -205,5 +241,8 @@ Durante uma execução, o CLI apresenta o progresso em tempo real por thread (De
 
 * [Pipeline de processamento](processing-pipeline.md) — Compreender a arquitetura do pipeline de 4 threads
 * [Guia do NVIDIA Jetson](../linux/nvidia-jetson-guide.md) — Implementação e otimização específicas para o Jetson
-* [CLI : Linha de comandos](../CLI.md) — O guia do CLI
-* [Referência do CLI](../reference/cli-reference.md) — Lista exaustiva de comandos para a versão 1.2.0
+* [CLI
+: Linha de comandos](../CLI.md) — O guia da CLI
+
+* [Referência da CLI
+](../reference/cli-reference.md) — Lista exaustiva de comandos para a versão 1.3.0
