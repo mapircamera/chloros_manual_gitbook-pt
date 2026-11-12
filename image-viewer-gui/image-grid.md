@@ -10,7 +10,9 @@ Utilize o controlo deslizante de zoom no canto superior direito para ajustar o t
 * **Ctrl + `+`**/**Ctrl + `=`**e**Ctrl + `−`** aumentam o tamanho em 4 px por pressão. O intervalo de teclas termina em 64 px no tamanho mínimo e, no tamanho máximo, no tamanho que couber exatamente duas miniaturas por linha na janela atual.
 * O tamanho que definir é guardado com o projeto (`UI → Grid thumbnail size` em `project.json`, predefinição `160`), pelo que, ao reabrir o projeto, este é restaurado.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>A *resolução* das miniaturas é uma definição distinta do *tamanho* das miniaturas: consulte **Exibição → Resolução das miniaturas de imagem** em [Definições do projeto](../project-settings/project-settings.md) (padrão: 512 px na aresta mais longa). O tamanho refere-se à dimensão com que o mosaico é desenhado; a resolução refere-se à quantidade de detalhes que são obtidos para o preencher.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>A *resolução* das miniaturas é uma definição distinta do *tamanho* das miniaturas: consulte **Exibição → Resolução das miniaturas de imagem** em [Definições do projeto](../project-settings/project-settings.md) (padrão: 512 px na aresta mais longa). O tamanho refere-se à dimensão com que o mosaico é desenhado; a resolução refere-se à quantidade de detalhes que são obtidos para o preencher.
+
+***
 
 ## A barra de ferramentas da grelha
 

@@ -78,7 +78,9 @@ Cada imagem com dados GPS recebe um marcador nas suas coordenadas.
 | Fornecedor        | Notas                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Google Maps** | Ampla cobertura mundial; suporta os quatro tipos de mosaicos                                                                                                            |
-| **Esri ArcGIS**| Imagens aéreas frequentemente de maior resolução em determinadas regiões. O tipo de mosaico**Terrain** não está disponível para o Esri e o respetivo botão fica desativado enquanto o Esri estiver selecionado |***
+| **Esri ArcGIS**| Imagens aéreas frequentemente de maior resolução em determinadas regiões. O tipo de mosaico**Terrain** não está disponível para o Esri e o respetivo botão fica desativado enquanto o Esri estiver selecionado |
+
+***
 
 ## Tipos de mosaicos de mapa
 
@@ -93,7 +95,9 @@ Escolha o tipo de camada de mapa com os botões (da esquerda para a direita):
 | **Satélite**        | Imagens de satélite detalhadas, sem legendas — a opção que consome mais largura de banda |
 | **Híbrido** (predefinição) | Imagens de satélite com estradas e legendas sobrepostas                |
 
-O separador «Mapa» abre-se na opção **Híbrido**. A sua escolha é aplicada à mudança de fornecedor, sempre que este o suporte.***
+O separador «Mapa» abre-se na opção **Híbrido**. A sua escolha é aplicada à mudança de fornecedor, sempre que este o suporte.
+
+***
 
 ## Navegação no mapa
 
@@ -141,7 +145,9 @@ O separador «Mapa» abre-se na opção **Híbrido**. A sua escolha é aplicada 
 
 ### O mapa está em branco ou os mosaicos deixam de carregar
 
-Os fornecedores de mosaicos são serviços online. Se os mosaicos deixarem de chegar, verifique a ligação de rede do equipamento e, em seguida, tente mudar de fornecedor. Se estiver com um zoom muito elevado, prima o botão de reinício **×** para regressar a um nível de zoom normal e permitir que o mapa volte a solicitar os mosaicos.***
+Os fornecedores de mosaicos são serviços online. Se os mosaicos deixarem de chegar, verifique a ligação de rede do equipamento e, em seguida, tente mudar de fornecedor. Se estiver com um zoom muito elevado, prima o botão de reinício **×** para regressar a um nível de zoom normal e permitir que o mapa volte a solicitar os mosaicos.
+
+***
 
 ## Páginas relacionadas
 

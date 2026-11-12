@@ -62,7 +62,9 @@ output/
 * Uma pasta de capturas guardada **sem** ficheiros brutos é importada e apresentada normalmente, mas o processamento ignora-a e indica isso no registo. (O sinalizador da CLI `--input-level` pode forçar um ponto de entrada para este caso — consulte [a Referência da CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * A partir da versão 1.3.0, uma pasta de capturas também pode conter uma pasta `clamp_masks/` (máscaras por pixel para os níveis de radiação e refletância — consulte [Formatos de Imagem de Saída](../output-image-formats.md#clamp-masks)). As máscaras não são imagens da cena, e o Chloros ignora-as durante a importação, independentemente de onde se encontrem.
 
-**As sessões do hub LATTICE** são importadas da mesma forma: selecione «Adicionar pasta» na pasta da sessão copiada do hub (que contém `raw/` e `previews/`), juntamente com qualquer registo de fluxo descendente do DAQ-M `.csv`. Se a calibração da câmara ou do DAQ ainda não estiver armazenada na cache do seu computador, o Chloros obtém-na automaticamente através do número de série durante a importação (requer ligação à Internet uma vez).***
+**As sessões do hub LATTICE** são importadas da mesma forma: selecione «Adicionar pasta» na pasta da sessão copiada do hub (que contém `raw/` e `previews/`), juntamente com qualquer registo de fluxo descendente do DAQ-M `.csv`. Se a calibração da câmara ou do DAQ ainda não estiver armazenada na cache do seu computador, o Chloros obtém-na automaticamente através do número de série durante a importação (requer ligação à Internet uma vez).
+
+***
 
 ## Compreender a tabela do navegador de ficheiros
 
@@ -104,7 +106,9 @@ Ao clicar no botão de alternância no canto superior direito, acima da tabela, 
 
 * Os ficheiros `.daq` e `.csv` aparecem na lista do Navegador de Ficheiros, mas não são imagens clicáveis — fornecem a irradiância descendente para a calibração da refletância.
 * Cada ficheiro `.daq`/`.csv` importado é listado em **Definições do projeto → Sensor de luz DAQ**, onde pode verificar a correção da tampa difusora aplicada a cada ficheiro. Consulte [Ajustar as definições do projeto](adjusting-project-settings.md).
-* As gravações que efetuar no separador **Sensores de luz** são adicionadas automaticamente ao projeto aberto — não é necessária qualquer importação manual.***
+* As gravações que efetuar no separador **Sensores de luz** são adicionadas automaticamente ao projeto aberto — não é necessária qualquer importação manual.
+
+***
 
 ## Gerir ficheiros no seu projeto
 
@@ -221,7 +225,9 @@ Se o seu projeto contiver imagens de várias câmaras MAPIR:
 
 ### Projeto reaberto indica ficheiros em falta
 
-Se os ficheiros de origem tiverem sido movidos ou eliminados desde a última vez que o projeto foi aberto, o Chloros indica-lhe **quais**os ficheiros que faltam, em vez de abrir uma grelha em branco. Se a própria pasta do projeto tiver sido movida, o Chloros redireciona os seus caminhos de origem para a pasta onde o `project.json` se encontra agora e mantém uma cópia de segurança (`project.json.before-relink-<date>-<time>`). Quando não os encontra, a janela**Ficheiros de origem não encontrados**oferece a opção**Procurar** para o novo local, seguida de Novo projeto ou Eliminar projeto. A partir da CLI, utilize `chloros-cli project open PATH --relink FOLDER`; a partir do SDK, `open_project(path, relink=...)`.***
+Se os ficheiros de origem tiverem sido movidos ou eliminados desde a última vez que o projeto foi aberto, o Chloros indica-lhe **quais**os ficheiros que faltam, em vez de abrir uma grelha em branco. Se a própria pasta do projeto tiver sido movida, o Chloros redireciona os seus caminhos de origem para a pasta onde o `project.json` se encontra agora e mantém uma cópia de segurança (`project.json.before-relink-<date>-<time>`). Quando não os encontra, a janela**Ficheiros de origem não encontrados**oferece a opção**Procurar** para o novo local, seguida de Novo projeto ou Eliminar projeto. A partir da CLI, utilize `chloros-cli project open PATH --relink FOLDER`; a partir do SDK, `open_project(path, relink=...)`.
+
+***
 
 ## Próximos passos
 

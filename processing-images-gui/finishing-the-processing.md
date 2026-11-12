@@ -112,7 +112,9 @@ A refletância é armazenada como um valor inteiro DN, e **o valor de DN que cor
 | LATTICE (M3C/M3M) | **32768** (margem até ρ 2,0) | A etiqueta XMP `Chloros:PixelScale=32768` está inserida no ficheiro |
 | Survey3          | **65535** (limitado a ρ 1,0)     | Não existe a etiqueta `Chloros:PixelScale` — essa ausência é o indício (os produtos Survey3 incluem outras etiquetas de processamento `Chloros:*`) |
 
-**Leia a etiqueta `Chloros:PixelScale` e divida por esse valor**, em vez de assumir um valor genérico de 65535 — dividir a refletância do LATTICE por 65535 reduz silenciosamente todos os valores para metade. Um ficheiro de refletância anterior à versão 1.3.0, gravado em 8 bits, foi cortado, não redimensionado, e não possui qualquer etiqueta de escala: reexporte-o em 16 bits ou 32 bits, em vez de o dividir. Consulte [Formatos de Imagem de Saída](../output-image-formats.md) para obter a informação completa.***
+**Leia a etiqueta `Chloros:PixelScale` e divida por esse valor**, em vez de assumir um valor genérico de 65535 — dividir a refletância do LATTICE por 65535 reduz silenciosamente todos os valores para metade. Um ficheiro de refletância anterior à versão 1.3.0, gravado em 8 bits, foi cortado, não redimensionado, e não possui qualquer etiqueta de escala: reexporte-o em 16 bits ou 32 bits, em vez de o dividir. Consulte [Formatos de Imagem de Saída](../output-image-formats.md) para obter a informação completa.
+
+***
 
 ## Metadados Transferidos para as Exportações
 
@@ -167,7 +169,9 @@ Para manter um registo do processamento ou para enviar ao Suporte da MAPIR:
 3. Inclua-o na documentação do projeto
 4. Envie para o suporte da MAPIR caso surjam problemas
 
-Para enviar um problema diretamente à MAPIR, utilize o ícone de bug (**Reportar um bug**) na parte superior do separador «Registo de Depuração» — consulte [Reportar um bug a partir do separador «Registo de Depuração»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Para enviar um problema diretamente à MAPIR, utilize o ícone de bug (**Reportar um bug**) na parte superior do separador «Registo de Depuração» — consulte [Reportar um bug a partir do separador «Registo de Depuração»](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Problemas comuns de saída e soluções
 

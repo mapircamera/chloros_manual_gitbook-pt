@@ -194,7 +194,9 @@ Desbloqueie funcionalidades avançadas com uma subscrição do Chloros+:
 * **🐻 Método avançado de remoção de pixelização com reconhecimento de textura** - um método de remoção de pixelização de alta qualidade, sensível aos contornos, combinado com um modelo de redução de ruído baseado em IA/ML que elimina praticamente todo o ruído resultante da remoção de pixelização.
 * 🧮 **Fórmulas personalizadas** - Crie índices multiespectrais personalizados
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planos e preços do Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Ver planos e preços do Chloros+</a></p>
+
+***
 
 ## Ajuda na instalação
 
@@ -235,7 +237,9 @@ Precisa de ajuda com a instalação ou configuração?
 * 📧 **E-mail**: info@mapir.camera
 * 🌐 **Site**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Documentação**: [Introdução](./)
-* ❓ **Perguntas frequentes**: [Perguntas frequentes](faq.md)***
+* ❓ **Perguntas frequentes**: [Perguntas frequentes](faq.md)
+
+***
 
 ## Atualizações de software O
 

@@ -196,7 +196,9 @@ Tudo nesta secção é **apenas do lado da visualização**— altera o que vê 
 | **Saturação** | 0–200 (100 = neutro) | 100 | Apenas RGB | Saturação HSV na pré-visualização em tempo real. |
 | **Contraste** | 0–200 (100 = neutro) | 100 | Apenas RGB | Contraste linear em torno do cinzento médio na pré-visualização em tempo real. |
 | **Espelhar H / Espelhar V** | Caixas de seleção | Desativado | Todos | Inverte a pré-visualização na horizontal / na vertical. |
-| **Rotação**| 0° / 90° / 180° / 270° | 0° | Todos | Rota a pré-visualização. A orientação é aplicada no final da cadeia de pré-visualização do backend.**Capturas guardadas (1.3.0):**os produtos Pré-visualização, Radiação, Refletância e Índice de uma câmara autónoma são invertidos por Espelhamento/Rotação, enquanto**os ficheiros Raw e Debayered mantêm a orientação nativa da câmara**; cada ficheiro de captura regista a configuração no seu XMP, pelo que o processamento posterior de um ficheiro raw aplica-a da mesma forma.**Os ficheiros membros de um conjunto mantêm a orientação nativa** (a configuração é registada, não aplicada), e as visualizações compostas do conjunto ignoram-na. |**Semântica dos perfis de cor** (câmaras RGB):
+| **Rotação**| 0° / 90° / 180° / 270° | 0° | Todos | Rota a pré-visualização. A orientação é aplicada no final da cadeia de pré-visualização do backend.**Capturas guardadas (1.3.0):**os produtos Pré-visualização, Radiação, Refletância e Índice de uma câmara autónoma são invertidos por Espelhamento/Rotação, enquanto**os ficheiros Raw e Debayered mantêm a orientação nativa da câmara**; cada ficheiro de captura regista a configuração no seu XMP, pelo que o processamento posterior de um ficheiro raw aplica-a da mesma forma.**Os ficheiros membros de um conjunto mantêm a orientação nativa** (a configuração é registada, não aplicada), e as visualizações compostas do conjunto ignoram-na. |
+
+**Semântica dos perfis de cor** (câmaras RGB):
 
 * **Raw** — ignora completamente a cadeia de processamento.
 * **Linear** — sinal escuro + campo plano + equilíbrio de brancos; sem matriz de cor, sem gama.

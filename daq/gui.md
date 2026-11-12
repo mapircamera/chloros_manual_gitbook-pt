@@ -196,7 +196,9 @@ Para obter valores quantitativos de irradiância, calcule a média de, pelo meno
 
 * Combine vários sensores num único gráfico (eixos partilhados), mantenha gráficos separados (disposição automática em grelha), mova sensores entre gráficos, reordene linhas/blocos por arrastar e oculte sensores individuais com o botão de ativação/desativação do olho.
 * Por projeto, o Chloros mantém: nomes de dispositivos, cores dos gráficos, tamanho dos gráficos, modo de visualização e as definições de cada sensor (tempo de integração, média de fotogramas, estado AE, seleção de tampa).
-* **Ao reabrir um projeto, os sensores são reconectados automaticamente** por endereço — porta COM para o DAQ-U, dispositivo BLE para o DAQ-M, nome de anfitrião mDNS para o DAQ-E (resolvido mesmo que o IP da unidade tenha mudado) — e reaplica o perfil de tampa guardado de cada sensor, a média de fotogramas, o estado AE e o tempo de integração manual.***
+* **Ao reabrir um projeto, os sensores são reconectados automaticamente** por endereço — porta COM para o DAQ-U, dispositivo BLE para o DAQ-M, nome de anfitrião mDNS para o DAQ-E (resolvido mesmo que o IP da unidade tenha mudado) — e reaplica o perfil de tampa guardado de cada sensor, a média de fotogramas, o estado AE e o tempo de integração manual.
+
+***
 
 ## Emparelhamento da câmara (DLS)
 

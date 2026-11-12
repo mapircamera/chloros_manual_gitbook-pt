@@ -136,7 +136,9 @@ Duas regras regem estes valores:
 * Uma thread que seja a **única** ativa recebe a alocação máxima do seu perfil.
 * Quando mais do que uma tarefa *pesada* da GPU está ativa, a alocação base de cada tarefa pesada é dividida entre elas (nunca ficando abaixo do mínimo configurado).
 
-O valor efetivamente utilizado em tempo de execução é o **mais baixo** entre a alocação do perfil da plataforma e a recomendação em tempo real do monitor de memória da GPU, pelo que uma placa ocupada prevalece sempre sobre um perfil otimista.***
+O valor efetivamente utilizado em tempo de execução é o **mais baixo** entre a alocação do perfil da plataforma e a recomendação em tempo real do monitor de memória da GPU, pelo que uma placa ocupada prevalece sempre sobre um perfil otimista.
+
+***
 
 ## Processamento sensível à textura
 

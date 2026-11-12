@@ -23,7 +23,9 @@ O Chloros 1.3.0 oferece suporte nativo ao Linux para a **CLI**e o**Python SDK** 
 | **Desbayering com reconhecimento de textura** (requer uma GPU CUDA) | Sim (Chloros+) | Sim (Chloros+) | Sim (Chloros+) | Sim (Chloros+) |
 | **Adaptação dinâmica de computação** | Sim | Sim | Sim | Sim |
 | **Backend como serviço do sistema** (`chloros-backend@<user>.service`) | Não | Não | Sim (opcional) | Sim (opcional) |
-| **Atualizador no local** (`chloros-cli update`) | Não (executar o instalador) | Não (executar o instalador) | Sim | Sim |***
+| **Atualizador no local** (`chloros-cli update`) | Não (executar o instalador) | Não (executar o instalador) | Sim | Sim |
+
+***
 
 ## Arquiteturas suportadas
 
@@ -36,7 +38,9 @@ O Chloros 1.3.0 oferece suporte nativo ao Linux para a **CLI**e o**Python SDK** 
 
 * **Ubuntu 22.04 LTS ou mais recente** (amd64)
 * **Debian 12 ou mais recente** (amd64)
-* **NVIDIA JetPack 6** (arm64 — plataformas Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — plataformas Jetson Orin)
+
+***
 
 ## O que os utilizadores do Linux obtêm
 
@@ -55,7 +59,9 @@ O Chloros 1.3.0 oferece suporte nativo ao Linux para a **CLI**e o**Python SDK** 
 
 * **GUI de ambiente de trabalho** — sem interface gráfica; toda a interação é feita através da CLI ou do Python SDK
 * **Visualizador de imagens** — sem visualizador de imagens interativo, vista em grelha ou marcadores de mapa
-* **Gestão visual de projetos** — os projetos são criados e geridos através de comandos de CLI e chamadas de SDK (o próprio hardware — câmaras, sensores, captura — continua a ser totalmente controlável a partir do terminal)***
+* **Gestão visual de projetos** — os projetos são criados e geridos através de comandos de CLI e chamadas de SDK (o próprio hardware — câmaras, sensores, captura — continua a ser totalmente controlável a partir do terminal)
+
+***
 
 ## Requisitos de licença
 
