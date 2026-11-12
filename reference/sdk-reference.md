@@ -682,7 +682,7 @@ False         # export in native sensor geometry / skip the common-overlap crop
 
 #### Saída radiométrica (pipeline multiespectral LATTICE)
 
-O nível de exportação multiespectral LATTICE (M3C/M3M) do pipeline `process` — `reflectance` (predefinição), `radiance`, `sensor-response` ou `all` (cada modo aplicável por imagem) — define os produtos **«Exportar radianância»**e**«Exportar refletância»****: o `radiance` exporta apenas radianância, o `reflectance` apenas refletância, o `sensor-response` nenhum dos dois (apenas os produtos sem bayering e de pré-visualização), o `all` exporta ambos. Os produtos sem efeito de Bayer e de pré-visualização não podem ser alterados neste nível. O `configure()` tem uma palavra-chave dedicada para isso:
+O nível de exportação multiespectral LATTICE (M3C/M3M) do pipeline `process` — `reflectance` (predefinição), `radiance`, `sensor-response` ou `all` (cada modo aplicável por imagem) — define os produtos **«Exportar radianância»** e **«Exportar refletância»**: o `radiance` exporta apenas radianância, o `reflectance` apenas refletância, o `sensor-response` nenhum dos dois (apenas os produtos sem bayering e de pré-visualização), o `all` exporta ambos. Os produtos sem efeito de Bayer e de pré-visualização não podem ser alterados neste nível. O `configure()` tem uma palavra-chave dedicada para isso:
 
 ```python
 with chloros_sdk.ChlorosLocal() as cl:

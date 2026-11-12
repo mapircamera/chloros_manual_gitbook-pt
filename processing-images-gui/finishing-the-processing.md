@@ -76,7 +76,7 @@ Não conte com base numa fórmula — o número de resultados depende dos produt
 
 1. Navegue até uma pasta de produtos (por exemplo, `tiff16/Reflectance_Calibrated_Images/`)
 2. Selecione um ficheiro de imagem
-3. A pré-visualização aparece no painel de pré-visualização do Explorador dWindows
+3. A pré-visualização aparece no painel de pré-visualização do Explorador do Windows
 
 4. Utilize as setas do teclado para percorrer as imagens
 
