@@ -375,7 +375,7 @@ Um painel de leitura apenas atualizado a cada 5 s:
 
 * **Rótulo do nível**: «Captura simultânea» (verde) · «Captura simultânea (emissão escalonada FTD)» (verde) · «Captura escalonada (desvio de 100 ms)» (âmbar) · «Configuração demasiado grande» (vermelho).
 * **Estado do quadro**: «x,xx % incompleto» — verde abaixo de 1 %, âmbar abaixo de 5 %, vermelho a partir de 5 %.
-* ****Linha de ligação**: «NIC {mbps} Mbps - sustentada {MB/s} MB/s».
+* **Linha de ligação**: «NIC {mbps} Mbps - sustentada {MB/s} MB/s».
 
 Este é o orçamento de largura de banda em tempo real do conjunto de câmaras. Para obter informações sobre os fps subjacentes e o modelo de rede — e o que alterar quando o nível fica âmbar ou vermelho — consulte [Matrizes multicâmara](arrays.md) e a [Referência da CLI](../reference/cli-reference.md).
 
@@ -401,7 +401,7 @@ Referência rápida sobre o que se encontra onde quando uma câmara é membro de
 Outros comportamentos transversais:
 
 * **Exibição combinada vs. separada** é escolhida na ligação da matriz: combinada = um mosaico composto alinhado (as imagens dos membros são transmitidas apenas através da Vista Dividida); separada = cada membro apresenta o seu próprio mosaico sincronizado. Uma câmara nunca mostra simultaneamente uma imagem independente e um mosaico da matriz.
-* ****Reconexão automática**: ao abrir um projeto guardado, as câmaras e matrizes são restauradas e todas as definições guardadas são reaplicadas ao backend antes de os fluxos serem retomados.
+* **Reconexão automática**: ao abrir um projeto guardado, as câmaras e matrizes são restauradas e todas as definições guardadas são reaplicadas ao backend antes de os fluxos serem retomados.
 * **Controlo de captura**: as câmaras ocultas ou em pausa são excluídas da opção «Capturar Tudo»; uma matriz só fica totalmente bloqueada quando TODOS os membros estiverem ocultos/em pausa. Consulte [Definições e modos de captura](capture.md).
 
 ## Como as definições são mantidas

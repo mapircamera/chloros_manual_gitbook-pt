@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Selecione «Adicionar pasta» na raiz das capturas** (`output/` acima). Quando a pasta selecionada não contém imagens, mas possui subpastas, o Chloros percorre-as automaticamente — as subpastas do nível e a pasta raiz `.daq` são todas recolhidas de uma só vez.**Como as capturas são importadas:*** Cada captura é importada como uma **única imagem**, agrupada por captura (não uma entrada por nível). Os outros níveis da mesma captura aparecem como modos de visualização dessa única imagem.
+**Selecione «Adicionar pasta» na raiz das capturas** (`output/` acima). Quando a pasta selecionada não contém imagens, mas possui subpastas, o Chloros percorre-as automaticamente — as subpastas do nível e a pasta raiz `.daq` são todas recolhidas de uma só vez.
+
+**Como as capturas são importadas:**
+
+* Cada captura é importada como uma **única imagem**, agrupada por captura (não uma entrada por nível). Os outros níveis da mesma captura aparecem como modos de visualização dessa única imagem.
 * **O processamento começa sempre a partir do fotograma bruto.** Os outros níveis são visíveis, mas apenas o `raw` é submetido ao pipeline — reprocessar um produto já processado aplicaria as correções duas vezes, pelo que o Chloros recusa fazê-lo. Uma exportação reimportada nunca pode ocupar o espaço de um ficheiro bruto de uma captura.
 * Uma pasta de capturas guardada **sem** ficheiros brutos é importada e apresentada normalmente, mas o processamento ignora-a e indica isso no registo. (O sinalizador da CLI `--input-level` pode forçar um ponto de entrada para este caso — consulte [a Referência da CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * A partir da versão 1.3.0, uma pasta de capturas também pode conter uma pasta `clamp_masks/` (máscaras por pixel para os níveis de radiação e refletância — consulte [Formatos de Imagem de Saída](../output-image-formats.md#clamp-masks)). As máscaras não são imagens da cena, e o Chloros ignora-as durante a importação, independentemente de onde se encontrem.

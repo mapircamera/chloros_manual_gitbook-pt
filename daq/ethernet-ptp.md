@@ -72,9 +72,9 @@ Na GUI, a janela modal de definições do DAQ-E apresenta uma linha **PTP Sync**
 
 ```bash
 chloros-cli daq pool-enable-ptp --sensor-id daq-e-def330
-``` O
+```
 
-Chloros nunca volta a ativar uma unidade por si próprio, porque o estado desativado pode ser intencional.
+O Chloros nunca volta a ativar uma unidade por si próprio, porque o estado desativado pode ser intencional.
 
 Detalhes para utilizadores que exigem um alinhamento rigoroso:
 

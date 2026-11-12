@@ -82,7 +82,9 @@ Não conte com base numa fórmula — o número de resultados depende dos produt
 
 ### Pré-visualização em visualizadores de imagens externos
 
-**Visualizadores recomendados:*** **QGIS** - Software SIG gratuito (ideal para análise multiespectral georreferenciada)
+**Visualizadores recomendados:**
+
+* **QGIS** - Software SIG gratuito (ideal para análise multiespectral georreferenciada)
 * **IrfanView** - Visualizador de imagens rápido e leve (suporta TIFF)
 * **Adobe Photoshop** - Edição profissional (suporte a TIFF)
 * **GIMP** - Alternativa gratuita ao Photoshop
@@ -224,7 +226,9 @@ Para enviar um problema diretamente à MAPIR, utilize o ícone de bug (**Reporta
 
 ### Problema: Os valores de NDVI parecem estar errados
 
-**Intervalos de NDVI esperados:*** **Água, rochas, solo**: -0,1 a 0,2
+**Intervalos de NDVI esperados:**
+
+* **Água, rochas, solo**: -0,1 a 0,2
 * **Vegetação escassa/doente**: 0,2 a 0,4
 * **Vegetação moderada**: 0,4 a 0,6
 * **Vegetação saudável e densa**: 0,6 a 0,9**Se os valores estiverem fora destes intervalos:**
@@ -278,12 +282,18 @@ Para enviar um problema diretamente à MAPIR, utilize o ícone de bug (**Reporta
 
 ### Estratégia de cópia de segurança recomendada
 
-**O que guardar:*** ✅ **Imagens RAW/JPG originais ou capturas brutas do LATTICE** — Arquivar numa unidade separada ou na nuvem; os ficheiros brutos são a fonte do pipeline e tudo o resto pode ser regenerado a partir deles
+**O que guardar:**
+
+* ✅ **Imagens RAW/JPG originais ou capturas brutas do LATTICE** — Arquivar numa unidade separada ou na nuvem; os ficheiros brutos são a fonte do pipeline e tudo o resto pode ser regenerado a partir deles
 * ✅ **Ficheiros do sensor de luz `.daq` / `.csv`** — Necessários para recalcular a refletância posteriormente
 * ✅ **Resultados processados** — Guarde as imagens calibradas e os índices
 * ✅ **Pasta do projeto** (`project.json` e ficheiros associados) — Contém todas as definições para reprocessamento, caso seja necessário
 * ✅ **Registo de depuração** — Documenta os detalhes do processamento
-* ✅ **Imagens de alvo de calibração** — Para verificação e reprocessamento**Recomendações de armazenamento:*** **Cópia de segurança imediata**: disco rígido externo
+* ✅ **Imagens de alvo de calibração** — Para verificação e reprocessamento
+
+**Recomendações de armazenamento:**
+
+* **Cópia de segurança imediata**: disco rígido externo
 * **Arquivo a longo prazo**: armazenamento na nuvem (Google Drive, Dropbox, etc.)
 * **Dados críticos**: guarde 2 a 3 cópias em locais diferentes***
 

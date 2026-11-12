@@ -32,7 +32,9 @@ Se **nenhuma** imagem estiver marcada, o Chloros volta a analisar todas as image
 
 Analise as imagens importadas no Navegador de Ficheiros e identifique quais as imagens que contêm alvos de calibração.
 
-**Cenários comuns:*** **Alvo pré-captura**: Capturado antes do início da sessão
+**Cenários comuns:**
+
+* **Alvo pré-captura**: Capturado antes do início da sessão
 * **Alvo pós-captura**: capturado após a conclusão da sessão
 * **Alvos no terreno**: alvos colocados dentro da área de captura
 * **Vários alvos**: 2 a 3 imagens de alvo por sessão (recomendado)
@@ -140,9 +142,17 @@ Utilize esta coluna para verificar se marcou alvos para cada tipo de câmara no 
 
 ### Ajustar a sensibilidade de deteção
 
-Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas definições em [Definições do projeto](adjusting-project-settings.md):**Área mínima da amostra de calibração (px):*** **Predefinição**: 25 píxeis
+Se o Chloros não estiver a detetar os seus alvos corretamente, ajuste estas definições em [Definições do projeto](adjusting-project-settings.md):
+
+**Área mínima da amostra de calibração (px):**
+
+* **Predefinição**: 25 píxeis
 * **Aumente** se estiver a obter detecções falsas em pequenos artefactos
-* **Diminua** se os alvos não estiverem a ser detetados**Agrupamento mínimo de alvos (0-100):*** **Padrão**: 60
+* **Diminua** se os alvos não estiverem a ser detetados
+
+**Agrupamento mínimo de alvos (0-100):**
+
+* **Padrão**: 60
 * **Aumente** se os alvos estiverem a ser divididos em várias deteções
 * **Diminua** se os alvos com variação de cor não estiverem a ser totalmente detetados
 

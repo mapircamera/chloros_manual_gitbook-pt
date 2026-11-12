@@ -78,7 +78,11 @@ Chloros funciona em dois modos de processamento diferentes, dependendo da sua li
 1. **Detecção** (Thread 1) — Identificação dos alvos de calibração
 2. **Análise** (Thread 2) — Análise dos metadados da imagem e cálculo da calibração
 3. **Calibração** (Thread 3) — Remoção do efeito «bayering», correção de vinheta, calibração, cálculo do índice
-4. **Exportação** (Thread 4) — Gravação das imagens processadas e dos índices**Interação com a barra de progresso:*** **Passe o rato** sobre a barra para ver o painel suspenso detalhado com as 4 fases
+4. **Exportação** (Thread 4) — Gravação das imagens processadas e dos índices
+
+**Interação com a barra de progresso:**
+
+* **Passe o rato** sobre a barra para ver o painel suspenso detalhado com as 4 fases
 * **Clique** na barra de progresso para fixar o painel suspenso no lugar
 * **Clique novamente** para desbloquear e ocultar o painel**Tempo de processamento:**
 
@@ -116,7 +120,9 @@ Chloros funciona em dois modos de processamento diferentes, dependendo da sua li
 
 ### Fase 3: Calibração
 
-**O que o Chloros faz:*** **Correção de vinheta**: Remove o escurecimento das bordas causado pela lente
+**O que o Chloros faz:**
+
+* **Correção de vinheta**: Remove o escurecimento das bordas causado pela lente
 * **Calibração da refletância**: Normaliza utilizando valores-alvo de refletância e/ou dados de radiação descendente do DAQ
 * Aplica correções em todas as bandas/canais
 * Utiliza a referência de calibração adequada para cada imagem com base no registo temporal

@@ -30,7 +30,11 @@ Para utilizadores com licença do Chloros+:
 1.**Detecção** — Localização de alvos de calibração
 2. **Análise** — Exame das imagens e preparação do pipeline
 3. **Calibração** - Aplicação de correções de vinheta e refletância
-4. **Exportação** - Gravação dos ficheiros processados**Funcionalidades interativas:*** **Passe o cursor sobre** a barra de progresso para ver o painel expandido de 4 fases
+4. **Exportação** - Gravação dos ficheiros processados
+
+**Funcionalidades interativas:**
+
+* **Passe o cursor sobre** a barra de progresso para ver o painel expandido de 4 fases
 * **Clique** na barra de progresso para fixar o painel expandido
 * **Clique novamente** para desbloquear e ocultar automaticamente quando o rato sair da área
 * Cada etapa mostra o progresso individual (0-100%)
@@ -94,7 +98,9 @@ Para utilizadores com licença do Chloros+:
 
 ### Fase 3: Calibração
 
-**O que está a acontecer:*** **Debayering**: Conversão do padrão RAW Bayer para 3 canais (ignorada para módulos LATTICE mono, com uma nota)
+**O que está a acontecer:**
+
+* **Debayering**: Conversão do padrão RAW Bayer para 3 canais (ignorada para módulos LATTICE mono, com uma nota)
 * **Correção de vinheta**: Remoção do escurecimento nas bordas da lente
 * **Calibração de refletância**: Normalização com valores-alvo e/ou downwelling do DAQ
 * **Cálculo de índices**: Cálculo de índices multiespectrais
@@ -106,7 +112,9 @@ Para utilizadores com licença do Chloros+:
 * Imagem atual a ser processada
 * Imagens concluídas / Total de imagens
 
-**Comportamento do processamento:*** **Modo livre**: Processa uma imagem de cada vez, sequencialmente
+**Comportamento do processamento:**
+
+* **Modo livre**: Processa uma imagem de cada vez, sequencialmente
 * **Modo Chloros+**: Executa um conjunto de trabalhadores adaptável ao hardware — 1 a 4 trabalhadores simultâneos em sistemas com GPU (dependendo da VRAM), um trabalhador por núcleo físico (menos um) em sistemas apenas com CPU. Ver [Adaptação Dinâmica de Computação](../processing-architecture/dynamic-compute-adaptation.md)
 * **Aceleração por GPU**: Acelera significativamente esta fase**O que observar:**
 
